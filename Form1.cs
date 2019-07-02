@@ -627,6 +627,94 @@ namespace TFT_Overlay
         {
             Application.Exit();
         }
+
+        int Levels = 2;
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+            Lvl.Text = "Level " + Levels;
+
+            if (Levels < 9)
+            {
+                Levels++;
+            }
+
+            switch (Levels)
+            {
+                case 1:
+                    T1P.Text = "100%";
+                    T2P.Text = "0%";
+                    T3P.Text = "0%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 2:
+                    T1P.Text = "100%";
+                    T2P.Text = "0%";
+                    T3P.Text = "0%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 3:
+                    T1P.Text = "70%";
+                    T2P.Text = "30%";
+                    T3P.Text = "0%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 4:
+                    T1P.Text = "55%";
+                    T2P.Text = "30%";
+                    T3P.Text = "15%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 5:
+                    T1P.Text = "40%";
+                    T2P.Text = "30%";
+                    T3P.Text = "25%";
+                    T4P.Text = "5%";
+                    T5P.Text = "0%";
+                    break;
+                case 6:
+                    T1P.Text = "29%";
+                    T2P.Text = "29.5%";
+                    T3P.Text = "31%";
+                    T4P.Text = "10%";
+                    T5P.Text = "0.5%";
+                    break;
+                case 7:
+                    T1P.Text = "24%";
+                    T2P.Text = "28%";
+                    T3P.Text = "31%";
+                    T4P.Text = "15%";
+                    T5P.Text = "2%";
+                    break;
+                case 8:
+                    T1P.Text = "20%";
+                    T2P.Text = "24%";
+                    T3P.Text = "31%";
+                    T4P.Text = "20%";
+                    T5P.Text = "5%";
+                    break;
+                case 9:
+                    T1P.Text = "10%";
+                    T2P.Text = "19%";
+                    T3P.Text = "31%";
+                    T4P.Text = "30%";
+                    T5P.Text = "10%";
+                    break;
+            }
+
+
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Levels = 1;
+        }
     }
 
 }

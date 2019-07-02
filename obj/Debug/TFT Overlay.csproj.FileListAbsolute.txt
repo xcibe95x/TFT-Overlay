@@ -8,3 +8,13 @@ C:\Users\xcibe\source\repos\TFT Overlay\TFT Overlay\obj\Debug\TFT Overlay.csproj
 C:\Users\xcibe\source\repos\TFT Overlay\TFT Overlay\obj\Debug\TFT Overlay.exe
 C:\Users\xcibe\source\repos\TFT Overlay\TFT Overlay\obj\Debug\TFT Overlay.pdb
 C:\Users\xcibe\source\repos\TFT Overlay\TFT Overlay\obj\Debug\TFT_Overlay.TFTCrafter.resources
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Debug\TFT Overlay.exe.config
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Debug\TFT Overlay.exe
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Debug\TFT Overlay.pdb
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.csprojAssemblyReference.cache
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT_Overlay.TFTCrafter.resources
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT_Overlay.Properties.Resources.resources
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.csproj.GenerateResource.cache
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.csproj.CoreCompileInputs.cache
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.exe
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.pdb
