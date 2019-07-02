@@ -154,7 +154,7 @@ namespace TFT_Overlay
             {
                 //Zeke
                 rItem = "Zeke's Herald";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Adjacent allies gain +10% attack speed";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.zekes_herald;
 
@@ -165,7 +165,7 @@ namespace TFT_Overlay
             {
                 //Frozen Heart
                 rItem = "Frozen Heart";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Adjacent enemies lose 20% attack speed";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozen_heart;
 
@@ -176,7 +176,7 @@ namespace TFT_Overlay
             {
                 //Locket
                 rItem = "Locket of the iron Solari";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "On start of combat, all adjacent allies gain a shield of 200";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.locket_of_the_iron_solari;
 
@@ -187,7 +187,7 @@ namespace TFT_Overlay
             {
                 //Phantom
                 rItem = "Phantom Dancer";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer dodges all Critical Strikes";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.phantom_dancer;
 
@@ -198,7 +198,7 @@ namespace TFT_Overlay
             {
                 //Red Buff
                 rItem = "Red Buff";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Attacks deal 2.5% burn damage";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.red_buff;
 
@@ -209,7 +209,7 @@ namespace TFT_Overlay
             {
                 //Thornmail
                 rItem = "Thornmail";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Reflect 35% of damage taken from attacks";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.thornmail;
 
@@ -220,7 +220,7 @@ namespace TFT_Overlay
             {
                 //Knight vow
                 rItem = "Knight's Vow";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer is also a Knight";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.knights_vow;
 
@@ -231,7 +231,7 @@ namespace TFT_Overlay
             {
                 //SWORD BREAKER
                 rItem = "Sword Breaker";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Attacks have a chance to disarm";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.sword_breaker;
 
@@ -242,7 +242,7 @@ namespace TFT_Overlay
             {
                 //Frozen Mallet
                 rItem = "Frozen Mallet";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer is also a Glacial";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozen_mallet;
 
@@ -253,7 +253,7 @@ namespace TFT_Overlay
             {
                 //Morello
                 rItem = "Morellonomicon";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Spells deal burn damage equal to 2.5% of the enemy's maximum health per second";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.morellonomicon;
 
@@ -264,7 +264,7 @@ namespace TFT_Overlay
             {
                 //Redemption
                 rItem = "Redemption";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "On death, heal all nearby allies for 1000 health";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.redemption;
 
@@ -275,7 +275,7 @@ namespace TFT_Overlay
             {
                 //Warmogs
                 rItem = "Warmog's Armor";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer regenerates 3% max health per second";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.warmogs_armor;
 
@@ -286,7 +286,7 @@ namespace TFT_Overlay
             {
                 //zephyr
                 rItem = "Zephyr";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "On start of combat, banish an enemy for 5 seconds";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.zephyr;
 
@@ -297,7 +297,7 @@ namespace TFT_Overlay
             {
                 //Titanic
                 rItem = "Titanic Hydra";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Attacks deal 10% of wearer's max health as splash damage";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.titanic_hydra;
 
@@ -308,7 +308,7 @@ namespace TFT_Overlay
             {
                 //Guinsoo
                 rItem = "Guinsoo's Rageblade";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Attacks grant 4% attack speed (stacks infinitely)";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guinsoos_rageblade;
 
@@ -319,7 +319,7 @@ namespace TFT_Overlay
             {
                 //Ionic Spark
                 rItem = "Ionic Spark";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Whenever an enemy casts a spell, they take 200 damage";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ionic_spark;
 
@@ -330,7 +330,7 @@ namespace TFT_Overlay
             {
                 //Deathcap
                 rItem = "Rabadon's Deathcap";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "+50% Ability Power";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rabadons_deathcap;
 
@@ -341,7 +341,7 @@ namespace TFT_Overlay
             {
                 //Ludens
                 rItem = "Luden's Echo";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Spells deal 200 splash damage on hit";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ludens_echo;
 
@@ -352,7 +352,7 @@ namespace TFT_Overlay
             {
                 //Yumii
                 rItem = "Yuumi";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer is also a Sorcerer";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.yuumi;
 
@@ -363,7 +363,7 @@ namespace TFT_Overlay
             {
                 //Cursed Blade
                 rItem = "Cursed Blade";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Attacks have a low chance to shrink (reduce enemy's star level by 1)";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.cursed_blade;
 
@@ -374,7 +374,7 @@ namespace TFT_Overlay
             {
                 //Dragons Claw
                 rItem = "Dragon's Claw";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Gain 83% resistance to magic damage";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.dragons_claw;
 
@@ -385,7 +385,7 @@ namespace TFT_Overlay
             {
                 //Hush
                 rItem = "Hush";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Attacks have a high chance to Silence";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.hush;
 
@@ -396,7 +396,7 @@ namespace TFT_Overlay
             {
                 //Runnan
                 rItem = "Runaan's Hurricane";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Attacks 2 extra targets on attack. Extra attacks deal 50% damage";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.runaans_hurricane;
 
@@ -407,7 +407,7 @@ namespace TFT_Overlay
             {
                 //Rapid Fire
                 rItem = "Rapid Firecannon";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer's attacks cannot be dodged. Attack range is doubled";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rapid_firecannon;
 
@@ -419,7 +419,7 @@ namespace TFT_Overlay
             {
                 //Statik
                 rItem = "Statikk Shiv";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Every 3rd attack deals 100 splash magical damage";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.statikk_shiv;
 
@@ -431,7 +431,7 @@ namespace TFT_Overlay
             {
                 //Ruined King
                 rItem = "Blade of the ruined King";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer is also a Blademaster";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.blade_of_the_ruined_king;
 
@@ -443,7 +443,7 @@ namespace TFT_Overlay
             {
                 //Seraph
                 rItem = "Seraph's Embrace";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Regain 20% mana each time a spell is cast";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.seraphs_embrace;
 
@@ -454,7 +454,7 @@ namespace TFT_Overlay
             {
                 //Darkin
                 rItem = "Darkin";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Wearer is also a Demon";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.darkin;
 
@@ -465,7 +465,7 @@ namespace TFT_Overlay
             {
                 //Force Of Nature
                 rItem = "Force of Nature";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = "Gain +1 team size";
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.force_of_nature;
 
