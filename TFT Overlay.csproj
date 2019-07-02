@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Teamfight_Tactics_2019_hover_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -244,6 +247,7 @@
     <Content Include="Images\Rounds\minion.png" />
     <Content Include="Images\Rounds\raptors.png" />
     <Content Include="Images\Rounds\wolves.png" />
+    <Content Include="Teamfight_Tactics_2019_hover_icon.ico" />
     <None Include="Resources\Normal.cur" />
     <None Include="Resources\Click.cur" />
   </ItemGroup>

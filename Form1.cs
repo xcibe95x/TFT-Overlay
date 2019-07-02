@@ -622,6 +622,11 @@ namespace TFT_Overlay
             ItemName.Text = rItem;
             ItemDescription.Text = rDesc;
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }
