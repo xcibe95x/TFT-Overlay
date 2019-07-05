@@ -19,6 +19,7 @@
     - Now gets items info from JSON Data
 	- Fixed a bug with Probabilities
 	. Notify when a new release is up
+	- Updated Layouts for Probabilities & Win Rate
 
 - **1.1**
   - Changelog  

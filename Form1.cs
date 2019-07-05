@@ -15,7 +15,7 @@ namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
-        public string Ver = "1.1";
+        public string Ver = "2.0";
         
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -26,6 +26,9 @@ namespace TFT_Overlay
         public string rDesc;
         public Point OMLoc;
         public int Levels = 1;
+        WebClient client = new WebClient();
+        public string itemsJSON;
+        
 
 
 
@@ -56,7 +59,6 @@ namespace TFT_Overlay
             Title.Text = "TFT Overlay - " + Ver + " | by @xcibe95x";
 
             // Check for new Release
-            WebClient client = new WebClient();
             string NVer = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/VERSION.md");
 
 
@@ -65,29 +67,30 @@ namespace TFT_Overlay
 
             if (iNVer > iVer)
             {
-                MessageBox.Show("Version: " + iNVer + "is now available on GitHub", "GitHub.com");
+                if (MessageBox.Show("Version: " + NVer + " is now available on GitHub, Want to get it now?", "GitHub.com", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start("https://github.com/xcibe95x/TFT-Overlay/releases");
+                }
             }
+
 
             // GET JSON DATA
-            using (var webClient2 = new WebClient())
-            {
-                string itemsJSON = webClient2.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
-                JObject jObject = JObject.Parse(itemsJSON);
+            itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
 
-               // string displayName = (string)jObject.SelectToken("displayName");
-               // string type = (string)jObject.SelectToken("signInNames[0].type");
-                //string bfsword = (string)jObject.SelectToken("recurvebow.name");
-              //  string value = (string)jObject.SelectToken("signInNames[0].value");
-               // Console.WriteLine("{0}, {1}, {2}", displayName, type, value);
-               // JArray signInNames = (JArray)jObject.SelectToken("signInNames");
-               // foreach (JToken signInName in signInNames)
-                //{
-                  //  type = (string)signInName.SelectToken("type");
-                   // value = (string)signInName.SelectToken("value");
-                    //Console.WriteLine("{0}, {1}", type, value);
-                //}
-               
-            }
+
+            // Useful codes for JSON
+
+            // string displayName = (string)jObject.SelectToken("name");
+            // string type = (string)jObject.SelectToken("arrayName[0].type");
+            //  string value = (string)jObject.SelectToken("arrayname[0].value");
+            // Console.WriteLine("{0}, {1}, {2}", displayName, type, value);
+            // JArray signInNames = (JArray)jObject.SelectToken("arrayname");
+            // foreach (JToken arrayname in arrayname)
+            //{
+            //  type = (string)arrayname.SelectToken("type");
+            // value = (string)arrayname.SelectToken("value");
+            //}
+
 
 
             // WINDOW STARTING POSITION
@@ -126,12 +129,14 @@ namespace TFT_Overlay
         private void CrafterWorker()
         {
 
+            JObject jObject = JObject.Parse(itemsJSON);
+
             //BF + Cape <--> Cape + BF
             if (Item1 == "BF" && Item2 == "Cape" || Item2 == "BF" && Item1 == "Cape")
             {
                 //BT
                 rItem = "Bloodthirster";
-                rDesc = "Attacks heal for 50% of damage";
+                rDesc = (string)jObject.SelectToken("bloodthirster.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.bloodthirster;
 
@@ -142,7 +147,7 @@ namespace TFT_Overlay
             {
                 //GA
                 rItem = "Guardian Angel";
-                rDesc = "Wearer revives with 300 health";
+                rDesc = (string)jObject.SelectToken("guardianangel.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guardian_angel;
 
@@ -153,7 +158,7 @@ namespace TFT_Overlay
             {
                 //HEXGUNBLADE
                 rItem = "Hextech Gunblade";
-                rDesc = "Heal for 25% of all damage dealt";
+                rDesc = (string)jObject.SelectToken("hextechgunblade.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.hextech_gunblade;
 
@@ -164,7 +169,7 @@ namespace TFT_Overlay
             {
                 //IE
                 rItem = "Infinity Edge";
-                rDesc = "Critical strikes deal +100% damage";
+                rDesc = (string)jObject.SelectToken("infinityedge.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.infinity_edge;
 
@@ -175,7 +180,7 @@ namespace TFT_Overlay
             {
                 //SPEAR OF SHOJIN
                 rItem = "Spear of Shojin";
-                rDesc = "After casting, wearer gains 15% of its max mana per attack";
+                rDesc = (string)jObject.SelectToken("spearofshojin.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.spear_of_shojin;
 
@@ -186,7 +191,7 @@ namespace TFT_Overlay
             {
                 //SWORD OF DIVINE
                 rItem = "Sword of the Divine";
-                rDesc = "Each second, the wearer has a 5% chance to gain 100% Critical Strike";
+                rDesc = (string)jObject.SelectToken("swordofthedivine.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.sword_of_the_divine;
 
@@ -196,8 +201,8 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Spatula" || Item2 == "BF" && Item1 == "Spatula")
             {
                 //YOMUU'S
-                rItem = "Yomuu's Ghostblade";
-                rDesc = "Wearer is also an Assassin";
+                rItem = (string)jObject.SelectToken("youmuusghostblade.name");
+                rDesc = (string)jObject.SelectToken("youmuusghostblade.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.youmuus_ghostblade;
 
@@ -207,8 +212,8 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Belt" || Item2 == "BF" && Item1 == "Belt")
             {
                 //Zeke
-                rItem = "Zeke's Herald";
-                rDesc = "Adjacent allies gain +10% attack speed";
+                rItem = (string)jObject.SelectToken("youmuusghostblade.name");
+                rDesc = (string)jObject.SelectToken("zekesherald.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.zekes_herald;
 
@@ -218,8 +223,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Tear" || Item2 == "Vest" && Item1 == "Tear")
             {
                 //Frozen Heart
-                rItem = "Frozen Heart";
-                rDesc = "Adjacent enemies lose 20% attack speed";
+                rItem = (string)jObject.SelectToken("frozenheart.name");
+                rDesc = (string)jObject.SelectToken("frozenheart.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozen_heart;
 
@@ -229,8 +234,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Rod" || Item2 == "Vest" && Item1 == "Rod")
             {
                 //Locket
-                rItem = "Locket of the iron Solari";
-                rDesc = "On start of combat, all adjacent allies gain a shield of 200";
+                rItem = (string)jObject.SelectToken("locketoftheironsolari.name");
+                rDesc = (string)jObject.SelectToken("locketoftheironsolari.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.locket_of_the_iron_solari;
 
@@ -240,8 +245,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Bow" || Item2 == "Vest" && Item1 == "Bow")
             {
                 //Phantom
-                rItem = "Phantom Dancer";
-                rDesc = "Wearer dodges all Critical Strikes";
+                rItem = (string)jObject.SelectToken("phantomdancer.name");
+                rDesc = (string)jObject.SelectToken("phantomdancer.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.phantom_dancer;
 
@@ -251,8 +256,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Belt" || Item2 == "Vest" && Item1 == "Belt")
             {
                 //Red Buff
-                rItem = "Red Buff";
-                rDesc = "Attacks deal 2.5% burn damage";
+                rItem = (string)jObject.SelectToken("youmuusghostblade.name");
+                rDesc = (string)jObject.SelectToken("youmuusghostblade.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.red_buff;
 
@@ -262,8 +267,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Vest" || Item2 == "Vest" && Item1 == "Vest")
             {
                 //Thornmail
-                rItem = "Thornmail";
-                rDesc = "Reflect 35% of damage taken from attacks";
+                rItem = (string)jObject.SelectToken("thornmail.name");
+                rDesc = (string)jObject.SelectToken("thornmail.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.thornmail;
 
@@ -273,8 +278,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Spatula" || Item2 == "Vest" && Item1 == "Spatula")
             {
                 //Knight vow
-                rItem = "Knight's Vow";
-                rDesc = "Wearer is also a Knight";
+                rItem = (string)jObject.SelectToken("knightsvow.name");
+                rDesc = (string)jObject.SelectToken("knightsvow.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.knights_vow;
 
@@ -284,8 +289,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Cape" || Item2 == "Vest" && Item1 == "Cape")
             {
                 //SWORD BREAKER
-                rItem = "Sword Breaker";
-                rDesc = "Attacks have a chance to disarm";
+                rItem = (string)jObject.SelectToken("swordbreaker.name");
+                rDesc = (string)jObject.SelectToken("swordbreaker.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.sword_breaker;
 
@@ -295,8 +300,8 @@ namespace TFT_Overlay
             if (Item1 == "Belt" && Item2 == "Spatula" || Item2 == "Belt" && Item1 == "Spatula")
             {
                 //Frozen Mallet
-                rItem = "Frozen Mallet";
-                rDesc = "Wearer is also a Glacial";
+                rItem = (string)jObject.SelectToken("frozenmallet.name");
+                rDesc = (string)jObject.SelectToken("frozenmallet.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozen_mallet;
 
@@ -306,8 +311,8 @@ namespace TFT_Overlay
             if (Item1 == "Belt" && Item2 == "Rod" || Item2 == "Belt" && Item1 == "Rod")
             {
                 //Morello
-                rItem = "Morellonomicon";
-                rDesc = "Spells deal burn damage equal to 2.5% of the enemy's maximum health per second";
+                rItem = (string)jObject.SelectToken("morellonomicon.name");
+                rDesc = (string)jObject.SelectToken("morellonomicon.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.morellonomicon;
 
@@ -317,8 +322,8 @@ namespace TFT_Overlay
             if (Item1 == "Belt" && Item2 == "Tear" || Item2 == "Belt" && Item1 == "Tear")
             {
                 //Redemption
-                rItem = "Redemption";
-                rDesc = "On death, heal all nearby allies for 1000 health";
+                rItem = (string)jObject.SelectToken("redemption.name");
+                rDesc = (string)jObject.SelectToken("redemption.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.redemption;
 
@@ -328,8 +333,8 @@ namespace TFT_Overlay
             if (Item1 == "Belt" && Item2 == "Belt" || Item2 == "Belt" && Item1 == "Belt")
             {
                 //Warmogs
-                rItem = "Warmog's Armor";
-                rDesc = "Wearer regenerates 3% max health per second";
+                rItem = (string)jObject.SelectToken("warmogsarmor.name");
+                rDesc = (string)jObject.SelectToken("warmogsarmor.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.warmogs_armor;
 
@@ -339,8 +344,8 @@ namespace TFT_Overlay
             if (Item1 == "Belt" && Item2 == "Cape" || Item2 == "Belt" && Item1 == "Cape")
             {
                 //zephyr
-                rItem = "Zephyr";
-                rDesc = "On start of combat, banish an enemy for 5 seconds";
+                rItem = (string)jObject.SelectToken("zephyr.name");
+                rDesc = (string)jObject.SelectToken("zephyr.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.zephyr;
 
@@ -350,8 +355,8 @@ namespace TFT_Overlay
             if (Item1 == "Belt" && Item2 == "Bow" || Item2 == "Belt" && Item1 == "Bow")
             {
                 //Titanic
-                rItem = "Titanic Hydra";
-                rDesc = "Attacks deal 10% of wearer's max health as splash damage";
+                rItem = (string)jObject.SelectToken("titanichydra.name");
+                rDesc = (string)jObject.SelectToken("titanichydra.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.titanic_hydra;
 
@@ -361,8 +366,8 @@ namespace TFT_Overlay
             if (Item1 == "Rod" && Item2 == "Bow" || Item2 == "Rod" && Item1 == "Bow")
             {
                 //Guinsoo
-                rItem = "Guinsoo's Rageblade";
-                rDesc = "Attacks grant 4% attack speed (stacks infinitely)";
+                rItem = (string)jObject.SelectToken("guinsoosrageblade.name");
+                rDesc = (string)jObject.SelectToken("guinsoosrageblade.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guinsoos_rageblade;
 
@@ -372,8 +377,8 @@ namespace TFT_Overlay
             if (Item1 == "Rod" && Item2 == "Cape" || Item2 == "Rod" && Item1 == "Cape")
             {
                 //Ionic Spark
-                rItem = "Ionic Spark";
-                rDesc = "Whenever an enemy casts a spell, they take 200 damage";
+                rItem = (string)jObject.SelectToken("ionicspark.name");
+                rDesc = (string)jObject.SelectToken("ionicspark.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ionic_spark;
 
@@ -383,8 +388,8 @@ namespace TFT_Overlay
             if (Item1 == "Rod" && Item2 == "Rod" || Item2 == "Rod" && Item1 == "Rod")
             {
                 //Deathcap
-                rItem = "Rabadon's Deathcap";
-                rDesc = "+50% Ability Power";
+                rItem = (string)jObject.SelectToken("rabadonsdeathcap.name");
+                rDesc = (string)jObject.SelectToken("rabadonsdeathcap.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rabadons_deathcap;
 
@@ -394,8 +399,8 @@ namespace TFT_Overlay
             if (Item1 == "Rod" && Item2 == "Tear" || Item2 == "Rod" && Item1 == "Tear")
             {
                 //Ludens
-                rItem = "Luden's Echo";
-                rDesc = "Spells deal 200 splash damage on hit";
+                rItem = (string)jObject.SelectToken("ludensecho.name");
+                rDesc = (string)jObject.SelectToken("ludensecho.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ludens_echo;
 
@@ -405,8 +410,8 @@ namespace TFT_Overlay
             if (Item1 == "Rod" && Item2 == "Spatula" || Item2 == "Rod" && Item1 == "Spatula")
             {
                 //Yumii
-                rItem = "Yuumi";
-                rDesc = "Wearer is also a Sorcerer";
+                rItem = (string)jObject.SelectToken("yuumi.name");
+                rDesc = (string)jObject.SelectToken("yuumi.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.yuumi;
 
@@ -416,8 +421,8 @@ namespace TFT_Overlay
             if (Item1 == "Cape" && Item2 == "Bow" || Item2 == "Cape" && Item1 == "Bow")
             {
                 //Cursed Blade
-                rItem = "Cursed Blade";
-                rDesc = "Attacks have a low chance to shrink (reduce enemy's star level by 1)";
+                rItem = (string)jObject.SelectToken("cursedblade.name");
+                rDesc = (string)jObject.SelectToken("cursedblade.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.cursed_blade;
 
@@ -427,8 +432,8 @@ namespace TFT_Overlay
             if (Item1 == "Cape" && Item2 == "Cape" || Item2 == "Cape" && Item1 == "Cape")
             {
                 //Dragons Claw
-                rItem = "Dragon's Claw";
-                rDesc = "Gain 83% resistance to magic damage";
+                rItem = (string)jObject.SelectToken("dragonsclaw.name");
+                rDesc = (string)jObject.SelectToken("dragonsclaw.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.dragons_claw;
 
@@ -438,8 +443,8 @@ namespace TFT_Overlay
             if (Item1 == "Cape" && Item2 == "Tear" || Item2 == "Cape" && Item1 == "Tear")
             {
                 //Hush
-                rItem = "Hush";
-                rDesc = "Attacks have a high chance to Silence";
+                rItem = (string)jObject.SelectToken("hush.name");
+                rDesc = (string)jObject.SelectToken("hush.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.hush;
 
@@ -449,8 +454,8 @@ namespace TFT_Overlay
             if (Item1 == "Cape" && Item2 == "Spatula" || Item2 == "Cape" && Item1 == "Spatula")
             {
                 //Runnan
-                rItem = "Runaan's Hurricane";
-                rDesc = "Attacks 2 extra targets on attack. Extra attacks deal 50% damage";
+                rItem = (string)jObject.SelectToken("runaanshurricane.name");
+                rDesc = (string)jObject.SelectToken("runaanshurricane.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.runaans_hurricane;
 
@@ -460,8 +465,8 @@ namespace TFT_Overlay
             if (Item1 == "Bow" && Item2 == "Bow" || Item2 == "Bow" && Item1 == "Bow")
             {
                 //Rapid Fire
-                rItem = "Rapid Firecannon";
-                rDesc = "Wearer's attacks cannot be dodged. Attack range is doubled";
+                rItem = (string)jObject.SelectToken("rapidfirecannon.name");
+                rDesc = (string)jObject.SelectToken("rapidfirecannon.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rapid_firecannon;
 
@@ -472,8 +477,8 @@ namespace TFT_Overlay
             if (Item1 == "Bow" && Item2 == "Tear" || Item2 == "Bow" && Item1 == "Tear")
             {
                 //Statik
-                rItem = "Statikk Shiv";
-                rDesc = "Every 3rd attack deals 100 splash magical damage";
+                rItem = (string)jObject.SelectToken("statikkshiv.name");
+                rDesc = (string)jObject.SelectToken("statikkshiv.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.statikk_shiv;
 
@@ -484,8 +489,8 @@ namespace TFT_Overlay
             if (Item1 == "Bow" && Item2 == "Spatula" || Item2 == "Bow" && Item1 == "Spatula")
             {
                 //Ruined King
-                rItem = "Blade of the ruined King";
-                rDesc = "Wearer is also a Blademaster";
+                rItem = (string)jObject.SelectToken("bladeoftheruinedking.name");
+                rDesc = (string)jObject.SelectToken("bladeoftheruinedking.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.blade_of_the_ruined_king;
 
@@ -496,8 +501,8 @@ namespace TFT_Overlay
             if (Item1 == "Tear" && Item2 == "Tear" || Item2 == "Tear" && Item1 == "Tear")
             {
                 //Seraph
-                rItem = "Seraph's Embrace";
-                rDesc = "Regain 20% mana each time a spell is cast";
+                rItem = (string)jObject.SelectToken("seraphsembrace.name");
+                rDesc = (string)jObject.SelectToken("seraphsembrace.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.seraphs_embrace;
 
@@ -507,8 +512,8 @@ namespace TFT_Overlay
             if (Item1 == "Tear" && Item2 == "Spatula" || Item2 == "Tear" && Item1 == "Spatula")
             {
                 //Darkin
-                rItem = "Darkin";
-                rDesc = "Wearer is also a Demon";
+                rItem = (string)jObject.SelectToken("darkin.name");
+                rDesc = (string)jObject.SelectToken("darkin.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.darkin;
 
@@ -518,8 +523,8 @@ namespace TFT_Overlay
             if (Item1 == "Spatula" && Item2 == "Spatula" || Item2 == "Spatula" && Item1 == "Spatula")
             {
                 //Force Of Nature
-                rItem = "Force of Nature";
-                rDesc = "Gain +1 team size";
+                rItem = (string)jObject.SelectToken("forceofnature.name");
+                rDesc = (string)jObject.SelectToken("forceofnature.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.force_of_nature;
 
@@ -804,7 +809,7 @@ namespace TFT_Overlay
         private void ResultItemImage_BackgroundImageChanged(object sender, EventArgs e)
         {
             ItemName.Text = rItem;
-            ItemDescription.Text = rDesc;
+            htmlItemdescription.Text = @"<div style=""color: #87ceeb; font-size: 8px"">" + rDesc + "</div>";
         }
 
 
@@ -961,6 +966,11 @@ namespace TFT_Overlay
             T3P.Text = "0%";
             T4P.Text = "0%";
             T5P.Text = "0%";
+        }
+
+        private void metroTabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
