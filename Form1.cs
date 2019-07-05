@@ -1068,5 +1068,10 @@ namespace TFT_Overlay
         {
             Application.Exit();
         }
+
+        private void ProbTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

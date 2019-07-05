@@ -98,6 +98,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -467,7 +468,7 @@
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -567,6 +568,7 @@
             // ProbTab
             // 
             this.ProbTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ProbTab.Controls.Add(this.label6);
             this.ProbTab.Controls.Add(this.metroLabel1);
             this.ProbTab.Controls.Add(this.metroButton2);
             this.ProbTab.Controls.Add(this.metroButton1);
@@ -601,12 +603,13 @@
             this.ProbTab.VerticalScrollbarBarColor = true;
             this.ProbTab.VerticalScrollbarHighlightOnWheel = false;
             this.ProbTab.VerticalScrollbarSize = 10;
+            this.ProbTab.Click += new System.EventHandler(this.ProbTab_Click);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.metroLabel1.Location = new System.Drawing.Point(216, 80);
+            this.metroLabel1.Location = new System.Drawing.Point(218, 150);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(104, 19);
             this.metroLabel1.TabIndex = 44;
@@ -616,7 +619,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(269, 40);
+            this.metroButton2.Location = new System.Drawing.Point(275, 108);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(47, 33);
             this.metroButton2.Style = MetroFramework.MetroColorStyle.Orange;
@@ -629,7 +632,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(216, 40);
+            this.metroButton1.Location = new System.Drawing.Point(222, 108);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(47, 33);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Orange;
@@ -645,44 +648,44 @@
             this.T1T.AutoSize = true;
             this.T1T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1T.ForeColor = System.Drawing.Color.SlateGray;
-            this.T1T.Location = new System.Drawing.Point(13, 58);
+            this.T1T.Location = new System.Drawing.Point(14, 58);
             this.T1T.Name = "T1T";
-            this.T1T.Size = new System.Drawing.Size(56, 15);
+            this.T1T.Size = new System.Drawing.Size(15, 15);
             this.T1T.TabIndex = 22;
-            this.T1T.Text = "Rarity 1";
+            this.T1T.Text = "1";
             // 
             // T2T
             // 
             this.T2T.AutoSize = true;
             this.T2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2T.ForeColor = System.Drawing.Color.LawnGreen;
-            this.T2T.Location = new System.Drawing.Point(13, 80);
+            this.T2T.Location = new System.Drawing.Point(14, 80);
             this.T2T.Name = "T2T";
-            this.T2T.Size = new System.Drawing.Size(56, 15);
+            this.T2T.Size = new System.Drawing.Size(15, 15);
             this.T2T.TabIndex = 23;
-            this.T2T.Text = "Rarity 2";
+            this.T2T.Text = "2";
             // 
             // T3T
             // 
             this.T3T.AutoSize = true;
             this.T3T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3T.ForeColor = System.Drawing.Color.Aqua;
-            this.T3T.Location = new System.Drawing.Point(13, 103);
+            this.T3T.Location = new System.Drawing.Point(14, 103);
             this.T3T.Name = "T3T";
-            this.T3T.Size = new System.Drawing.Size(56, 15);
+            this.T3T.Size = new System.Drawing.Size(15, 15);
             this.T3T.TabIndex = 24;
-            this.T3T.Text = "Rarity 3";
+            this.T3T.Text = "3";
             // 
             // T4T
             // 
             this.T4T.AutoSize = true;
             this.T4T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4T.ForeColor = System.Drawing.Color.DarkViolet;
-            this.T4T.Location = new System.Drawing.Point(13, 126);
+            this.T4T.Location = new System.Drawing.Point(14, 126);
             this.T4T.Name = "T4T";
-            this.T4T.Size = new System.Drawing.Size(56, 15);
+            this.T4T.Size = new System.Drawing.Size(15, 15);
             this.T4T.TabIndex = 25;
-            this.T4T.Text = "Rarity 4";
+            this.T4T.Text = "4";
             this.T4T.Click += new System.EventHandler(this.T4T_Click);
             // 
             // label4
@@ -701,11 +704,11 @@
             this.T5T.AutoSize = true;
             this.T5T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5T.ForeColor = System.Drawing.Color.Orange;
-            this.T5T.Location = new System.Drawing.Point(13, 150);
+            this.T5T.Location = new System.Drawing.Point(14, 150);
             this.T5T.Name = "T5T";
-            this.T5T.Size = new System.Drawing.Size(56, 15);
+            this.T5T.Size = new System.Drawing.Size(15, 15);
             this.T5T.TabIndex = 26;
-            this.T5T.Text = "Rarity 5";
+            this.T5T.Text = "5";
             // 
             // T1P
             // 
@@ -723,7 +726,7 @@
             this.ChampsInPool.AutoSize = true;
             this.ChampsInPool.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChampsInPool.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.ChampsInPool.Location = new System.Drawing.Point(76, 40);
+            this.ChampsInPool.Location = new System.Drawing.Point(74, 40);
             this.ChampsInPool.Name = "ChampsInPool";
             this.ChampsInPool.Size = new System.Drawing.Size(51, 13);
             this.ChampsInPool.TabIndex = 39;
@@ -789,7 +792,7 @@
             this.T5S.AutoSize = true;
             this.T5S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T5S.Location = new System.Drawing.Point(76, 150);
+            this.T5S.Location = new System.Drawing.Point(74, 150);
             this.T5S.Name = "T5S";
             this.T5S.Size = new System.Drawing.Size(19, 13);
             this.T5S.TabIndex = 31;
@@ -800,7 +803,7 @@
             this.T4S.AutoSize = true;
             this.T4S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T4S.Location = new System.Drawing.Point(76, 126);
+            this.T4S.Location = new System.Drawing.Point(74, 126);
             this.T4S.Name = "T4S";
             this.T4S.Size = new System.Drawing.Size(19, 13);
             this.T4S.TabIndex = 30;
@@ -811,7 +814,7 @@
             this.T3S.AutoSize = true;
             this.T3S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T3S.Location = new System.Drawing.Point(76, 105);
+            this.T3S.Location = new System.Drawing.Point(74, 105);
             this.T3S.Name = "T3S";
             this.T3S.Size = new System.Drawing.Size(19, 13);
             this.T3S.TabIndex = 29;
@@ -822,7 +825,7 @@
             this.T2S.AutoSize = true;
             this.T2S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T2S.Location = new System.Drawing.Point(76, 82);
+            this.T2S.Location = new System.Drawing.Point(74, 82);
             this.T2S.Name = "T2S";
             this.T2S.Size = new System.Drawing.Size(19, 13);
             this.T2S.TabIndex = 28;
@@ -833,7 +836,7 @@
             this.T1S.AutoSize = true;
             this.T1S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T1S.Location = new System.Drawing.Point(76, 60);
+            this.T1S.Location = new System.Drawing.Point(74, 60);
             this.T1S.Name = "T1S";
             this.T1S.Size = new System.Drawing.Size(19, 13);
             this.T1S.TabIndex = 27;
@@ -844,7 +847,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(10, 10);
+            this.label3.Location = new System.Drawing.Point(14, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(207, 17);
             this.label3.TabIndex = 21;
@@ -863,7 +866,7 @@
             this.TierListTab.Name = "TierListTab";
             this.TierListTab.Size = new System.Drawing.Size(332, 184);
             this.TierListTab.TabIndex = 3;
-            this.TierListTab.Text = "Tier List";
+            this.TierListTab.Text = "Meta Tier";
             this.TierListTab.UseCustomBackColor = true;
             this.TierListTab.VerticalScrollbarBarColor = true;
             this.TierListTab.VerticalScrollbarHighlightOnWheel = false;
@@ -1070,6 +1073,17 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label6.Location = new System.Drawing.Point(14, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Tier";
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1177,6 +1191,7 @@
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton4;
+        private System.Windows.Forms.Label label6;
     }
 }
 
