@@ -57,11 +57,15 @@ namespace TFT_Overlay
 
             // Check for new Release
             WebClient client = new WebClient();
-            string NVer = client.DownloadString("https://github.com/xcibe95x/TFT-Overlay/VERSION.md");
+            string NVer = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/VERSION.md");
 
-            if (int.Parse(NVer) > int.Parse(Ver))
+
+            double iNVer = double.Parse(NVer);
+            double iVer = double.Parse(Ver) ;
+
+            if (iNVer > iVer)
             {
-                MessageBox.Show("Version: " + int.Parse(NVer) + "is now available on GitHub", "GitHub.com");
+                MessageBox.Show("Version: " + iNVer + "is now available on GitHub", "GitHub.com");
             }
 
             // GET JSON DATA
