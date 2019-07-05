@@ -2,10 +2,12 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Reflection;
+using System.Resources;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -15,8 +17,8 @@ namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
-        public string Ver = "2.0";
-        
+        public string Ver = "2.1";
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         public string Item1;
@@ -28,7 +30,7 @@ namespace TFT_Overlay
         public int Levels = 1;
         WebClient client = new WebClient();
         public string itemsJSON;
-        
+        public string tiersJSON;
 
 
 
@@ -36,6 +38,24 @@ namespace TFT_Overlay
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+
+
+
+        static class NativeMethods
+        {
+            public static Cursor LoadCustomCursor(string path)
+            {
+                IntPtr hCurs = LoadCursorFromFile(path);
+                if (hCurs == IntPtr.Zero) throw new Win32Exception();
+                var curs = new Cursor(hCurs);
+                // Note: force the cursor to own the handle so it gets released properly
+                var fi = typeof(Cursor).GetField("ownHandle", BindingFlags.NonPublic | BindingFlags.Instance);
+                fi.SetValue(curs, true);
+                return curs;
+            }
+            [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+            private static extern IntPtr LoadCursorFromFile(string path);
+        }
 
         public TFTCrafter()
         {
@@ -55,7 +75,7 @@ namespace TFT_Overlay
             {
                 WinRate.Text = "0%";
             }
-          
+
         }
 
 
@@ -65,13 +85,22 @@ namespace TFT_Overlay
         {
             Title.Text = "TFT Overlay - " + Ver + " | by @xcibe95x";
 
+            Process[] pname = Process.GetProcessesByName("LeagueClient");
+            if (pname.Length == 0)
+            {
+
+            }
+            else
+            {
+                Cursor = NativeMethods.LoadCustomCursor(@"Normal.cur");
+            }
 
             // Check for new Release
             string NVer = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/VERSION.md");
 
 
             double iNVer = double.Parse(NVer);
-            double iVer = double.Parse(Ver) ;
+            double iVer = double.Parse(Ver);
 
             if (iNVer > iVer)
             {
@@ -84,20 +113,18 @@ namespace TFT_Overlay
 
             // GET JSON DATA
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
+            tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
 
+
+            // EXECUTE TIER LIST
+            GetTierList(0 + 1);
 
             // Useful codes for JSON
 
             // string displayName = (string)jObject.SelectToken("name");
             // string type = (string)jObject.SelectToken("arrayName[0].type");
             //  string value = (string)jObject.SelectToken("arrayname[0].value");
-            // Console.WriteLine("{0}, {1}, {2}", displayName, type, value);
-            // JArray signInNames = (JArray)jObject.SelectToken("arrayname");
-            // foreach (JToken arrayname in arrayname)
-            //{
-            //  type = (string)arrayname.SelectToken("type");
-            // value = (string)arrayname.SelectToken("value");
-            //}
+
 
 
 
@@ -834,6 +861,47 @@ namespace TFT_Overlay
         }
 
 
+
+        private void GetTierList(int TierIndex)
+        {
+
+            // FILL TIER LIST
+
+            JObject jObject = JObject.Parse(tiersJSON);
+
+            JArray championsTiers = (JArray)jObject.SelectToken("all." + TierIndex);
+            int champIndex = 0;
+
+            foreach (JToken arrayname in championsTiers)
+            {
+                //label5.Text = (string)jObject.SelectToken("all.1[{0}]");
+                //string champName = Properties.Resources.ResourceManager.GetString("rabadons_deathcap");
+
+                ResourceManager rm = new ResourceManager(
+                "TFT_Overlay.Properties.Resources",
+                Assembly.GetExecutingAssembly());
+
+
+
+                string champName = (string)jObject.SelectToken("all."+ TierIndex + "[" + champIndex.ToString() + "]");
+
+                var picture = new PictureBox
+                {
+                    Name = "pictureBox",
+                    Size = new Size(36, 36),
+                    Location = new Point(100, 100),
+                    BackgroundImage = (Image)(rm.GetObject(champName)),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+
+                };
+                flowLayoutPanel1.Controls.Add(picture);
+                champIndex++;
+            }
+
+        }
+
+
+
         // LVL UP BUTTON
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
@@ -986,6 +1054,32 @@ namespace TFT_Overlay
         private void LoseLab_TextChanged(object sender, EventArgs e)
         {
             CalculateWR();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            Image testImg = Properties.Resources.rabadons_deathcap;
+            var picture = new PictureBox
+            {
+                Name = "pictureBox",
+                Size = new Size(32, 32),
+                Location = new Point(100, 100),
+                BackgroundImage = testImg,
+                BackgroundImageLayout = ImageLayout.Stretch,
+
+            };
+            flowLayoutPanel1.Controls.Add(picture);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            GetTierList(TierListBox.SelectedIndex + 1);
         }
     }
 }
