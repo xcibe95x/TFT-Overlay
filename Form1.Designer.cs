@@ -63,7 +63,6 @@
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.T1T = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@
             this.T1S = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TierListTab = new MetroFramework.Controls.MetroTabPage();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TierListBox = new MetroFramework.Controls.MetroComboBox();
@@ -97,7 +97,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -459,7 +459,7 @@
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -495,7 +495,7 @@
             // htmlItemdescription
             // 
             this.htmlItemdescription.AutoScroll = true;
-            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 10);
+            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
             this.htmlItemdescription.AutoSize = false;
             this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -594,18 +594,6 @@
             this.ProbTab.VerticalScrollbarBarColor = true;
             this.ProbTab.VerticalScrollbarHighlightOnWheel = false;
             this.ProbTab.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.metroLabel1.Location = new System.Drawing.Point(212, 80);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(97, 19);
-            this.metroLabel1.TabIndex = 44;
-            this.metroLabel1.Text = "Valid till: Jun 20";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
             // 
             // metroButton2
             // 
@@ -862,6 +850,28 @@
             this.TierListTab.VerticalScrollbarHighlightOnWheel = false;
             this.TierListTab.VerticalScrollbarSize = 10;
             // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.metroComboBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "All",
+            "Early",
+            "Mid",
+            "Late"});
+            this.metroComboBox1.Location = new System.Drawing.Point(211, 9);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "All";
+            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroComboBox1.TabIndex = 7;
+            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox1.UseCustomBackColor = true;
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
+            // 
             // metroPanel4
             // 
             this.metroPanel4.AutoScroll = true;
@@ -1041,27 +1051,17 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
-            // metroComboBox1
+            // metroLabel1
             // 
-            this.metroComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.metroComboBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "All",
-            "Early",
-            "Mid",
-            "Late"});
-            this.metroComboBox1.Location = new System.Drawing.Point(211, 9);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.PromptText = "All";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroComboBox1.TabIndex = 7;
-            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox1.UseCustomBackColor = true;
-            this.metroComboBox1.UseSelectable = true;
-            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.metroLabel1.Location = new System.Drawing.Point(216, 80);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel1.TabIndex = 44;
+            this.metroLabel1.Text = "Updated: Jun 20";
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // TFTCrafter
             // 
@@ -1158,7 +1158,6 @@
         private System.Windows.Forms.Label label3;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Drawing.Html.HtmlLabel htmlItemdescription;
         private MetroFramework.Controls.MetroButton AddWinBtn;
         private MetroFramework.Controls.MetroButton AddLoseBtn;
@@ -1170,6 +1169,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private System.Windows.Forms.Label label5;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
 
