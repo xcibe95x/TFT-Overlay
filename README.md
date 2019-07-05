@@ -17,6 +17,8 @@
     - New Graphics
     - Quality of Life improvements to Crafting
     - Now gets items info from JSON Data
+	- Fixed a bug with Probabilities
+	. Notify when a new release is up
 
 - **1.1**
   - Changelog  

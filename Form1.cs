@@ -15,7 +15,8 @@ namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
-
+        public string Ver = "1.1";
+        
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         public string Item1;
@@ -24,7 +25,7 @@ namespace TFT_Overlay
         public string rTier;
         public string rDesc;
         public Point OMLoc;
-        int Levels = 1;
+        public int Levels = 1;
 
 
 
@@ -52,11 +53,21 @@ namespace TFT_Overlay
         private void Form1_Load(object sender, EventArgs e)
 
         {
+            Title.Text = "TFT Overlay - " + Ver + " | by @xcibe95x";
+
+            // Check for new Release
+            WebClient client = new WebClient();
+            string NVer = client.DownloadString("https://github.com/xcibe95x/TFT-Overlay/VERSION.md");
+
+            if (int.Parse(NVer) > int.Parse(Ver))
+            {
+                MessageBox.Show("Version: " + int.Parse(NVer) + "is now available on GitHub", "GitHub.com");
+            }
 
             // GET JSON DATA
-            using (var webClient = new WebClient())
+            using (var webClient2 = new WebClient())
             {
-                string itemsJSON = webClient.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
+                string itemsJSON = webClient2.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
                 JObject jObject = JObject.Parse(itemsJSON);
 
                // string displayName = (string)jObject.SelectToken("displayName");
@@ -79,7 +90,8 @@ namespace TFT_Overlay
             StartPosition = FormStartPosition.Manual;
             Location = new Point(20, 60);
 
-            TopMost = true;
+            TopMost = Properties.Settings.Default.TopMost;
+            alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.TopMost;
 
 
             // WINRATE LABELS
@@ -916,6 +928,20 @@ namespace TFT_Overlay
 
 
 
+        }
+
+        private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (TopMost == true)
+            {
+                Properties.Settings.Default.TopMost = false;
+                TopMost = false;
+                Properties.Settings.Default.Save();
+            } else {
+                Properties.Settings.Default.TopMost = true;
+                TopMost = true;
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }
