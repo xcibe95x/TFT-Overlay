@@ -292,9 +292,8 @@
             this.ItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ItemName.Location = new System.Drawing.Point(2, 148);
             this.ItemName.Name = "ItemName";
-            this.ItemName.Size = new System.Drawing.Size(25, 13);
+            this.ItemName.Size = new System.Drawing.Size(0, 13);
             this.ItemName.TabIndex = 17;
-            this.ItemName.Text = "222";
             // 
             // panel2
             // 
@@ -455,8 +454,8 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.CraftingTab);
-            this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.ProbTab);
+            this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -496,7 +495,7 @@
             // htmlItemdescription
             // 
             this.htmlItemdescription.AutoScroll = true;
-            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(30, 23);
+            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 10);
             this.htmlItemdescription.AutoSize = false;
             this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -504,7 +503,6 @@
             this.htmlItemdescription.Name = "htmlItemdescription";
             this.htmlItemdescription.Size = new System.Drawing.Size(332, 29);
             this.htmlItemdescription.TabIndex = 19;
-            this.htmlItemdescription.Text = "<div style=\"font-size: 8px; color: red;\">asdj";
             // 
             // metroPanel2
             // 
@@ -589,7 +587,7 @@
             this.ProbTab.HorizontalScrollbarSize = 10;
             this.ProbTab.Location = new System.Drawing.Point(4, 38);
             this.ProbTab.Name = "ProbTab";
-            this.ProbTab.Size = new System.Drawing.Size(332, 181);
+            this.ProbTab.Size = new System.Drawing.Size(332, 184);
             this.ProbTab.TabIndex = 2;
             this.ProbTab.Text = "Probabilities";
             this.ProbTab.UseCustomBackColor = true;
@@ -856,7 +854,7 @@
             this.TierListTab.HorizontalScrollbarSize = 10;
             this.TierListTab.Location = new System.Drawing.Point(4, 38);
             this.TierListTab.Name = "TierListTab";
-            this.TierListTab.Size = new System.Drawing.Size(332, 181);
+            this.TierListTab.Size = new System.Drawing.Size(332, 184);
             this.TierListTab.TabIndex = 3;
             this.TierListTab.Text = "Tier List";
             this.TierListTab.UseCustomBackColor = true;
@@ -929,7 +927,7 @@
             this.WinRateTab.HorizontalScrollbarSize = 10;
             this.WinRateTab.Location = new System.Drawing.Point(4, 38);
             this.WinRateTab.Name = "WinRateTab";
-            this.WinRateTab.Size = new System.Drawing.Size(332, 181);
+            this.WinRateTab.Size = new System.Drawing.Size(332, 184);
             this.WinRateTab.TabIndex = 1;
             this.WinRateTab.Text = "Win Rate";
             this.WinRateTab.UseCustomBackColor = true;
