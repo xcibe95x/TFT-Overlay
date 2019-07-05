@@ -845,10 +845,7 @@ namespace TFT_Overlay
             }
         }
 
-        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+ 
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -1056,25 +1053,6 @@ namespace TFT_Overlay
             CalculateWR();
         }
 
-        private void button17_Click(object sender, EventArgs e)
-        {
-            Image testImg = Properties.Resources.rabadons_deathcap;
-            var picture = new PictureBox
-            {
-                Name = "pictureBox",
-                Size = new Size(32, 32),
-                Location = new Point(100, 100),
-                BackgroundImage = testImg,
-                BackgroundImageLayout = ImageLayout.Stretch,
-
-            };
-            flowLayoutPanel1.Controls.Add(picture);
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
