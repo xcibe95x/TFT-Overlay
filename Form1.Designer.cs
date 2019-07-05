@@ -97,6 +97,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -287,12 +288,13 @@
             // ItemName
             // 
             this.ItemName.AutoSize = true;
-            this.ItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ItemName.Location = new System.Drawing.Point(2, 150);
+            this.ItemName.Location = new System.Drawing.Point(2, 148);
             this.ItemName.Name = "ItemName";
-            this.ItemName.Size = new System.Drawing.Size(0, 15);
+            this.ItemName.Size = new System.Drawing.Size(25, 13);
             this.ItemName.TabIndex = 17;
+            this.ItemName.Text = "222";
             // 
             // panel2
             // 
@@ -458,8 +460,8 @@
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
-            this.metroTabControl1.Size = new System.Drawing.Size(340, 223);
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -483,7 +485,7 @@
             this.CraftingTab.HorizontalScrollbarSize = 10;
             this.CraftingTab.Location = new System.Drawing.Point(4, 38);
             this.CraftingTab.Name = "CraftingTab";
-            this.CraftingTab.Size = new System.Drawing.Size(332, 181);
+            this.CraftingTab.Size = new System.Drawing.Size(332, 184);
             this.CraftingTab.TabIndex = 0;
             this.CraftingTab.Text = "Crafting";
             this.CraftingTab.UseCustomBackColor = true;
@@ -494,14 +496,15 @@
             // htmlItemdescription
             // 
             this.htmlItemdescription.AutoScroll = true;
-            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
+            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(30, 23);
             this.htmlItemdescription.AutoSize = false;
             this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlItemdescription.Location = new System.Drawing.Point(0, 161);
+            this.htmlItemdescription.Location = new System.Drawing.Point(0, 162);
             this.htmlItemdescription.Name = "htmlItemdescription";
-            this.htmlItemdescription.Size = new System.Drawing.Size(332, 22);
+            this.htmlItemdescription.Size = new System.Drawing.Size(332, 29);
             this.htmlItemdescription.TabIndex = 19;
+            this.htmlItemdescription.Text = "<div style=\"font-size: 8px; color: red;\">asdj";
             // 
             // metroPanel2
             // 
@@ -845,6 +848,7 @@
             // TierListTab
             // 
             this.TierListTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.TierListTab.Controls.Add(this.metroComboBox1);
             this.TierListTab.Controls.Add(this.metroPanel4);
             this.TierListTab.Controls.Add(this.TierListBox);
             this.TierListTab.HorizontalScrollbarBarColor = true;
@@ -1039,12 +1043,34 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.metroComboBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "All",
+            "Early",
+            "Mid",
+            "Late"});
+            this.metroComboBox1.Location = new System.Drawing.Point(211, 9);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "All";
+            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroComboBox1.TabIndex = 7;
+            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox1.UseCustomBackColor = true;
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(339, 245);
+            this.ClientSize = new System.Drawing.Size(339, 247);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1145,6 +1171,7 @@
         private MetroFramework.Controls.MetroComboBox TierListBox;
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private System.Windows.Forms.Label label5;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
     }
 }
 

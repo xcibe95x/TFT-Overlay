@@ -32,6 +32,9 @@ namespace TFT_Overlay
         public string itemsJSON;
         public string tiersJSON;
 
+        int TierIndex = 1;
+        string TierType = "all";
+
 
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -85,6 +88,7 @@ namespace TFT_Overlay
         {
             Title.Text = "TFT Overlay - " + Ver + " | by @xcibe95x";
 
+
             Process[] pname = Process.GetProcessesByName("LeagueClient");
             if (pname.Length == 0)
             {
@@ -116,8 +120,10 @@ namespace TFT_Overlay
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
 
 
-            // EXECUTE TIER LIST
-            GetTierList(0 + 1);
+            // FIX TIER LIST
+            metroComboBox1.SelectedIndex = 0;
+            TierListBox.SelectedIndex = 0;
+
 
             // Useful codes for JSON
 
@@ -857,22 +863,18 @@ namespace TFT_Overlay
 
         }
 
-
-
-        private void GetTierList(int TierIndex)
+        private void GetTierList(int TierIndex, string TierType)
         {
 
             // FILL TIER LIST
 
             JObject jObject = JObject.Parse(tiersJSON);
 
-            JArray championsTiers = (JArray)jObject.SelectToken("all." + TierIndex);
+            JArray championsTiers = (JArray)jObject.SelectToken(TierType + "." + TierIndex);
             int champIndex = 0;
 
             foreach (JToken arrayname in championsTiers)
             {
-                //label5.Text = (string)jObject.SelectToken("all.1[{0}]");
-                //string champName = Properties.Resources.ResourceManager.GetString("rabadons_deathcap");
 
                 ResourceManager rm = new ResourceManager(
                 "TFT_Overlay.Properties.Resources",
@@ -880,7 +882,7 @@ namespace TFT_Overlay
 
 
 
-                string champName = (string)jObject.SelectToken("all."+ TierIndex + "[" + champIndex.ToString() + "]");
+                string champName = (string)jObject.SelectToken(TierType + "."+ TierIndex + "[" + champIndex.ToString() + "]");
 
                 var picture = new PictureBox
                 {
@@ -1057,7 +1059,16 @@ namespace TFT_Overlay
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-            GetTierList(TierListBox.SelectedIndex + 1);
+            TierIndex = TierListBox.SelectedIndex + 1;
+            GetTierList(TierIndex, TierType);
+
+        }
+
+        private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            TierType = metroComboBox1.SelectedItem.ToString().ToLower();
+            GetTierList(TierIndex, TierType);
         }
     }
 }
