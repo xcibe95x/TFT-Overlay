@@ -259,4 +259,19 @@
   <data name="Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Normal.cur;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MetroFramework" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\MetroFramework.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MetroFramework_Design" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\MetroFramework.Design.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MetroFramework_Fonts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\MetroFramework.Fonts.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Newtonsoft_Json" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Newtonsoft.Json.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Newtonsoft_Json1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Newtonsoft.Json.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>

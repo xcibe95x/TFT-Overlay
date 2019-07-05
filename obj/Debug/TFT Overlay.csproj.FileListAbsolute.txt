@@ -18,3 +18,7 @@ C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT
 C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.csproj.CoreCompileInputs.cache
 C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.exe
 C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.pdb
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Debug\MetroFramework.Design.dll
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Debug\MetroFramework.dll
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Debug\TFT Overlay.csproj.CopyComplete

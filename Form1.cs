@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -30,7 +33,8 @@ namespace TFT_Overlay
             InitializeComponent();
         }
 
-        private void CalculateWR() {
+        private void CalculateWR()
+        {
             //Properties.Settings.Default.Reload();
             float TotalGames = Properties.Settings.Default.WINS + Properties.Settings.Default.DEFEAT;
             float FinalWinRate = Properties.Settings.Default.WINS / TotalGames * 100;
@@ -41,8 +45,30 @@ namespace TFT_Overlay
 
         {
 
+            using (var webClient = new WebClient())
+            {
+                string rawJSON = webClient.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
+                //string jsonString = "{\"displayName\":\"Alex Wu\",\"signInNames\":[{\"type\":\"emailAddress\",\"value\":\"AlexW@example.com\"},{\"type\":\"emailAddress\",\"value\":\"AlexW2@example.com\"}]}";
+                JObject jObject = JObject.Parse(rawJSON);
+               // string displayName = (string)jObject.SelectToken("displayName");
+               // string type = (string)jObject.SelectToken("signInNames[0].type");
+                string bfsword = (string)jObject.SelectToken("recurvebow.name");
+              //  string value = (string)jObject.SelectToken("signInNames[0].value");
+               // Console.WriteLine("{0}, {1}, {2}", displayName, type, value);
+               // JArray signInNames = (JArray)jObject.SelectToken("signInNames");
+               // foreach (JToken signInName in signInNames)
+                //{
+                  //  type = (string)signInName.SelectToken("type");
+                   // value = (string)signInName.SelectToken("value");
+                    //Console.WriteLine("{0}, {1}", type, value);
+                //}
+                
+                Console.WriteLine(jObject);
+                Console.WriteLine("Done.");
+                Console.ReadLine();
+            }
 
-            StartPosition = FormStartPosition.Manual;
+                StartPosition = FormStartPosition.Manual;
             Location = new Point(20, 60);
             TopMost = true;
 
@@ -66,7 +92,7 @@ namespace TFT_Overlay
         private void DoCheck()
         {
             CrafterWorker();
-            
+
         }
 
         private void CrafterWorker()
@@ -476,100 +502,230 @@ namespace TFT_Overlay
         }
 
 
-
+        // ITEMS SET 1
         private void button2_Click(object sender, EventArgs e)
         {
             Item1 = "BF";
+            button2.ForeColor = Color.FromArgb(205, 61, 18);
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Item1 = "Vest";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.FromArgb(205, 61, 18);
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
             Item1 = "Belt";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.FromArgb(205, 61, 18);
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Item1 = "Rod";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.FromArgb(205, 61, 18);
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Item1 = "Cape";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.FromArgb(205, 61, 18);
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Item1 = "Bow";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.FromArgb(205, 61, 18);
+            button8.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             Item1 = "Tear";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.FromArgb(205, 61, 18);
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             Item1 = "Spatula";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.FromArgb(205, 61, 18);
             DoCheck();
         }
 
+
+        // ITEMS SET 2
         private void button1_Click(object sender, EventArgs e)
         {
             Item2 = "BF";
+            button1.ForeColor = Color.FromArgb(205, 61, 18);
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             Item2 = "Vest";
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.FromArgb(205, 61, 18);
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             Item2 = "Belt";
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.FromArgb(205, 61, 18);
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             Item2 = "Rod";
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.FromArgb(205, 61, 18);
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             Item2 = "Cape";
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.FromArgb(205, 61, 18);
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             Item2 = "Bow";
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.FromArgb(205, 61, 18);
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             Item2 = "Tear";
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.FromArgb(205, 61, 18);
+            button16.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
             Item2 = "Spatula";
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.FromArgb(205, 61, 18);
             DoCheck();
         }
 
@@ -587,7 +743,7 @@ namespace TFT_Overlay
             Properties.Settings.Default.DEFEAT++;
             LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
             Properties.Settings.Default.Save();
-         
+
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -623,10 +779,6 @@ namespace TFT_Overlay
             ItemDescription.Text = rDesc;
         }
 
-        private void button18_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         int Levels = 2;
 
@@ -715,6 +867,22 @@ namespace TFT_Overlay
         {
             Levels = 1;
         }
-    }
 
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Exit Application
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void metroPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

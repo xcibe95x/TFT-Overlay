@@ -1,0 +1,12 @@
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Release\TFT Overlay.exe.config
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Release\TFT Overlay.exe
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Release\TFT Overlay.pdb
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.csprojAssemblyReference.cache
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT_Overlay.TFTCrafter.resources
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT_Overlay.Properties.Resources.resources
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.csproj.GenerateResource.cache
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.csproj.CoreCompileInputs.cache
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.csproj.CopyComplete
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.exe
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.pdb
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Release\Newtonsoft.Json.xml
