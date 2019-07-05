@@ -825,13 +825,6 @@ namespace TFT_Overlay
 
         }
 
-
-        // Exit Application
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void metroPanel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -1069,6 +1062,11 @@ namespace TFT_Overlay
             flowLayoutPanel1.Controls.Clear();
             TierType = metroComboBox1.SelectedItem.ToString().ToLower();
             GetTierList(TierIndex, TierType);
+        }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

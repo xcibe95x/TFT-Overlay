@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.label5 = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -63,6 +63,7 @@
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.T1T = new System.Windows.Forms.Label();
@@ -97,7 +98,6 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -117,6 +117,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(61)))), ((int)(((byte)(18)))));
             this.panel1.ContextMenuStrip = this.metroContextMenu1;
+            this.panel1.Controls.Add(this.metroButton4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.Title);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
@@ -128,10 +129,9 @@
             // metroContextMenu1
             // 
             this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alwaysOnTopToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.alwaysOnTopToolStripMenuItem});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(152, 48);
+            this.metroContextMenu1.Size = new System.Drawing.Size(152, 26);
             // 
             // alwaysOnTopToolStripMenuItem
             // 
@@ -143,12 +143,20 @@
             this.alwaysOnTopToolStripMenuItem.Text = "Always on Top";
             this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_Click);
             // 
-            // exitToolStripMenuItem
+            // metroButton4
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.metroButton4.BackColor = System.Drawing.Color.Transparent;
+            this.metroButton4.ForeColor = System.Drawing.Color.Red;
+            this.metroButton4.Location = new System.Drawing.Point(312, 5);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(20, 18);
+            this.metroButton4.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroButton4.TabIndex = 2;
+            this.metroButton4.Text = "X";
+            this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton4.UseCustomBackColor = true;
+            this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             // 
             // label5
             // 
@@ -459,7 +467,7 @@
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -594,6 +602,18 @@
             this.ProbTab.VerticalScrollbarHighlightOnWheel = false;
             this.ProbTab.VerticalScrollbarSize = 10;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.metroLabel1.Location = new System.Drawing.Point(216, 80);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel1.TabIndex = 44;
+            this.metroLabel1.Text = "Updated: Jun 20";
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
+            // 
             // metroButton2
             // 
             this.metroButton2.Location = new System.Drawing.Point(269, 40);
@@ -625,44 +645,44 @@
             this.T1T.AutoSize = true;
             this.T1T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1T.ForeColor = System.Drawing.Color.SlateGray;
-            this.T1T.Location = new System.Drawing.Point(17, 58);
+            this.T1T.Location = new System.Drawing.Point(13, 58);
             this.T1T.Name = "T1T";
-            this.T1T.Size = new System.Drawing.Size(44, 15);
+            this.T1T.Size = new System.Drawing.Size(56, 15);
             this.T1T.TabIndex = 22;
-            this.T1T.Text = "Tier 1";
+            this.T1T.Text = "Rarity 1";
             // 
             // T2T
             // 
             this.T2T.AutoSize = true;
             this.T2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2T.ForeColor = System.Drawing.Color.LawnGreen;
-            this.T2T.Location = new System.Drawing.Point(17, 80);
+            this.T2T.Location = new System.Drawing.Point(13, 80);
             this.T2T.Name = "T2T";
-            this.T2T.Size = new System.Drawing.Size(44, 15);
+            this.T2T.Size = new System.Drawing.Size(56, 15);
             this.T2T.TabIndex = 23;
-            this.T2T.Text = "Tier 2";
+            this.T2T.Text = "Rarity 2";
             // 
             // T3T
             // 
             this.T3T.AutoSize = true;
             this.T3T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3T.ForeColor = System.Drawing.Color.Aqua;
-            this.T3T.Location = new System.Drawing.Point(17, 103);
+            this.T3T.Location = new System.Drawing.Point(13, 103);
             this.T3T.Name = "T3T";
-            this.T3T.Size = new System.Drawing.Size(44, 15);
+            this.T3T.Size = new System.Drawing.Size(56, 15);
             this.T3T.TabIndex = 24;
-            this.T3T.Text = "Tier 3";
+            this.T3T.Text = "Rarity 3";
             // 
             // T4T
             // 
             this.T4T.AutoSize = true;
             this.T4T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4T.ForeColor = System.Drawing.Color.DarkViolet;
-            this.T4T.Location = new System.Drawing.Point(17, 126);
+            this.T4T.Location = new System.Drawing.Point(13, 126);
             this.T4T.Name = "T4T";
-            this.T4T.Size = new System.Drawing.Size(44, 15);
+            this.T4T.Size = new System.Drawing.Size(56, 15);
             this.T4T.TabIndex = 25;
-            this.T4T.Text = "Tier 4";
+            this.T4T.Text = "Rarity 4";
             this.T4T.Click += new System.EventHandler(this.T4T_Click);
             // 
             // label4
@@ -681,11 +701,11 @@
             this.T5T.AutoSize = true;
             this.T5T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5T.ForeColor = System.Drawing.Color.Orange;
-            this.T5T.Location = new System.Drawing.Point(17, 150);
+            this.T5T.Location = new System.Drawing.Point(13, 150);
             this.T5T.Name = "T5T";
-            this.T5T.Size = new System.Drawing.Size(44, 15);
+            this.T5T.Size = new System.Drawing.Size(56, 15);
             this.T5T.TabIndex = 26;
-            this.T5T.Text = "Tier 5";
+            this.T5T.Text = "Rarity 5";
             // 
             // T1P
             // 
@@ -824,7 +844,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(17, 14);
+            this.label3.Location = new System.Drawing.Point(10, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(207, 17);
             this.label3.TabIndex = 21;
@@ -860,10 +880,10 @@
             "Early",
             "Mid",
             "Late"});
-            this.metroComboBox1.Location = new System.Drawing.Point(211, 9);
+            this.metroComboBox1.Location = new System.Drawing.Point(134, 9);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.PromptText = "All";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBox1.Size = new System.Drawing.Size(88, 29);
             this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroComboBox1.TabIndex = 7;
             this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -1050,18 +1070,6 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.metroLabel1.Location = new System.Drawing.Point(216, 80);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(104, 19);
-            this.metroLabel1.TabIndex = 44;
-            this.metroLabel1.Text = "Updated: Jun 20";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1125,7 +1133,6 @@
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Label ItemName;
         private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage CraftingTab;
@@ -1169,6 +1176,7 @@
         private System.Windows.Forms.Label label5;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroButton metroButton4;
     }
 }
 
