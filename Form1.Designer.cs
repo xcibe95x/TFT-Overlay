@@ -109,7 +109,7 @@
             this.panel1.Controls.Add(this.Title);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(421, 27);
+            this.panel1.Size = new System.Drawing.Size(363, 27);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
@@ -446,7 +446,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(364, 223);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -674,6 +674,7 @@
             this.button20.TabIndex = 40;
             this.button20.Text = "Reset";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click_1);
             // 
             // SizesPool
             // 
@@ -760,6 +761,7 @@
             this.button19.TabIndex = 32;
             this.button19.Text = "Level Up";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click_1);
             // 
             // T5S
             // 

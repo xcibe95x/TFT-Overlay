@@ -9,6 +9,8 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+
+
 namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
@@ -22,6 +24,9 @@ namespace TFT_Overlay
         public string rTier;
         public string rDesc;
         public Point OMLoc;
+        int Levels = 1;
+
+
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -33,26 +38,30 @@ namespace TFT_Overlay
             InitializeComponent();
         }
 
+
+        // WINRATE CALCULATOR
         private void CalculateWR()
         {
-            //Properties.Settings.Default.Reload();
             float TotalGames = Properties.Settings.Default.WINS + Properties.Settings.Default.DEFEAT;
             float FinalWinRate = Properties.Settings.Default.WINS / TotalGames * 100;
             WinRate.Text = FinalWinRate.ToString("0.0") + "%";
         }
 
+
+        // FORM LOAD
         private void Form1_Load(object sender, EventArgs e)
 
         {
 
+            // GET JSON DATA
             using (var webClient = new WebClient())
             {
-                string rawJSON = webClient.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
-                //string jsonString = "{\"displayName\":\"Alex Wu\",\"signInNames\":[{\"type\":\"emailAddress\",\"value\":\"AlexW@example.com\"},{\"type\":\"emailAddress\",\"value\":\"AlexW2@example.com\"}]}";
-                JObject jObject = JObject.Parse(rawJSON);
+                string itemsJSON = webClient.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
+                JObject jObject = JObject.Parse(itemsJSON);
+
                // string displayName = (string)jObject.SelectToken("displayName");
                // string type = (string)jObject.SelectToken("signInNames[0].type");
-                string bfsword = (string)jObject.SelectToken("recurvebow.name");
+                //string bfsword = (string)jObject.SelectToken("recurvebow.name");
               //  string value = (string)jObject.SelectToken("signInNames[0].value");
                // Console.WriteLine("{0}, {1}, {2}", displayName, type, value);
                // JArray signInNames = (JArray)jObject.SelectToken("signInNames");
@@ -62,19 +71,22 @@ namespace TFT_Overlay
                    // value = (string)signInName.SelectToken("value");
                     //Console.WriteLine("{0}, {1}", type, value);
                 //}
-                
-                Console.WriteLine(jObject);
-                Console.WriteLine("Done.");
-                Console.ReadLine();
+               
             }
 
-                StartPosition = FormStartPosition.Manual;
+
+            // WINDOW STARTING POSITION
+            StartPosition = FormStartPosition.Manual;
             Location = new Point(20, 60);
+
             TopMost = true;
 
+
+            // WINRATE LABELS
             WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
             LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
 
+            // CALL WINRATE CALCULATOR
             CalculateWR();
 
         }
@@ -780,94 +792,6 @@ namespace TFT_Overlay
         }
 
 
-        int Levels = 2;
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-
-            Lvl.Text = "Level " + Levels;
-
-            if (Levels < 9)
-            {
-                Levels++;
-            }
-
-            switch (Levels)
-            {
-                case 1:
-                    T1P.Text = "100%";
-                    T2P.Text = "0%";
-                    T3P.Text = "0%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
-                    break;
-                case 2:
-                    T1P.Text = "100%";
-                    T2P.Text = "0%";
-                    T3P.Text = "0%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
-                    break;
-                case 3:
-                    T1P.Text = "70%";
-                    T2P.Text = "30%";
-                    T3P.Text = "0%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
-                    break;
-                case 4:
-                    T1P.Text = "55%";
-                    T2P.Text = "30%";
-                    T3P.Text = "15%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
-                    break;
-                case 5:
-                    T1P.Text = "40%";
-                    T2P.Text = "30%";
-                    T3P.Text = "25%";
-                    T4P.Text = "5%";
-                    T5P.Text = "0%";
-                    break;
-                case 6:
-                    T1P.Text = "29%";
-                    T2P.Text = "29.5%";
-                    T3P.Text = "31%";
-                    T4P.Text = "10%";
-                    T5P.Text = "0.5%";
-                    break;
-                case 7:
-                    T1P.Text = "24%";
-                    T2P.Text = "28%";
-                    T3P.Text = "31%";
-                    T4P.Text = "15%";
-                    T5P.Text = "2%";
-                    break;
-                case 8:
-                    T1P.Text = "20%";
-                    T2P.Text = "24%";
-                    T3P.Text = "31%";
-                    T4P.Text = "20%";
-                    T5P.Text = "5%";
-                    break;
-                case 9:
-                    T1P.Text = "10%";
-                    T2P.Text = "19%";
-                    T3P.Text = "31%";
-                    T4P.Text = "30%";
-                    T5P.Text = "10%";
-                    break;
-            }
-
-
-
-        }
-
-        private void button20_Click(object sender, EventArgs e)
-        {
-            Levels = 1;
-        }
-
         private void metroButton1_Click(object sender, EventArgs e)
         {
 
@@ -882,6 +806,115 @@ namespace TFT_Overlay
 
         private void metroPanel2_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button20_Click_1(object sender, EventArgs e)
+        {
+            Levels = 1;
+            Lvl.Text = "Level " + 1;
+            T1P.Text = "100%";
+            T2P.Text = "0%";
+            T3P.Text = "0%";
+            T4P.Text = "0%";
+            T5P.Text = "0%";
+        }
+
+        private void button19_Click_1(object sender, EventArgs e)
+        {
+
+
+
+            if (Levels < 9)
+            {
+                Levels++;
+            }
+
+            switch (Levels)
+            {
+               default:
+                    Lvl.Text = "Level 1";
+                    T1P.Text = "100%";
+                    T2P.Text = "0%";
+                    T3P.Text = "0%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 1:
+                    Lvl.Text = "Level 1";
+                    T1P.Text = "100%";
+                    T2P.Text = "0%";
+                    T3P.Text = "0%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 2:
+                    Lvl.Text = "Level 2";
+                    T1P.Text = "100%";
+                    T2P.Text = "0%";
+                    T3P.Text = "0%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 3:
+                    Lvl.Text = "Level 3";
+                    T1P.Text = "70%";
+                    T2P.Text = "30%";
+                    T3P.Text = "0%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 4:
+                    Lvl.Text = "Level 4";
+                    T1P.Text = "55%";
+                    T2P.Text = "30%";
+                    T3P.Text = "15%";
+                    T4P.Text = "0%";
+                    T5P.Text = "0%";
+                    break;
+                case 5:
+                    Lvl.Text = "Level 5";
+                    T1P.Text = "40%";
+                    T2P.Text = "30%";
+                    T3P.Text = "25%";
+                    T4P.Text = "5%";
+                    T5P.Text = "0%";
+                    break;
+                case 6:
+                    Lvl.Text = "Level 6";
+                    T1P.Text = "29%";
+                    T2P.Text = "29.5%";
+                    T3P.Text = "31%";
+                    T4P.Text = "10%";
+                    T5P.Text = "0.5%";
+                    break;
+                case 7:
+                    Lvl.Text = "Level 7";
+                    T1P.Text = "24%";
+                    T2P.Text = "28%";
+                    T3P.Text = "31%";
+                    T4P.Text = "15%";
+                    T5P.Text = "2%";
+                    break;
+                case 8:
+                    Lvl.Text = "Level 8";
+                    T1P.Text = "20%";
+                    T2P.Text = "24%";
+                    T3P.Text = "31%";
+                    T4P.Text = "20%";
+                    T5P.Text = "5%";
+                    break;
+                case 9:
+                    Lvl.Text = "Level 9";
+                    T1P.Text = "10%";
+                    T2P.Text = "19%";
+                    T3P.Text = "31%";
+                    T4P.Text = "30%";
+                    T5P.Text = "10%";
+                    break;
+            }
+
+
 
         }
     }
