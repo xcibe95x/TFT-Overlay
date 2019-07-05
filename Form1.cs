@@ -825,20 +825,39 @@ namespace TFT_Overlay
 
         }
 
-        private void button20_Click_1(object sender, EventArgs e)
+        private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Levels = 1;
-            Lvl.Text = "Level " + 1;
-            T1P.Text = "100%";
-            T2P.Text = "0%";
-            T3P.Text = "0%";
-            T4P.Text = "0%";
-            T5P.Text = "0%";
+            if (TopMost == true)
+            {
+                Properties.Settings.Default.TopMost = false;
+                TopMost = false;
+                Properties.Settings.Default.Save();
+            } else {
+                Properties.Settings.Default.TopMost = true;
+                TopMost = true;
+                Properties.Settings.Default.Save();
+            }
         }
 
-        private void button19_Click_1(object sender, EventArgs e)
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void T4T_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // LVL UP BUTTON
+        private void metroButton1_Click_1(object sender, EventArgs e)
+        {
 
 
             if (Levels < 9)
@@ -848,7 +867,7 @@ namespace TFT_Overlay
 
             switch (Levels)
             {
-               default:
+                default:
                     Lvl.Text = "Level 1";
                     T1P.Text = "100%";
                     T2P.Text = "0%";
@@ -929,23 +948,19 @@ namespace TFT_Overlay
                     T5P.Text = "10%";
                     break;
             }
-
-
-
         }
 
-        private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+
+        // RESET LEVEL BUTTON
+        private void metroButton2_Click(object sender, EventArgs e)
         {
-            if (TopMost == true)
-            {
-                Properties.Settings.Default.TopMost = false;
-                TopMost = false;
-                Properties.Settings.Default.Save();
-            } else {
-                Properties.Settings.Default.TopMost = true;
-                TopMost = true;
-                Properties.Settings.Default.Save();
-            }
+            Levels = 1;
+            Lvl.Text = "Level " + 1;
+            T1P.Text = "100%";
+            T2P.Text = "0%";
+            T3P.Text = "0%";
+            T4P.Text = "0%";
+            T5P.Text = "0%";
         }
     }
 }
