@@ -48,7 +48,14 @@ namespace TFT_Overlay
         {
             float TotalGames = Properties.Settings.Default.WINS + Properties.Settings.Default.DEFEAT;
             float FinalWinRate = Properties.Settings.Default.WINS / TotalGames * 100;
-            WinRate.Text = FinalWinRate.ToString("0.0") + "%";
+            if (TotalGames != 0)
+            {
+                WinRate.Text = FinalWinRate.ToString("0.0") + "%";
+            } else
+            {
+                WinRate.Text = "0%";
+            }
+          
         }
 
 
@@ -57,6 +64,7 @@ namespace TFT_Overlay
 
         {
             Title.Text = "TFT Overlay - " + Ver + " | by @xcibe95x";
+
 
             // Check for new Release
             string NVer = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/VERSION.md");
@@ -762,40 +770,6 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-
-        private void AddWinBtn_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.WINS++;
-            WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
-            Properties.Settings.Default.Save();
-
-        }
-
-        private void AddLoseBtn_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.DEFEAT++;
-            LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
-            Properties.Settings.Default.Save();
-
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Reset();
-            WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
-            LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
-        }
-
-        private void WinLab_TextChanged(object sender, EventArgs e)
-        {
-            CalculateWR();
-        }
-
-        private void LoseLab_TextChanged(object sender, EventArgs e)
-        {
-            CalculateWR();
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -971,6 +945,47 @@ namespace TFT_Overlay
         private void metroTabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddWinBtn_Click_1(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.WINS++;
+            WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
+            Properties.Settings.Default.Save();
+        }
+
+        private void AddLoseBtn_Click_1(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.DEFEAT++;
+            LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
+            Properties.Settings.Default.Save();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Reset();
+            WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
+            LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
+        }
+
+        private void WinRate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WinLab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WinLab_TextChanged_1(object sender, EventArgs e)
+        {
+            CalculateWR();
+        }
+
+        private void LoseLab_TextChanged(object sender, EventArgs e)
+        {
+            CalculateWR();
         }
     }
 }

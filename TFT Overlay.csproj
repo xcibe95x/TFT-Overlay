@@ -261,6 +261,7 @@
     <Content Include="Images\Rounds\minion.png" />
     <Content Include="Images\Rounds\raptors.png" />
     <Content Include="Images\Rounds\wolves.png" />
+    <None Include="Resources\circle.png" />
     <Content Include="Teamfight_Tactics_2019_hover_icon.ico" />
     <None Include="Resources\Normal.cur" />
     <None Include="Resources\Click.cur" />
