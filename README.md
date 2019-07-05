@@ -1,8 +1,8 @@
 # TFT Overlay by Cibe (Youtube: https://youtube.com/xcibe95x)  
    
-`Working on 2.1 adding new features.`
+`Going to release 2.1 since it has some more fixes and add more features in 2.2`
 
-![Image](https://i.redd.it/j08wq7ei0h831.png)
+![Image](https://i.redd.it/vyhdcp8m2k831.png)
 
 ## Informations
 - Set your Game to be Borderless or Windowed!
