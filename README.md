@@ -28,7 +28,7 @@ https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || htt
 ## Version Changelogs
 - **2.2**
   - Changelog  
-    - Hotfix
+    - A new hotfix is in progress.
 
 - **2.1.1**
   - Changelog  
