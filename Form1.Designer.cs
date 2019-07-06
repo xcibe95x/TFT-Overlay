@@ -486,6 +486,9 @@
             this.metroTabControl1.Controls.Add(this.ProbTab);
             this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.WinRateTab);
+            this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Small;
+            this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
+            this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
@@ -511,9 +514,9 @@
             this.CraftingTab.HorizontalScrollbarBarColor = true;
             this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
             this.CraftingTab.HorizontalScrollbarSize = 10;
-            this.CraftingTab.Location = new System.Drawing.Point(4, 38);
+            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
             this.CraftingTab.Name = "CraftingTab";
-            this.CraftingTab.Size = new System.Drawing.Size(332, 184);
+            this.CraftingTab.Size = new System.Drawing.Size(332, 188);
             this.CraftingTab.TabIndex = 0;
             this.CraftingTab.Text = "Crafting";
             this.CraftingTab.UseCustomBackColor = true;
@@ -615,9 +618,9 @@
             this.ProbTab.HorizontalScrollbarBarColor = true;
             this.ProbTab.HorizontalScrollbarHighlightOnWheel = false;
             this.ProbTab.HorizontalScrollbarSize = 10;
-            this.ProbTab.Location = new System.Drawing.Point(4, 38);
+            this.ProbTab.Location = new System.Drawing.Point(4, 34);
             this.ProbTab.Name = "ProbTab";
-            this.ProbTab.Size = new System.Drawing.Size(332, 184);
+            this.ProbTab.Size = new System.Drawing.Size(332, 188);
             this.ProbTab.TabIndex = 2;
             this.ProbTab.Text = "Probabilities";
             this.ProbTab.UseCustomBackColor = true;
@@ -896,9 +899,9 @@
             this.TierListTab.HorizontalScrollbarBarColor = true;
             this.TierListTab.HorizontalScrollbarHighlightOnWheel = false;
             this.TierListTab.HorizontalScrollbarSize = 10;
-            this.TierListTab.Location = new System.Drawing.Point(4, 38);
+            this.TierListTab.Location = new System.Drawing.Point(4, 34);
             this.TierListTab.Name = "TierListTab";
-            this.TierListTab.Size = new System.Drawing.Size(332, 184);
+            this.TierListTab.Size = new System.Drawing.Size(332, 188);
             this.TierListTab.TabIndex = 3;
             this.TierListTab.Text = "Meta Tier";
             this.TierListTab.UseCustomBackColor = true;

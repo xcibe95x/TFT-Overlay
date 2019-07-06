@@ -179,7 +179,7 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Cape" || Item2 == "BF" && Item1 == "Cape")
             {
                 //BT
-                rItem = "Bloodthirster";
+                rItem = (string)jObject.SelectToken("bloodthirster.name");
                 rDesc = (string)jObject.SelectToken("bloodthirster.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.bloodthirster;
@@ -190,7 +190,7 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Vest" || Item2 == "BF" && Item1 == "Vest")
             {
                 //GA
-                rItem = "Guardian Angel";
+                rItem = (string)jObject.SelectToken("guardianangel.name");
                 rDesc = (string)jObject.SelectToken("guardianangel.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guardian_angel;
@@ -201,7 +201,7 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Rod" || Item2 == "BF" && Item1 == "Rod")
             {
                 //HEXGUNBLADE
-                rItem = "Hextech Gunblade";
+                rItem = (string)jObject.SelectToken("hextechgunblade.name");
                 rDesc = (string)jObject.SelectToken("hextechgunblade.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.hextech_gunblade;
@@ -212,7 +212,7 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "BF" || Item2 == "BF" && Item1 == "BF")
             {
                 //IE
-                rItem = "Infinity Edge";
+                rItem = (string)jObject.SelectToken("infinityedge.name");
                 rDesc = (string)jObject.SelectToken("infinityedge.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.infinity_edge;
@@ -223,7 +223,7 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Tear" || Item2 == "BF" && Item1 == "Tear")
             {
                 //SPEAR OF SHOJIN
-                rItem = "Spear of Shojin";
+                rItem = (string)jObject.SelectToken("spearofshojin.name");
                 rDesc = (string)jObject.SelectToken("spearofshojin.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.spear_of_shojin;
@@ -234,7 +234,7 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Bow" || Item2 == "BF" && Item1 == "Bow")
             {
                 //SWORD OF DIVINE
-                rItem = "Sword of the Divine";
+                rItem = (string)jObject.SelectToken("swordofthedivine.name");
                 rDesc = (string)jObject.SelectToken("swordofthedivine.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.sword_of_the_divine;
@@ -256,7 +256,7 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Belt" || Item2 == "BF" && Item1 == "Belt")
             {
                 //Zeke
-                rItem = (string)jObject.SelectToken("youmuusghostblade.name");
+                rItem = (string)jObject.SelectToken("zekesherald.name");
                 rDesc = (string)jObject.SelectToken("zekesherald.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.zekes_herald;
@@ -300,8 +300,8 @@ namespace TFT_Overlay
             if (Item1 == "Vest" && Item2 == "Belt" || Item2 == "Vest" && Item1 == "Belt")
             {
                 //Red Buff
-                rItem = (string)jObject.SelectToken("youmuusghostblade.name");
-                rDesc = (string)jObject.SelectToken("youmuusghostblade.bonus");
+                rItem = (string)jObject.SelectToken("redbuff.name");
+                rDesc = (string)jObject.SelectToken("redbuff.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.red_buff;
 
