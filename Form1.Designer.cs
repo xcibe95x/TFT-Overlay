@@ -124,7 +124,7 @@
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(339, 27);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 2;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
             // metroContextMenu1
@@ -147,17 +147,19 @@
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton4.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.metroButton4.ForeColor = System.Drawing.Color.Red;
+            this.metroButton4.ForeColor = System.Drawing.Color.Black;
             this.metroButton4.Location = new System.Drawing.Point(312, 5);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(20, 18);
             this.metroButton4.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroButton4.TabIndex = 2;
+            this.metroButton4.TabIndex = 0;
+            this.metroButton4.TabStop = false;
             this.metroButton4.Text = "X";
             this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton4.UseCustomBackColor = true;
+            this.metroButton4.UseCustomForeColor = true;
             this.metroButton4.UseSelectable = true;
+            this.metroButton4.UseStyleColors = true;
             this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             this.metroButton4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
@@ -176,13 +178,13 @@
             // 
             this.Title.AutoSize = true;
             this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Enabled = false;
-            this.Title.ForeColor = System.Drawing.Color.Azure;
+            this.Title.ForeColor = System.Drawing.Color.Black;
             this.Title.Location = new System.Drawing.Point(3, 6);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(165, 13);
             this.Title.TabIndex = 0;
             this.Title.Text = "TFT Overlay - 2.2 | by @xcibe95x";
+            this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
             // button2
             // 
@@ -988,6 +990,7 @@
             this.WinRateTab.Controls.Add(this.AddWinBtn);
             this.WinRateTab.Controls.Add(this.WinLab);
             this.WinRateTab.Controls.Add(this.LoseLab);
+            this.WinRateTab.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.WinRateTab.HorizontalScrollbarBarColor = true;
             this.WinRateTab.HorizontalScrollbarHighlightOnWheel = false;
             this.WinRateTab.HorizontalScrollbarSize = 10;
