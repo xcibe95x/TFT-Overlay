@@ -17,7 +17,6 @@ namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
-        public string Ver = "2.2";
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -93,25 +92,25 @@ namespace TFT_Overlay
             File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
             File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
 
+            var localVersion = new Version("2.2");
 
             // Program Title
-            Title.Text = "TFT Overlay - " + Ver + " | by @xcibe95x";
+            Title.Text = "TFT Overlay - " + localVersion + " | by @xcibe95x";
 
 
             // Set League Cursor
             Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
-           
+
 
             // Check for new Release
-            string NVer = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/VERSION.md");
+            string Ver = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/VERSION.md");
 
 
-            double iNVer = double.Parse(NVer);
-            double iVer = double.Parse(Ver);
+            var netVersion = new Version(Ver);
 
-            if (iNVer > iVer)
+            if (netVersion > localVersion)
             {
-                if (MessageBox.Show("Version: " + NVer + " is now available on GitHub, Want to get it now?", "GitHub.com", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                if (MessageBox.Show("Version: " + netVersion + " is now available on GitHub, Want to get it now?", "GitHub.com", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start("https://github.com/xcibe95x/TFT-Overlay/releases");
                 }
