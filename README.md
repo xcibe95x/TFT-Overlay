@@ -13,12 +13,16 @@
 - Right click on the title bar to open the menu to quit the applications and other features.
 
 ## Version Changelogs
+- **2.1.1**
+  - Changelog  
+    - Fixed some wrong items names & description from 2.0 (My bad!)
+
 - **2.1**
   - Changelog  
     - Meta Tier List
 	- Small changes based on feedback
     - Fixed some bugs
-	- League Cursor while league client open (May remove it)
+	- League Cursor while league client open
 
 - **2.0**
   - Changelog  

@@ -17,7 +17,7 @@ namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
-        public string Ver = "2.1";
+        public string Ver = "2.1.1";
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
