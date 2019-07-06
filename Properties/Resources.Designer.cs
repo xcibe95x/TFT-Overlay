@@ -241,16 +241,6 @@ namespace TFT_Overlay.Properties {
         }
         
         /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Byte[].
-        /// </summary>
-        internal static byte[] Click {
-            get {
-                object obj = ResourceManager.GetObject("Click", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cursed_blade {
@@ -732,6 +722,16 @@ namespace TFT_Overlay.Properties {
             get {
                 object obj = ResourceManager.GetObject("phantom_dancer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Pointer {
+            get {
+                object obj = ResourceManager.GetObject("Pointer", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

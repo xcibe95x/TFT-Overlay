@@ -63,6 +63,7 @@
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -98,7 +99,6 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -147,6 +147,7 @@
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.Transparent;
+            this.metroButton4.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.metroButton4.ForeColor = System.Drawing.Color.Red;
             this.metroButton4.Location = new System.Drawing.Point(312, 5);
             this.metroButton4.Name = "metroButton4";
@@ -158,12 +159,13 @@
             this.metroButton4.UseCustomBackColor = true;
             this.metroButton4.UseSelectable = true;
             this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
+            this.metroButton4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.MistyRose;
-            this.label5.Location = new System.Drawing.Point(203, 9);
+            this.label5.Location = new System.Drawing.Point(229, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 1;
@@ -195,6 +197,7 @@
             this.button2.TabIndex = 8;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button3
             // 
@@ -209,6 +212,7 @@
             this.button3.TabIndex = 9;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button4
             // 
@@ -223,6 +227,7 @@
             this.button4.TabIndex = 10;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
+            this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button5
             // 
@@ -237,6 +242,7 @@
             this.button5.TabIndex = 12;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button6
             // 
@@ -251,6 +257,7 @@
             this.button6.TabIndex = 13;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button7
             // 
@@ -265,6 +272,7 @@
             this.button7.TabIndex = 14;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button8
             // 
@@ -279,6 +287,7 @@
             this.button8.TabIndex = 15;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button9
             // 
@@ -293,6 +302,7 @@
             this.button9.TabIndex = 11;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // ItemName
             // 
@@ -361,6 +371,7 @@
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button10
             // 
@@ -375,6 +386,7 @@
             this.button10.TabIndex = 9;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button11
             // 
@@ -389,6 +401,7 @@
             this.button11.TabIndex = 10;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button12
             // 
@@ -403,6 +416,7 @@
             this.button12.TabIndex = 12;
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button13
             // 
@@ -417,6 +431,7 @@
             this.button13.TabIndex = 13;
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button14
             // 
@@ -431,6 +446,7 @@
             this.button14.TabIndex = 14;
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button15
             // 
@@ -445,6 +461,7 @@
             this.button15.TabIndex = 15;
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // button16
             // 
@@ -459,6 +476,7 @@
             this.button16.TabIndex = 11;
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // metroTabControl1
             // 
@@ -468,12 +486,13 @@
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // CraftingTab
             // 
@@ -605,6 +624,17 @@
             this.ProbTab.VerticalScrollbarSize = 10;
             this.ProbTab.Click += new System.EventHandler(this.ProbTab_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label6.Location = new System.Drawing.Point(14, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Tier";
+            // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
@@ -629,6 +659,7 @@
             this.metroButton2.UseCustomBackColor = true;
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.metroButton2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // metroButton1
             // 
@@ -642,6 +673,7 @@
             this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
+            this.metroButton1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // T1T
             // 
@@ -893,6 +925,7 @@
             this.metroComboBox1.UseCustomBackColor = true;
             this.metroComboBox1.UseSelectable = true;
             this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
+            this.metroComboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // metroPanel4
             // 
@@ -929,11 +962,11 @@
             this.TierListBox.FormattingEnabled = true;
             this.TierListBox.ItemHeight = 23;
             this.TierListBox.Items.AddRange(new object[] {
-            "Tier 1",
-            "Tier 2",
-            "Tier 3",
-            "Tier 4",
-            "Tier 5"});
+            "Grade S",
+            "Grade A",
+            "Grade B",
+            "Grade C",
+            "Grade D"});
             this.TierListBox.Location = new System.Drawing.Point(7, 9);
             this.TierListBox.Name = "TierListBox";
             this.TierListBox.PromptText = "Tier 1";
@@ -944,6 +977,7 @@
             this.TierListBox.UseCustomBackColor = true;
             this.TierListBox.UseSelectable = true;
             this.TierListBox.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
+            this.TierListBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // WinRateTab
             // 
@@ -1015,6 +1049,7 @@
             this.metroButton3.UseCustomForeColor = true;
             this.metroButton3.UseSelectable = true;
             this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            this.metroButton3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // AddLoseBtn
             // 
@@ -1031,6 +1066,7 @@
             this.AddLoseBtn.UseCustomForeColor = true;
             this.AddLoseBtn.UseSelectable = true;
             this.AddLoseBtn.Click += new System.EventHandler(this.AddLoseBtn_Click_1);
+            this.AddLoseBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // AddWinBtn
             // 
@@ -1047,6 +1083,7 @@
             this.AddWinBtn.UseCustomForeColor = true;
             this.AddWinBtn.UseSelectable = true;
             this.AddWinBtn.Click += new System.EventHandler(this.AddWinBtn_Click_1);
+            this.AddWinBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
             // WinLab
             // 
@@ -1072,17 +1109,6 @@
             this.LoseLab.TabIndex = 9;
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(14, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Tier";
             // 
             // TFTCrafter
             // 

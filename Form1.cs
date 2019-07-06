@@ -59,7 +59,7 @@ namespace TFT_Overlay
             [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
             private static extern IntPtr LoadCursorFromFile(string path);
         }
-
+       
         public TFTCrafter()
         {
             InitializeComponent();
@@ -86,18 +86,21 @@ namespace TFT_Overlay
         private void Form1_Load(object sender, EventArgs e)
 
         {
+
+            // Delete and Generate Custom Mouse Pointer to Temp Path
+            File.Delete(Path.GetTempPath() + "Normal.cur");
+            File.Delete(Path.GetTempPath() + "Pointer.cur");
+            File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
+            File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
+
+
+            // Program Title
             Title.Text = "TFT Overlay - " + Ver + " | by @xcibe95x";
 
 
-            Process[] pname = Process.GetProcessesByName("LeagueClient");
-            if (pname.Length == 0)
-            {
-
-            }
-            else
-            {
-                Cursor = NativeMethods.LoadCustomCursor(@"Normal.cur");
-            }
+            // Set League Cursor
+            Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
+           
 
             // Check for new Release
             string NVer = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/VERSION.md");
@@ -880,7 +883,7 @@ namespace TFT_Overlay
                 var picture = new PictureBox
                 {
                     Name = "pictureBox",
-                    Size = new Size(36, 36),
+                    Size = new Size(42, 42),
                     Location = new Point(100, 100),
                     BackgroundImage = (Image)(rm.GetObject(champName)),
                     BackgroundImageLayout = ImageLayout.Stretch,
@@ -1073,5 +1076,13 @@ namespace TFT_Overlay
         {
 
         }
+
+        private void Pointer_MouseClick(object sender, MouseEventArgs e)
+        {
+            Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
+            System.Threading.Thread.Sleep(60);           
+            Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
+        }
+
     }
 }
