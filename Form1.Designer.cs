@@ -71,7 +71,6 @@
             this.T2T = new System.Windows.Forms.Label();
             this.T3T = new System.Windows.Forms.Label();
             this.T4T = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.T5T = new System.Windows.Forms.Label();
             this.T1P = new System.Windows.Forms.Label();
             this.ChampsInPool = new System.Windows.Forms.Label();
@@ -491,7 +490,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -600,7 +599,6 @@
             this.ProbTab.Controls.Add(this.T2T);
             this.ProbTab.Controls.Add(this.T3T);
             this.ProbTab.Controls.Add(this.T4T);
-            this.ProbTab.Controls.Add(this.label4);
             this.ProbTab.Controls.Add(this.T5T);
             this.ProbTab.Controls.Add(this.T1P);
             this.ProbTab.Controls.Add(this.ChampsInPool);
@@ -724,17 +722,6 @@
             this.T4T.TabIndex = 25;
             this.T4T.Text = "4";
             this.T4T.Click += new System.EventHandler(this.T4T_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label4.Location = new System.Drawing.Point(18, 182);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 13);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Accurate as of 20 Jun 2019 ";
             // 
             // T5T
             // 
@@ -1189,7 +1176,6 @@
         private System.Windows.Forms.Label WinLab;
         private System.Windows.Forms.Label LoseLab;
         private System.Windows.Forms.Label WinRate;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label ChampsInPool;
         private System.Windows.Forms.Label Lvl;
         private System.Windows.Forms.Label T5P;
