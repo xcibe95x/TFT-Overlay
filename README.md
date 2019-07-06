@@ -26,9 +26,9 @@ https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || htt
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
-- **2.2**
+- **2.1.2**
   - Changelog  
-    - A new hotfix is in progress.
+    - Fixed a fatal error
 
 - **2.1.1**
   - Changelog  

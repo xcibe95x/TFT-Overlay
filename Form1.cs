@@ -92,7 +92,7 @@ namespace TFT_Overlay
             File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
             File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
 
-            var localVersion = new Version("2.2");
+            var localVersion = new Version("2.1.2");
 
             // Program Title
             Title.Text = "TFT Overlay - " + localVersion + " | by @xcibe95x";
