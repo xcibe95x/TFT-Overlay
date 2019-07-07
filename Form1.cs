@@ -882,8 +882,8 @@ namespace TFT_Overlay
                 var picture = new PictureBox
                 {
                     Name = "pictureBox",
-                    Size = new Size(52, 52),
-                    Location = new Point(100, 100),
+                    Size = new Size(60, 60),
+                    Location = new Point(0, 0),
                     BackgroundImage = (Image)(rm.GetObject(champName)),
                     BackgroundImageLayout = ImageLayout.Stretch,
 

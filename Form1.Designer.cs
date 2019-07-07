@@ -34,7 +34,7 @@
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Debug = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -118,7 +118,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(61)))), ((int)(((byte)(18)))));
             this.panel1.ContextMenuStrip = this.metroContextMenu1;
             this.panel1.Controls.Add(this.metroButton4);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.Debug);
             this.panel1.Controls.Add(this.Title);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
@@ -162,16 +162,16 @@
             this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             this.metroButton4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pointer_MouseClick);
             // 
-            // label5
+            // Debug
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.MistyRose;
-            this.label5.Location = new System.Drawing.Point(229, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Debug Label";
-            this.label5.Visible = false;
+            this.Debug.AutoSize = true;
+            this.Debug.ForeColor = System.Drawing.Color.MistyRose;
+            this.Debug.Location = new System.Drawing.Point(229, 6);
+            this.Debug.Name = "Debug";
+            this.Debug.Size = new System.Drawing.Size(68, 13);
+            this.Debug.TabIndex = 1;
+            this.Debug.Text = "Debug Label";
+            this.Debug.Visible = false;
             // 
             // Title
             // 
@@ -1204,7 +1204,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroComboBox TierListBox;
         private MetroFramework.Controls.MetroPanel metroPanel4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Debug;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton4;
