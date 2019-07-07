@@ -16,5 +16,10 @@ namespace TFT_Overlay
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            TopMost = Properties.Settings.Default.TopMost;
+        }
     }
 }
