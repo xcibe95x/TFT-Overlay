@@ -482,8 +482,8 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.CraftingTab);
-            this.metroTabControl1.Controls.Add(this.ProbTab);
             this.metroTabControl1.Controls.Add(this.TierListTab);
+            this.metroTabControl1.Controls.Add(this.ProbTab);
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
@@ -906,7 +906,7 @@
             "Early",
             "Mid",
             "Late"});
-            this.metroComboBox1.Location = new System.Drawing.Point(134, 9);
+            this.metroComboBox1.Location = new System.Drawing.Point(130, 9);
             this.metroComboBox1.Name = "metroComboBox1";
             this.metroComboBox1.PromptText = "All";
             this.metroComboBox1.Size = new System.Drawing.Size(88, 29);
@@ -958,7 +958,7 @@
             "Grade B",
             "Grade C",
             "Grade D"});
-            this.TierListBox.Location = new System.Drawing.Point(7, 9);
+            this.TierListBox.Location = new System.Drawing.Point(3, 9);
             this.TierListBox.Name = "TierListBox";
             this.TierListBox.PromptText = "Tier 1";
             this.TierListBox.Size = new System.Drawing.Size(121, 29);
