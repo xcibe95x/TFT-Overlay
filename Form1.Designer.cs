@@ -98,6 +98,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,9 +130,10 @@
             // metroContextMenu1
             // 
             this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.alwaysOnTopToolStripMenuItem});
+            this.alwaysOnTopToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(152, 26);
+            this.metroContextMenu1.Size = new System.Drawing.Size(181, 70);
             // 
             // alwaysOnTopToolStripMenuItem
             // 
@@ -139,7 +141,7 @@
             this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
             this.alwaysOnTopToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alwaysOnTopToolStripMenuItem.Text = "Always on Top";
             this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_Click);
             // 
@@ -1102,6 +1104,13 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1209,6 +1218,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

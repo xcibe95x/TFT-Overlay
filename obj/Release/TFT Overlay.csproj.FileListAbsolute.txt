@@ -10,3 +10,4 @@ C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\T
 C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.exe
 C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT Overlay.pdb
 C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\bin\Release\Newtonsoft.Json.xml
+C:\Users\xcibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TFT_Overlay.Form2.resources
