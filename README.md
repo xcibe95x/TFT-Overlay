@@ -29,6 +29,11 @@ https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || htt
 ## Version Changelogs
 - **2.1.2**
   - Changelog  
+    - New champions Portraits
+	- Fixed some champions not showing in tier list
+	
+- **2.1.2**
+  - Changelog  
     - Fixed a fatal error
 
 - **2.1.1**
