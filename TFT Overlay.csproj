@@ -188,11 +188,17 @@
     <Content Include="Images\champs\Lissandra-Icon.png" />
     <None Include="Images\champs\Lissandra.png" />
     <Content Include="Images\champs\Lucian-Icon.png" />
+    <None Include="Images\champs\Lucian.png" />
     <Content Include="Images\champs\Lulu-Icon.png" />
+    <None Include="Images\champs\Lulu.png" />
     <Content Include="Images\champs\MissFortune-Icon.png" />
+    <None Include="Images\champs\Missfortune.png" />
     <Content Include="Images\champs\Mordekaiser-Icon.png" />
+    <None Include="Images\champs\Mordekaiser.png" />
     <Content Include="Images\champs\Morgana-Icon.png" />
+    <None Include="Images\champs\Morgana.png" />
     <Content Include="Images\champs\Nidalee-Icon.png" />
+    <None Include="Images\champs\Nidalee.png" />
     <Content Include="Images\champs\Poppy-Icon.png" />
     <None Include="Images\champs\Poppy.png" />
     <Content Include="Images\champs\Pyke-Icon.png" />
@@ -227,6 +233,7 @@
     <None Include="Images\champs\Yasuo.png" />
     <Content Include="Images\champs\Zed-Icon.png" />
     <None Include="Images\champs\Zed.png" />
+    <None Include="Images\circle.png" />
     <Content Include="Images\classes\assassin.jpg" />
     <Content Include="Images\classes\blademaster.jpg" />
     <Content Include="Images\classes\brawler.jpg" />
