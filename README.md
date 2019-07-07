@@ -27,11 +27,6 @@ https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || htt
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
-- **2.2**
-  - Changelog  
-    - Updated Champions Icons to Riot TFT Ones
-    - 
-
 - **2.1.2**
   - Changelog  
     - Fixed a fatal error
@@ -47,3 +42,23 @@ https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || htt
 	- Re-Added Exit button on title bar
     - Fixed some bugs
 	- League Cursor while league client open
+
+- **2.0**
+  - Changelog  
+    - New Graphics
+    - Quality of Life improvements to Crafting
+    - Now gets items info from JSON Data
+	- Fixed a bug with Probabilities
+	. Notify when a new release is up
+	- Updated Layouts for Probabilities & Win Rate
+	- Context Menu (Toggle Always on Top & Exit)
+
+- **1.1**
+  - Changelog  
+    - Probabilities
+    - Bug Fixes
+
+- **1.0**
+  - Changelog  
+    - Crafting System
+    - Win Rate Calculator Pre-Ranked
