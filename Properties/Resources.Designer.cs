@@ -623,9 +623,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Missfortune {
+        internal static System.Drawing.Bitmap MissFortune {
             get {
-                object obj = ResourceManager.GetObject("Missfortune", resourceCulture);
+                object obj = ResourceManager.GetObject("MissFortune", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
