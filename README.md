@@ -10,7 +10,8 @@ You can also support by following this socials
 
 https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || https://www.facebook.com/xcibe95x || https://twitter.com/xcibe95x
 
-`Going to work on 2.2 and have a little break after that`
+`Updating some assets and implementing the Champions List`
+
 `I'm working to release the very first version of Legends of the League (Riot Approved LOL Based CCG) at https://lol.playconstraints.com/ (Website not fully optimized yet)`
 
 ![Image](https://i.redd.it/vyhdcp8m2k831.png)
@@ -26,6 +27,11 @@ https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || htt
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
+- **2.2**
+  - Changelog  
+    - Updated Champions Icons to Riot TFT Ones
+    - 
+
 - **2.1.2**
   - Changelog  
     - Fixed a fatal error
@@ -41,22 +47,3 @@ https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || htt
 	- Re-Added Exit button on title bar
     - Fixed some bugs
 	- League Cursor while league client open
-
-- **2.0**
-  - Changelog  
-    - New Graphics
-    - Quality of Life improvements to Crafting
-    - Now gets items info from JSON Data
-	- Fixed a bug with Probabilities
-	. Notify when a new release is up
-	- Updated Layouts for Probabilities & Win Rate
-
-- **1.1**
-  - Changelog  
-    - Probabilities
-    - Bug Fixes
-
-- **1.0**
-  - Changelog  
-    - Crafting System
-    - Win Rate Calculator Pre-Ranked
