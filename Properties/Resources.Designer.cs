@@ -798,9 +798,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Reksai {
+        internal static System.Drawing.Bitmap RekSai {
             get {
-                object obj = ResourceManager.GetObject("Reksai", resourceCulture);
+                object obj = ResourceManager.GetObject("RekSai", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
