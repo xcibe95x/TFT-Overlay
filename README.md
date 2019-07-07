@@ -1,18 +1,18 @@
 # TFT Overlay by Cibe
 
 If you want to give any kind of support wich is really apreciated here's a couple of links to do that
-(I'm adding this to all of my Projects from now on, don't expect anything out of it and never wanted to this before, but at somepoint you just need it)
 
-https://ko-fi.com/xcibe95x || https://www.patreon.com/xcibe95x
-Paypal: xcibe95x@gmail.com
+https://ko-fi.com/xcibe95x || https://www.patreon.com/xcibe95x !! Paypal: xcibe95x@gmail.com
 
 You can also support by following this socials
+(They are a bit outdated as now, but going back to them soon)
 
 https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || https://www.facebook.com/xcibe95x || https://twitter.com/xcibe95x
 
 `Updating some assets and implementing the Champions List`
 
-`I'm working to release the very first version of Legends of the League (Riot Approved LOL Based CCG) at https://lol.playconstraints.com/ (Website not fully optimized yet)`
+`I'm working to release the very first version of Legends of the League (Riot Approved LOL Based CCG) at https://lol.playconstraints.com/ (Website not fully optimized yet)
+I'm gonna take a break to finish it after 2.2, but i will keep pushing small updates`
 
 ![Image](https://i.redd.it/vyhdcp8m2k831.png)
 
