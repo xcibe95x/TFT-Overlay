@@ -486,11 +486,10 @@
             this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.WinRateTab);
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Small;
-            this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Bold;
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -984,9 +983,9 @@
             this.WinRateTab.HorizontalScrollbarBarColor = true;
             this.WinRateTab.HorizontalScrollbarHighlightOnWheel = false;
             this.WinRateTab.HorizontalScrollbarSize = 10;
-            this.WinRateTab.Location = new System.Drawing.Point(4, 38);
+            this.WinRateTab.Location = new System.Drawing.Point(4, 34);
             this.WinRateTab.Name = "WinRateTab";
-            this.WinRateTab.Size = new System.Drawing.Size(332, 184);
+            this.WinRateTab.Size = new System.Drawing.Size(332, 188);
             this.WinRateTab.TabIndex = 1;
             this.WinRateTab.Text = "Win Rate";
             this.WinRateTab.UseCustomBackColor = true;
