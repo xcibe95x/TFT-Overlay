@@ -100,6 +100,19 @@
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
             this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -113,6 +126,17 @@
             this.metroPanel4.SuspendLayout();
             this.WinRateTab.SuspendLayout();
             this.metroPanel3.SuspendLayout();
+            this.ChampionsTab.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -517,7 +541,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -1139,6 +1163,7 @@
             // ChampionsTab
             // 
             this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampionsTab.Controls.Add(this.flowLayoutPanel2);
             this.ChampionsTab.HorizontalScrollbarBarColor = true;
             this.ChampionsTab.HorizontalScrollbarHighlightOnWheel = false;
             this.ChampionsTab.HorizontalScrollbarSize = 10;
@@ -1151,6 +1176,140 @@
             this.ChampionsTab.VerticalScrollbarBarColor = true;
             this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
             this.ChampionsTab.VerticalScrollbarSize = 10;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox1);
+            this.flowLayoutPanel2.Controls.Add(this.metroLabel3);
+            this.flowLayoutPanel2.Controls.Add(this.metroLabel2);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox5);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox6);
+            this.flowLayoutPanel2.Controls.Add(this.panel3);
+            this.flowLayoutPanel2.Controls.Add(this.panel4);
+            this.flowLayoutPanel2.Controls.Add(this.panel5);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 25);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(312, 55);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::TFT_Overlay.Properties.Resources.Aatrox;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 43);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.metroToolTip1.SetToolTip(this.pictureBox1, "Aatrox, , ");
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Maroon;
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Location = new System.Drawing.Point(183, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(2);
+            this.panel3.Size = new System.Drawing.Size(36, 34);
+            this.panel3.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::TFT_Overlay.Properties.Resources.hush;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Maroon;
+            this.panel4.Controls.Add(this.pictureBox3);
+            this.panel4.Location = new System.Drawing.Point(225, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(2);
+            this.panel4.Size = new System.Drawing.Size(36, 34);
+            this.panel4.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::TFT_Overlay.Properties.Resources.hush;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Maroon;
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Location = new System.Drawing.Point(267, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(2);
+            this.panel5.Size = new System.Drawing.Size(36, 34);
+            this.panel5.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::TFT_Overlay.Properties.Resources.hush;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 30);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::TFT_Overlay.Properties.Resources._null;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(97, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(37, 34);
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::TFT_Overlay.Properties.Resources._null;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(140, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 34);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(75, 0);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(16, 19);
+            this.metroLabel2.TabIndex = 6;
+            this.metroLabel2.Text = "3";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(54, 0);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(15, 19);
+            this.metroLabel3.TabIndex = 7;
+            this.metroLabel3.Text = "?";
+            this.metroToolTip1.SetToolTip(this.metroLabel3, "Aatrox cleaves the area in front of him, \r\ndealing damage to enemies inside it.");
             // 
             // TFTCrafter
             // 
@@ -1185,6 +1344,18 @@
             this.WinRateTab.ResumeLayout(false);
             this.WinRateTab.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
+            this.ChampionsTab.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1261,6 +1432,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private MetroFramework.Controls.MetroTabPage ChampionsTab;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 
