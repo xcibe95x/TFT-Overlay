@@ -99,6 +99,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
+            this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -508,6 +509,7 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.CraftingTab);
+            this.metroTabControl1.Controls.Add(this.ChampionsTab);
             this.metroTabControl1.Controls.Add(this.ProbTab);
             this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.WinRateTab);
@@ -1134,6 +1136,22 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
+            // ChampionsTab
+            // 
+            this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampionsTab.HorizontalScrollbarBarColor = true;
+            this.ChampionsTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.ChampionsTab.HorizontalScrollbarSize = 10;
+            this.ChampionsTab.Location = new System.Drawing.Point(4, 34);
+            this.ChampionsTab.Name = "ChampionsTab";
+            this.ChampionsTab.Size = new System.Drawing.Size(332, 188);
+            this.ChampionsTab.TabIndex = 4;
+            this.ChampionsTab.Text = "Champs";
+            this.ChampionsTab.UseCustomBackColor = true;
+            this.ChampionsTab.VerticalScrollbarBarColor = true;
+            this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
+            this.ChampionsTab.VerticalScrollbarSize = 10;
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1242,6 +1260,7 @@
         private MetroFramework.Controls.MetroButton metroButton4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private MetroFramework.Controls.MetroTabPage ChampionsTab;
     }
 }
 
