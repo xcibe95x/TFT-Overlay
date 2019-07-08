@@ -373,6 +373,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Coin {
+            get {
+                object obj = ResourceManager.GetObject("Coin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cursed_blade {
             get {
                 object obj = ResourceManager.GetObject("cursed_blade", resourceCulture);

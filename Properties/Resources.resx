@@ -466,6 +466,9 @@
   <data name="Chogath_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\new_champs\Chogath_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Darius_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\new_champs\Darius_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
