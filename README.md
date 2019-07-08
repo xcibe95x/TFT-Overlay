@@ -27,7 +27,7 @@ I'm gonna take a break to finish it after 2.2, but i will keep pushing small upd
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
-- **2.1.2**
+- **2.2**
   - Changelog  
     - New champions Portraits
 	- Fixed some champions not showing in tier list
