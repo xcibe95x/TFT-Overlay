@@ -209,6 +209,7 @@
     <None Include="Images\new_champs\Volibear_n.png" />
     <None Include="Images\new_champs\Warwick_n.png" />
     <None Include="Images\Coin.png" />
+    <None Include="Images\origins\noble.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />
