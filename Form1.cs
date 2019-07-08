@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Resources;
@@ -30,6 +31,7 @@ namespace TFT_Overlay
         WebClient client = new WebClient();
         public string itemsJSON;
         public string tiersJSON;
+        public string champsJSON;
 
         int TierIndex = 1;
         string TierType = "all";
@@ -120,6 +122,7 @@ namespace TFT_Overlay
             // GET JSON DATA
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
+            champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
 
 
             // FIX TIER LIST
@@ -1097,6 +1100,80 @@ namespace TFT_Overlay
         private void PointerLogicLeave(object sender, EventArgs e)
         {
             Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            JObject jObject = JObject.Parse(champsJSON);
+
+            // string displayName = (string)jObject.SelectToken("name");
+            // string type = (string)jObject.SelectToken("arrayName[0].type");
+            //  string value = (string)jObject.SelectToken("arrayname[0].value");
+
+            dynamic dynJson = JsonConvert.DeserializeObject(champsJSON);
+
+            // CHAMP LIST
+            var ChampionNamesList = jObject.SelectTokens("$").ToList();
+
+            foreach (JProperty item in ChampionNamesList.Children())
+            {
+                var key = item.Name.ToString();
+                Console.WriteLine(key);
+            }
+
+            //Debug.Text = (string)jObject.SelectToken("$").ToString();
+            // Debug.Text = (string)jObject.SelectToken("Aatrox.class.[0]");
+            // Debug.Text = (string)jObject.SelectToken("Aatrox.origin.[0]");
+
+            var basepanel = new FlowLayoutPanel
+            {
+                Name = "basepanel",
+                Size = new Size(312, 48),
+                Location = new Point(0, 0),
+
+            };
+            ChampsList.Controls.Add(basepanel);
+
+
+
+            var ChampBox = new Panel
+            {
+                Name = "ChampBox",
+                Size = new Size(45, 45),
+                Padding = new Padding(2, 2, 2, 2),
+                Location = new Point(0, 0),
+                BackColor = Color.Blue,
+
+            };
+            basepanel.Controls.Add(ChampBox);
+
+            var ChampPicture = new PictureBox
+            {
+                Name = "ChampPicture",
+                Size = new Size(41, 41),
+                Dock = DockStyle.Fill,
+                Location = new Point(0, 0),
+                BackgroundImage = (Properties.Resources.Aatrox_n),
+                BackgroundImageLayout = ImageLayout.Stretch,
+
+            };
+            ChampBox.Controls.Add(ChampPicture);
+
+
+            var picturebox = new PictureBox
+            {
+                Name = "basepanel",
+                Size = new Size(37, 34),
+                Location = new Point(0, 0),
+                BackgroundImage = (Properties.Resources.ludens_echo),
+                BackgroundImageLayout = ImageLayout.Stretch,
+
+            };
+            basepanel.Controls.Add(picturebox);
+
+
+
+
         }
     }
 }

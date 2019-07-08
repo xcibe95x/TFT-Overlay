@@ -427,4 +427,223 @@
   <data name="_null" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\items\null.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Aatrox_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Aatrox_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ahri_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Ahri_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Akali_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Akali_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Anivia_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Anivia_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ashe_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Ashe_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="assassin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\assassin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AurelionSol_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\AurelionSol_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blademaster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\blademaster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blitzcrank_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Blitzcrank_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Brand_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Brand_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Braum_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Braum_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brawler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\brawler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chogath_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Chogath_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Darius_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Darius_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="demon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\demon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Draven_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Draven_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="elementalist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\elementalist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Elise_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Elise_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Evelynn_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Evelynn_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\exile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fiora_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Fiora_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gangplank_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Gangplank_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Garen_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Garen_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="glacial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\glacial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gnar_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Gnar_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Graves_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Graves_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guardian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\guardian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gunslinger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\gunslinger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imperial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\imperial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Karthus_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Karthus_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kassadin_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Kassadin_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Katarina_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Katarina_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kayle_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Kayle_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kennen_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Kennen_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Khazix_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Khazix_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kindred_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Kindred_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="knight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\knight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Leona_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Leona_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lissandra_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Lissandra_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lucian_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Lucian_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lulu_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Lulu_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Missfortune_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Missfortune_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mordekaiser_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Mordekaiser_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Morgana_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Morgana_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mpnòe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\mpnòe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nidalee_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Nidalee_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ninja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\ninja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phantom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\phantom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pirate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\pirate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Poppy_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Poppy_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pyke_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Pyke_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ranger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\ranger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reksai_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Reksai_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rengar_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Rengar_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sejuani_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Sejuani_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shapeshifter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\shapeshifter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shen_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Shen_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shyvana_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Shyvana_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sorcerer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\classes\sorcerer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Swain_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Swain_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tristana_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Tristana_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Varus_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Varus_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vayne_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Vayne_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Veigar_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Veigar_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Volibear_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Volibear_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warwick_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Warwick_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wild" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\wild.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Yasuo_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Yasuo_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yordle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\yordle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zed_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\new_champs\Zed_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_void" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\origins\void.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
