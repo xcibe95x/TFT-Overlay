@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Components;
+using MetroFramework.Controls;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -196,7 +197,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("guardianangel.name");
                 rDesc = (string)jObject.SelectToken("guardianangel.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guardian_angel;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guardianangel;
 
             }
 
@@ -207,7 +208,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("hextechgunblade.name");
                 rDesc = (string)jObject.SelectToken("hextechgunblade.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.hextech_gunblade;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.hextechgunblade;
 
             }
 
@@ -218,7 +219,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("infinityedge.name");
                 rDesc = (string)jObject.SelectToken("infinityedge.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.infinity_edge;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.infinityedge;
 
             }
 
@@ -229,7 +230,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("spearofshojin.name");
                 rDesc = (string)jObject.SelectToken("spearofshojin.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.spear_of_shojin;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.spearofshojin;
 
             }
 
@@ -240,7 +241,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("swordofthedivine.name");
                 rDesc = (string)jObject.SelectToken("swordofthedivine.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.sword_of_the_divine;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.swordofthedivine;
 
             }
 
@@ -251,7 +252,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("youmuusghostblade.name");
                 rDesc = (string)jObject.SelectToken("youmuusghostblade.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.youmuus_ghostblade;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.youmuusghostblade;
 
             }
 
@@ -262,7 +263,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("zekesherald.name");
                 rDesc = (string)jObject.SelectToken("zekesherald.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.zekes_herald;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.zekesherald;
 
             }
 
@@ -273,7 +274,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("frozenheart.name");
                 rDesc = (string)jObject.SelectToken("frozenheart.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozen_heart;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozenheart;
 
             }
 
@@ -284,7 +285,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("locketoftheironsolari.name");
                 rDesc = (string)jObject.SelectToken("locketoftheironsolari.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.locket_of_the_iron_solari;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.locketoftheironsolari;
 
             }
 
@@ -295,7 +296,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("phantomdancer.name");
                 rDesc = (string)jObject.SelectToken("phantomdancer.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.phantom_dancer;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.phantomdancer;
 
             }
 
@@ -306,7 +307,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("redbuff.name");
                 rDesc = (string)jObject.SelectToken("redbuff.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.red_buff;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.redbuff;
 
             }
 
@@ -328,7 +329,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("knightsvow.name");
                 rDesc = (string)jObject.SelectToken("knightsvow.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.knights_vow;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.knightsvow;
 
             }
 
@@ -339,7 +340,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("swordbreaker.name");
                 rDesc = (string)jObject.SelectToken("swordbreaker.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.sword_breaker;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.swordbreaker;
 
             }
 
@@ -350,7 +351,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("frozenmallet.name");
                 rDesc = (string)jObject.SelectToken("frozenmallet.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozen_mallet;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.frozenmallet;
 
             }
 
@@ -383,7 +384,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("warmogsarmor.name");
                 rDesc = (string)jObject.SelectToken("warmogsarmor.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.warmogs_armor;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.warmogsarmor;
 
             }
 
@@ -405,7 +406,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("titanichydra.name");
                 rDesc = (string)jObject.SelectToken("titanichydra.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.titanic_hydra;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.titanichydra;
 
             }
 
@@ -416,7 +417,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("guinsoosrageblade.name");
                 rDesc = (string)jObject.SelectToken("guinsoosrageblade.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guinsoos_rageblade;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.guinsoosrageblade;
 
             }
 
@@ -427,7 +428,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("ionicspark.name");
                 rDesc = (string)jObject.SelectToken("ionicspark.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ionic_spark;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ionicspark;
 
             }
 
@@ -438,7 +439,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("rabadonsdeathcap.name");
                 rDesc = (string)jObject.SelectToken("rabadonsdeathcap.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rabadons_deathcap;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rabadonsdeathcap;
 
             }
 
@@ -449,7 +450,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("ludensecho.name");
                 rDesc = (string)jObject.SelectToken("ludensecho.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ludens_echo;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ludensecho;
 
             }
 
@@ -471,7 +472,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("cursedblade.name");
                 rDesc = (string)jObject.SelectToken("cursedblade.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.cursed_blade;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.cursedblade;
 
             }
 
@@ -482,7 +483,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("dragonsclaw.name");
                 rDesc = (string)jObject.SelectToken("dragonsclaw.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.dragons_claw;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.dragonsclaw;
 
             }
 
@@ -515,7 +516,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("rapidfirecannon.name");
                 rDesc = (string)jObject.SelectToken("rapidfirecannon.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rapid_firecannon;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.rapidfirecannon;
 
             }
 
@@ -527,7 +528,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("statikkshiv.name");
                 rDesc = (string)jObject.SelectToken("statikkshiv.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.statikk_shiv;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.statikkshiv;
 
             }
 
@@ -539,7 +540,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("bladeoftheruinedking.name");
                 rDesc = (string)jObject.SelectToken("bladeoftheruinedking.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.blade_of_the_ruined_king;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.bladeoftheruinedking;
 
             }
 
@@ -573,7 +574,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("forceofnature.name");
                 rDesc = (string)jObject.SelectToken("forceofnature.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.force_of_nature;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.forceofnature;
 
             }
 
@@ -1111,7 +1112,7 @@ namespace TFT_Overlay
 
         private void button17_Click(object sender, EventArgs e)
         {
-
+            
             JObject jObject = JObject.Parse(champsJSON);
 
             // CHAMP LIST (FOREACH)
@@ -1119,11 +1120,15 @@ namespace TFT_Overlay
 
             foreach (JProperty item in ChampionNamesList.Children())
             {
+                int originsIndex = 0;
+                int classesIndex = 0;
+                bool originsCheck = false;
+                bool classesCheck = false;
+                int itemsIndex = 0;
 
                 // VARIABLES
                 var key = item.Name.ToString();
-                int cost = (int)jObject.SelectToken(key + ".cost");
-                string origins = (string)jObject.SelectToken(key + ".origin.[0]");
+                int cost = (int)jObject.SelectToken(key + ".cost");              
                 string ability = (string)jObject.SelectToken(key + ".ability.description");
                 Color tiercost = Color.OrangeRed;
 
@@ -1171,6 +1176,7 @@ namespace TFT_Overlay
 
 
 
+                // CHAMP BORDER
                 var ChampBox = new Panel
                 {
                     Name = "ChampBox",
@@ -1184,7 +1190,7 @@ namespace TFT_Overlay
                 basepanel.Controls.Add(ChampBox);
 
 
-                // CHAMP BORDER
+                // CHAMP ICON
                 var ChampPicture = new PictureBox
                 {
                     Name = "ChampPicture",
@@ -1198,24 +1204,146 @@ namespace TFT_Overlay
                 ChampBox.Controls.Add(ChampPicture);
 
 
+                // CHAMP COST
+                var ChampCost = new MetroLabel
+                {
+                    Text = cost.ToString(),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    ForeColor = tiercost,
+                    Location = new Point(0, 0),
+                    Size = new Size(17, 19),
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                };
+                basepanel.Controls.Add(ChampCost);
+
+
+                // COST ICON
+                var CostIcon = new PictureBox
+                {
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Size = new Size(10, 10),
+                    Location = new Point(0, 0),
+                    BackgroundImage = Properties.Resources.Coin,
+                    BackgroundImageLayout = ImageLayout.Stretch,
+
+                };
+                basepanel.Controls.Add(CostIcon);
+
                 // ORIGIN
 
                 ToolTip tip = new MetroFramework.Drawing.Html.HtmlToolTip();
                 ToolTip tiup = new MetroToolTip();
-                
-                var picturebox = new PictureBox
+
+                JArray originsLoop = (JArray)jObject.SelectToken(key + ".origin");
+
+                foreach (JToken arrayname in originsLoop)
                 {
-                    Name = "basepanel",
-                    Size = new Size(25, 25),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Location = new Point(0, 0),
-                    BackgroundImage = (Image)(rm.GetObject(origins)),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-                    
-            };
-                basepanel.Controls.Add(picturebox);
-                tiup.SetToolTip(picturebox, origins);
+
+
+
+                    if (originsCheck == true)
+                    {
+                        originsIndex++;
+
+                    }
+                    if (originsIndex == 0)
+                    {
+                        originsCheck = true;
+                    }
+
+                    string origins = (string)jObject.SelectToken(key + ".origin.[" + originsIndex.ToString() + "]");
+
+                    var picturebox = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Location = new Point(0, 0),
+                        BackgroundImage = (Image)(rm.GetObject(origins)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+                    Console.Write(originsIndex);
+                    basepanel.Controls.Add(picturebox);
+                    tiup.SetToolTip(picturebox, origins);
+
+                }
+
+
+                // CLASSES
+
+                JArray classesLoop = (JArray)jObject.SelectToken(key + ".class");
+
+                foreach (JToken arrayname in classesLoop)
+                {
+
+
+
+                    if (classesCheck == true)
+                    {
+                        classesIndex++;
+
+                    }
+                    if (classesIndex == 0)
+                    {
+                        classesCheck = true;
+                    }
+
+                    string classes = (string)jObject.SelectToken(key + ".class.[" + classesIndex.ToString() + "]");
+
+                    var picturebox = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Location = new Point(0, 0),
+                        BackgroundImage = (Image)(rm.GetObject(classes)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+                    Console.Write(originsIndex);
+                    basepanel.Controls.Add(picturebox);
+                    tiup.SetToolTip(picturebox, classes);
+
+                }
+
+
+                // ITEMS
+
+                JArray itemsLoop = (JArray)jObject.SelectToken(key + ".items");
+
+
+
+                foreach (JToken arrayname in itemsLoop)
+                {
+
+
+                    string itemization = (string)jObject.SelectToken(key + ".items.[" + itemsIndex.ToString() + "]");
+
+                    var picturebox = new PictureBox
+                    {
+
+                        Size = new Size(32, 32),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Location = new Point(0, 0),
+                        BackgroundImage = (Image)(rm.GetObject(itemization)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+                    basepanel.Controls.Add(picturebox);
+                    itemsIndex++;
+
+                }
+
+
+                // TOOLTIPS
                 tiup.SetToolTip(ChampBox, ability);
                 tiup.SetToolTip(ChampPicture, "           "+ ability + "           ");
 
