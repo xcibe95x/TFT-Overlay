@@ -116,6 +116,7 @@
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
             this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
+            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -141,6 +142,7 @@
             this.metroPanel4.SuspendLayout();
             this.WinRateTab.SuspendLayout();
             this.metroPanel3.SuspendLayout();
+            this.metroPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -644,8 +646,8 @@
             // ChampionsTab
             // 
             this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ChampionsTab.Controls.Add(this.ChampsList);
             this.ChampionsTab.Controls.Add(this.button17);
+            this.ChampionsTab.Controls.Add(this.metroPanel5);
             this.ChampionsTab.Controls.Add(this.flowLayoutPanel2);
             this.ChampionsTab.HorizontalScrollbarBarColor = true;
             this.ChampionsTab.HorizontalScrollbarHighlightOnWheel = false;
@@ -662,9 +664,11 @@
             // 
             // ChampsList
             // 
+            this.ChampsList.AutoSize = true;
             this.ChampsList.Location = new System.Drawing.Point(3, 3);
+            this.ChampsList.MaximumSize = new System.Drawing.Size(329, 0);
             this.ChampsList.Name = "ChampsList";
-            this.ChampsList.Size = new System.Drawing.Size(326, 119);
+            this.ChampsList.Size = new System.Drawing.Size(321, 58);
             this.ChampsList.TabIndex = 4;
             // 
             // button17
@@ -687,7 +691,7 @@
             this.flowLayoutPanel2.Controls.Add(this.panel3);
             this.flowLayoutPanel2.Controls.Add(this.panel4);
             this.flowLayoutPanel2.Controls.Add(this.panel5);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 128);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 127);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(325, 50);
             this.flowLayoutPanel2.TabIndex = 2;
@@ -738,7 +742,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.BackgroundImage = global::TFT_Overlay.Properties.Resources.robot;
+            this.pictureBox5.BackgroundImage = global::TFT_Overlay.Properties.Resources.Robot;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(97, 13);
             this.pictureBox5.Name = "pictureBox5";
@@ -1351,6 +1355,24 @@
             this.htmlToolTip1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.htmlToolTip1.OwnerDraw = true;
             // 
+            // metroPanel5
+            // 
+            this.metroPanel5.AutoScroll = true;
+            this.metroPanel5.Controls.Add(this.ChampsList);
+            this.metroPanel5.HorizontalScrollbar = true;
+            this.metroPanel5.HorizontalScrollbarBarColor = true;
+            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.HorizontalScrollbarSize = 10;
+            this.metroPanel5.Location = new System.Drawing.Point(2, 3);
+            this.metroPanel5.Name = "metroPanel5";
+            this.metroPanel5.Size = new System.Drawing.Size(327, 118);
+            this.metroPanel5.TabIndex = 5;
+            this.metroPanel5.UseCustomBackColor = true;
+            this.metroPanel5.VerticalScrollbar = true;
+            this.metroPanel5.VerticalScrollbarBarColor = true;
+            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.VerticalScrollbarSize = 10;
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1397,6 +1419,8 @@
             this.WinRateTab.ResumeLayout(false);
             this.WinRateTab.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
+            this.metroPanel5.ResumeLayout(false);
+            this.metroPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1489,6 +1513,7 @@
         private System.Windows.Forms.FlowLayoutPanel ChampsList;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Panel panel6;
+        private MetroFramework.Controls.MetroPanel metroPanel5;
     }
 }
 

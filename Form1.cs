@@ -1079,12 +1079,14 @@ namespace TFT_Overlay
 
         }
 
-        private void Pointer_MouseClick(object sender, MouseEventArgs e)
-        {
-           Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
-           //System.Threading.Thread.Sleep(60);           
-           //Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
-        }
+        // DEPRECATED
+
+       // private void Pointer_MouseClick(object sender, MouseEventArgs e)
+       // {
+       // Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
+       // System.Threading.Thread.Sleep(60);           
+       // Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
+       // }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1102,76 +1104,87 @@ namespace TFT_Overlay
             Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
         }
 
+
+
+      // CHAMPIONS LIST CODE
+
         private void button17_Click(object sender, EventArgs e)
         {
+
             JObject jObject = JObject.Parse(champsJSON);
 
-            // string displayName = (string)jObject.SelectToken("name");
-            // string type = (string)jObject.SelectToken("arrayName[0].type");
-            //  string value = (string)jObject.SelectToken("arrayname[0].value");
-
-            dynamic dynJson = JsonConvert.DeserializeObject(champsJSON);
-
-            // CHAMP LIST
+            // CHAMP LIST (FOREACH)
             var ChampionNamesList = jObject.SelectTokens("$").ToList();
 
             foreach (JProperty item in ChampionNamesList.Children())
             {
                 var key = item.Name.ToString();
-                Console.WriteLine(key);
+
+                ResourceManager rm = new ResourceManager(
+                "TFT_Overlay.Properties.Resources",
+                Assembly.GetExecutingAssembly());
+
+
+                // DEBUG LINE
+                Console.WriteLine((string)jObject.SelectToken(key + ".name"));
+
+                // CODE
+                var basepanel = new FlowLayoutPanel
+                {
+                    Name = "basepanel",
+                    Size = new Size(312, 48),
+                    Location = new Point(0, 0),
+
+                };
+                ChampsList.Controls.Add(basepanel);
+
+
+
+                var ChampBox = new Panel
+                {
+                    Name = "ChampBox",
+                    Size = new Size(45, 45),
+                    Padding = new Padding(2, 2, 2, 2),
+                    Location = new Point(0, 0),
+                    BackColor = Color.Blue,
+
+                };
+                basepanel.Controls.Add(ChampBox);
+
+                var ChampPicture = new PictureBox
+                {
+                    Name = "ChampPicture",
+                    Size = new Size(41, 41),
+                    Dock = DockStyle.Fill,
+                    Location = new Point(0, 0),
+                    BackgroundImage = (Image)(rm.GetObject(key + "_n")),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+
+                };
+                ChampBox.Controls.Add(ChampPicture);
+
+
+                string origins = (string)jObject.SelectToken(key + ".origin.[0]");
+                var picturebox = new PictureBox
+                {
+                    Name = "basepanel",
+                    Size = new Size(25, 25),
+                    Dock = DockStyle.None,
+                    Location = new Point(0, 0),
+                    BackgroundImage = (Image)(rm.GetObject(origins)),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+
+                };
+                basepanel.Controls.Add(picturebox);
+
+
+
+
             }
 
             //Debug.Text = (string)jObject.SelectToken("$").ToString();
             // Debug.Text = (string)jObject.SelectToken("Aatrox.class.[0]");
-            // Debug.Text = (string)jObject.SelectToken("Aatrox.origin.[0]");
-
-            var basepanel = new FlowLayoutPanel
-            {
-                Name = "basepanel",
-                Size = new Size(312, 48),
-                Location = new Point(0, 0),
-
-            };
-            ChampsList.Controls.Add(basepanel);
-
-
-
-            var ChampBox = new Panel
-            {
-                Name = "ChampBox",
-                Size = new Size(45, 45),
-                Padding = new Padding(2, 2, 2, 2),
-                Location = new Point(0, 0),
-                BackColor = Color.Blue,
-
-            };
-            basepanel.Controls.Add(ChampBox);
-
-            var ChampPicture = new PictureBox
-            {
-                Name = "ChampPicture",
-                Size = new Size(41, 41),
-                Dock = DockStyle.Fill,
-                Location = new Point(0, 0),
-                BackgroundImage = (Properties.Resources.Aatrox_n),
-                BackgroundImageLayout = ImageLayout.Stretch,
-
-            };
-            ChampBox.Controls.Add(ChampPicture);
-
-
-            var picturebox = new PictureBox
-            {
-                Name = "basepanel",
-                Size = new Size(37, 34),
-                Location = new Point(0, 0),
-                BackgroundImage = (Properties.Resources.ludens_echo),
-                BackgroundImageLayout = ImageLayout.Stretch,
-
-            };
-            basepanel.Controls.Add(picturebox);
-
-
+            // Debug.Text = (string)jObject.SelectToken("Aatrox.origin.[0]")
 
 
         }
