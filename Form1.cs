@@ -1078,15 +1078,25 @@ namespace TFT_Overlay
 
         private void Pointer_MouseClick(object sender, MouseEventArgs e)
         {
-           //Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
+           Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
            //System.Threading.Thread.Sleep(60);           
-           // Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
+           //Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();
             frm2.ShowDialog();
+        }
+
+        private void PointerLogic(object sender, EventArgs e)
+        {
+            Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
+        }
+
+        private void PointerLogicLeave(object sender, EventArgs e)
+        {
+            Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
         }
     }
 }
