@@ -863,9 +863,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Khazix_n {
+        internal static System.Drawing.Bitmap KhaZix_n {
             get {
-                object obj = ResourceManager.GetObject("Khazix_n", resourceCulture);
+                object obj = ResourceManager.GetObject("KhaZix_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1053,9 +1053,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Missfortune_n {
+        internal static System.Drawing.Bitmap MissFortune_n {
             get {
-                object obj = ResourceManager.GetObject("Missfortune_n", resourceCulture);
+                object obj = ResourceManager.GetObject("MissFortune_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1338,9 +1338,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Reksai_n {
+        internal static System.Drawing.Bitmap RekSai_n {
             get {
-                object obj = ResourceManager.GetObject("Reksai_n", resourceCulture);
+                object obj = ResourceManager.GetObject("RekSai_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

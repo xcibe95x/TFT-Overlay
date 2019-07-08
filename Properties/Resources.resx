@@ -532,7 +532,7 @@
   <data name="Kennen_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\new_champs\Kennen_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Khazix_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="KhaZix_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\new_champs\Khazix_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kindred_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -553,7 +553,7 @@
   <data name="Lulu_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\new_champs\Lulu_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Missfortune_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="MissFortune_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\new_champs\Missfortune_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mordekaiser_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -586,7 +586,7 @@
   <data name="Ranger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\classes\ranger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Reksai_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="RekSai_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\new_champs\Reksai_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rengar_n" type="System.Resources.ResXFileRef, System.Windows.Forms">

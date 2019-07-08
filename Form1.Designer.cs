@@ -64,12 +64,12 @@
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
-            this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
             this.button17 = new System.Windows.Forms.Button();
+            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
+            this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -115,8 +115,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
-            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -126,6 +125,7 @@
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.ChampionsTab.SuspendLayout();
+            this.metroPanel5.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -142,7 +142,7 @@
             this.metroPanel4.SuspendLayout();
             this.WinRateTab.SuspendLayout();
             this.metroPanel3.SuspendLayout();
-            this.metroPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -662,32 +662,50 @@
             this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
             this.ChampionsTab.VerticalScrollbarSize = 10;
             // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(256, 165);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 23);
+            this.button17.TabIndex = 3;
+            this.button17.Text = "Debug";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // metroPanel5
+            // 
+            this.metroPanel5.AutoScroll = true;
+            this.metroPanel5.Controls.Add(this.ChampsList);
+            this.metroPanel5.HorizontalScrollbar = true;
+            this.metroPanel5.HorizontalScrollbarBarColor = true;
+            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.HorizontalScrollbarSize = 10;
+            this.metroPanel5.Location = new System.Drawing.Point(2, 3);
+            this.metroPanel5.Name = "metroPanel5";
+            this.metroPanel5.Size = new System.Drawing.Size(327, 118);
+            this.metroPanel5.TabIndex = 5;
+            this.metroPanel5.UseCustomBackColor = true;
+            this.metroPanel5.VerticalScrollbar = true;
+            this.metroPanel5.VerticalScrollbarBarColor = true;
+            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.VerticalScrollbarSize = 10;
+            // 
             // ChampsList
             // 
             this.ChampsList.AutoSize = true;
             this.ChampsList.Location = new System.Drawing.Point(3, 3);
             this.ChampsList.MaximumSize = new System.Drawing.Size(329, 0);
             this.ChampsList.Name = "ChampsList";
-            this.ChampsList.Size = new System.Drawing.Size(321, 58);
+            this.ChampsList.Size = new System.Drawing.Size(321, 0);
             this.ChampsList.TabIndex = 4;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(254, 165);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 3;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.panel6);
-            this.flowLayoutPanel2.Controls.Add(this.metroLabel3);
-            this.flowLayoutPanel2.Controls.Add(this.metroLabel2);
             this.flowLayoutPanel2.Controls.Add(this.pictureBox5);
             this.flowLayoutPanel2.Controls.Add(this.pictureBox6);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox7);
+            this.flowLayoutPanel2.Controls.Add(this.metroLabel2);
             this.flowLayoutPanel2.Controls.Add(this.panel3);
             this.flowLayoutPanel2.Controls.Add(this.panel4);
             this.flowLayoutPanel2.Controls.Add(this.panel5);
@@ -718,33 +736,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // metroLabel3
-            // 
-            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(54, 16);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(15, 19);
-            this.metroLabel3.TabIndex = 7;
-            this.metroLabel3.Text = "?";
-            // 
             // metroLabel2
             // 
             this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(75, 16);
+            this.metroLabel2.ForeColor = System.Drawing.Color.DarkRed;
+            this.metroLabel2.Location = new System.Drawing.Point(147, 16);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(16, 19);
             this.metroLabel2.TabIndex = 6;
             this.metroLabel2.Text = "3";
-            this.htmlToolTip1.SetToolTip(this.metroLabel2, "Aatrox cleaves the area in front of him, dealing damage to enemies inside it.");
+            this.metroLabel2.UseCustomBackColor = true;
+            this.metroLabel2.UseCustomForeColor = true;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BackgroundImage = global::TFT_Overlay.Properties.Resources.Robot;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(97, 13);
+            this.pictureBox5.Location = new System.Drawing.Point(54, 13);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(25, 25);
             this.pictureBox5.TabIndex = 4;
@@ -755,7 +765,7 @@
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BackgroundImage = global::TFT_Overlay.Properties.Resources.blademaster;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(128, 13);
+            this.pictureBox6.Location = new System.Drawing.Point(85, 13);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(25, 25);
             this.pictureBox6.TabIndex = 5;
@@ -766,7 +776,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Maroon;
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(159, 8);
+            this.panel3.Location = new System.Drawing.Point(169, 8);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(2);
             this.panel3.Size = new System.Drawing.Size(36, 34);
@@ -788,7 +798,7 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.Maroon;
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(201, 8);
+            this.panel4.Location = new System.Drawing.Point(211, 8);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(2);
             this.panel4.Size = new System.Drawing.Size(36, 34);
@@ -810,7 +820,7 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.Maroon;
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(243, 8);
+            this.panel5.Location = new System.Drawing.Point(253, 8);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(2);
             this.panel5.Size = new System.Drawing.Size(36, 34);
@@ -923,7 +933,7 @@
             // 
             this.T1T.AutoSize = true;
             this.T1T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T1T.ForeColor = System.Drawing.Color.SlateGray;
+            this.T1T.ForeColor = System.Drawing.Color.DimGray;
             this.T1T.Location = new System.Drawing.Point(14, 58);
             this.T1T.Name = "T1T";
             this.T1T.Size = new System.Drawing.Size(15, 15);
@@ -934,7 +944,7 @@
             // 
             this.T2T.AutoSize = true;
             this.T2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T2T.ForeColor = System.Drawing.Color.LawnGreen;
+            this.T2T.ForeColor = System.Drawing.Color.ForestGreen;
             this.T2T.Location = new System.Drawing.Point(14, 80);
             this.T2T.Name = "T2T";
             this.T2T.Size = new System.Drawing.Size(15, 15);
@@ -945,7 +955,7 @@
             // 
             this.T3T.AutoSize = true;
             this.T3T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T3T.ForeColor = System.Drawing.Color.Aqua;
+            this.T3T.ForeColor = System.Drawing.Color.DodgerBlue;
             this.T3T.Location = new System.Drawing.Point(14, 103);
             this.T3T.Name = "T3T";
             this.T3T.Size = new System.Drawing.Size(15, 15);
@@ -968,7 +978,7 @@
             // 
             this.T5T.AutoSize = true;
             this.T5T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T5T.ForeColor = System.Drawing.Color.Orange;
+            this.T5T.ForeColor = System.Drawing.Color.Gold;
             this.T5T.Location = new System.Drawing.Point(14, 150);
             this.T5T.Name = "T5T";
             this.T5T.Size = new System.Drawing.Size(15, 15);
@@ -979,7 +989,7 @@
             // 
             this.T1P.AutoSize = true;
             this.T1P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T1P.ForeColor = System.Drawing.Color.SlateGray;
+            this.T1P.ForeColor = System.Drawing.Color.DimGray;
             this.T1P.Location = new System.Drawing.Point(149, 60);
             this.T1P.Name = "T1P";
             this.T1P.Size = new System.Drawing.Size(33, 13);
@@ -1012,7 +1022,7 @@
             // 
             this.T5P.AutoSize = true;
             this.T5P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T5P.ForeColor = System.Drawing.Color.Orange;
+            this.T5P.ForeColor = System.Drawing.Color.Gold;
             this.T5P.Location = new System.Drawing.Point(149, 152);
             this.T5P.Name = "T5P";
             this.T5P.Size = new System.Drawing.Size(21, 13);
@@ -1034,7 +1044,7 @@
             // 
             this.T3P.AutoSize = true;
             this.T3P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T3P.ForeColor = System.Drawing.Color.Aqua;
+            this.T3P.ForeColor = System.Drawing.Color.DodgerBlue;
             this.T3P.Location = new System.Drawing.Point(149, 105);
             this.T3P.Name = "T3P";
             this.T3P.Size = new System.Drawing.Size(21, 13);
@@ -1045,7 +1055,7 @@
             // 
             this.T2P.AutoSize = true;
             this.T2P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T2P.ForeColor = System.Drawing.Color.LawnGreen;
+            this.T2P.ForeColor = System.Drawing.Color.ForestGreen;
             this.T2P.Location = new System.Drawing.Point(149, 82);
             this.T2P.Name = "T2P";
             this.T2P.Size = new System.Drawing.Size(21, 13);
@@ -1349,29 +1359,16 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
-            // htmlToolTip1
+            // pictureBox7
             // 
-            this.htmlToolTip1.BackColor = System.Drawing.Color.Yellow;
-            this.htmlToolTip1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.htmlToolTip1.OwnerDraw = true;
-            // 
-            // metroPanel5
-            // 
-            this.metroPanel5.AutoScroll = true;
-            this.metroPanel5.Controls.Add(this.ChampsList);
-            this.metroPanel5.HorizontalScrollbar = true;
-            this.metroPanel5.HorizontalScrollbarBarColor = true;
-            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.HorizontalScrollbarSize = 10;
-            this.metroPanel5.Location = new System.Drawing.Point(2, 3);
-            this.metroPanel5.Name = "metroPanel5";
-            this.metroPanel5.Size = new System.Drawing.Size(327, 118);
-            this.metroPanel5.TabIndex = 5;
-            this.metroPanel5.UseCustomBackColor = true;
-            this.metroPanel5.VerticalScrollbar = true;
-            this.metroPanel5.VerticalScrollbarBarColor = true;
-            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.VerticalScrollbarSize = 10;
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox7.BackgroundImage = global::TFT_Overlay.Properties.Resources.blademaster;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(116, 13);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox7.TabIndex = 9;
+            this.pictureBox7.TabStop = false;
             // 
             // TFTCrafter
             // 
@@ -1399,6 +1396,8 @@
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.ChampionsTab.ResumeLayout(false);
+            this.metroPanel5.ResumeLayout(false);
+            this.metroPanel5.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1419,8 +1418,7 @@
             this.WinRateTab.ResumeLayout(false);
             this.WinRateTab.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
-            this.metroPanel5.ResumeLayout(false);
-            this.metroPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1505,15 +1503,14 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private MetroFramework.Drawing.Html.HtmlToolTip htmlToolTip1;
         private System.Windows.Forms.FlowLayoutPanel ChampsList;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Panel panel6;
         private MetroFramework.Controls.MetroPanel metroPanel5;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
 

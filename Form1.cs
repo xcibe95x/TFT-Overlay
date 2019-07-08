@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MetroFramework.Components;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel;
@@ -1118,7 +1119,37 @@ namespace TFT_Overlay
 
             foreach (JProperty item in ChampionNamesList.Children())
             {
+
+                // VARIABLES
                 var key = item.Name.ToString();
+                int cost = (int)jObject.SelectToken(key + ".cost");
+                string origins = (string)jObject.SelectToken(key + ".origin.[0]");
+                string ability = (string)jObject.SelectToken(key + ".ability.description");
+                Color tiercost = Color.OrangeRed;
+
+                if (cost == 1)
+                {
+                    tiercost = Color.DimGray;
+                }
+
+                if (cost == 2) {
+                   tiercost = Color.ForestGreen;
+                }
+
+                if (cost == 3)
+                {
+                    tiercost = Color.DodgerBlue;
+                }
+
+                if (cost == 4)
+                {
+                    tiercost = Color.DarkViolet;
+                }
+
+                if (cost == 5)
+                {
+                    tiercost = Color.Gold;
+                }
 
                 ResourceManager rm = new ResourceManager(
                 "TFT_Overlay.Properties.Resources",
@@ -1146,11 +1177,14 @@ namespace TFT_Overlay
                     Size = new Size(45, 45),
                     Padding = new Padding(2, 2, 2, 2),
                     Location = new Point(0, 0),
-                    BackColor = Color.Blue,
+
+                    BackColor = tiercost,
 
                 };
                 basepanel.Controls.Add(ChampBox);
 
+
+                // CHAMP BORDER
                 var ChampPicture = new PictureBox
                 {
                     Name = "ChampPicture",
@@ -1164,20 +1198,26 @@ namespace TFT_Overlay
                 ChampBox.Controls.Add(ChampPicture);
 
 
-                string origins = (string)jObject.SelectToken(key + ".origin.[0]");
+                // ORIGIN
+
+                ToolTip tip = new MetroFramework.Drawing.Html.HtmlToolTip();
+                ToolTip tiup = new MetroToolTip();
+                
                 var picturebox = new PictureBox
                 {
                     Name = "basepanel",
                     Size = new Size(25, 25),
+                    Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
                     Location = new Point(0, 0),
                     BackgroundImage = (Image)(rm.GetObject(origins)),
                     BackgroundImageLayout = ImageLayout.Stretch,
-
-                };
+                    
+            };
                 basepanel.Controls.Add(picturebox);
-
-
+                tiup.SetToolTip(picturebox, origins);
+                tiup.SetToolTip(ChampBox, ability);
+                tiup.SetToolTip(ChampPicture, "           "+ ability + "           ");
 
 
             }
