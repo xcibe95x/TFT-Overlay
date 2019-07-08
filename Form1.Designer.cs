@@ -1147,7 +1147,7 @@
             this.Name = "TFTCrafter";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "TFT Overlay";
+            this.Text = "TFT Overlay @xcibe95x";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
