@@ -210,6 +210,9 @@
     <None Include="Images\new_champs\Warwick_n.png" />
     <None Include="Images\Coin.png" />
     <None Include="Images\origins\noble.png" />
+    <None Include="Images\becomeapatronbanner.png" />
+    <None Include="Images\Ko_fi.jpg" />
+    <None Include="Images\Ko-fi.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />

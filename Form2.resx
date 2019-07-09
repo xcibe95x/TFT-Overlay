@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Infos: Tier Lists, Champs List and similiar utility's 
+will always be up to date without updating the app.
+I'm also working on a Fan Made Game at 'lol.playconstraints.com'
+If you like card games, check it out.
+Donations will not be used to support this tool or the game.
+Just if you want to get me some food, you are welcome!
+Enjoy your journey of Teamfight Tactics!</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

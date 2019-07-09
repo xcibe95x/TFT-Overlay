@@ -21,5 +21,17 @@ namespace TFT_Overlay
         {
             TopMost = Properties.Settings.Default.TopMost;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://ko-fi.com/xcibe95x");
+            Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.patreon.com/xcibe95x");
+            Close();
+        }
     }
 }

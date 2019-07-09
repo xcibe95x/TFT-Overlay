@@ -933,9 +933,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ko_fi {
+        internal static System.Drawing.Bitmap KoFi {
             get {
-                object obj = ResourceManager.GetObject("Ko_fi", resourceCulture);
+                object obj = ResourceManager.GetObject("KoFi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
