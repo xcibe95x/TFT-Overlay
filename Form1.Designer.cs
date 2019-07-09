@@ -525,7 +525,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -738,7 +738,7 @@
             this.ProbTab.Name = "ProbTab";
             this.ProbTab.Size = new System.Drawing.Size(332, 188);
             this.ProbTab.TabIndex = 2;
-            this.ProbTab.Text = "Probabilities";
+            this.ProbTab.Text = "Drop Rates";
             this.ProbTab.UseCustomBackColor = true;
             this.ProbTab.VerticalScrollbarBarColor = true;
             this.ProbTab.VerticalScrollbarHighlightOnWheel = false;
