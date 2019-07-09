@@ -525,7 +525,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 4;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -991,11 +991,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(14, 11);
+            this.label3.Location = new System.Drawing.Point(14, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 17);
+            this.label3.Size = new System.Drawing.Size(147, 17);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Chances to get a Tier per Level";
+            this.label3.Text = "Champion Drop Rates";
             // 
             // TierListTab
             // 
@@ -1126,7 +1126,7 @@
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(10, 13);
+            this.metroPanel3.Location = new System.Drawing.Point(10, 3);
             this.metroPanel3.Name = "metroPanel3";
             this.metroPanel3.Size = new System.Drawing.Size(155, 160);
             this.metroPanel3.TabIndex = 16;
@@ -1153,7 +1153,7 @@
             // 
             this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.metroButton3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.metroButton3.Location = new System.Drawing.Point(232, 135);
+            this.metroButton3.Location = new System.Drawing.Point(236, 140);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(86, 38);
             this.metroButton3.Style = MetroFramework.MetroColorStyle.Orange;
@@ -1171,7 +1171,7 @@
             // 
             this.AddLoseBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.AddLoseBtn.ForeColor = System.Drawing.Color.Crimson;
-            this.AddLoseBtn.Location = new System.Drawing.Point(278, 13);
+            this.AddLoseBtn.Location = new System.Drawing.Point(282, 34);
             this.AddLoseBtn.Name = "AddLoseBtn";
             this.AddLoseBtn.Size = new System.Drawing.Size(40, 38);
             this.AddLoseBtn.Style = MetroFramework.MetroColorStyle.Orange;
@@ -1189,7 +1189,7 @@
             // 
             this.AddWinBtn.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.AddWinBtn.ForeColor = System.Drawing.Color.LawnGreen;
-            this.AddWinBtn.Location = new System.Drawing.Point(232, 13);
+            this.AddWinBtn.Location = new System.Drawing.Point(236, 34);
             this.AddWinBtn.Name = "AddWinBtn";
             this.AddWinBtn.Size = new System.Drawing.Size(40, 38);
             this.AddWinBtn.Style = MetroFramework.MetroColorStyle.Orange;
@@ -1208,7 +1208,7 @@
             this.WinLab.AutoSize = true;
             this.WinLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WinLab.ForeColor = System.Drawing.Color.LawnGreen;
-            this.WinLab.Location = new System.Drawing.Point(235, 73);
+            this.WinLab.Location = new System.Drawing.Point(49, 161);
             this.WinLab.Name = "WinLab";
             this.WinLab.Size = new System.Drawing.Size(37, 20);
             this.WinLab.TabIndex = 10;
@@ -1221,7 +1221,7 @@
             this.LoseLab.AutoSize = true;
             this.LoseLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoseLab.ForeColor = System.Drawing.Color.Crimson;
-            this.LoseLab.Location = new System.Drawing.Point(283, 73);
+            this.LoseLab.Location = new System.Drawing.Point(97, 161);
             this.LoseLab.Name = "LoseLab";
             this.LoseLab.Size = new System.Drawing.Size(31, 20);
             this.LoseLab.TabIndex = 9;

@@ -1178,8 +1178,6 @@ namespace TFT_Overlay
                 {
                     Name = "basepanel",
                     Size = new Size(312, 48),
-                    Location = new Point(0, 0),
-
                 };
                 ChampsList.Controls.Add(basepanel);
 
@@ -1191,8 +1189,6 @@ namespace TFT_Overlay
                     Name = "ChampBox",
                     Size = new Size(45, 45),
                     Padding = new Padding(2, 2, 2, 2),
-                    Location = new Point(0, 0),
-
                     BackColor = tiercost,
 
                 };
@@ -1205,7 +1201,6 @@ namespace TFT_Overlay
                     Name = "ChampPicture",
                     Size = new Size(41, 41),
                     Dock = DockStyle.Fill,
-                    Location = new Point(0, 0),
                     BackgroundImage = (Image)(rm.GetObject(key + "_n")),
                     BackgroundImageLayout = ImageLayout.Stretch,
 
@@ -1222,8 +1217,8 @@ namespace TFT_Overlay
                     UseCustomBackColor = true,
                     UseCustomForeColor = true,
                     ForeColor = tiercost,
-                    Location = new Point(0, 0),
-                    Size = new Size(17, 19),
+  
+                    Size = new Size(12, 18),
                     FontWeight = MetroFramework.MetroLabelWeight.Bold,
                 };
                 tiup.SetToolTip(ChampCost, "Cost");
@@ -1236,13 +1231,25 @@ namespace TFT_Overlay
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
                     Size = new Size(10, 10),
-                    Location = new Point(0, 0),
                     BackgroundImage = Properties.Resources.Coin,
                     BackgroundImageLayout = ImageLayout.Stretch,
 
                 };
                 tiup.SetToolTip(CostIcon, "Cost");
                 basepanel.Controls.Add(CostIcon);
+
+
+                // SPACER
+
+                var Spacer = new Panel
+                {
+                    Size = new Size(1, 1),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Location = new Point(0, 0),
+                };
+                basepanel.Controls.Add(Spacer);
+
 
                 // ORIGIN
 
@@ -1300,14 +1307,14 @@ namespace TFT_Overlay
 
                 // SPACER
 
-                var Spacer = new Panel
+                var Spacer2 = new Panel
                 {
-                    Size = new Size(5, 5),
+                    Size = new Size(4, 4),
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
                     Location = new Point(0, 0),
                 };
-                basepanel.Controls.Add(Spacer);
+                basepanel.Controls.Add(Spacer2);
 
 
                 // ITEMS

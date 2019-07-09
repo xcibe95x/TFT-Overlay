@@ -33,8 +33,8 @@ I'm gonna take a break to finish it after 2.2, but i will keep pushing small upd
 	- Fixed some champions not showing in tier list
 	- New Champions List
 	- Updated Drop Rates
-	- Changed Roll Chances colors to fit with the new graphics
-	-
+	- Changed Drop rates colors to fit with the new graphics
+	- Some layouts changes
 	
 - **2.1.2**
   - Changelog  
