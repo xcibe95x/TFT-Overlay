@@ -1326,18 +1326,32 @@ namespace TFT_Overlay
 
                     string itemization = (string)jObject.SelectToken(key + ".items.[" + itemsIndex.ToString() + "]");
 
-                    var picturebox = new PictureBox
+                    var itemBorder = new Panel
                     {
 
                         Size = new Size(32, 32),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.None,
                         Location = new Point(0, 0),
+                        BackColor = tiercost,
+                        Padding = new Padding(2, 2, 2, 2),
+                    };
+
+
+                    var picturebox = new PictureBox
+                    {
+
+                        Size = new Size(28, 28),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+
+                        Location = new Point(0, 0),
                         BackgroundImage = (Image)(rm.GetObject(itemization)),
                         BackgroundImageLayout = ImageLayout.Stretch,
                     };
 
-                    basepanel.Controls.Add(picturebox);
+                    basepanel.Controls.Add(itemBorder);
+                    itemBorder.Controls.Add(picturebox);
                     itemsIndex++;
 
                 }
