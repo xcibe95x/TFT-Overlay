@@ -1398,9 +1398,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap runaans_hurricane {
+        internal static System.Drawing.Bitmap runaanshurricane {
             get {
-                object obj = ResourceManager.GetObject("runaans_hurricane", resourceCulture);
+                object obj = ResourceManager.GetObject("runaanshurricane", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1428,9 +1428,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap seraphs_embrace {
+        internal static System.Drawing.Bitmap seraphsembrace {
             get {
-                object obj = ResourceManager.GetObject("seraphs_embrace", resourceCulture);
+                object obj = ResourceManager.GetObject("seraphsembrace", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

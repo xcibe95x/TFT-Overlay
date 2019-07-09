@@ -121,6 +121,8 @@ namespace TFT_Overlay
             }
 
 
+
+        
             // GET JSON DATA
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
@@ -155,6 +157,10 @@ namespace TFT_Overlay
 
             // CALL WINRATE CALCULATOR
             CalculateWR();
+
+            // LOAD CHAMPIONS LIST
+            championsListLoop();
+     
 
         }
 
@@ -505,7 +511,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("runaanshurricane.name");
                 rDesc = (string)jObject.SelectToken("runaanshurricane.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.runaans_hurricane;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.runaanshurricane;
 
             }
 
@@ -552,7 +558,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("seraphsembrace.name");
                 rDesc = (string)jObject.SelectToken("seraphsembrace.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.seraphs_embrace;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.seraphsembrace;
 
             }
 
@@ -1110,7 +1116,7 @@ namespace TFT_Overlay
 
       // CHAMPIONS LIST CODE
 
-        private void button17_Click(object sender, EventArgs e)
+        private void championsListLoop()
         {
             
             JObject jObject = JObject.Parse(champsJSON);
@@ -1122,8 +1128,6 @@ namespace TFT_Overlay
             {
                 int originsIndex = 0;
                 int classesIndex = 0;
-                bool originsCheck = false;
-                bool classesCheck = false;
                 int itemsIndex = 0;
 
                 // VARIABLES
@@ -1131,6 +1135,10 @@ namespace TFT_Overlay
                 int cost = (int)jObject.SelectToken(key + ".cost");              
                 string ability = (string)jObject.SelectToken(key + ".ability.description");
                 Color tiercost = Color.OrangeRed;
+
+                ToolTip tip = new MetroFramework.Drawing.Html.HtmlToolTip();
+                ToolTip tiup = new MetroToolTip();
+
 
                 if (cost == 1)
                 {
@@ -1217,6 +1225,7 @@ namespace TFT_Overlay
                     Size = new Size(17, 19),
                     FontWeight = MetroFramework.MetroLabelWeight.Bold,
                 };
+                tiup.SetToolTip(ChampCost, "Cost");
                 basepanel.Controls.Add(ChampCost);
 
 
@@ -1231,29 +1240,15 @@ namespace TFT_Overlay
                     BackgroundImageLayout = ImageLayout.Stretch,
 
                 };
+                tiup.SetToolTip(CostIcon, "Cost");
                 basepanel.Controls.Add(CostIcon);
 
                 // ORIGIN
-
-                ToolTip tip = new MetroFramework.Drawing.Html.HtmlToolTip();
-                ToolTip tiup = new MetroToolTip();
 
                 JArray originsLoop = (JArray)jObject.SelectToken(key + ".origin");
 
                 foreach (JToken arrayname in originsLoop)
                 {
-
-
-
-                    if (originsCheck == true)
-                    {
-                        originsIndex++;
-
-                    }
-                    if (originsIndex == 0)
-                    {
-                        originsCheck = true;
-                    }
 
                     string origins = (string)jObject.SelectToken(key + ".origin.[" + originsIndex.ToString() + "]");
 
@@ -1268,10 +1263,9 @@ namespace TFT_Overlay
                         BackgroundImageLayout = ImageLayout.Stretch,
                     };
 
-                    Console.Write(originsIndex);
                     basepanel.Controls.Add(picturebox);
                     tiup.SetToolTip(picturebox, origins);
-
+                    originsIndex++;
                 }
 
 
@@ -1282,17 +1276,6 @@ namespace TFT_Overlay
                 foreach (JToken arrayname in classesLoop)
                 {
 
-
-
-                    if (classesCheck == true)
-                    {
-                        classesIndex++;
-
-                    }
-                    if (classesIndex == 0)
-                    {
-                        classesCheck = true;
-                    }
 
                     string classes = (string)jObject.SelectToken(key + ".class.[" + classesIndex.ToString() + "]");
 
@@ -1307,11 +1290,23 @@ namespace TFT_Overlay
                         BackgroundImageLayout = ImageLayout.Stretch,
                     };
 
-                    Console.Write(originsIndex);
                     basepanel.Controls.Add(picturebox);
                     tiup.SetToolTip(picturebox, classes);
-
+                    classesIndex++;
                 }
+            
+
+
+                // SPACER
+
+                var Spacer = new Panel
+                {
+                    Size = new Size(5, 5),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Location = new Point(0, 0),
+                };
+                basepanel.Controls.Add(Spacer);
 
 
                 // ITEMS
@@ -1356,18 +1351,12 @@ namespace TFT_Overlay
 
                 }
 
-
                 // TOOLTIPS
                 tiup.SetToolTip(ChampBox, ability);
                 tiup.SetToolTip(ChampPicture, "           "+ ability + "           ");
 
 
             }
-
-            //Debug.Text = (string)jObject.SelectToken("$").ToString();
-            // Debug.Text = (string)jObject.SelectToken("Aatrox.class.[0]");
-            // Debug.Text = (string)jObject.SelectToken("Aatrox.origin.[0]")
-
 
         }
     }
