@@ -64,6 +64,10 @@
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
@@ -102,10 +106,6 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -525,7 +525,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 226);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -642,6 +642,42 @@
             this.ChampionsTab.VerticalScrollbarBarColor = true;
             this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
             this.ChampionsTab.VerticalScrollbarSize = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(65, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Cost";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(95, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Origin/Class";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(170, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Reccomended Items";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Champion";
             // 
             // metroPanel5
             // 
@@ -765,44 +801,44 @@
             // T1T
             // 
             this.T1T.AutoSize = true;
-            this.T1T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T1T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1T.ForeColor = System.Drawing.Color.DimGray;
             this.T1T.Location = new System.Drawing.Point(14, 58);
             this.T1T.Name = "T1T";
-            this.T1T.Size = new System.Drawing.Size(15, 15);
+            this.T1T.Size = new System.Drawing.Size(14, 15);
             this.T1T.TabIndex = 22;
             this.T1T.Text = "1";
             // 
             // T2T
             // 
             this.T2T.AutoSize = true;
-            this.T2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2T.ForeColor = System.Drawing.Color.ForestGreen;
             this.T2T.Location = new System.Drawing.Point(14, 80);
             this.T2T.Name = "T2T";
-            this.T2T.Size = new System.Drawing.Size(15, 15);
+            this.T2T.Size = new System.Drawing.Size(14, 15);
             this.T2T.TabIndex = 23;
             this.T2T.Text = "2";
             // 
             // T3T
             // 
             this.T3T.AutoSize = true;
-            this.T3T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T3T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3T.ForeColor = System.Drawing.Color.DodgerBlue;
             this.T3T.Location = new System.Drawing.Point(14, 103);
             this.T3T.Name = "T3T";
-            this.T3T.Size = new System.Drawing.Size(15, 15);
+            this.T3T.Size = new System.Drawing.Size(14, 15);
             this.T3T.TabIndex = 24;
             this.T3T.Text = "3";
             // 
             // T4T
             // 
             this.T4T.AutoSize = true;
-            this.T4T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T4T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4T.ForeColor = System.Drawing.Color.DarkViolet;
             this.T4T.Location = new System.Drawing.Point(14, 126);
             this.T4T.Name = "T4T";
-            this.T4T.Size = new System.Drawing.Size(15, 15);
+            this.T4T.Size = new System.Drawing.Size(14, 15);
             this.T4T.TabIndex = 25;
             this.T4T.Text = "4";
             this.T4T.Click += new System.EventHandler(this.T4T_Click);
@@ -810,22 +846,22 @@
             // T5T
             // 
             this.T5T.AutoSize = true;
-            this.T5T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T5T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5T.ForeColor = System.Drawing.Color.Gold;
             this.T5T.Location = new System.Drawing.Point(14, 150);
             this.T5T.Name = "T5T";
-            this.T5T.Size = new System.Drawing.Size(15, 15);
+            this.T5T.Size = new System.Drawing.Size(14, 15);
             this.T5T.TabIndex = 26;
             this.T5T.Text = "5";
             // 
             // T1P
             // 
             this.T1P.AutoSize = true;
-            this.T1P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T1P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1P.ForeColor = System.Drawing.Color.DimGray;
             this.T1P.Location = new System.Drawing.Point(149, 60);
             this.T1P.Name = "T1P";
-            this.T1P.Size = new System.Drawing.Size(33, 13);
+            this.T1P.Size = new System.Drawing.Size(37, 13);
             this.T1P.TabIndex = 33;
             this.T1P.Text = "100%";
             // 
@@ -854,44 +890,44 @@
             // T5P
             // 
             this.T5P.AutoSize = true;
-            this.T5P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T5P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5P.ForeColor = System.Drawing.Color.Gold;
             this.T5P.Location = new System.Drawing.Point(149, 152);
             this.T5P.Name = "T5P";
-            this.T5P.Size = new System.Drawing.Size(10, 13);
+            this.T5P.Size = new System.Drawing.Size(11, 13);
             this.T5P.TabIndex = 37;
             this.T5P.Text = "-";
             // 
             // T4P
             // 
             this.T4P.AutoSize = true;
-            this.T4P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T4P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4P.ForeColor = System.Drawing.Color.DarkViolet;
             this.T4P.Location = new System.Drawing.Point(149, 128);
             this.T4P.Name = "T4P";
-            this.T4P.Size = new System.Drawing.Size(10, 13);
+            this.T4P.Size = new System.Drawing.Size(11, 13);
             this.T4P.TabIndex = 36;
             this.T4P.Text = "-";
             // 
             // T3P
             // 
             this.T3P.AutoSize = true;
-            this.T3P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T3P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3P.ForeColor = System.Drawing.Color.DodgerBlue;
             this.T3P.Location = new System.Drawing.Point(149, 105);
             this.T3P.Name = "T3P";
-            this.T3P.Size = new System.Drawing.Size(10, 13);
+            this.T3P.Size = new System.Drawing.Size(11, 13);
             this.T3P.TabIndex = 35;
             this.T3P.Text = "-";
             // 
             // T2P
             // 
             this.T2P.AutoSize = true;
-            this.T2P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T2P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2P.ForeColor = System.Drawing.Color.ForestGreen;
             this.T2P.Location = new System.Drawing.Point(149, 82);
             this.T2P.Name = "T2P";
-            this.T2P.Size = new System.Drawing.Size(10, 13);
+            this.T2P.Size = new System.Drawing.Size(11, 13);
             this.T2P.TabIndex = 34;
             this.T2P.Text = "-";
             // 
@@ -1191,42 +1227,6 @@
             this.LoseLab.TabIndex = 9;
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Champion";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(170, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Reccomended Items";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(95, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Origin/Class";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(65, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Cost";
             // 
             // TFTCrafter
             // 
