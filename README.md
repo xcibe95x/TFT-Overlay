@@ -35,6 +35,7 @@ I'm gonna take a break to finish it after 2.2, but i will keep pushing small upd
 	- Updated Drop Rates
 	- Changed Drop rates colors to fit with the new graphics
 	- Some layouts changes
+	- Reccomended Items
 	
 - **2.1.2**
   - Changelog  
