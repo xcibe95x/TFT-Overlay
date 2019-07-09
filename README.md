@@ -34,6 +34,7 @@ I'm gonna take a break to finish it after 2.2, but i will keep pushing small upd
 	- New Champions List
 	- Updated Drop Rates
 	- Changed Roll Chances colors to fit with the new graphics
+	-
 	
 - **2.1.2**
   - Changelog  

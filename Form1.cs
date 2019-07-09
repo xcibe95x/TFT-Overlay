@@ -908,6 +908,7 @@ namespace TFT_Overlay
 
 
         // LVL UP BUTTON
+        // PROBABILITIES
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
 
@@ -922,80 +923,80 @@ namespace TFT_Overlay
                 default:
                     Lvl.Text = "Level 1";
                     T1P.Text = "100%";
-                    T2P.Text = "0%";
-                    T3P.Text = "0%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
+                    T2P.Text = "-";
+                    T3P.Text = "-";
+                    T4P.Text = "-";
+                    T5P.Text = "-";
                     break;
                 case 1:
                     Lvl.Text = "Level 1";
                     T1P.Text = "100%";
-                    T2P.Text = "0%";
-                    T3P.Text = "0%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
+                    T2P.Text = "-";
+                    T3P.Text = "-";
+                    T4P.Text = "-";
+                    T5P.Text = "-";
                     break;
                 case 2:
                     Lvl.Text = "Level 2";
                     T1P.Text = "100%";
-                    T2P.Text = "0%";
-                    T3P.Text = "0%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
+                    T2P.Text = "-";
+                    T3P.Text = "-";
+                    T4P.Text = "-";
+                    T5P.Text = "-";
                     break;
                 case 3:
                     Lvl.Text = "Level 3";
-                    T1P.Text = "70%";
+                    T1P.Text = "65%";
                     T2P.Text = "30%";
-                    T3P.Text = "0%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
+                    T3P.Text = "5%";
+                    T4P.Text = "-";
+                    T5P.Text = "-";
                     break;
                 case 4:
                     Lvl.Text = "Level 4";
-                    T1P.Text = "55%";
-                    T2P.Text = "30%";
+                    T1P.Text = "50%";
+                    T2P.Text = "35%";
                     T3P.Text = "15%";
-                    T4P.Text = "0%";
-                    T5P.Text = "0%";
+                    T4P.Text = "-";
+                    T5P.Text = "-";
                     break;
                 case 5:
                     Lvl.Text = "Level 5";
-                    T1P.Text = "40%";
-                    T2P.Text = "30%";
+                    T1P.Text = "37%";
+                    T2P.Text = "35%";
                     T3P.Text = "25%";
-                    T4P.Text = "5%";
-                    T5P.Text = "0%";
+                    T4P.Text = "3%";
+                    T5P.Text = "-";
                     break;
                 case 6:
                     Lvl.Text = "Level 6";
-                    T1P.Text = "29%";
-                    T2P.Text = "29.5%";
-                    T3P.Text = "31%";
+                    T1P.Text = "24.5%";
+                    T2P.Text = "35%";
+                    T3P.Text = "30%";
                     T4P.Text = "10%";
                     T5P.Text = "0.5%";
                     break;
                 case 7:
                     Lvl.Text = "Level 7";
-                    T1P.Text = "24%";
-                    T2P.Text = "28%";
-                    T3P.Text = "31%";
+                    T1P.Text = "20%";
+                    T2P.Text = "30%";
+                    T3P.Text = "33%";
                     T4P.Text = "15%";
                     T5P.Text = "2%";
                     break;
                 case 8:
                     Lvl.Text = "Level 8";
-                    T1P.Text = "20%";
-                    T2P.Text = "24%";
-                    T3P.Text = "31%";
+                    T1P.Text = "15%";
+                    T2P.Text = "25%";
+                    T3P.Text = "35%";
                     T4P.Text = "20%";
                     T5P.Text = "5%";
                     break;
                 case 9:
                     Lvl.Text = "Level 9";
                     T1P.Text = "10%";
-                    T2P.Text = "19%";
-                    T3P.Text = "31%";
+                    T2P.Text = "15%";
+                    T3P.Text = "35%";
                     T4P.Text = "30%";
                     T5P.Text = "10%";
                     break;

@@ -203,6 +203,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap becomeapatronbanner {
+            get {
+                object obj = ResourceManager.GetObject("becomeapatronbanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Belt {
             get {
                 object obj = ResourceManager.GetObject("Belt", resourceCulture);
@@ -916,6 +926,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap knightsvow {
             get {
                 object obj = ResourceManager.GetObject("knightsvow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ko_fi {
+            get {
+                object obj = ResourceManager.GetObject("Ko_fi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
