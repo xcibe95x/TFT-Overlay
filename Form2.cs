@@ -19,6 +19,7 @@ namespace TFT_Overlay
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            VersionLab.Text = "Version: " + Properties.Settings.Default.Version;
             TopMost = Properties.Settings.Default.TopMost;
         }
 

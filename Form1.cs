@@ -91,6 +91,8 @@ namespace TFT_Overlay
 
         {
 
+            metroTabControl1.SelectedIndex = 0;
+
             // Delete and Generate Custom Mouse Pointer to Temp Path
             File.Delete(Path.GetTempPath() + "Normal.cur");
             File.Delete(Path.GetTempPath() + "Pointer.cur");
@@ -100,7 +102,8 @@ namespace TFT_Overlay
             var localVersion = new Version("2.2");
 
             // Program Title
-            Title.Text = "TFT Overlay - " + localVersion + " | by @xcibe95x";
+            Title.Text = "TFT Overlay | by @xcibe95x";
+            Properties.Settings.Default.Version = localVersion.ToString();
 
 
             // Set League Cursor
@@ -1398,5 +1401,17 @@ namespace TFT_Overlay
             }
         }
 
+        private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (metroTabControl1.SelectedTab != metroTabControl1.TabPages["ChampionsTab"])
+            {
+                ChampsSearchBox.Visible = false;
+                label9.Visible = false;
+            } else
+            {
+                ChampsSearchBox.Visible = true;
+                label9.Visible = true;
+            }
+        }
     }
 }
