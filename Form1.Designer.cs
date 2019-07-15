@@ -34,6 +34,8 @@
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ChampsSearchBox = new System.Windows.Forms.TextBox();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.Debug = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
@@ -65,11 +67,16 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
+            this.ChampsListContext = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -106,13 +113,9 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.ChampsSearchBox = new System.Windows.Forms.TextBox();
-            this.ChampsListContext = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label9 = new System.Windows.Forms.Label();
+            this.cost3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -123,12 +126,12 @@
             this.metroPanel1.SuspendLayout();
             this.ChampionsTab.SuspendLayout();
             this.metroPanel5.SuspendLayout();
+            this.ChampsListContext.SuspendLayout();
             this.ProbTab.SuspendLayout();
             this.TierListTab.SuspendLayout();
             this.metroPanel4.SuspendLayout();
             this.WinRateTab.SuspendLayout();
             this.metroPanel3.SuspendLayout();
-            this.ChampsListContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -170,6 +173,27 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(178, 7);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Search:";
+            // 
+            // ChampsSearchBox
+            // 
+            this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampsSearchBox.Location = new System.Drawing.Point(223, 4);
+            this.ChampsSearchBox.Name = "ChampsSearchBox";
+            this.ChampsSearchBox.Size = new System.Drawing.Size(83, 20);
+            this.ChampsSearchBox.TabIndex = 10;
+            this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // metroButton4
             // 
@@ -635,6 +659,7 @@
             // 
             // ChampionsTab
             // 
+            this.ChampionsTab.AccessibleName = "";
             this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.ChampionsTab.Controls.Add(this.label8);
             this.ChampionsTab.Controls.Add(this.metroPanel5);
@@ -648,6 +673,7 @@
             this.ChampionsTab.Name = "ChampionsTab";
             this.ChampionsTab.Size = new System.Drawing.Size(332, 187);
             this.ChampionsTab.TabIndex = 4;
+            this.ChampionsTab.Tag = "";
             this.ChampionsTab.Text = "Champs";
             this.ChampionsTab.UseCustomBackColor = true;
             this.ChampionsTab.VerticalScrollbarBarColor = true;
@@ -663,36 +689,6 @@
             this.label8.Size = new System.Drawing.Size(28, 13);
             this.label8.TabIndex = 9;
             this.label8.Text = "Cost";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(101, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Origin/Class";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(172, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Reccomended Items";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(10, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Champion";
             // 
             // metroPanel5
             // 
@@ -713,6 +709,47 @@
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 10;
             // 
+            // ChampsListContext
+            // 
+            this.ChampsListContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem1});
+            this.ChampsListContext.Name = "metroContextMenu1";
+            this.ChampsListContext.Size = new System.Drawing.Size(181, 70);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "Sort by Name";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ascendingToolStripMenuItem,
+            this.descendingToolStripMenuItem,
+            this.cost3ToolStripMenuItem,
+            this.cost4ToolStripMenuItem,
+            this.cost5ToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Sort by Cost";
+            // 
+            // ascendingToolStripMenuItem
+            // 
+            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
+            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ascendingToolStripMenuItem.Text = "Cost 1";
+            this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
+            // 
+            // descendingToolStripMenuItem
+            // 
+            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
+            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.descendingToolStripMenuItem.Text = "Cost 2";
+            this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
+            // 
             // ChampsList
             // 
             this.ChampsList.AutoSize = true;
@@ -721,6 +758,36 @@
             this.ChampsList.Name = "ChampsList";
             this.ChampsList.Size = new System.Drawing.Size(321, 0);
             this.ChampsList.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(172, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Reccomended Items";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(101, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Origin/Class";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(10, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Champion";
             // 
             // ProbTab
             // 
@@ -1244,66 +1311,26 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
-            // ChampsSearchBox
+            // cost3ToolStripMenuItem
             // 
-            this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ChampsSearchBox.Location = new System.Drawing.Point(223, 4);
-            this.ChampsSearchBox.Name = "ChampsSearchBox";
-            this.ChampsSearchBox.Size = new System.Drawing.Size(83, 20);
-            this.ChampsSearchBox.TabIndex = 10;
-            this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.cost3ToolStripMenuItem.Name = "cost3ToolStripMenuItem";
+            this.cost3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cost3ToolStripMenuItem.Text = "Cost 3";
+            this.cost3ToolStripMenuItem.Click += new System.EventHandler(this.cost3ToolStripMenuItem_Click);
             // 
-            // ChampsListContext
+            // cost4ToolStripMenuItem
             // 
-            this.ChampsListContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem1});
-            this.ChampsListContext.Name = "metroContextMenu1";
-            this.ChampsListContext.Size = new System.Drawing.Size(147, 48);
+            this.cost4ToolStripMenuItem.Name = "cost4ToolStripMenuItem";
+            this.cost4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cost4ToolStripMenuItem.Text = "Cost 4";
+            this.cost4ToolStripMenuItem.Click += new System.EventHandler(this.cost4ToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // cost5ToolStripMenuItem
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ascendingToolStripMenuItem,
-            this.descendingToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
-            this.toolStripMenuItem1.Text = "Sort by Cost";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Checked = true;
-            this.toolStripMenuItem2.CheckOnClick = true;
-            this.toolStripMenuItem2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
-            this.toolStripMenuItem2.Text = "Sort by Name";
-            // 
-            // ascendingToolStripMenuItem
-            // 
-            this.ascendingToolStripMenuItem.CheckOnClick = true;
-            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ascendingToolStripMenuItem.Text = "Ascending";
-            // 
-            // descendingToolStripMenuItem
-            // 
-            this.descendingToolStripMenuItem.CheckOnClick = true;
-            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.descendingToolStripMenuItem.Text = "Descending";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(178, 7);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Search:";
+            this.cost5ToolStripMenuItem.Name = "cost5ToolStripMenuItem";
+            this.cost5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cost5ToolStripMenuItem.Text = "Cost 5";
+            this.cost5ToolStripMenuItem.Click += new System.EventHandler(this.cost5ToolStripMenuItem_Click);
             // 
             // TFTCrafter
             // 
@@ -1334,6 +1361,7 @@
             this.ChampionsTab.PerformLayout();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
+            this.ChampsListContext.ResumeLayout(false);
             this.ProbTab.ResumeLayout(false);
             this.ProbTab.PerformLayout();
             this.TierListTab.ResumeLayout(false);
@@ -1342,7 +1370,6 @@
             this.WinRateTab.ResumeLayout(false);
             this.WinRateTab.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
-            this.ChampsListContext.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1432,6 +1459,9 @@
         private System.Windows.Forms.ToolStripMenuItem ascendingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem descendingToolStripMenuItem;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolStripMenuItem cost3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cost4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cost5ToolStripMenuItem;
     }
 }
 

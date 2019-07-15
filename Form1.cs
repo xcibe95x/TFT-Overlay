@@ -63,7 +63,7 @@ namespace TFT_Overlay
             [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
             private static extern IntPtr LoadCursorFromFile(string path);
         }
-       
+
         public TFTCrafter()
         {
             InitializeComponent();
@@ -78,7 +78,8 @@ namespace TFT_Overlay
             if (TotalGames != 0)
             {
                 WinRate.Text = FinalWinRate.ToString("0.0") + "%";
-            } else
+            }
+            else
             {
                 WinRate.Text = "0%";
             }
@@ -126,7 +127,7 @@ namespace TFT_Overlay
 
 
 
-        
+
             // GET JSON DATA
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
@@ -164,7 +165,7 @@ namespace TFT_Overlay
 
             // LOAD CHAMPIONS LIST
             championsListLoop();
-     
+
 
         }
 
@@ -854,14 +855,16 @@ namespace TFT_Overlay
                 Properties.Settings.Default.TopMost = false;
                 TopMost = false;
                 Properties.Settings.Default.Save();
-            } else {
+            }
+            else
+            {
                 Properties.Settings.Default.TopMost = true;
                 TopMost = true;
                 Properties.Settings.Default.Save();
             }
         }
 
- 
+
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -892,7 +895,7 @@ namespace TFT_Overlay
 
 
 
-                string champName = (string)jObject.SelectToken(TierType + "."+ TierIndex + "[" + champIndex.ToString() + "]");
+                string champName = (string)jObject.SelectToken(TierType + "." + TierIndex + "[" + champIndex.ToString() + "]");
 
                 var picture = new PictureBox
                 {
@@ -1094,12 +1097,12 @@ namespace TFT_Overlay
 
         // DEPRECATED
 
-       // private void Pointer_MouseClick(object sender, MouseEventArgs e)
-       // {
-       // Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
-       // System.Threading.Thread.Sleep(60);           
-       // Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
-       // }
+        // private void Pointer_MouseClick(object sender, MouseEventArgs e)
+        // {
+        // Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Pointer.cur");
+        // System.Threading.Thread.Sleep(60);           
+        // Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
+        // }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1119,11 +1122,11 @@ namespace TFT_Overlay
 
 
 
-      // CHAMPIONS LIST CODE
+        // CHAMPIONS LIST CODE
 
         private void championsListLoop()
         {
-            
+
             JObject jObject = JObject.Parse(champsJSON);
 
             // CHAMP LIST (FOREACH)
@@ -1137,7 +1140,7 @@ namespace TFT_Overlay
 
                 // VARIABLES
                 var key = item.Name.ToString();
-                int cost = (int)jObject.SelectToken(key + ".cost");              
+                int cost = (int)jObject.SelectToken(key + ".cost");
                 string ability = (string)jObject.SelectToken(key + ".ability.description");
                 Color tiercost = Color.OrangeRed;
 
@@ -1150,8 +1153,9 @@ namespace TFT_Overlay
                     tiercost = Color.DimGray;
                 }
 
-                if (cost == 2) {
-                   tiercost = Color.ForestGreen;
+                if (cost == 2)
+                {
+                    tiercost = Color.ForestGreen;
                 }
 
                 if (cost == 3)
@@ -1184,11 +1188,12 @@ namespace TFT_Overlay
                 var basepanel = new FlowLayoutPanel
                 {
                     Name = key,
+                    Text = cost.ToString(),
                     Size = new Size(312, 48),
+                    
                 };
                 ChampsList.Controls.Add(basepanel);
                 SearchPanel = basepanel;
-
 
                 // CHAMP BORDER
                 var ChampBox = new Panel
@@ -1218,13 +1223,15 @@ namespace TFT_Overlay
                 // CHAMP COST
                 var ChampCost = new MetroLabel
                 {
+
+                    Name = cost.ToString(),
                     Text = cost.ToString(),
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
                     UseCustomBackColor = true,
                     UseCustomForeColor = true,
                     ForeColor = tiercost,
-  
+
                     Size = new Size(12, 18),
                     FontWeight = MetroFramework.MetroLabelWeight.Bold,
                 };
@@ -1309,7 +1316,7 @@ namespace TFT_Overlay
                     tiup.SetToolTip(picturebox, classes);
                     classesIndex++;
                 }
-            
+
 
 
                 // SPACER
@@ -1368,12 +1375,16 @@ namespace TFT_Overlay
 
                 // TOOLTIPS
                 tiup.SetToolTip(ChampBox, ability);
-                tiup.SetToolTip(ChampPicture, "           "+ ability + "           ");
+                tiup.SetToolTip(ChampPicture, "           " + ability + "           ");
 
 
             }
 
         }
+
+
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -1407,10 +1418,133 @@ namespace TFT_Overlay
             {
                 ChampsSearchBox.Visible = false;
                 label9.Visible = false;
-            } else
+            }
+            else
             {
                 ChampsSearchBox.Visible = true;
                 label9.Visible = true;
+            }
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ChampsList.Controls.Clear();
+            ChampsSearchBox.Clear();
+            championsListLoop();
+
+        }
+
+        private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChampsList.Controls.Clear();
+            ChampsSearchBox.Clear();
+            championsListLoop();
+
+            for (int i = 0; i < 5; i++)
+            {
+                foreach (Control SearchPanel in ChampsList.Controls)
+                {
+
+
+                    if (!SearchPanel.Text.ToLower().Contains("1".ToLower()))
+                    {
+
+                        Console.WriteLine("Executed");
+                        ChampsList.Controls.Remove(SearchPanel);
+                    }
+
+                }
+            }
+        }
+
+        private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            ChampsList.Controls.Clear();
+            ChampsSearchBox.Clear();
+            championsListLoop();
+            for (int i = 0; i < 5; i++)
+            {
+                foreach (Control SearchPanel in ChampsList.Controls)
+                {
+
+
+                    if (!SearchPanel.Text.ToLower().Contains("2".ToLower()))
+                    {
+
+                        Console.WriteLine("Executed");
+                        ChampsList.Controls.Remove(SearchPanel);
+                    }
+
+                }
+            }
+        }
+
+        private void cost3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChampsList.Controls.Clear();
+            ChampsSearchBox.Clear();
+            championsListLoop();
+
+            for (int i = 0; i < 5; i++)
+            {
+                foreach (Control SearchPanel in ChampsList.Controls)
+                {
+
+
+                    if (!SearchPanel.Text.ToLower().Contains("3".ToLower()))
+                    {
+
+                        Console.WriteLine("Executed");
+                        ChampsList.Controls.Remove(SearchPanel);
+                    }
+
+                }
+            }
+        }
+
+        private void cost4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChampsList.Controls.Clear();
+            ChampsSearchBox.Clear();
+            championsListLoop();
+            for (int i = 0; i < 5; i++)
+            {
+                foreach (Control SearchPanel in ChampsList.Controls)
+                {
+
+
+                    if (!SearchPanel.Text.ToLower().Contains("4".ToLower()))
+                    {
+
+                        Console.WriteLine("Executed");
+                        ChampsList.Controls.Remove(SearchPanel);
+                    }
+
+                }
+            }
+        }
+
+        private void cost5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChampsList.Controls.Clear();
+            ChampsSearchBox.Clear();
+            championsListLoop();
+
+            for (int i = 0; i < 5; i++)
+            {
+                foreach (Control SearchPanel in ChampsList.Controls)
+                {
+
+
+                    if (!SearchPanel.Text.ToLower().Contains("5".ToLower()))
+                    {
+
+                        Console.WriteLine("Executed");
+                        ChampsList.Controls.Remove(SearchPanel);
+                    }
+
+                }
             }
         }
     }
