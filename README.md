@@ -27,6 +27,12 @@ I'm gonna take a break to finish it after 2.2, but i will keep pushing small upd
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
+- **2.2.1**
+  - Changelog  
+    - Searchbox for championslist
+	- You can now sorter by cost by right clicking on the champlist
+	
+
 - **2.2**
   - Changelog  
     - New champions Portraits
