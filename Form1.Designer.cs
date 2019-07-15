@@ -106,6 +106,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
+            this.ChampsSearchBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -625,6 +626,7 @@
             // ChampionsTab
             // 
             this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampionsTab.Controls.Add(this.ChampsSearchBox);
             this.ChampionsTab.Controls.Add(this.label8);
             this.ChampionsTab.Controls.Add(this.label7);
             this.ChampionsTab.Controls.Add(this.label5);
@@ -646,7 +648,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(65, 5);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(65, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 13);
             this.label8.TabIndex = 9;
@@ -655,7 +658,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(99, 5);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(99, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 8;
@@ -664,7 +668,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(170, 5);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(170, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 13);
             this.label5.TabIndex = 7;
@@ -673,7 +678,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 5);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(8, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 6;
@@ -687,9 +693,9 @@
             this.metroPanel5.HorizontalScrollbarBarColor = true;
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel5.HorizontalScrollbarSize = 10;
-            this.metroPanel5.Location = new System.Drawing.Point(2, 21);
+            this.metroPanel5.Location = new System.Drawing.Point(2, 16);
             this.metroPanel5.Name = "metroPanel5";
-            this.metroPanel5.Size = new System.Drawing.Size(329, 167);
+            this.metroPanel5.Size = new System.Drawing.Size(329, 142);
             this.metroPanel5.TabIndex = 5;
             this.metroPanel5.UseCustomBackColor = true;
             this.metroPanel5.VerticalScrollbar = true;
@@ -1228,6 +1234,16 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
+            // ChampsSearchBox
+            // 
+            this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampsSearchBox.Location = new System.Drawing.Point(224, 164);
+            this.ChampsSearchBox.Name = "ChampsSearchBox";
+            this.ChampsSearchBox.Size = new System.Drawing.Size(104, 20);
+            this.ChampsSearchBox.TabIndex = 10;
+            this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1347,6 +1363,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox ChampsSearchBox;
     }
 }
 

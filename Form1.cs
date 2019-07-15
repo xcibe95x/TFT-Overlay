@@ -34,6 +34,7 @@ namespace TFT_Overlay
         public string itemsJSON;
         public string tiersJSON;
         public string champsJSON;
+        FlowLayoutPanel SearchPanel;
 
         int TierIndex = 1;
         string TierType = "all";
@@ -1165,6 +1166,9 @@ namespace TFT_Overlay
                     tiercost = Color.Gold;
                 }
 
+
+                ChampsSearchBox.AutoCompleteCustomSource.Add(key);
+
                 ResourceManager rm = new ResourceManager(
                 "TFT_Overlay.Properties.Resources",
                 Assembly.GetExecutingAssembly());
@@ -1176,11 +1180,11 @@ namespace TFT_Overlay
                 // CODE
                 var basepanel = new FlowLayoutPanel
                 {
-                    Name = "basepanel",
+                    Name = key,
                     Size = new Size(312, 48),
                 };
                 ChampsList.Controls.Add(basepanel);
-
+                SearchPanel = basepanel;
 
 
                 // CHAMP BORDER
@@ -1367,5 +1371,32 @@ namespace TFT_Overlay
             }
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            foreach (Control SearchPanel in ChampsList.Controls)
+            {
+                if (!SearchPanel.Name.ToLower().Contains(ChampsSearchBox.Text.ToLower()))
+                {
+                    ChampsList.Controls.Remove(SearchPanel);
+                }
+
+            }
+
+            if (string.IsNullOrWhiteSpace(ChampsSearchBox.Text))
+            {
+                ChampsList.Controls.Clear();
+                championsListLoop();
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8)
+            {
+                ((TextBox)sender).Clear();
+            }
+        }
+
     }
 }
