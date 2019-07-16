@@ -92,6 +92,9 @@ namespace TFT_Overlay
 
         {
 
+            // RETIRE WIN RATE TAB
+            metroTabControl1.TabPages.Remove(WinRateTab);
+
             metroTabControl1.SelectedIndex = 0;
 
             // Delete and Generate Custom Mouse Pointer to Temp Path

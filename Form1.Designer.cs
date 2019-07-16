@@ -73,6 +73,9 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -113,9 +116,6 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.cost3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -559,7 +559,7 @@
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(340, 225);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -715,12 +715,12 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem1});
             this.ChampsListContext.Name = "metroContextMenu1";
-            this.ChampsListContext.Size = new System.Drawing.Size(181, 70);
+            this.ChampsListContext.Size = new System.Drawing.Size(147, 48);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
             this.toolStripMenuItem2.Text = "Sort by Name";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -733,22 +733,43 @@
             this.cost4ToolStripMenuItem,
             this.cost5ToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.toolStripMenuItem1.Text = "Sort by Cost";
             // 
             // ascendingToolStripMenuItem
             // 
             this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.ascendingToolStripMenuItem.Text = "Cost 1";
             this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
             // 
             // descendingToolStripMenuItem
             // 
             this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.descendingToolStripMenuItem.Text = "Cost 2";
             this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
+            // 
+            // cost3ToolStripMenuItem
+            // 
+            this.cost3ToolStripMenuItem.Name = "cost3ToolStripMenuItem";
+            this.cost3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.cost3ToolStripMenuItem.Text = "Cost 3";
+            this.cost3ToolStripMenuItem.Click += new System.EventHandler(this.cost3ToolStripMenuItem_Click);
+            // 
+            // cost4ToolStripMenuItem
+            // 
+            this.cost4ToolStripMenuItem.Name = "cost4ToolStripMenuItem";
+            this.cost4ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.cost4ToolStripMenuItem.Text = "Cost 4";
+            this.cost4ToolStripMenuItem.Click += new System.EventHandler(this.cost4ToolStripMenuItem_Click);
+            // 
+            // cost5ToolStripMenuItem
+            // 
+            this.cost5ToolStripMenuItem.Name = "cost5ToolStripMenuItem";
+            this.cost5ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.cost5ToolStripMenuItem.Text = "Cost 5";
+            this.cost5ToolStripMenuItem.Click += new System.EventHandler(this.cost5ToolStripMenuItem_Click);
             // 
             // ChampsList
             // 
@@ -1310,27 +1331,6 @@
             this.LoseLab.TabIndex = 9;
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
-            // 
-            // cost3ToolStripMenuItem
-            // 
-            this.cost3ToolStripMenuItem.Name = "cost3ToolStripMenuItem";
-            this.cost3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cost3ToolStripMenuItem.Text = "Cost 3";
-            this.cost3ToolStripMenuItem.Click += new System.EventHandler(this.cost3ToolStripMenuItem_Click);
-            // 
-            // cost4ToolStripMenuItem
-            // 
-            this.cost4ToolStripMenuItem.Name = "cost4ToolStripMenuItem";
-            this.cost4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cost4ToolStripMenuItem.Text = "Cost 4";
-            this.cost4ToolStripMenuItem.Click += new System.EventHandler(this.cost4ToolStripMenuItem_Click);
-            // 
-            // cost5ToolStripMenuItem
-            // 
-            this.cost5ToolStripMenuItem.Name = "cost5ToolStripMenuItem";
-            this.cost5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cost5ToolStripMenuItem.Text = "Cost 5";
-            this.cost5ToolStripMenuItem.Click += new System.EventHandler(this.cost5ToolStripMenuItem_Click);
             // 
             // TFTCrafter
             // 
