@@ -213,6 +213,8 @@
     <None Include="Images\becomeapatronbanner.png" />
     <None Include="Images\Ko_fi.jpg" />
     <None Include="Images\Ko-fi.png" />
+    <None Include="Images\champs\TwistedFate.png" />
+    <None Include="Images\new_champs\TwistedFate_n.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />

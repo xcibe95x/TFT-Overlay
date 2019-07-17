@@ -1167,7 +1167,8 @@ namespace TFT_Overlay.Properties {
         ///            Gets or sets the value of the Oid.
         ///            &lt;/summary&gt;
         ///            &lt;value&gt;The value of the Oid.&lt;/value&gt;
-        ///        &lt; [stringa troncata]&quot;;.
+        ///        &lt;/member&gt;
+        ///        [stringa troncata]&quot;;.
         /// </summary>
         internal static string Newtonsoft_Json1 {
             get {
@@ -1631,6 +1632,26 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap Tristana_n {
             get {
                 object obj = ResourceManager.GetObject("Tristana_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TwistedFate {
+            get {
+                object obj = ResourceManager.GetObject("TwistedFate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TwistedFate_n {
+            get {
+                object obj = ResourceManager.GetObject("TwistedFate_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -184,6 +184,7 @@
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 11;
             this.label9.Text = "Search:";
+            this.label9.Visible = false;
             // 
             // ChampsSearchBox
             // 
@@ -192,6 +193,7 @@
             this.ChampsSearchBox.Name = "ChampsSearchBox";
             this.ChampsSearchBox.Size = new System.Drawing.Size(83, 20);
             this.ChampsSearchBox.TabIndex = 10;
+            this.ChampsSearchBox.Visible = false;
             this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
