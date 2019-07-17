@@ -22,12 +22,13 @@ I'm gonna take a break to finish it after 2.2, but i will keep pushing small upd
   - Changelog  
     - Adjusted Elise Tier List icon to reflect the new cost
 	- Added Twisted Fate Assets
-
+	- Retired Win Rate Tab
+	
 - **2.2.1**
   - Changelog  
     - Searchbox for championslist
 	- You can now sorter by cost by right clicking on the champlist
-	- Retired Win Rate Tab
+
 	
 
 - **2.2**
