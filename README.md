@@ -1,15 +1,6 @@
 # TFT Overlay by Cibe
 
-If you want to give any kind of support wich is really apreciated here's a couple of links to do that
-
-https://ko-fi.com/xcibe95x || https://www.patreon.com/xcibe95x !! Paypal: xcibe95x@gmail.com
-
-You can also support by following this socials
-(They are a bit outdated as now, but going back to them soon)
-
-https://youtube.com/xcibe95x || https://www.facebook.com/ConstraintsGame/ || https://www.facebook.com/xcibe95x || https://twitter.com/xcibe95x
-
-`Updating some assets and implementing the Champions List`
+`Everything except Drop Rates is now always automatically updated, you will just be missing assets like the new champions image, but they will still show up in champ list.`
 
 `I'm working to release the very first version of Legends of the League (Riot Approved LOL Based CCG) at https://lol.playconstraints.com/ (Website not fully optimized yet)
 I'm gonna take a break to finish it after 2.2, but i will keep pushing small updates`
@@ -27,6 +18,11 @@ I'm gonna take a break to finish it after 2.2, but i will keep pushing small upd
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
+- **2.2.2**
+  - Changelog  
+    - Adjusted Elise Tier List icon to reflect the new cost
+	- Added Twisted Fate Assets
+
 - **2.2.1**
   - Changelog  
     - Searchbox for championslist
