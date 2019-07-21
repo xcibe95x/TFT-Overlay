@@ -70,5 +70,17 @@ namespace TFT_Overlay.Properties {
                 this["Version"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Tsunderina")]
+        public string SummonerName {
+            get {
+                return ((string)(this["SummonerName"]));
+            }
+            set {
+                this["SummonerName"] = value;
+            }
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace TFT_Overlay
 
         // RIOT API KEY
         public string ApiKey = "";
+        public string SummonerName = Properties.Settings.Default.SummonerName;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -34,6 +35,8 @@ namespace TFT_Overlay
         public Point OMLoc;
         public int Levels = 1;
         WebClient client = new WebClient();
+        public string summonerJSON;
+        public string rankedJSON;
         public string itemsJSON;
         public string tiersJSON;
         public string champsJSON;
@@ -95,6 +98,8 @@ namespace TFT_Overlay
 
         {
 
+           
+
             // RETIRE WIN RATE TAB
             metroTabControl1.TabPages.Remove(WinRateTab);
 
@@ -132,9 +137,71 @@ namespace TFT_Overlay
             }
 
 
+            pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
 
 
             // GET JSON DATA
+            summonerJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+ SummonerName +"?api_key=" + ApiKey);
+            
+            JObject summonerObject = JObject.Parse(summonerJSON);
+            string SummonerId = (string)summonerObject.SelectToken("id");
+            SummName.Text = SummonerName;
+            
+            pictureBox2.Load("http://ddragon.leagueoflegends.com/cdn/9.14.1/img/profileicon/" + (string)summonerObject.SelectToken("profileIconId") + ".png");
+
+
+
+            rankedJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
+            JArray rankedArray = JArray.Parse(rankedJSON);
+  
+            int QueueIndex = 0;
+            string TFTQueue = (string)rankedArray.SelectToken("[" + QueueIndex + "].queueType");
+            string TFTTier = (string)rankedArray.SelectToken("[" + QueueIndex + "].tier");
+            string TFTRank = (string)rankedArray.SelectToken("[" + QueueIndex + "].rank");
+            string TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
+            string TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+            string TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+
+            JArray rankedLoop = (JArray)rankedArray.SelectToken("$");
+
+            // Force TFT Ranking
+            foreach (JToken arrayname in rankedLoop)
+            {
+                if (TFTQueue != "RANKED_TFT")
+                {
+                    QueueIndex++;
+                    TFTQueue = (string)rankedArray.SelectToken("[" + QueueIndex + "].queueType");
+                    TFTTier = (string)rankedArray.SelectToken("[" + QueueIndex + "].tier");
+                    TFTRank = (string)rankedArray.SelectToken("[" + QueueIndex + "].rank");
+                    TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
+                    TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+                    TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+
+                }
+            }
+
+            string RankNumber = "";
+            if (TFTRank == "IV")
+            {
+                RankNumber = "4";
+            }
+            if (TFTRank == "III")
+            {
+                RankNumber = "3";
+            }
+            if (TFTRank == "II")
+            {
+                RankNumber = "2";
+            }
+            if (TFTRank == "I")
+            {
+                RankNumber = "1";
+            }
+            pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/"+ TFTTier.ToLower() + "_" + RankNumber + ".png");
+            RankTierLabel.Text = TFTTier + " " + TFTRank;
+            TFTWinns.Text = "W: " + TFTWins;
+            TFTLossess.Text = "L: " + TFTLosses;
+
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
             champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
@@ -172,6 +239,15 @@ namespace TFT_Overlay
             // LOAD CHAMPIONS LIST
             championsListLoop();
 
+
+
+            if (TFTQueue != "RANKED_TFT")
+            {
+                
+                QueueIndex = 0;
+                pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
+
+            }
 
         }
 
@@ -1188,7 +1264,7 @@ namespace TFT_Overlay
 
 
                 // DEBUG LINE
-                Console.WriteLine((string)jObject.SelectToken(key + ".name"));
+                //Console.WriteLine((string)jObject.SelectToken(key + ".name"));
 
                 // CODE
                 var basepanel = new FlowLayoutPanel
@@ -1551,6 +1627,31 @@ namespace TFT_Overlay
                     }
 
                 }
+            }
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+            toolStripTextBox1.Clear();
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.SummonerName = toolStripTextBox1.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        private void toolStripTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            
+        }
+
+        private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Application.Restart();
             }
         }
     }

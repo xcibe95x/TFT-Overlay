@@ -14,5 +14,8 @@
     <Setting Name="Version" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="SummonerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tsunderina</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

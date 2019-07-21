@@ -34,11 +34,11 @@
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ChampsSearchBox = new System.Windows.Forms.TextBox();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.Debug = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ChampsSearchBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.ProfileTAB = new MetroFramework.Controls.MetroTabPage();
             this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
             this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -116,12 +117,19 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
-            this.ProfileTAB = new MetroFramework.Controls.MetroTabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SummName = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.RankTierLabel = new MetroFramework.Controls.MetroLabel();
+            this.TFTWinns = new MetroFramework.Controls.MetroLabel();
+            this.TFTLossess = new MetroFramework.Controls.MetroLabel();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ResultItemImage)).BeginInit();
             this.metroTabControl1.SuspendLayout();
+            this.ProfileTAB.SuspendLayout();
             this.CraftingTab.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
@@ -133,17 +141,19 @@
             this.metroPanel4.SuspendLayout();
             this.WinRateTab.SuspendLayout();
             this.metroPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(61)))), ((int)(((byte)(18)))));
             this.panel1.ContextMenuStrip = this.metroContextMenu1;
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.ChampsSearchBox);
             this.panel1.Controls.Add(this.metroButton4);
             this.panel1.Controls.Add(this.Debug);
             this.panel1.Controls.Add(this.Title);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.ChampsSearchBox);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 27);
@@ -154,9 +164,11 @@
             // 
             this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alwaysOnTopToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.toolStripTextBox1});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(152, 48);
+            this.metroContextMenu1.Size = new System.Drawing.Size(181, 95);
+            this.metroContextMenu1.Text = "Summoner";
             // 
             // alwaysOnTopToolStripMenuItem
             // 
@@ -164,39 +176,16 @@
             this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
             this.alwaysOnTopToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alwaysOnTopToolStripMenuItem.Text = "Always on Top";
             this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(178, 7);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Search:";
-            this.label9.Visible = false;
-            // 
-            // ChampsSearchBox
-            // 
-            this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ChampsSearchBox.Location = new System.Drawing.Point(223, 4);
-            this.ChampsSearchBox.Name = "ChampsSearchBox";
-            this.ChampsSearchBox.Size = new System.Drawing.Size(83, 20);
-            this.ChampsSearchBox.TabIndex = 10;
-            this.ChampsSearchBox.Visible = false;
-            this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // metroButton4
             // 
@@ -222,7 +211,7 @@
             // 
             this.Debug.AutoSize = true;
             this.Debug.ForeColor = System.Drawing.Color.MistyRose;
-            this.Debug.Location = new System.Drawing.Point(240, 7);
+            this.Debug.Location = new System.Drawing.Point(6, 7);
             this.Debug.Name = "Debug";
             this.Debug.Size = new System.Drawing.Size(68, 13);
             this.Debug.TabIndex = 1;
@@ -236,10 +225,33 @@
             this.Title.ForeColor = System.Drawing.Color.Black;
             this.Title.Location = new System.Drawing.Point(6, 7);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(99, 13);
+            this.Title.Size = new System.Drawing.Size(90, 13);
             this.Title.TabIndex = 0;
-            this.Title.Text = "TFT Overlay - 2.2.1";
+            this.Title.Text = "TFT Overlay - 2.3";
             this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(178, 7);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Search:";
+            this.label9.Visible = false;
+            // 
+            // ChampsSearchBox
+            // 
+            this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampsSearchBox.Location = new System.Drawing.Point(223, 4);
+            this.ChampsSearchBox.Name = "ChampsSearchBox";
+            this.ChampsSearchBox.Size = new System.Drawing.Size(83, 20);
+            this.ChampsSearchBox.TabIndex = 10;
+            this.ChampsSearchBox.Visible = false;
+            this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // button2
             // 
@@ -570,6 +582,27 @@
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
             this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
+            // 
+            // ProfileTAB
+            // 
+            this.ProfileTAB.Controls.Add(this.TFTLossess);
+            this.ProfileTAB.Controls.Add(this.TFTWinns);
+            this.ProfileTAB.Controls.Add(this.RankTierLabel);
+            this.ProfileTAB.Controls.Add(this.pictureBox2);
+            this.ProfileTAB.Controls.Add(this.SummName);
+            this.ProfileTAB.Controls.Add(this.pictureBox1);
+            this.ProfileTAB.HorizontalScrollbarBarColor = true;
+            this.ProfileTAB.HorizontalScrollbarHighlightOnWheel = false;
+            this.ProfileTAB.HorizontalScrollbarSize = 10;
+            this.ProfileTAB.Location = new System.Drawing.Point(4, 34);
+            this.ProfileTAB.Name = "ProfileTAB";
+            this.ProfileTAB.Size = new System.Drawing.Size(332, 187);
+            this.ProfileTAB.TabIndex = 5;
+            this.ProfileTAB.Text = "Profile";
+            this.ProfileTAB.UseCustomBackColor = true;
+            this.ProfileTAB.VerticalScrollbarBarColor = true;
+            this.ProfileTAB.VerticalScrollbarHighlightOnWheel = false;
+            this.ProfileTAB.VerticalScrollbarSize = 10;
             // 
             // CraftingTab
             // 
@@ -1336,20 +1369,88 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
-            // ProfileTAB
+            // pictureBox1
             // 
-            this.ProfileTAB.HorizontalScrollbarBarColor = true;
-            this.ProfileTAB.HorizontalScrollbarHighlightOnWheel = false;
-            this.ProfileTAB.HorizontalScrollbarSize = 10;
-            this.ProfileTAB.Location = new System.Drawing.Point(4, 34);
-            this.ProfileTAB.Name = "ProfileTAB";
-            this.ProfileTAB.Size = new System.Drawing.Size(332, 187);
-            this.ProfileTAB.TabIndex = 5;
-            this.ProfileTAB.Text = "Profile";
-            this.ProfileTAB.UseCustomBackColor = true;
-            this.ProfileTAB.VerticalScrollbarBarColor = true;
-            this.ProfileTAB.VerticalScrollbarHighlightOnWheel = false;
-            this.ProfileTAB.VerticalScrollbarSize = 10;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // SummName
+            // 
+            this.SummName.AutoSize = true;
+            this.SummName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.SummName.ForeColor = System.Drawing.Color.White;
+            this.SummName.Location = new System.Drawing.Point(198, 37);
+            this.SummName.Name = "SummName";
+            this.SummName.Size = new System.Drawing.Size(122, 19);
+            this.SummName.TabIndex = 3;
+            this.SummName.Text = "SummonerName";
+            this.SummName.UseCustomBackColor = true;
+            this.SummName.UseCustomForeColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(156, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // RankTierLabel
+            // 
+            this.RankTierLabel.AutoSize = true;
+            this.RankTierLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.RankTierLabel.ForeColor = System.Drawing.Color.White;
+            this.RankTierLabel.Location = new System.Drawing.Point(30, 136);
+            this.RankTierLabel.Name = "RankTierLabel";
+            this.RankTierLabel.Size = new System.Drawing.Size(74, 19);
+            this.RankTierLabel.TabIndex = 5;
+            this.RankTierLabel.Text = "Unranked";
+            this.RankTierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RankTierLabel.UseCustomBackColor = true;
+            this.RankTierLabel.UseCustomForeColor = true;
+            // 
+            // TFTWinns
+            // 
+            this.TFTWinns.AutoSize = true;
+            this.TFTWinns.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.TFTWinns.ForeColor = System.Drawing.Color.LawnGreen;
+            this.TFTWinns.Location = new System.Drawing.Point(198, 56);
+            this.TFTWinns.Name = "TFTWinns";
+            this.TFTWinns.Size = new System.Drawing.Size(39, 19);
+            this.TFTWinns.TabIndex = 6;
+            this.TFTWinns.Text = "W: 0";
+            this.TFTWinns.UseCustomBackColor = true;
+            this.TFTWinns.UseCustomForeColor = true;
+            // 
+            // TFTLossess
+            // 
+            this.TFTLossess.AutoSize = true;
+            this.TFTLossess.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.TFTLossess.ForeColor = System.Drawing.Color.Crimson;
+            this.TFTLossess.Location = new System.Drawing.Point(261, 56);
+            this.TFTLossess.Name = "TFTLossess";
+            this.TFTLossess.Size = new System.Drawing.Size(32, 19);
+            this.TFTLossess.TabIndex = 7;
+            this.TFTLossess.Text = "L: 0";
+            this.TFTLossess.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TFTLossess.UseCustomBackColor = true;
+            this.TFTLossess.UseCustomForeColor = true;
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.Text = "Summoner Name";
+            this.toolStripTextBox1.ToolTipText = "Set your summoner name";
+            this.toolStripTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox1_KeyDown);
+            this.toolStripTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toolStripTextBox1_KeyPress);
+            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
+            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
             // TFTCrafter
             // 
@@ -1369,9 +1470,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.metroContextMenu1.ResumeLayout(false);
+            this.metroContextMenu1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ResultItemImage)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
+            this.ProfileTAB.ResumeLayout(false);
+            this.ProfileTAB.PerformLayout();
             this.CraftingTab.ResumeLayout(false);
             this.CraftingTab.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
@@ -1389,6 +1493,8 @@
             this.WinRateTab.ResumeLayout(false);
             this.WinRateTab.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1482,6 +1588,13 @@
         private System.Windows.Forms.ToolStripMenuItem cost4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cost5ToolStripMenuItem;
         private MetroFramework.Controls.MetroTabPage ProfileTAB;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroLabel SummName;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private MetroFramework.Controls.MetroLabel RankTierLabel;
+        private MetroFramework.Controls.MetroLabel TFTLossess;
+        private MetroFramework.Controls.MetroLabel TFTWinns;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }
 
