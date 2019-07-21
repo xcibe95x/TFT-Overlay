@@ -21,6 +21,9 @@ namespace TFT_Overlay
     public partial class TFTCrafter : Form
     {
 
+        // RIOT API KEY
+        public string ApiKey = "";
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         public string Item1;
