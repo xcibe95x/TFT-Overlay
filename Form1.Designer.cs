@@ -116,6 +116,7 @@
             this.AddWinBtn = new MetroFramework.Controls.MetroButton();
             this.WinLab = new System.Windows.Forms.Label();
             this.LoseLab = new System.Windows.Forms.Label();
+            this.ProfileTAB = new MetroFramework.Controls.MetroTabPage();
             this.panel1.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -552,6 +553,7 @@
             // 
             // metroTabControl1
             // 
+            this.metroTabControl1.Controls.Add(this.ProfileTAB);
             this.metroTabControl1.Controls.Add(this.CraftingTab);
             this.metroTabControl1.Controls.Add(this.ChampionsTab);
             this.metroTabControl1.Controls.Add(this.ProbTab);
@@ -1334,6 +1336,21 @@
             this.LoseLab.Text = "0 L";
             this.LoseLab.TextChanged += new System.EventHandler(this.LoseLab_TextChanged);
             // 
+            // ProfileTAB
+            // 
+            this.ProfileTAB.HorizontalScrollbarBarColor = true;
+            this.ProfileTAB.HorizontalScrollbarHighlightOnWheel = false;
+            this.ProfileTAB.HorizontalScrollbarSize = 10;
+            this.ProfileTAB.Location = new System.Drawing.Point(4, 34);
+            this.ProfileTAB.Name = "ProfileTAB";
+            this.ProfileTAB.Size = new System.Drawing.Size(332, 187);
+            this.ProfileTAB.TabIndex = 5;
+            this.ProfileTAB.Text = "Profile";
+            this.ProfileTAB.UseCustomBackColor = true;
+            this.ProfileTAB.VerticalScrollbarBarColor = true;
+            this.ProfileTAB.VerticalScrollbarHighlightOnWheel = false;
+            this.ProfileTAB.VerticalScrollbarSize = 10;
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1464,6 +1481,7 @@
         private System.Windows.Forms.ToolStripMenuItem cost3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cost4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cost5ToolStripMenuItem;
+        private MetroFramework.Controls.MetroTabPage ProfileTAB;
     }
 }
 
