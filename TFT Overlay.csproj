@@ -215,6 +215,14 @@
     <None Include="Images\Ko-fi.png" />
     <None Include="Images\champs\TwistedFate.png" />
     <None Include="Images\new_champs\TwistedFate_n.png" />
+    <None Include="Images\champs\Jayce.png" />
+    <None Include="Images\champs\Camille.png" />
+    <None Include="Images\champs\Vi.png" />
+    <None Include="Images\new_champs\Camille_n.png" />
+    <None Include="Images\new_champs\Jayce_n.png" />
+    <None Include="Images\new_champs\Vi_n.png" />
+    <None Include="Images\champs\Jinx.png" />
+    <None Include="Images\new_champs\Jinx_n.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />

@@ -22,8 +22,8 @@ namespace TFT_Overlay
     {
 
         // RIOT API KEY
-        public string ApiKey = "";
-        public string SummonerName = Properties.Settings.Default.SummonerName;
+        public string ApiKey = "null";
+        public string SummonerName = "Tsunderina"; //Properties.Settings.Default.SummonerName;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -102,6 +102,7 @@ namespace TFT_Overlay
 
             // RETIRE WIN RATE TAB
             metroTabControl1.TabPages.Remove(WinRateTab);
+            metroTabControl1.TabPages.Remove(ProfileTAB);
 
             metroTabControl1.SelectedIndex = 0;
 
@@ -139,10 +140,12 @@ namespace TFT_Overlay
 
             pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
 
+            try
+            {
+                // GET JSON DATA
+                summonerJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey);
+      
 
-            // GET JSON DATA
-            summonerJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+ SummonerName +"?api_key=" + ApiKey);
-            
             JObject summonerObject = JObject.Parse(summonerJSON);
             string SummonerId = (string)summonerObject.SelectToken("id");
             SummName.Text = SummonerName;
@@ -150,10 +153,13 @@ namespace TFT_Overlay
             pictureBox2.Load("http://ddragon.leagueoflegends.com/cdn/9.14.1/img/profileicon/" + (string)summonerObject.SelectToken("profileIconId") + ".png");
 
 
+        
+                rankedJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
+                
+         
 
-            rankedJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
+            
             JArray rankedArray = JArray.Parse(rankedJSON);
-  
             int QueueIndex = 0;
             string TFTQueue = (string)rankedArray.SelectToken("[" + QueueIndex + "].queueType");
             string TFTTier = (string)rankedArray.SelectToken("[" + QueueIndex + "].tier");
@@ -202,6 +208,18 @@ namespace TFT_Overlay
             TFTWinns.Text = "W: " + TFTWins;
             TFTLossess.Text = "L: " + TFTLosses;
 
+
+            if (TFTQueue != "RANKED_TFT")
+            {
+
+                QueueIndex = 0;
+                pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
+
+            }
+
+            }
+            catch { }
+
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
             champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
@@ -241,14 +259,7 @@ namespace TFT_Overlay
 
 
 
-            if (TFTQueue != "RANKED_TFT")
-            {
-                
-                QueueIndex = 0;
-                pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
-
-            }
-
+  
         }
 
         private void Panel1_MouseDown(object sender, MouseEventArgs e)
