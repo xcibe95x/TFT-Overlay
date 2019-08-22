@@ -2,9 +2,6 @@
 
 Sorry for the delay, a new update is coming soon on september
 
-
-`Checkout the very first version of Legends of the League (Riot Approved LOL Based CCG) at https://lol.playconstraints.com/download.php (Website not fully optimized yet). report any bugs you can find but check trello first'
-
 ![Image](https://i.redd.it/vyhdcp8m2k831.png)
 
 ## Informations
