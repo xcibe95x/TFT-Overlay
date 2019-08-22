@@ -20,7 +20,11 @@ Now version count will be raised faster even if the changes are small.
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
+
 - **2.4** COMING SEPTEMBER
+
+- **2.4**
+
   - Changelog
     - New Profile Tab!
     - Right clicking on the orange title bar you can now set your summoner name and press enter
@@ -49,8 +53,6 @@ Now version count will be raised faster even if the changes are small.
   - Changelog
     - Searchbox for championslist
     - You can now sorter by cost by right clicking on the champlist
-
-	
 
 - **2.2**
   - Changelog  
