@@ -1,6 +1,6 @@
 # TFT Overlay by Cibe
 
-## Important, this is not dropped, just don't have much time for it! it will be fuly automated in 3.0 wich will be the last version
+## Important, this is not dropped, just don't have much time for it! it will be fully automated in 3.0 wich will be the last version
 Sorry for the delay, a new update is coming soon on september
 
 I will be pushing smaller updates to get inline with the latest patch before releasing new features i will do my best to automate the tool so it will not require costant updating!
