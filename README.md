@@ -1,6 +1,7 @@
 # TFT Overlay by Cibe
 
-`Everything except Drop Rates is now always automatically updated, you will just be missing assets like the new champions image, but they will still show up in champ list.`
+Sorry for the delay, a new update is coming soon on september
+
 
 `Checkout the very first version of Legends of the League (Riot Approved LOL Based CCG) at https://lol.playconstraints.com/download.php (Website not fully optimized yet). report any bugs you can find but check trello first'
 
@@ -15,8 +16,13 @@
 - Right click on the title bar for the context menu
 
 ## Version Changelogs
+- **2.4**
+  - Changelog
+    - 
+	- 
+
 - **2.3**
-  - Changelog  
+  - Changelog
     - New Profile Tab!
 	- Right clicking on the orange title bar you can now set your summoner name and press enter
 	- Since riot implemented an in-game system to check items you are going to build, crafting is not anymore the first tab when you open the program, since is only usefull to think earlier of the items you need now.
@@ -24,13 +30,13 @@
 	- Winrate is back!, Win rate is now incorporated to your profile and scale with your actual wins and losses from your Teamfight Tactics Games!
 
 - **2.2.2**
-  - Changelog  
+  - Changelog
     - Adjusted Elise Tier List icon to reflect the new cost
 	- Added Twisted Fate Assets
 	- Retired Win Rate Tab
 	
 - **2.2.1**
-  - Changelog  
+  - Changelog
     - Searchbox for championslist
 	- You can now sorter by cost by right clicking on the champlist
 
