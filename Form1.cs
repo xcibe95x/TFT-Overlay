@@ -14,6 +14,10 @@ using System.Resources;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+// Useful Links
+// https://riotapi.dev/en/latest/
+
+//https://ddragon.leagueoflegends.com/cdn/9.16.1/img/champion/Blitzcrank.png
 
 
 namespace TFT_Overlay
@@ -32,6 +36,7 @@ namespace TFT_Overlay
         public string rItem;
         public string rTier;
         public string rDesc;
+        public string lolVer;
         public Point OMLoc;
         public int Levels = 1;
         WebClient client = new WebClient();
@@ -40,6 +45,7 @@ namespace TFT_Overlay
         public string itemsJSON;
         public string tiersJSON;
         public string champsJSON;
+        public string versionJSON;
         FlowLayoutPanel SearchPanel;
 
         int TierIndex = 1;
@@ -220,9 +226,22 @@ namespace TFT_Overlay
             }
             catch { }
 
+
+            versionJSON = client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
             champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
+
+
+
+
+            
+            JArray jArray22 = JArray.Parse(versionJSON);
+            lolVer = (string)jArray22.SelectToken("[0]");
+
+
+
+
 
 
             // FIX TIER LIST
@@ -1011,7 +1030,8 @@ namespace TFT_Overlay
         // PROBABILITIES
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
-
+            
+            Debug.Text = lolVer;
 
             if (Levels < 9)
             {
@@ -1311,7 +1331,8 @@ namespace TFT_Overlay
 
                 };
                 ChampBox.Controls.Add(ChampPicture);
-
+                ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
+                ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 // CHAMP COST
                 var ChampCost = new MetroLabel

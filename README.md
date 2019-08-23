@@ -21,11 +21,12 @@ Now version count will be raised faster even if the changes are small.
 
 ## Version Changelogs
 
+ 
+
 - **2.4** COMING SEPTEMBER
-
-- **2.4**
-
-  - Changelog
+  - Possible Changelog
+    - Champions Icons are now always up to date! No more manual updates.
+	- 
     - New Profile Tab!
     - Right clicking on the orange title bar you can now set your summoner name and press enter
     - Since riot implemented an in-game system to check items you are going to build, crafting is not anymore the first tab when you open the program, since is only usefull to think earlier of the items you need now.
