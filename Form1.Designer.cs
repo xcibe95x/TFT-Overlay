@@ -156,8 +156,9 @@
             this.panel1.Controls.Add(this.ChampsSearchBox);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 27);
+            this.panel1.Size = new System.Drawing.Size(427, 27);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
             // metroContextMenu1
@@ -202,7 +203,7 @@
             // 
             this.metroButton4.BackColor = System.Drawing.Color.Transparent;
             this.metroButton4.ForeColor = System.Drawing.Color.Black;
-            this.metroButton4.Location = new System.Drawing.Point(312, 5);
+            this.metroButton4.Location = new System.Drawing.Point(396, 4);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(20, 18);
             this.metroButton4.Style = MetroFramework.MetroColorStyle.Orange;
@@ -245,7 +246,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(178, 7);
+            this.label9.Location = new System.Drawing.Point(257, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 11;
@@ -255,7 +256,7 @@
             // ChampsSearchBox
             // 
             this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ChampsSearchBox.Location = new System.Drawing.Point(223, 4);
+            this.ChampsSearchBox.Location = new System.Drawing.Point(307, 4);
             this.ChampsSearchBox.Name = "ChampsSearchBox";
             this.ChampsSearchBox.Size = new System.Drawing.Size(83, 20);
             this.ChampsSearchBox.TabIndex = 10;
@@ -405,7 +406,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(61)))), ((int)(((byte)(18)))));
             this.panel2.Controls.Add(this.ResultItemImage);
-            this.panel2.Location = new System.Drawing.Point(266, 46);
+            this.panel2.Location = new System.Drawing.Point(288, 54);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
             this.panel2.Size = new System.Drawing.Size(60, 60);
@@ -429,7 +430,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(240, 62);
+            this.label2.Location = new System.Drawing.Point(262, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 25);
             this.label2.TabIndex = 4;
@@ -439,7 +440,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(109, 66);
+            this.label1.Location = new System.Drawing.Point(131, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 25);
             this.label1.TabIndex = 3;
@@ -586,7 +587,7 @@
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(340, 225);
+            this.metroTabControl1.Size = new System.Drawing.Size(431, 257);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -595,6 +596,7 @@
             // 
             // ProfileTAB
             // 
+            this.ProfileTAB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.ProfileTAB.Controls.Add(this.TFTLossess);
             this.ProfileTAB.Controls.Add(this.TFTWinns);
             this.ProfileTAB.Controls.Add(this.RankTierLabel);
@@ -606,7 +608,7 @@
             this.ProfileTAB.HorizontalScrollbarSize = 10;
             this.ProfileTAB.Location = new System.Drawing.Point(4, 34);
             this.ProfileTAB.Name = "ProfileTAB";
-            this.ProfileTAB.Size = new System.Drawing.Size(332, 187);
+            this.ProfileTAB.Size = new System.Drawing.Size(381, 203);
             this.ProfileTAB.TabIndex = 5;
             this.ProfileTAB.Text = "Profile";
             this.ProfileTAB.UseCustomBackColor = true;
@@ -657,12 +659,13 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(156, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(154, 37);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // SummName
             // 
@@ -703,7 +706,7 @@
             this.CraftingTab.HorizontalScrollbarSize = 10;
             this.CraftingTab.Location = new System.Drawing.Point(4, 34);
             this.CraftingTab.Name = "CraftingTab";
-            this.CraftingTab.Size = new System.Drawing.Size(332, 187);
+            this.CraftingTab.Size = new System.Drawing.Size(423, 219);
             this.CraftingTab.TabIndex = 0;
             this.CraftingTab.Text = "Crafting";
             this.CraftingTab.UseCustomBackColor = true;
@@ -713,14 +716,14 @@
             // 
             // htmlItemdescription
             // 
-            this.htmlItemdescription.AutoScroll = true;
             this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
             this.htmlItemdescription.AutoSize = false;
             this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlItemdescription.Location = new System.Drawing.Point(0, 162);
+            this.htmlItemdescription.Location = new System.Drawing.Point(9, 161);
+            this.htmlItemdescription.MaximumSize = new System.Drawing.Size(427, 70);
             this.htmlItemdescription.Name = "htmlItemdescription";
-            this.htmlItemdescription.Size = new System.Drawing.Size(332, 29);
+            this.htmlItemdescription.Size = new System.Drawing.Size(397, 54);
             this.htmlItemdescription.TabIndex = 19;
             // 
             // metroPanel2
@@ -738,7 +741,7 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(133, 12);
+            this.metroPanel2.Location = new System.Drawing.Point(155, 20);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(106, 132);
             this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
@@ -765,7 +768,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(2, 12);
+            this.metroPanel1.Location = new System.Drawing.Point(24, 20);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(106, 132);
             this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
@@ -1456,7 +1459,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(336, 246);
+            this.ClientSize = new System.Drawing.Size(421, 274);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

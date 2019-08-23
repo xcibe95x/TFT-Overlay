@@ -27,7 +27,7 @@ namespace TFT_Overlay
 
         // RIOT API KEY
         public string ApiKey = "null";
-        public string SummonerName = "Tsunderina"; //Properties.Settings.Default.SummonerName;
+        public string SummonerName = Properties.Settings.Default.SummonerName;
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -108,7 +108,7 @@ namespace TFT_Overlay
 
             // RETIRE WIN RATE TAB
             metroTabControl1.TabPages.Remove(WinRateTab);
-            metroTabControl1.TabPages.Remove(ProfileTAB);
+            //metroTabControl1.TabPages.Remove(ProfileTAB);
 
             metroTabControl1.SelectedIndex = 0;
 
@@ -226,7 +226,7 @@ namespace TFT_Overlay
             }
             catch { }
 
-
+            
             versionJSON = client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
@@ -1018,6 +1018,9 @@ namespace TFT_Overlay
                     BackgroundImageLayout = ImageLayout.Stretch,
 
                 };
+
+               // picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
+                picture.SizeMode = PictureBoxSizeMode.StretchImage;
                 flowLayoutPanel1.Controls.Add(picture);
                 champIndex++;
             }
@@ -1031,7 +1034,7 @@ namespace TFT_Overlay
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
             
-            Debug.Text = lolVer;
+            
 
             if (Levels < 9)
             {
@@ -1685,6 +1688,16 @@ namespace TFT_Overlay
             {
                 Application.Restart();
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
