@@ -144,7 +144,7 @@ namespace TFT_Overlay
             File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
             File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
 
-            var localVersion = new Version("2.5");
+            var localVersion = new Version("2.5.1");
 
             // Program Title
             Title.Text = "Pocket Tactics | by @xcibe95x";
