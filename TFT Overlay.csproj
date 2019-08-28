@@ -7,7 +7,7 @@
     <ProjectGuid>{4826312A-0E80-4E4F-98AD-6B80F3AF341E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TFT_Overlay</RootNamespace>
-    <AssemblyName>TFT Overlay</AssemblyName>
+    <AssemblyName>Pocket Tactics</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
