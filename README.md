@@ -1,40 +1,57 @@
-# TFT Overlay by Cibe
-
-## Important, this is not dropped, just don't have much time for it! it will be fully automated in 3.0 wich will be the last version
-Sorry for the delay, a new update is coming soon on september
-
-I will be pushing smaller updates to get inline with the latest patch before releasing new features i will do my best to automate the tool so it will not require costant updating!
-If riot had a better support for this on the API it would have been easier, by now i will be busy but this will be in my focus as soon as i have time.
-
-
-Now version count will be raised faster even if the changes are small.
+# Pocket Tactics a TFT Overlay by Cibe aka (xcibe95x)
 
 ![Image](https://i.redd.it/vyhdcp8m2k831.png)
 
-## Informations
+## ! HOW TO USE !
 - Set your Game to be Borderless or Windowed!
-- Since this app does not affect D3D it only works in Borderless or Windowed, this is beacuse we don't want to inject League or any other components to avoid triggering some unwanted ban, there is no other way to bring the overlay in fullscreen for this reason.
-- Once you update the tool you will lose wins and losess, be sure to copy them to the new version.
-
-## Menu
 - Right click on the title bar for the context menu
+- Right click on champions list for sorting options
+
+## Goal Version
+- **3.0 FINAL (Fully Automated) + Credits for Sources**
+- Code Cleanup / Improvements
 
 ## Version Changelogs
 
- 
+- **2.6 PROJECTION**
+   - Changelog
+    + Fature
+	+ Profile Support for All Servers
+	* Fix slow loadings by adding local assets for todays champs
+	* Fix wrong win/lose ratios 
+	+ New Assets
+    * Fixes
+	* Tooltips Fixes
+	* Fix Classes / Origins Sizes Bugs in Tierlist
+	# General Layout Adjustments
+	# Adjust Profile Layout
+	# Drop Rates Auto Reset after Level 9
 
-- **2.4** COMING SEPTEMBER
-  - Possible Changelog
-    - Champions Icons are now always up to date! No more manual updates.
-	- 
-    - New Profile Tab!
-    - Right clicking on the orange title bar you can now set your summoner name and press enter
-    - Since riot implemented an in-game system to check items you are going to build, crafting is not anymore the first tab when you open the program, since is only usefull to think earlier of the items you need now.
-    - Riot API!. If you build the source you will need your own API Key.
-    - Winrate is back!, Win rate is now incorporated to your profile and scale with your actual wins and losses from your Teamfight Tactics Games!
-	- Old Winrate tab is completely REMOVED!
-	- Tool Sizes increased to compensate new lenght of stuff
-	- Tooltips Fixed(?)
+- **2.5** 
+   - Changelog
+    - Removed some stuff from About Infos
+    - Winrate Tab completely Removed
+    + Using Riot API's and Ddragon Data! (You will need your own API Key if you buildthe source.)
+	+ Profile Tab! (Right Click on the Orange title bar to Set your Summoner Name and hit Enter) (Only Support EUW At the Moment)
+	+ You can now hide part of the tool, hovering the bar will show it and leaving will hide it
+	+ Tier List assets are now always up-to-date
+	+ Default Class/Origins Hex (Black for Now)
+	* Fixed Win and Lose, now properly shows TFT Stats and ignores Solo Q
+	* Champions Class and Origins for new champs are now automatically updated across the tool
+    * Champions Icons are now always up to date! No more manual updates
+    * Fixed some crash
+	* Fixed an issue with Tabs, they no longer randomly change position
+	* Searchbox no longer appear when starting the tool
+	# New Name (TFT Overlay --> Pocket Tactics)
+    # Profile is now the main Tab when starting 
+    # Winrate is back!, Winrate is now incorporated to your profile and scale with your actual wins and losses from your Teamfight Tactics Games!
+	# Tool Sizes increased
+    # Champion description tooltips are still too long to be readable, will work on a fix on 2.6
+	# There are a bunch of common bugs left will be fixed on the road for new versions
+    # Still unable to teach rammus new words
+	
+- **2.4 (Unreleased)**
+  - Changes listed in 2.5 Changelog
 
 - **2.3**
   - Changelog

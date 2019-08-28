@@ -67,6 +67,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -223,6 +224,12 @@
     <None Include="Images\new_champs\Vi_n.png" />
     <None Include="Images\champs\Jinx.png" />
     <None Include="Images\new_champs\Jinx_n.png" />
+    <None Include="Images\tiers\Tier5.png" />
+    <None Include="Images\tiers\Tier1.png" />
+    <None Include="Images\tiers\Tier2.png" />
+    <None Include="Images\tiers\Tier3.png" />
+    <None Include="Images\tiers\Tier4.png" />
+    <None Include="Images\hexes\Default_Hex.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />

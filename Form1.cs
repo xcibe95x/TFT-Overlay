@@ -1,24 +1,26 @@
 ﻿using MetroFramework.Components;
 using MetroFramework.Controls;
+using MetroFramework.Properties;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Windows.Forms;
 
 // Useful Links
 // https://riotapi.dev/en/latest/
-
-//https://ddragon.leagueoflegends.com/cdn/9.16.1/img/champion/Blitzcrank.png
-
 
 namespace TFT_Overlay
 {
@@ -26,9 +28,10 @@ namespace TFT_Overlay
     {
 
         // RIOT API KEY
-        public string ApiKey = "null";
-        public string SummonerName = Properties.Settings.Default.SummonerName;
+        public string ApiKey = "RGAPI-";
 
+
+        public string SummonerName = Properties.Settings.Default.SummonerName;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         public string Item1;
@@ -46,19 +49,22 @@ namespace TFT_Overlay
         public string tiersJSON;
         public string champsJSON;
         public string versionJSON;
+        public bool toggleHide;
+        public int Wins;
+        public int Loss;
+        List<string> ResourcesList = new List<string>();
+
+        ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
+
         FlowLayoutPanel SearchPanel;
 
         int TierIndex = 1;
         string TierType = "all";
 
-
-
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-
-
 
         static class NativeMethods
         {
@@ -85,11 +91,15 @@ namespace TFT_Overlay
         // WINRATE CALCULATOR
         private void CalculateWR()
         {
-            float TotalGames = Properties.Settings.Default.WINS + Properties.Settings.Default.DEFEAT;
-            float FinalWinRate = Properties.Settings.Default.WINS / TotalGames * 100;
+            float TotalGames = Wins + Loss;
+            float FinalWinRate = Wins / TotalGames * 100;
             if (TotalGames != 0)
             {
                 WinRate.Text = FinalWinRate.ToString("0.0") + "%";
+                if (FinalWinRate > 50) { WinRate.ForeColor = Color.ForestGreen; }
+                if (FinalWinRate < 50 && FinalWinRate > 15) { WinRate.ForeColor = Color.Orange; }
+                if (FinalWinRate < 15) { WinRate.ForeColor = Color.Red; }
+
             }
             else
             {
@@ -103,14 +113,30 @@ namespace TFT_Overlay
         private void Form1_Load(object sender, EventArgs e)
 
         {
+            ItemName.Text = "";
+            ResourceSet resSet = Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
 
-           
+            ResourceSet set = rm.GetResourceSet(CultureInfo.CurrentCulture, true, true);
 
-            // RETIRE WIN RATE TAB
-            metroTabControl1.TabPages.Remove(WinRateTab);
-            //metroTabControl1.TabPages.Remove(ProfileTAB);
+            foreach (DictionaryEntry o in set)
+            {
+                 ResourcesList.Add((string)o.Key);
+            }
+            rm.ReleaseAllResources();
+
+            // TABS ORDER PERMANENT FIX
+            metroTabControl1.TabPages.Clear();
+            metroTabControl1.TabPages.Insert(0, ProfileTAB);
+            metroTabControl1.TabPages.Insert(1, CraftingTab);
+            metroTabControl1.TabPages.Insert(2, ChampionsTab);
+            metroTabControl1.TabPages.Insert(3, TierListTab);
+            metroTabControl1.TabPages.Insert(4, ProbTab);
+            
 
             metroTabControl1.SelectedIndex = 0;
+
+            label9.Visible = false;
+            ChampsSearchBox.Visible = false;
 
             // Delete and Generate Custom Mouse Pointer to Temp Path
             File.Delete(Path.GetTempPath() + "Normal.cur");
@@ -118,10 +144,10 @@ namespace TFT_Overlay
             File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
             File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
 
-            var localVersion = new Version("2.3");
+            var localVersion = new Version("2.5");
 
             // Program Title
-            Title.Text = "TFT Overlay | by @xcibe95x";
+            Title.Text = "Pocket Tactics | by @xcibe95x";
             Properties.Settings.Default.Version = localVersion.ToString();
 
 
@@ -144,7 +170,8 @@ namespace TFT_Overlay
             }
 
 
-            pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
+            RankedArmor.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
+            RankedArmor.SizeMode = PictureBoxSizeMode.StretchImage;
 
             try
             {
@@ -173,8 +200,9 @@ namespace TFT_Overlay
             string TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
             string TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
             string TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
-
-            JArray rankedLoop = (JArray)rankedArray.SelectToken("$");
+                Wins = (int)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+                Loss = (int)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+                JArray rankedLoop = (JArray)rankedArray.SelectToken("$");
 
             // Force TFT Ranking
             foreach (JToken arrayname in rankedLoop)
@@ -188,8 +216,9 @@ namespace TFT_Overlay
                     TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
                     TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
                     TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
-
-                }
+                        Wins = (int)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+                        Loss = (int)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+                    }
             }
 
             string RankNumber = "";
@@ -209,17 +238,15 @@ namespace TFT_Overlay
             {
                 RankNumber = "1";
             }
-            pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/"+ TFTTier.ToLower() + "_" + RankNumber + ".png");
+            RankedArmor.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/"+ TFTTier.ToLower() + "_" + RankNumber + ".png");
             RankTierLabel.Text = TFTTier + " " + TFTRank;
-            TFTWinns.Text = "W: " + TFTWins;
-            TFTLossess.Text = "L: " + TFTLosses;
 
 
             if (TFTQueue != "RANKED_TFT")
             {
 
                 QueueIndex = 0;
-                pictureBox1.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
+                RankedArmor.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
 
             }
 
@@ -267,8 +294,8 @@ namespace TFT_Overlay
 
 
             // WINRATE LABELS
-            WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
-            LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
+            WinLab.Text = Wins.ToString() + " W";
+            LoseLab.Text = Loss.ToString() + " L";
 
             // CALL WINRATE CALCULATOR
             CalculateWR();
@@ -933,32 +960,13 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ResultItemImage_BackgroundImageChanged(object sender, EventArgs e)
         {
             ItemName.Text = rItem;
-            htmlItemdescription.Text = @"<div style=""color: #87ceeb; font-size: 8px"">" + rDesc + "</div>";
+            htmlItemdescription.Text = @"<div style=""color: #87ceeb; font-size: 10px; width:320px""><li style=""max-width:60em; word-wrap:break-word; overflow-wrap: break-word"">" + rDesc + "</li></div>";
         }
 
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -993,37 +1001,255 @@ namespace TFT_Overlay
 
             // FILL TIER LIST
 
+
+
             JObject jObject = JObject.Parse(tiersJSON);
 
             JArray championsTiers = (JArray)jObject.SelectToken(TierType + "." + TierIndex);
             int champIndex = 0;
 
-            foreach (JToken arrayname in championsTiers)
-            {
 
-                ResourceManager rm = new ResourceManager(
-                "TFT_Overlay.Properties.Resources",
-                Assembly.GetExecutingAssembly());
+
+            JObject jObjectw = JObject.Parse(champsJSON);
 
 
 
-                string champName = (string)jObject.SelectToken(TierType + "." + TierIndex + "[" + champIndex.ToString() + "]");
+            
 
-                var picture = new PictureBox
+                foreach (JToken arrayname in championsTiers)
                 {
-                    Name = "pictureBox",
-                    Size = new Size(58, 58),
-                    Location = new Point(0, 0),
-                    BackgroundImage = (Image)(rm.GetObject(champName)),
-                    BackgroundImageLayout = ImageLayout.Stretch,
 
-                };
+                    int originsIndex = 0;
+                    int classesIndex = 0;
 
-               // picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
-                picture.SizeMode = PictureBoxSizeMode.StretchImage;
-                flowLayoutPanel1.Controls.Add(picture);
+
+
+                
+
+                    string champName = (string)jObject.SelectToken(TierType + "." + TierIndex + "[" + champIndex.ToString() + "]");
+                    int cost = (int)jObjectw.SelectToken(champName + ".cost");
+
+
+
+
+
+                    var picture = new PictureBox
+                    {
+                        Name = "pictureBox",
+                        Size = new Size(84, 84),
+                        //Padding = newPadding(5, 5, 5, 5),
+                        Dock = DockStyle.None,
+                        Anchor = AnchorStyles.None,
+                        Location = new Point(0, 0),
+                        BackgroundImage = (Image)(rm.GetObject(champName)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+                    };
+
+                    var basepanel = new FlowLayoutPanel
+                    {
+                        Dock = DockStyle.None,
+                        Anchor = AnchorStyles.None,
+                        BackColor = Color.Transparent,
+                        Location = new Point(7, 52),
+                        FlowDirection = FlowDirection.RightToLeft,
+                        AutoSize = true,
+                        AutoSizeMode = AutoSizeMode.GrowOnly,
+                        Size = new Size(picture.Width - 10, picture.Height - 60),
+
+                    };
+
+                    picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
+                    picture.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    picture.Controls.Add(basepanel);
+                    flowLayoutPanel1.Controls.Add(picture);
+
+                    var tierbox = new PictureBox
+                    {
+                        Name = "pictureBox",
+                        Size = new Size(84, 84),
+                        Location = new Point(0, 0),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("Tier" + cost.ToString())),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+                    };
+
+                    picture.Controls.Add(tierbox);
+
+                    var label = new Label
+                    {
+                        Text = cost.ToString(),
+                        ForeColor = Color.White,
+                        //Size = new Size(84, 84),
+                        Location = new Point(0, 0),
+                        BackColor = Color.Transparent,
+                        Font = new Font(Font, FontStyle.Bold),
+
+                    };
+
+                    var coin = new PictureBox
+                    {
+                        Name = "pictureBox",
+                        Size = new Size(8, 8),
+                        Location = new Point(12, 3),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("Coin")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+                    };
+
+
+                    tierbox.Controls.Add(label);
+                    label.Controls.Add(coin);
+
+
+
+                    // ORIGIN
+
+                    JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
+
+                    foreach (JToken arrayname2 in originsLoop)
+                    {
+
+                        string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
+
+                        var defaultHex = new PictureBox
+                        {
+                            Name = "basepanel",
+                            Size = new Size(22, 22),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            //Location = new Point(10, 50),
+                            BackColor = Color.Transparent,
+                            BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                            BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                        };
+
+                    var newOrigins = new PictureBox
+                    {
+                        Name = "newOrigins",
+                        Size = new Size(18, 18),
+                        Padding = new Padding(3, 3 ,3,3),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+
+                    var originsBox = new PictureBox
+                        {
+                            Name = "basepanel",
+                            Size = new Size(22, 22),
+                            //Anchor = AnchorStyles.Left | AnchorStyles.Right,
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            //Location = new Point((picture.Parent.ClientSize.Width / 2) - (picture.Width / 2),
+
+                            BackColor = Color.Transparent,
+                            BackgroundImage = (Image)(rm.GetObject(origins)),
+                            BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                        };
+   
+
+                    if (ResourcesList.Contains(origins))
+                        {
+                            basepanel.Controls.Add(originsBox);
+                        }
+                        else {
+                        newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/"+ origins +".png");
+                        newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
+                        basepanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newOrigins);
+                        
+                    }
+
+
+
+                    originsIndex++;
+                    }
+
+
+
+                JArray classesLoop = (JArray)jObjectw.SelectToken(champName + ".class");
+
+                foreach (JToken arrayname3 in classesLoop)
+                {
+
+
+                    string classes = (string)jObjectw.SelectToken(champName + ".class.[" + classesIndex.ToString() + "]");
+
+                    var classBox = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Location = new Point(0, 0),
+                        BackgroundImage = (Image)(rm.GetObject(classes)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+
+                    var defaultHex = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(22, 22),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                    };
+
+
+                    var newClass = new PictureBox
+                    {
+                        Name = "newOrigins",
+                        Size = new Size(18, 18),
+                        Padding = new Padding(3, 3, 3, 3),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        BackColor = Color.Transparent,
+
+                    };
+
+                    if (ResourcesList.Contains(classes))
+                    {
+                        basepanel.Controls.Add(classBox);
+                    }
+                    else
+                    {
+                        classBox.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + classes + ".png");
+                        classBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                        basepanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newClass);
+
+                    }
+                    
+                    
+                    classesIndex++;
+                }
+
+
+
+                basepanel.BringToFront();
+                TierListBox.BringToFront();
+                label.BringToFront();
+
                 champIndex++;
-            }
+                }
+
+
 
         }
 
@@ -1144,26 +1370,6 @@ namespace TFT_Overlay
 
         }
 
-        private void AddWinBtn_Click_1(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.WINS++;
-            WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
-            Properties.Settings.Default.Save();
-        }
-
-        private void AddLoseBtn_Click_1(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.DEFEAT++;
-            LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
-            Properties.Settings.Default.Save();
-        }
-
-        private void metroButton3_Click(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Reset();
-            WinLab.Text = Properties.Settings.Default.WINS.ToString() + " W";
-            LoseLab.Text = Properties.Settings.Default.DEFEAT.ToString() + " L";
-        }
 
         private void WinRate_Click(object sender, EventArgs e)
         {
@@ -1402,8 +1608,52 @@ namespace TFT_Overlay
                         BackgroundImageLayout = ImageLayout.Stretch,
                     };
 
-                    basepanel.Controls.Add(picturebox);
-                    tiup.SetToolTip(picturebox, origins);
+                    var defaultHex = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                    };
+
+                    var newOrigins = new PictureBox
+                    {
+                        Name = "newOrigins",
+                        Size = new Size(18, 18),
+                        Padding = new Padding(3, 3, 3, 3),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+
+
+
+                    if (ResourcesList.Contains(origins))
+                    {
+                        basepanel.Controls.Add(picturebox);
+                        tiup.SetToolTip(picturebox, origins);
+                    }
+                    else
+                    {
+                        newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + origins + ".png");
+                        newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
+                        basepanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newOrigins);
+                        tiup.SetToolTip(defaultHex, origins);
+                        tiup.SetToolTip(newOrigins, origins);
+
+                    }
+
+                    
+                    
                     originsIndex++;
                 }
 
@@ -1429,8 +1679,49 @@ namespace TFT_Overlay
                         BackgroundImageLayout = ImageLayout.Stretch,
                     };
 
-                    basepanel.Controls.Add(picturebox);
-                    tiup.SetToolTip(picturebox, classes);
+                    var defaultHex = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                    };
+
+                    var newClasses = new PictureBox
+                    {
+                        Name = "newOrigins",
+                        Size = new Size(18, 18),
+                        Padding = new Padding(3, 3, 3, 3),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+
+                    if (ResourcesList.Contains(classes))
+                    {
+                        basepanel.Controls.Add(picturebox);
+                        tiup.SetToolTip(picturebox, classes);
+                    }
+                    else
+                    {
+                        newClasses.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + classes + ".png");
+                        newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
+                        basepanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newClasses);
+                        tiup.SetToolTip(defaultHex, classes);
+                        tiup.SetToolTip(newClasses, classes);
+                    }
+
+                   
+                    
                     classesIndex++;
                 }
 
@@ -1698,6 +1989,32 @@ namespace TFT_Overlay
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProfileTAB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // HIDE TOOL
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            if (Height == 289) { Height = 28; metroButton5.Text = "v"; toggleHide = true; } else { Height = 289; metroButton5.Text = ">"; toggleHide = false; }        
+        }
+
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            if (toggleHide == true) { Height = 289; }
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            if (toggleHide == true) { Height = 28; }
         }
     }
 }

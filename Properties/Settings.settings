@@ -2,12 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TFT_Overlay.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="WINS" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
-    <Setting Name="DEFEAT" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
     <Setting Name="TopMost" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
@@ -15,7 +9,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="SummonerName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Tsunderina</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

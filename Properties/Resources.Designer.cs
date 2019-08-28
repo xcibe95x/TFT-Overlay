@@ -453,6 +453,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DefaultHex {
+            get {
+                object obj = ResourceManager.GetObject("DefaultHex", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Demon {
             get {
                 object obj = ResourceManager.GetObject("Demon", resourceCulture);
@@ -1662,6 +1672,56 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap thornmail {
             get {
                 object obj = ResourceManager.GetObject("thornmail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tier1 {
+            get {
+                object obj = ResourceManager.GetObject("Tier1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tier2 {
+            get {
+                object obj = ResourceManager.GetObject("Tier2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tier3 {
+            get {
+                object obj = ResourceManager.GetObject("Tier3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tier4 {
+            get {
+                object obj = ResourceManager.GetObject("Tier4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tier5 {
+            get {
+                object obj = ResourceManager.GetObject("Tier5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

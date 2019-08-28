@@ -25,30 +25,6 @@ namespace TFT_Overlay.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int WINS {
-            get {
-                return ((int)(this["WINS"]));
-            }
-            set {
-                this["WINS"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int DEFEAT {
-            get {
-                return ((int)(this["DEFEAT"]));
-            }
-            set {
-                this["DEFEAT"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool TopMost {
             get {
@@ -73,7 +49,7 @@ namespace TFT_Overlay.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Tsunderina")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string SummonerName {
             get {
                 return ((string)(this["SummonerName"]));
