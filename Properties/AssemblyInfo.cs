@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("TFT Overlay")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Pocket Tactics")]
+[assembly: AssemblyDescription("Pocket Tactics is a useful overlay for Teamfight Tactics by Riot Games, easily access the best current meta strategies")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TFT Overlay")]
+[assembly: AssemblyCompany("Cibe")]
+[assembly: AssemblyProduct("Pocket Tactics")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Cibe")]
 [assembly: AssemblyCulture("")]
 
 // Se si imposta ComVisible su false, i tipi in questo assembly non saranno visibili
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // È possibile specificare tutti i valori oppure impostare valori predefiniti per i numeri relativi alla revisione e alla build
 // usando l'asterisco '*' come illustrato di seguito:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]
