@@ -13,13 +13,13 @@
 
 ## Version Changelogs
 
-- **2.6 ACTUAL (COMING SEPTEMBER**
+- **2.6 ACTUAL (COMING SEPTEMBER)**
    - Changelog
-     - Fature
+     - TBD
 
 - **2.6 PROJECTION**
    - Changelog
-     - New Fature
+     - New Feature
      - Profile Support for All Servers
      - Fix slow loadings by adding local assets for todays champs
      - Fix wrong win/lose ratios 
