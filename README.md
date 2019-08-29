@@ -15,7 +15,11 @@
 
 - **2.6 ACTUAL (COMING SEPTEMBER)**
    - Changelog
-     - TBD
+     - Eventual new items for crafting will be manually mantained ( Those are not always up to date )
+	 - Added new assets for spells
+     - Updated champs local assets to Patch 9.17, to speed up loading times
+	 . 
+	 
 
 - **2.6 PROJECTION**
    - Changelog
@@ -23,7 +27,6 @@
      - Profile Support for All Servers
      - Fix slow loadings by adding local assets for todays champs
      - Fix wrong win/lose ratios 
-     - New Assets
      - Fixes
      - Tooltips Fixes
      - Fix Classes / Origins Sizes Bugs in Tierlist
