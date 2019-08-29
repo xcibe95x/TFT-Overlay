@@ -611,7 +611,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("yuumi.name");
                 rDesc = (string)jObject.SelectToken("yuumi.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.yuumi;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.yuumii;
 
             }
 
@@ -1059,10 +1059,21 @@ namespace TFT_Overlay
 
                     };
 
-                    picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
-                    picture.SizeMode = PictureBoxSizeMode.StretchImage;
 
+                if (ResourcesList.Contains(champName))
+                {
                     picture.Controls.Add(basepanel);
+                }
+                else
+                {
+                    picture.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
+                    picture.Controls.Add(basepanel);
+                }
+                
+                    
+
+                    
                     flowLayoutPanel1.Controls.Add(picture);
 
                     var tierbox = new PictureBox
@@ -1535,14 +1546,26 @@ namespace TFT_Overlay
                     Name = "ChampPicture",
                     Size = new Size(41, 41),
                     Dock = DockStyle.Fill,
-                    BackgroundImage = (Image)(rm.GetObject(key + "_n")),
+                    BackgroundImage = (Image)(rm.GetObject(key)),
                     BackgroundImageLayout = ImageLayout.Stretch,
 
                 };
-                ChampBox.Controls.Add(ChampPicture);
-                ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
-                ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
 
+
+
+                if (ResourcesList.Contains(key))
+                {
+                    ChampBox.Controls.Add(ChampPicture);
+                }
+                else
+                {
+                    ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+                    ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
+                    ChampBox.Controls.Add(ChampPicture);
+                }
+
+                               
+              
                 // CHAMP COST
                 var ChampCost = new MetroLabel
                 {

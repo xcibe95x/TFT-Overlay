@@ -18,15 +18,15 @@
      - Eventual new items for crafting will be manually mantained ( Those are not always up to date )
 	 - Added new assets for spells
      - Updated champs local assets to Patch 9.17, to speed up loading times
-	 . 
+	 . Now properly prioritize local assets over ddragon flying data (Sorry! :P)
+	 - Removed unused Assets
 	 
 
 - **2.6 PROJECTION**
    - Changelog
      - New Feature
      - Profile Support for All Servers
-     - Fix slow loadings by adding local assets for todays champs
-     - Fix wrong win/lose ratios 
+     - Fix slow loadings by adding local assets for todays champs 
      - Fixes
      - Tooltips Fixes
      - Fix Classes / Origins Sizes Bugs in Tierlist
@@ -34,6 +34,7 @@
      - Adjust Profile Layout
      - Drop Rates Auto Reset after Level 9
 	 - General Improvements
+	 - Layout and Sizes Adjustments
 
 - **2.5.1 HOTFIX** 
    - Changelog
