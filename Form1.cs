@@ -1270,12 +1270,22 @@ namespace TFT_Overlay
         // PROBABILITIES
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
-            
-            
+
+
 
             if (Levels < 9)
             {
                 Levels++;
+            }
+            else {
+                Levels = 1;
+                Lvl.Text = "Level " + 1;
+                T1P.Text = "100%";
+                T2P.Text = "0%";
+                T3P.Text = "0%";
+                T4P.Text = "0%";
+                T5P.Text = "0%";
+            
             }
 
             switch (Levels)
@@ -1364,16 +1374,10 @@ namespace TFT_Overlay
         }
 
 
-        // RESET LEVEL BUTTON
+        
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            Levels = 1;
-            Lvl.Text = "Level " + 1;
-            T1P.Text = "100%";
-            T2P.Text = "0%";
-            T3P.Text = "0%";
-            T4P.Text = "0%";
-            T5P.Text = "0%";
+
         }
 
         private void metroTabPage2_Click(object sender, EventArgs e)

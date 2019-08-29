@@ -84,7 +84,6 @@
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.T1T = new System.Windows.Forms.Label();
             this.T2T = new System.Windows.Forms.Label();
@@ -597,15 +596,15 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.ProfileTAB);
+            this.metroTabControl1.Controls.Add(this.ChampionsTab);
             this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.CraftingTab);
             this.metroTabControl1.Controls.Add(this.ProbTab);
-            this.metroTabControl1.Controls.Add(this.ChampionsTab);
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 4;
+            this.metroTabControl1.SelectedIndex = 3;
             this.metroTabControl1.Size = new System.Drawing.Size(424, 267);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -928,7 +927,6 @@
             this.ProbTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.ProbTab.Controls.Add(this.label6);
             this.ProbTab.Controls.Add(this.metroLabel1);
-            this.ProbTab.Controls.Add(this.metroButton2);
             this.ProbTab.Controls.Add(this.metroButton1);
             this.ProbTab.Controls.Add(this.T1T);
             this.ProbTab.Controls.Add(this.T2T);
@@ -985,29 +983,14 @@
             this.metroLabel1.UseCustomBackColor = true;
             this.metroLabel1.UseCustomForeColor = true;
             // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(317, 84);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(47, 33);
-            this.metroButton2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroButton2.TabIndex = 43;
-            this.metroButton2.Text = "Reset";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
-            this.metroButton2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.metroButton2.MouseHover += new System.EventHandler(this.PointerLogic);
-            // 
             // metroButton1
             // 
             this.metroButton1.Location = new System.Drawing.Point(264, 84);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(47, 33);
+            this.metroButton1.Size = new System.Drawing.Size(123, 33);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroButton1.TabIndex = 42;
-            this.metroButton1.Text = "Lvl UP";
+            this.metroButton1.Text = "Increase Level";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton1.UseCustomBackColor = true;
             this.metroButton1.UseSelectable = true;
@@ -1462,7 +1445,6 @@
         private System.Windows.Forms.Label T2T;
         private System.Windows.Forms.Label T1T;
         private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Drawing.Html.HtmlLabel htmlItemdescription;
         private MetroFramework.Controls.MetroTabPage TierListTab;

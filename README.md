@@ -13,6 +13,8 @@
 
 ## Version Changelogs
 
+(Note for my self: Add an easy updatabled by the users over GitHub Json files, for Drop Rates and Local Assets Exclusion list for reworked champions so theres no need for further updates :3)
+
 - **2.6 ACTUAL (COMING SEPTEMBER)**
    - Changelog
      - Eventual new items for crafting will be manually mantained ( Those are not always up to date )
@@ -20,6 +22,7 @@
      - Updated champs local assets to Patch 9.17, to speed up loading times
 	 . Now properly prioritize local assets over ddragon flying data (Sorry! :P)
 	 - Removed unused Assets
+	 - Now Auto Reset after Passing Level 9 on Drop Rates
 	 
 
 - **2.6 PROJECTION**
@@ -32,7 +35,6 @@
      - Fix Classes / Origins Sizes Bugs in Tierlist
      - General Layout Adjustments
      - Adjust Profile Layout
-     - Drop Rates Auto Reset after Level 9
 	 - General Improvements
 	 - Layout and Sizes Adjustments
 
