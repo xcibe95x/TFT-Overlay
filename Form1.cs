@@ -1,13 +1,9 @@
-﻿using MetroFramework.Components;
-using MetroFramework.Controls;
-using MetroFramework.Properties;
-using Newtonsoft.Json;
+﻿using MetroFramework.Controls;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -27,10 +23,8 @@ namespace TFT_Overlay
     public partial class TFTCrafter : Form
     {
 
-        // RIOT API KEY
-        public string ApiKey = "RGAPI-";
-
-
+        
+        public string ApiKey = "RGAPI-"; // RIOT API KEY
         public string SummonerName = Properties.Settings.Default.SummonerName;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -53,6 +47,8 @@ namespace TFT_Overlay
         public int Wins;
         public int Loss;
         List<string> ResourcesList = new List<string>();
+
+        ToolTip tiup = new MetroFramework.Drawing.Html.HtmlToolTip();
 
         ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
 
@@ -114,16 +110,30 @@ namespace TFT_Overlay
 
         {
 
-          toolStripTextBox1.Text = Properties.Settings.Default.SummonerName;
-          toolStripComboBox1.Text = Properties.Settings.Default.Server;
-            ItemName.Text = "";
-            ResourceSet resSet = Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
+            // WINDOW STARTING POSITION
+            StartPosition = FormStartPosition.Manual;
+            Location = new Point(20, 60);
+            TopMost = Properties.Settings.Default.TopMost;
+            alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.TopMost;
 
+
+            toolStripTextBox1.Text = Properties.Settings.Default.SummonerName;
+            toolStripComboBox1.Text = Properties.Settings.Default.Server;
+            ItemName.Text = "";
+
+
+            versionJSON = client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
+            itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
+            tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
+            champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
+
+
+            ResourceSet resSet = Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
             ResourceSet set = rm.GetResourceSet(CultureInfo.CurrentCulture, true, true);
 
             foreach (DictionaryEntry o in set)
             {
-                 ResourcesList.Add((string)o.Key);
+                ResourcesList.Add((string)o.Key);
             }
             rm.ReleaseAllResources();
 
@@ -175,8 +185,8 @@ namespace TFT_Overlay
 
             try
             {
-                // GET JSON DATA
-                summonerJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey);
+            // GET JSON DATA
+            summonerJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey);
       
 
             JObject summonerObject = JObject.Parse(summonerJSON);
@@ -185,12 +195,9 @@ namespace TFT_Overlay
             
             pictureBox2.Load("http://ddragon.leagueoflegends.com/cdn/9.14.1/img/profileicon/" + (string)summonerObject.SelectToken("profileIconId") + ".png");
 
-
-        
-                rankedJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
+            rankedJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
                 
-         
-
+        
             
             JArray rankedArray = JArray.Parse(rankedJSON);
             int QueueIndex = 0;
@@ -200,9 +207,9 @@ namespace TFT_Overlay
             string TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
             string TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
             string TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
-                Wins = (int)rankedArray.SelectToken("[" + QueueIndex + "].wins");
-                Loss = (int)rankedArray.SelectToken("[" + QueueIndex + "].losses");
-                JArray rankedLoop = (JArray)rankedArray.SelectToken("$");
+            Wins = (int)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+            Loss = (int)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+            JArray rankedLoop = (JArray)rankedArray.SelectToken("$");
 
             // Force TFT Ranking
             foreach (JToken arrayname in rankedLoop)
@@ -253,45 +260,15 @@ namespace TFT_Overlay
             }
             catch { }
 
-            
-            versionJSON = client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
-            itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
-            tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
-            champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
+           
 
-
-
-
-            
             JArray jArray22 = JArray.Parse(versionJSON);
             lolVer = (string)jArray22.SelectToken("[0]");
-
-
-
-
 
 
             // FIX TIER LIST
             metroComboBox1.SelectedIndex = 0;
             TierListBox.SelectedIndex = 0;
-
-
-            // Useful codes for JSON
-
-            // string displayName = (string)jObject.SelectToken("name");
-            // string type = (string)jObject.SelectToken("arrayName[0].type");
-            //  string value = (string)jObject.SelectToken("arrayname[0].value");
-
-
-
-
-            // WINDOW STARTING POSITION
-            StartPosition = FormStartPosition.Manual;
-            Location = new Point(20, 60);
-
-            TopMost = Properties.Settings.Default.TopMost;
-            alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.TopMost;
-
 
             // WINRATE LABELS
             WinLab.Text = Wins.ToString() + " W";
@@ -304,9 +281,7 @@ namespace TFT_Overlay
             championsListLoop();
 
 
-
-  
-        }
+        }   // FORM 1 END
 
         private void Panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1042,7 +1017,7 @@ namespace TFT_Overlay
                     {
                         Name = "pictureBox",
                         Size = new Size(84, 84),
-                        //Padding = newPadding(5, 5, 5, 5),
+                        //Padding = new Padding(5, 5, 5, 5),
                         Dock = DockStyle.None,
                         Anchor = AnchorStyles.None,
                         Location = new Point(0, 0),
@@ -1056,11 +1031,11 @@ namespace TFT_Overlay
                         Dock = DockStyle.None,
                         Anchor = AnchorStyles.None,
                         BackColor = Color.Transparent,
-                        Location = new Point(7, 52),
+                        Location = new Point(3, 52),
                         FlowDirection = FlowDirection.RightToLeft,
-                        AutoSize = true,
-                        AutoSizeMode = AutoSizeMode.GrowOnly,
-                        Size = new Size(picture.Width - 10, picture.Height - 60),
+                        //AutoSize = true,
+                        //AutoSizeMode = AutoSizeMode.GrowOnly,
+                        Size = new Size(picture.Width - 6, picture.Height - 55),
 
                     };
 
@@ -1120,10 +1095,83 @@ namespace TFT_Overlay
                     tierbox.Controls.Add(label);
                     label.Controls.Add(coin);
 
-
-
-
                 
+
+
+
+
+                    // ORIGIN
+
+                    JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
+
+                    foreach (JToken arrayname2 in originsLoop)
+                    {
+
+                        string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
+
+                        var defaultHex = new PictureBox
+                        {
+                            Name = "basepanel",
+                            Size = new Size(22, 22),
+                            Margin = new Padding(2, 5, 2, 0),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            //Location = new Point(10, 50),
+                            BackColor = Color.Transparent,
+                            BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                            BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                        };
+
+                    var newOrigins = new PictureBox
+                    {
+                        Name = "newOrigins",
+                        Size = new Size(18, 18),
+                        Padding = new Padding(3, 3 ,3,3),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+
+                    var originsBox = new PictureBox
+                    {
+                            Name = "basepanel",
+                            Margin = new Padding(2, 5, 2, 0),
+                            Size = new Size(22, 22),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            BackColor = Color.Transparent,
+                            BackgroundImage = (Image)(rm.GetObject(origins)),
+                            BackgroundImageLayout = ImageLayout.Stretch,
+                        };
+
+
+                    if (ResourcesList.Contains(origins))
+                    {
+                        basepanel.Controls.Add(originsBox);
+                        tiup.SetToolTip(originsBox, origins);
+                    }
+                    else
+                    {
+
+                        newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + origins + ".png");
+                        newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
+                        basepanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newOrigins);
+                        tiup.SetToolTip(defaultHex, origins);
+                        tiup.SetToolTip(newOrigins, origins);
+
+                    }
+
+
+                    originsIndex++;
+                    }
+
+                    // CLASSES
+
                 JArray classesLoop = (JArray)jObjectw.SelectToken(champName + ".class");
 
                 foreach (JToken arrayname3 in classesLoop)
@@ -1138,6 +1186,7 @@ namespace TFT_Overlay
                         Size = new Size(22, 22),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.None,
+                        Margin = new Padding(2, 5, 2, 0),
                         //Location = new Point(10, 50),
                         BackColor = Color.Transparent,
                         BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
@@ -1163,11 +1212,9 @@ namespace TFT_Overlay
                     {
                         Name = "basepanel",
                         Size = new Size(22, 22),
-                        //Anchor = AnchorStyles.Left | AnchorStyles.Right,
+                        Margin = new Padding(2, 5, 2, 0),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.None,
-                        //Location = new Point((picture.Parent.ClientSize.Width / 2) - (picture.Width / 2),
-
                         BackColor = Color.Transparent,
                         BackgroundImage = (Image)(rm.GetObject(classes)),
                         BackgroundImageLayout = ImageLayout.Stretch,
@@ -1176,93 +1223,21 @@ namespace TFT_Overlay
                     if (ResourcesList.Contains(classes))
                     {
                         basepanel.Controls.Add(classBox);
+                        tiup.SetToolTip(classBox, classes);
                     }
                     else
                     {
-                        classBox.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + FirstLetterCapital(classes) + ".png");
-                        classBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                        newClass.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + classes + ".png");
+                        newClass.SizeMode = PictureBoxSizeMode.StretchImage;
                         basepanel.Controls.Add(defaultHex);
                         defaultHex.Controls.Add(newClass);
-
+                        tiup.SetToolTip(defaultHex, classes);
+                        tiup.SetToolTip(newClass, classes);
                     }
-                    
-                    
+
+
                     classesIndex++;
                 }
-
-
-
-                    // ORIGIN
-
-                    JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
-
-                    foreach (JToken arrayname2 in originsLoop)
-                    {
-
-                        string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
-
-                        var defaultHex = new PictureBox
-                        {
-                            Name = "basepanel",
-                            Size = new Size(22, 22),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.None,
-                            //Location = new Point(10, 50),
-                            BackColor = Color.Transparent,
-                            BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                            BackgroundImageLayout = ImageLayout.Stretch,
-
-
-                        };
-
-                    var newOrigins = new PictureBox
-                    {
-                        Name = "newOrigins",
-                        Size = new Size(18, 18),
-                        Padding = new Padding(3, 3 ,3,3),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.Fill,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-
-                    };
-
-                    var originsBox = new PictureBox
-                        {
-                            Name = "basepanel",
-                            Size = new Size(22, 22),
-                            //Anchor = AnchorStyles.Left | AnchorStyles.Right,
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.None,
-                            //Location = new Point((picture.Parent.ClientSize.Width / 2) - (picture.Width / 2),
-
-                            BackColor = Color.Transparent,
-                            BackgroundImage = (Image)(rm.GetObject(origins)),
-                            BackgroundImageLayout = ImageLayout.Stretch,
-
-
-                        };
-   
-
-                    if (ResourcesList.Contains(origins))
-                        {
-                            basepanel.Controls.Add(originsBox);
-                        }
-                        else {
-                        newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/"+ FirstLetterCapital(origins) + ".png");
-                        newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
-                        basepanel.Controls.Add(defaultHex);
-                        defaultHex.Controls.Add(newOrigins);
-                        
-                    }
-
-
-
-                    originsIndex++;
-                    }
-
-
-
 
 
 
@@ -1493,9 +1468,6 @@ namespace TFT_Overlay
                 int cost = (int)jObject.SelectToken(key + ".cost");
                 string ability = (string)jObject.SelectToken(key + ".ability.description");
                 Color tiercost = Color.OrangeRed;
-
-                ToolTip tip = new MetroFramework.Drawing.Html.HtmlToolTip();
-                ToolTip tiup = new MetroFramework.Drawing.Html.HtmlToolTip();
 
 
                 if (cost == 1)
@@ -1729,8 +1701,6 @@ namespace TFT_Overlay
                         BackColor = Color.Transparent,
                         BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
                         BackgroundImageLayout = ImageLayout.Stretch,
-
-
                     };
 
                     var newClasses = new PictureBox
@@ -1742,7 +1712,6 @@ namespace TFT_Overlay
                         Dock = DockStyle.Fill,
                         //Location = new Point(10, 50),
                         BackColor = Color.Transparent,
-
                     };
 
                     if (ResourcesList.Contains(classes))
@@ -1759,8 +1728,6 @@ namespace TFT_Overlay
                         tiup.SetToolTip(defaultHex, classes);
                         tiup.SetToolTip(newClasses, classes);
                     }
-
-                   
                     
                     classesIndex++;
                 }
@@ -1822,9 +1789,8 @@ namespace TFT_Overlay
                 }
 
                 // TOOLTIPS
-                tiup.SetToolTip(ChampBox, @"<div style=""color: #87ceeb; font-size: 10px; width:200px""><li style=""max-width:60em; word-wrap:break-word; overflow-wrap: break-word"">" + ability);
-                tiup.SetToolTip(ChampPicture, @"<div style="" font-size: 10px; width:200px; background-color: #87ceeb""><li style=""max-width:60em; word-wrap:break-word; overflow-wrap: break-word"">" + ability);
-                tiup.BackColor = Color.Black;
+                tiup.SetToolTip(ChampBox, @"<body style=""width:380px;font-size: 10px;"">" + ability + "</body>");
+                tiup.SetToolTip(ChampPicture, @"<body style=""width:380px;font-size: 10px;"">" + ability + "</body>");
 
             }
 
@@ -1887,8 +1853,6 @@ namespace TFT_Overlay
 
                     if (!SearchPanel.Text.ToLower().Contains("1".ToLower()))
                     {
-
-                        Console.WriteLine("Executed");
                         ChampsList.Controls.Remove(SearchPanel);
                     }
 
@@ -1910,8 +1874,6 @@ namespace TFT_Overlay
 
                     if (!SearchPanel.Text.ToLower().Contains("2".ToLower()))
                     {
-
-                        Console.WriteLine("Executed");
                         ChampsList.Controls.Remove(SearchPanel);
                     }
 
@@ -1933,8 +1895,6 @@ namespace TFT_Overlay
 
                     if (!SearchPanel.Text.ToLower().Contains("3".ToLower()))
                     {
-
-                        Console.WriteLine("Executed");
                         ChampsList.Controls.Remove(SearchPanel);
                     }
 
@@ -1955,8 +1915,6 @@ namespace TFT_Overlay
 
                     if (!SearchPanel.Text.ToLower().Contains("4".ToLower()))
                     {
-
-                        Console.WriteLine("Executed");
                         ChampsList.Controls.Remove(SearchPanel);
                     }
 
@@ -1978,8 +1936,6 @@ namespace TFT_Overlay
 
                     if (!SearchPanel.Text.ToLower().Contains("5".ToLower()))
                     {
-
-                        Console.WriteLine("Executed");
                         ChampsList.Controls.Remove(SearchPanel);
                     }
 

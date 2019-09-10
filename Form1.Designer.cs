@@ -72,21 +72,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Summoner = new MetroFramework.Controls.MetroLabel();
             this.RankedArmor = new System.Windows.Forms.PictureBox();
-            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
-            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.label8 = new System.Windows.Forms.Label();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
-            this.ChampsListContext = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -96,6 +86,10 @@
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TierListBox = new MetroFramework.Controls.MetroComboBox();
+            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
+            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -117,8 +111,8 @@
             this.T2S = new System.Windows.Forms.Label();
             this.T1S = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.TitleBar.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,14 +122,13 @@
             this.WINRATEPANEL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankedArmor)).BeginInit();
+            this.ChampionsTab.SuspendLayout();
+            this.metroPanel5.SuspendLayout();
+            this.TierListTab.SuspendLayout();
+            this.metroPanel4.SuspendLayout();
             this.CraftingTab.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            this.ChampionsTab.SuspendLayout();
-            this.metroPanel5.SuspendLayout();
-            this.ChampsListContext.SuspendLayout();
-            this.TierListTab.SuspendLayout();
-            this.metroPanel4.SuspendLayout();
             this.ProbTab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,7 +142,7 @@
             this.TitleBar.Controls.Add(this.Title);
             this.TitleBar.Location = new System.Drawing.Point(-2, 0);
             this.TitleBar.Name = "TitleBar";
-            this.TitleBar.Size = new System.Drawing.Size(427, 27);
+            this.TitleBar.Size = new System.Drawing.Size(424, 27);
             this.TitleBar.TabIndex = 2;
             this.TitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
@@ -439,7 +432,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(61)))), ((int)(((byte)(18)))));
             this.panel2.Controls.Add(this.ResultItemImage);
-            this.panel2.Location = new System.Drawing.Point(323, 42);
+            this.panel2.Location = new System.Drawing.Point(320, 42);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
             this.panel2.Size = new System.Drawing.Size(82, 80);
@@ -464,7 +457,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(291, 70);
+            this.label2.Location = new System.Drawing.Point(288, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 25);
             this.label2.TabIndex = 4;
@@ -475,7 +468,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(135, 70);
+            this.label1.Location = new System.Drawing.Point(129, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 25);
             this.label1.TabIndex = 3;
@@ -612,15 +605,15 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.ProfileTAB);
-            this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.CraftingTab);
             this.metroTabControl1.Controls.Add(this.ChampionsTab);
+            this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.ProbTab);
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(-2, 22);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 3;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(424, 267);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.TabIndex = 15;
@@ -710,7 +703,7 @@
             this.RankTierLabel.AutoSize = true;
             this.RankTierLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.RankTierLabel.ForeColor = System.Drawing.Color.White;
-            this.RankTierLabel.Location = new System.Drawing.Point(278, 192);
+            this.RankTierLabel.Location = new System.Drawing.Point(285, 183);
             this.RankTierLabel.Name = "RankTierLabel";
             this.RankTierLabel.Size = new System.Drawing.Size(74, 19);
             this.RankTierLabel.TabIndex = 5;
@@ -745,102 +738,12 @@
             // RankedArmor
             // 
             this.RankedArmor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RankedArmor.Location = new System.Drawing.Point(246, 41);
+            this.RankedArmor.Location = new System.Drawing.Point(231, 18);
             this.RankedArmor.Name = "RankedArmor";
-            this.RankedArmor.Size = new System.Drawing.Size(141, 136);
+            this.RankedArmor.Size = new System.Drawing.Size(176, 162);
             this.RankedArmor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.RankedArmor.TabIndex = 2;
             this.RankedArmor.TabStop = false;
-            // 
-            // CraftingTab
-            // 
-            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CraftingTab.Controls.Add(this.htmlItemdescription);
-            this.CraftingTab.Controls.Add(this.metroPanel2);
-            this.CraftingTab.Controls.Add(this.metroPanel1);
-            this.CraftingTab.Controls.Add(this.ItemName);
-            this.CraftingTab.Controls.Add(this.panel2);
-            this.CraftingTab.Controls.Add(this.label2);
-            this.CraftingTab.Controls.Add(this.label1);
-            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingTab.HorizontalScrollbarBarColor = true;
-            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.HorizontalScrollbarSize = 10;
-            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
-            this.CraftingTab.Name = "CraftingTab";
-            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
-            this.CraftingTab.TabIndex = 0;
-            this.CraftingTab.Text = "Crafting";
-            this.CraftingTab.UseCustomBackColor = true;
-            this.CraftingTab.VerticalScrollbarBarColor = true;
-            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.VerticalScrollbarSize = 10;
-            // 
-            // htmlItemdescription
-            // 
-            this.htmlItemdescription.AutoScroll = true;
-            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
-            this.htmlItemdescription.AutoSize = false;
-            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
-            this.htmlItemdescription.Name = "htmlItemdescription";
-            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
-            this.htmlItemdescription.TabIndex = 19;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.AutoScroll = true;
-            this.metroPanel2.Controls.Add(this.button1);
-            this.metroPanel2.Controls.Add(this.button11);
-            this.metroPanel2.Controls.Add(this.button10);
-            this.metroPanel2.Controls.Add(this.button16);
-            this.metroPanel2.Controls.Add(this.button12);
-            this.metroPanel2.Controls.Add(this.button15);
-            this.metroPanel2.Controls.Add(this.button13);
-            this.metroPanel2.Controls.Add(this.button14);
-            this.metroPanel2.HorizontalScrollbar = true;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(165, 11);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(120, 137);
-            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel2.TabIndex = 16;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.VerticalScrollbar = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.AutoScroll = true;
-            this.metroPanel1.Controls.Add(this.button2);
-            this.metroPanel1.Controls.Add(this.button4);
-            this.metroPanel1.Controls.Add(this.button3);
-            this.metroPanel1.Controls.Add(this.button9);
-            this.metroPanel1.Controls.Add(this.button5);
-            this.metroPanel1.Controls.Add(this.button8);
-            this.metroPanel1.Controls.Add(this.button6);
-            this.metroPanel1.Controls.Add(this.button7);
-            this.metroPanel1.HorizontalScrollbar = true;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(9, 11);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(120, 137);
-            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.VerticalScrollbar = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // ChampionsTab
             // 
@@ -868,6 +771,42 @@
             this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
             this.ChampionsTab.VerticalScrollbarSize = 10;
             // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.metroComboBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "Cost 1",
+            "Cost 2",
+            "Cost 3",
+            "Cost 4",
+            "Cost 5"});
+            this.metroComboBox2.Location = new System.Drawing.Point(3, 197);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.PromptText = "Filter by Cost";
+            this.metroComboBox2.Size = new System.Drawing.Size(119, 29);
+            this.metroComboBox2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroComboBox2.TabIndex = 44;
+            this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox2.UseCustomBackColor = true;
+            this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(128, 197);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(109, 29);
+            this.metroButton2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroButton2.TabIndex = 43;
+            this.metroButton2.Text = "Filter by Name";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -881,7 +820,6 @@
             // metroPanel5
             // 
             this.metroPanel5.AutoScroll = true;
-            this.metroPanel5.ContextMenuStrip = this.ChampsListContext;
             this.metroPanel5.Controls.Add(this.ChampsList);
             this.metroPanel5.HorizontalScrollbar = true;
             this.metroPanel5.HorizontalScrollbarBarColor = true;
@@ -896,68 +834,6 @@
             this.metroPanel5.VerticalScrollbarBarColor = true;
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 10;
-            // 
-            // ChampsListContext
-            // 
-            this.ChampsListContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem1});
-            this.ChampsListContext.Name = "metroContextMenu1";
-            this.ChampsListContext.Size = new System.Drawing.Size(147, 48);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
-            this.toolStripMenuItem2.Text = "Sort by Name";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ascendingToolStripMenuItem,
-            this.descendingToolStripMenuItem,
-            this.cost3ToolStripMenuItem,
-            this.cost4ToolStripMenuItem,
-            this.cost5ToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
-            this.toolStripMenuItem1.Text = "Sort by Cost";
-            // 
-            // ascendingToolStripMenuItem
-            // 
-            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ascendingToolStripMenuItem.Text = "Cost 1";
-            this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
-            // 
-            // descendingToolStripMenuItem
-            // 
-            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.descendingToolStripMenuItem.Text = "Cost 2";
-            this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
-            // 
-            // cost3ToolStripMenuItem
-            // 
-            this.cost3ToolStripMenuItem.Name = "cost3ToolStripMenuItem";
-            this.cost3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cost3ToolStripMenuItem.Text = "Cost 3";
-            this.cost3ToolStripMenuItem.Click += new System.EventHandler(this.cost3ToolStripMenuItem_Click);
-            // 
-            // cost4ToolStripMenuItem
-            // 
-            this.cost4ToolStripMenuItem.Name = "cost4ToolStripMenuItem";
-            this.cost4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cost4ToolStripMenuItem.Text = "Cost 4";
-            this.cost4ToolStripMenuItem.Click += new System.EventHandler(this.cost4ToolStripMenuItem_Click);
-            // 
-            // cost5ToolStripMenuItem
-            // 
-            this.cost5ToolStripMenuItem.Name = "cost5ToolStripMenuItem";
-            this.cost5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cost5ToolStripMenuItem.Text = "Cost 5";
-            this.cost5ToolStripMenuItem.Click += new System.EventHandler(this.cost5ToolStripMenuItem_Click);
             // 
             // ChampsList
             // 
@@ -1011,7 +887,7 @@
             this.TierListTab.Name = "TierListTab";
             this.TierListTab.Size = new System.Drawing.Size(416, 229);
             this.TierListTab.TabIndex = 3;
-            this.TierListTab.Text = "Meta Tier";
+            this.TierListTab.Text = "Tier List";
             this.TierListTab.UseCustomBackColor = true;
             this.TierListTab.VerticalScrollbarBarColor = true;
             this.TierListTab.VerticalScrollbarHighlightOnWheel = false;
@@ -1093,6 +969,96 @@
             this.TierListBox.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             this.TierListBox.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.TierListBox.MouseHover += new System.EventHandler(this.PointerLogic);
+            // 
+            // CraftingTab
+            // 
+            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CraftingTab.Controls.Add(this.htmlItemdescription);
+            this.CraftingTab.Controls.Add(this.metroPanel2);
+            this.CraftingTab.Controls.Add(this.metroPanel1);
+            this.CraftingTab.Controls.Add(this.ItemName);
+            this.CraftingTab.Controls.Add(this.panel2);
+            this.CraftingTab.Controls.Add(this.label2);
+            this.CraftingTab.Controls.Add(this.label1);
+            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CraftingTab.HorizontalScrollbarBarColor = true;
+            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.HorizontalScrollbarSize = 10;
+            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
+            this.CraftingTab.Name = "CraftingTab";
+            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
+            this.CraftingTab.TabIndex = 0;
+            this.CraftingTab.Text = "Crafting";
+            this.CraftingTab.UseCustomBackColor = true;
+            this.CraftingTab.VerticalScrollbarBarColor = true;
+            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.VerticalScrollbarSize = 10;
+            // 
+            // htmlItemdescription
+            // 
+            this.htmlItemdescription.AutoScroll = true;
+            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
+            this.htmlItemdescription.AutoSize = false;
+            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
+            this.htmlItemdescription.Name = "htmlItemdescription";
+            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
+            this.htmlItemdescription.TabIndex = 19;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.AutoScroll = true;
+            this.metroPanel2.Controls.Add(this.button1);
+            this.metroPanel2.Controls.Add(this.button11);
+            this.metroPanel2.Controls.Add(this.button10);
+            this.metroPanel2.Controls.Add(this.button16);
+            this.metroPanel2.Controls.Add(this.button12);
+            this.metroPanel2.Controls.Add(this.button15);
+            this.metroPanel2.Controls.Add(this.button13);
+            this.metroPanel2.Controls.Add(this.button14);
+            this.metroPanel2.HorizontalScrollbar = true;
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(160, 11);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel2.TabIndex = 16;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.VerticalScrollbar = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.AutoScroll = true;
+            this.metroPanel1.Controls.Add(this.button2);
+            this.metroPanel1.Controls.Add(this.button4);
+            this.metroPanel1.Controls.Add(this.button3);
+            this.metroPanel1.Controls.Add(this.button9);
+            this.metroPanel1.Controls.Add(this.button5);
+            this.metroPanel1.Controls.Add(this.button8);
+            this.metroPanel1.Controls.Add(this.button6);
+            this.metroPanel1.Controls.Add(this.button7);
+            this.metroPanel1.HorizontalScrollbar = true;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(2, 11);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.VerticalScrollbar = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // ProbTab
             // 
@@ -1356,41 +1322,10 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Champion Drop Rates";
             // 
-            // metroButton2
+            // htmlToolTip1
             // 
-            this.metroButton2.Location = new System.Drawing.Point(128, 197);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(109, 29);
-            this.metroButton2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroButton2.TabIndex = 43;
-            this.metroButton2.Text = "Filter by Name";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.UseCustomBackColor = true;
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.metroComboBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Items.AddRange(new object[] {
-            "Cost 1",
-            "Cost 2",
-            "Cost 3",
-            "Cost 4",
-            "Cost 5"});
-            this.metroComboBox2.Location = new System.Drawing.Point(3, 197);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.PromptText = "Filter by Cost";
-            this.metroComboBox2.Size = new System.Drawing.Size(119, 29);
-            this.metroComboBox2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroComboBox2.TabIndex = 44;
-            this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroComboBox2.UseCustomBackColor = true;
-            this.metroComboBox2.UseSelectable = true;
-            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
+            this.htmlToolTip1.OwnerDraw = true;
+            this.htmlToolTip1.ShowAlways = true;
             // 
             // TFTCrafter
             // 
@@ -1419,18 +1354,17 @@
             this.WINRATEPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankedArmor)).EndInit();
-            this.CraftingTab.ResumeLayout(false);
-            this.CraftingTab.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
-            this.metroPanel1.ResumeLayout(false);
             this.ChampionsTab.ResumeLayout(false);
             this.ChampionsTab.PerformLayout();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
-            this.ChampsListContext.ResumeLayout(false);
             this.TierListTab.ResumeLayout(false);
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
+            this.CraftingTab.ResumeLayout(false);
+            this.CraftingTab.PerformLayout();
+            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel1.ResumeLayout(false);
             this.ProbTab.ResumeLayout(false);
             this.ProbTab.PerformLayout();
             this.ResumeLayout(false);
@@ -1506,14 +1440,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ChampsSearchBox;
-        private MetroFramework.Controls.MetroContextMenu ChampsListContext;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem ascendingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem descendingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cost3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cost4ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cost5ToolStripMenuItem;
         private MetroFramework.Controls.MetroTabPage ProfileTAB;
         private System.Windows.Forms.PictureBox RankedArmor;
         private MetroFramework.Controls.MetroLabel Summoner;
@@ -1528,6 +1454,8 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private MetroFramework.Controls.MetroComboBox metroComboBox2;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Drawing.Html.HtmlToolTip htmlToolTip1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

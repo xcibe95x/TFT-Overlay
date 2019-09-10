@@ -751,4 +751,76 @@
   <data name="DefaultHex" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\hexes\Default_Hex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Assassin2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\assassin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blademaster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\blademaster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Brawler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\brawler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Demon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\demon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Elementalist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\elementalist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\exile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Glacial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\glacial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guardian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\guardian.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gunslinger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\gunslinger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hextech" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\hextech.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imperial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\imperial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Knight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\knight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ninja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\ninja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Noble" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\noble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Phantom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\phantom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pirate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\pirate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ranger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\ranger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Robot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\robot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shapeshifter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\shapeshifter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sorcerer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\classes\sorcerer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Void" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\void.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wild" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\wild.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Yordle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\origins\yordle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -13,14 +13,13 @@
 
 ## Version Changelogs
 
-(Note for my self: Add an easy updatabled by the users over GitHub Json files, for Drop Rates and Local Assets Exclusion list for reworked champions so theres no need for further updates :3)
-
 - **2.7 PLACE HOLDER**
      - New Feature
-     - Profile Tab Labels adjusted
-	 - Tooltips look adjusted
+     - Profile Tab Labels adjustments
+	 - Tooltips look updated
+	 - Crafting layout adjustments
 	 
-- **2.6 ACTUAL (NEXT WEEK)**
+- **2.6 STABLE RELEASE**
    - Changelog
      ( No new features in this update, will be done in 2.7 )
      - Eventual new items for crafting will be manually mantained ( Those are not always up to date )
@@ -31,7 +30,7 @@
 	 - Now Auto Reset after Passing Level 9 on Drop Rates
 	 - Profile Support for All Servers Including PBE
 	 - Improved Loading Speed
-	 . droprates.json compiled but not yet included
+	 . droprates.json and exclusion.json compiled but not yet included
 	 - Changed profile layout (Will fix labels in 2.7)
 	 - Tooltips now show the whole text (will adjust it's colors in 2.7)
 	 - Layout Sizes will not be changed further for now, will see if i can make it smaller in 3.0
@@ -44,11 +43,10 @@
 	 - Drop Rates Champs counts increased
 	 - Classes and Origins Assets Replaced
 	 - Default Hex Color Changed
-	 
-- **2.6 PROJECTION**
-   - Changelog
 	 - Fixed a bug with meta tier classes not showing properly when the local assets is missing
-     - Fix Classes / Origins Sizes Bugs in Tierlist
+	 - Fix Classes / Origins Sizes Bugs in Tierlist
+	 - Added tooltips on Origins and Classes for Tier list
+	 - Slightly improved loading times
 
 - **2.5.1 HOTFIX** 
    - Changelog
