@@ -11,5 +11,8 @@
     <Setting Name="SummonerName" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">euw1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

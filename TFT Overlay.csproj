@@ -380,6 +380,7 @@
     <None Include="assets\champs\Zyra.png" />
     <None Include="assets\champs\Yuumi1.png" />
     <None Include="assets\champs\Zed1.png" />
+    <None Include="assets\hexes\Default_Hex.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />

@@ -15,28 +15,40 @@
 
 (Note for my self: Add an easy updatabled by the users over GitHub Json files, for Drop Rates and Local Assets Exclusion list for reworked champions so theres no need for further updates :3)
 
-- **2.6 ACTUAL (COMING SEPTEMBER)**
+- **2.7 PLACE HOLDER**
+     - New Feature
+     - Profile Tab Labels adjusted
+	 - Tooltips look adjusted
+	 
+- **2.6 ACTUAL (NEXT WEEK)**
    - Changelog
+     ( No new features in this update, will be done in 2.7 )
      - Eventual new items for crafting will be manually mantained ( Those are not always up to date )
 	 - Added new assets for spells
      - Updated champs local assets to Patch 9.17, to speed up loading times
-	 . Now properly prioritize local assets over ddragon flying data (Sorry! :P)
+	 - Now properly prioritize local assets over ddragon flying data (Sorry! :P)
 	 - Removed unused Assets
 	 - Now Auto Reset after Passing Level 9 on Drop Rates
+	 - Profile Support for All Servers Including PBE
+	 - Improved Loading Speed
+	 . droprates.json compiled but not yet included
+	 - Changed profile layout (Will fix labels in 2.7)
+	 - Tooltips now show the whole text (will adjust it's colors in 2.7)
+	 - Layout Sizes will not be changed further for now, will see if i can make it smaller in 3.0
+     - Crafting Layout Adjustments
+     - Champion list searchbox moved to Champs Tab
+	 - Champion list Context Menu Removed
+	 - Champion list filter conveniently re-added under the list
+	 - Champion list SearchBox now clear when clicking on it
+	 - Drop Rates Layout updated
+	 - Drop Rates Champs counts increased
+	 - Classes and Origins Assets Replaced
+	 - Default Hex Color Changed
 	 
-
 - **2.6 PROJECTION**
    - Changelog
-     - New Feature
-     - Profile Support for All Servers
-     - Fix slow loadings by adding local assets for todays champs 
-     - Fixes
-     - Tooltips Fixes
+	 - Fixed a bug with meta tier classes not showing properly when the local assets is missing
      - Fix Classes / Origins Sizes Bugs in Tierlist
-     - General Layout Adjustments
-     - Adjust Profile Layout
-	 - General Improvements
-	 - Layout and Sizes Adjustments
 
 - **2.5.1 HOTFIX** 
    - Changelog
@@ -48,7 +60,7 @@
      - Winrate Tab completely Removed
      - Using Riot API's and Ddragon Data! (You will need your own API Key if you buildthe source.)
      - Profile Tab! (Right Click on the Orange title bar to Set your Summoner Name and hit Enter) (Only Support EUW At the Moment)
-     - You can now hide part of the tool, hovering the bar will show it and leaving will hide it
+     - You can now hide/show part of the tool, hovering the bar will show it and leaving will hide it
      + Tier List assets are now always up-to-date
      + Default Class/Origins Hex (Black for Now)
      * Fixed Win and Lose, now properly shows TFT Stats and ignores Solo Q
@@ -97,7 +109,7 @@
     - Some layouts changes
     - Reccomended Items
 	
-- **2.1.2**
+- **2.1.2 HOTFIX**
   - Changelog  
     - Fixed a fatal error
 

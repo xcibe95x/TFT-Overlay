@@ -113,6 +113,9 @@ namespace TFT_Overlay
         private void Form1_Load(object sender, EventArgs e)
 
         {
+
+          toolStripTextBox1.Text = Properties.Settings.Default.SummonerName;
+          toolStripComboBox1.Text = Properties.Settings.Default.Server;
             ItemName.Text = "";
             ResourceSet resSet = Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
 
@@ -135,16 +138,13 @@ namespace TFT_Overlay
 
             metroTabControl1.SelectedIndex = 0;
 
-            label9.Visible = false;
-            ChampsSearchBox.Visible = false;
-
             // Delete and Generate Custom Mouse Pointer to Temp Path
             File.Delete(Path.GetTempPath() + "Normal.cur");
             File.Delete(Path.GetTempPath() + "Pointer.cur");
             File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
             File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
 
-            var localVersion = new Version("2.5.1");
+            var localVersion = new Version("2.6");
 
             // Program Title
             Title.Text = "Pocket Tactics | by @xcibe95x";
@@ -176,18 +176,18 @@ namespace TFT_Overlay
             try
             {
                 // GET JSON DATA
-                summonerJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey);
+                summonerJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey);
       
 
             JObject summonerObject = JObject.Parse(summonerJSON);
             string SummonerId = (string)summonerObject.SelectToken("id");
-            SummName.Text = SummonerName;
+            Summoner.Text = SummonerName;
             
             pictureBox2.Load("http://ddragon.leagueoflegends.com/cdn/9.14.1/img/profileicon/" + (string)summonerObject.SelectToken("profileIconId") + ".png");
 
 
         
-                rankedJSON = client.DownloadString("https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
+                rankedJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
                 
          
 
@@ -322,6 +322,11 @@ namespace TFT_Overlay
         {
             CrafterWorker();
 
+        }
+
+        private string FirstLetterCapital(string str)
+        {
+            return Char.ToUpper(str[0]) + str.Remove(0, 1);
         }
 
         private void CrafterWorker()
@@ -1117,6 +1122,76 @@ namespace TFT_Overlay
 
 
 
+
+                
+                JArray classesLoop = (JArray)jObjectw.SelectToken(champName + ".class");
+
+                foreach (JToken arrayname3 in classesLoop)
+                {
+
+
+                    string classes = (string)jObjectw.SelectToken(champName + ".class.[" + classesIndex.ToString() + "]");
+
+                    var defaultHex = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(22, 22),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                    };
+
+
+                    var newClass = new PictureBox
+                    {
+                        Name = "newOrigins",
+                        Size = new Size(18, 18),
+                        Padding = new Padding(3, 3, 3, 3),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+
+                    var classBox = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(22, 22),
+                        //Anchor = AnchorStyles.Left | AnchorStyles.Right,
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point((picture.Parent.ClientSize.Width / 2) - (picture.Width / 2),
+
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject(classes)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+                    if (ResourcesList.Contains(classes))
+                    {
+                        basepanel.Controls.Add(classBox);
+                    }
+                    else
+                    {
+                        classBox.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + FirstLetterCapital(classes) + ".png");
+                        classBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                        basepanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newClass);
+
+                    }
+                    
+                    
+                    classesIndex++;
+                }
+
+
+
                     // ORIGIN
 
                     JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
@@ -1174,7 +1249,7 @@ namespace TFT_Overlay
                             basepanel.Controls.Add(originsBox);
                         }
                         else {
-                        newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/"+ origins +".png");
+                        newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/"+ FirstLetterCapital(origins) + ".png");
                         newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
                         basepanel.Controls.Add(defaultHex);
                         defaultHex.Controls.Add(newOrigins);
@@ -1188,68 +1263,6 @@ namespace TFT_Overlay
 
 
 
-                JArray classesLoop = (JArray)jObjectw.SelectToken(champName + ".class");
-
-                foreach (JToken arrayname3 in classesLoop)
-                {
-
-
-                    string classes = (string)jObjectw.SelectToken(champName + ".class.[" + classesIndex.ToString() + "]");
-
-                    var classBox = new PictureBox
-                    {
-                        Name = "basepanel",
-                        Size = new Size(25, 25),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        Location = new Point(0, 0),
-                        BackgroundImage = (Image)(rm.GetObject(classes)),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    };
-
-
-                    var defaultHex = new PictureBox
-                    {
-                        Name = "basepanel",
-                        Size = new Size(22, 22),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-
-
-                    };
-
-
-                    var newClass = new PictureBox
-                    {
-                        Name = "newOrigins",
-                        Size = new Size(18, 18),
-                        Padding = new Padding(3, 3, 3, 3),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.Fill,
-                        BackColor = Color.Transparent,
-
-                    };
-
-                    if (ResourcesList.Contains(classes))
-                    {
-                        basepanel.Controls.Add(classBox);
-                    }
-                    else
-                    {
-                        classBox.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + classes + ".png");
-                        classBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                        basepanel.Controls.Add(defaultHex);
-                        defaultHex.Controls.Add(newClass);
-
-                    }
-                    
-                    
-                    classesIndex++;
-                }
 
 
 
@@ -1482,7 +1495,7 @@ namespace TFT_Overlay
                 Color tiercost = Color.OrangeRed;
 
                 ToolTip tip = new MetroFramework.Drawing.Html.HtmlToolTip();
-                ToolTip tiup = new MetroToolTip();
+                ToolTip tiup = new MetroFramework.Drawing.Html.HtmlToolTip();
 
 
                 if (cost == 1)
@@ -1809,9 +1822,9 @@ namespace TFT_Overlay
                 }
 
                 // TOOLTIPS
-                tiup.SetToolTip(ChampBox, ability);
-                tiup.SetToolTip(ChampPicture, "           " + ability + "           ");
-
+                tiup.SetToolTip(ChampBox, @"<div style=""color: #87ceeb; font-size: 10px; width:200px""><li style=""max-width:60em; word-wrap:break-word; overflow-wrap: break-word"">" + ability);
+                tiup.SetToolTip(ChampPicture, @"<div style="" font-size: 10px; width:200px; background-color: #87ceeb""><li style=""max-width:60em; word-wrap:break-word; overflow-wrap: break-word"">" + ability);
+                tiup.BackColor = Color.Black;
 
             }
 
@@ -1849,16 +1862,7 @@ namespace TFT_Overlay
 
         private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (metroTabControl1.SelectedTab != metroTabControl1.TabPages["ChampionsTab"])
-            {
-                ChampsSearchBox.Visible = false;
-                label9.Visible = false;
-            }
-            else
-            {
-                ChampsSearchBox.Visible = true;
-                label9.Visible = true;
-            }
+        // Deprecated
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -2042,6 +2046,164 @@ namespace TFT_Overlay
         private void panel1_MouseLeave(object sender, EventArgs e)
         {
             if (toggleHide == true) { Height = 28; }
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroContextMenu1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+ 
+        }
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (toolStripComboBox1.SelectedItem.Equals("EUW")) { Properties.Settings.Default.Server = "euw1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("NA")) { Properties.Settings.Default.Server = "na"; }
+            if (toolStripComboBox1.SelectedItem.Equals("NA1")) { Properties.Settings.Default.Server = "na1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("EUNE")) { Properties.Settings.Default.Server = "eun1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("JP")) { Properties.Settings.Default.Server = "jp1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("KR")) { Properties.Settings.Default.Server = "kr"; }
+            if (toolStripComboBox1.SelectedItem.Equals("LAN")) { Properties.Settings.Default.Server = "la1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("LAS")) { Properties.Settings.Default.Server = "la2"; }
+            if (toolStripComboBox1.SelectedItem.Equals("OCE")) { Properties.Settings.Default.Server = "oc1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("TR")) { Properties.Settings.Default.Server = "tr1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("RU")) { Properties.Settings.Default.Server = "ru"; }
+            if (toolStripComboBox1.SelectedItem.Equals("PBE")) { Properties.Settings.Default.Server = "pbe1"; }
+            if (toolStripComboBox1.SelectedItem.Equals("BR")) { Properties.Settings.Default.Server = "br1"; }
+            Properties.Settings.Default.Save();
+            
+        }
+
+        private void metroButton2_Click_1(object sender, EventArgs e)
+        {
+            ChampsList.Controls.Clear();
+            ChampsSearchBox.Clear();
+            championsListLoop();
+        }
+
+        private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (metroComboBox2.SelectedIndex == 0) {
+
+                ChampsList.Controls.Clear();
+                ChampsSearchBox.Clear();
+                championsListLoop();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    foreach (Control SearchPanel in ChampsList.Controls)
+                    {
+
+
+                        if (!SearchPanel.Text.ToLower().Contains("1".ToLower()))
+                        {
+                            ChampsList.Controls.Remove(SearchPanel);
+                        }
+
+                    }
+                }
+
+            }
+
+            if (metroComboBox2.SelectedIndex == 1)
+            {
+
+                ChampsList.Controls.Clear();
+                ChampsSearchBox.Clear();
+                championsListLoop();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    foreach (Control SearchPanel in ChampsList.Controls)
+                    {
+
+
+                        if (!SearchPanel.Text.ToLower().Contains("2".ToLower()))
+                        {
+                            ChampsList.Controls.Remove(SearchPanel);
+                        }
+
+                    }
+                }
+
+            }
+
+            if (metroComboBox2.SelectedIndex == 2)
+            {
+
+                ChampsList.Controls.Clear();
+                ChampsSearchBox.Clear();
+                championsListLoop();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    foreach (Control SearchPanel in ChampsList.Controls)
+                    {
+
+
+                        if (!SearchPanel.Text.ToLower().Contains("3".ToLower()))
+                        {
+                            ChampsList.Controls.Remove(SearchPanel);
+                        }
+
+                    }
+                }
+
+            }
+
+            if (metroComboBox2.SelectedIndex == 3)
+            {
+
+                ChampsList.Controls.Clear();
+                ChampsSearchBox.Clear();
+                championsListLoop();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    foreach (Control SearchPanel in ChampsList.Controls)
+                    {
+
+
+                        if (!SearchPanel.Text.ToLower().Contains("4".ToLower()))
+                        {
+                            ChampsList.Controls.Remove(SearchPanel);
+                        }
+
+                    }
+                }
+
+            }
+
+            if (metroComboBox2.SelectedIndex == 4)
+            {
+
+                ChampsList.Controls.Clear();
+                ChampsSearchBox.Clear();
+                championsListLoop();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    foreach (Control SearchPanel in ChampsList.Controls)
+                    {
+
+
+                        if (!SearchPanel.Text.ToLower().Contains("5".ToLower()))
+                        {
+                            ChampsList.Controls.Remove(SearchPanel);
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        private void ChampsSearchBox_Click(object sender, EventArgs e)
+        {
+            ((TextBox)sender).Clear();
         }
     }
 }

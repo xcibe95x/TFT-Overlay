@@ -32,14 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TFTCrafter));
             this.TitleBar = new System.Windows.Forms.Panel();
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.Debug = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.ChampsSearchBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -70,20 +70,34 @@
             this.LoseLab = new System.Windows.Forms.Label();
             this.RankTierLabel = new MetroFramework.Controls.MetroLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.SummName = new MetroFramework.Controls.MetroLabel();
+            this.Summoner = new MetroFramework.Controls.MetroLabel();
             this.RankedArmor = new System.Windows.Forms.PictureBox();
+            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
+            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
+            this.ChampsListContext = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cost5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.TierListTab = new MetroFramework.Controls.MetroTabPage();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TierListBox = new MetroFramework.Controls.MetroComboBox();
-            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
-            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.T1T = new System.Windows.Forms.Label();
             this.T2T = new System.Windows.Forms.Label();
@@ -103,21 +117,8 @@
             this.T2S = new System.Windows.Forms.Label();
             this.T1S = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
-            this.label8 = new System.Windows.Forms.Label();
-            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
-            this.ChampsListContext = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cost5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChampsList = new System.Windows.Forms.FlowLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.TitleBar.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -127,15 +128,15 @@
             this.WINRATEPANEL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankedArmor)).BeginInit();
-            this.TierListTab.SuspendLayout();
-            this.metroPanel4.SuspendLayout();
             this.CraftingTab.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            this.ProbTab.SuspendLayout();
             this.ChampionsTab.SuspendLayout();
             this.metroPanel5.SuspendLayout();
             this.ChampsListContext.SuspendLayout();
+            this.TierListTab.SuspendLayout();
+            this.metroPanel4.SuspendLayout();
+            this.ProbTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleBar
@@ -146,8 +147,6 @@
             this.TitleBar.Controls.Add(this.metroButton4);
             this.TitleBar.Controls.Add(this.Debug);
             this.TitleBar.Controls.Add(this.Title);
-            this.TitleBar.Controls.Add(this.label9);
-            this.TitleBar.Controls.Add(this.ChampsSearchBox);
             this.TitleBar.Location = new System.Drawing.Point(-2, 0);
             this.TitleBar.Name = "TitleBar";
             this.TitleBar.Size = new System.Drawing.Size(427, 27);
@@ -160,29 +159,14 @@
             // metroContextMenu1
             // 
             this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.toolStripComboBox1,
             this.alwaysOnTopToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.toolStripTextBox1});
+            this.aboutToolStripMenuItem});
             this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(161, 73);
+            this.metroContextMenu1.Size = new System.Drawing.Size(182, 100);
             this.metroContextMenu1.Text = "Summoner";
-            // 
-            // alwaysOnTopToolStripMenuItem
-            // 
-            this.alwaysOnTopToolStripMenuItem.Checked = true;
-            this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
-            this.alwaysOnTopToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.alwaysOnTopToolStripMenuItem.Text = "Always on Top";
-            this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.metroContextMenu1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.metroContextMenu1_ItemClicked);
             // 
             // toolStripTextBox1
             // 
@@ -194,6 +178,45 @@
             this.toolStripTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toolStripTextBox1_KeyPress);
             this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
             this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Items.AddRange(new object[] {
+            "EUW",
+            "EUNE",
+            "NA",
+            "NA1",
+            "JP",
+            "KR",
+            "BR",
+            "LAN",
+            "LAS",
+            "TR",
+            "RU",
+            "OCE",
+            "PBE"});
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.Text = "EUW";
+            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
+            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click);
+            // 
+            // alwaysOnTopToolStripMenuItem
+            // 
+            this.alwaysOnTopToolStripMenuItem.Checked = true;
+            this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
+            this.alwaysOnTopToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.alwaysOnTopToolStripMenuItem.Text = "Always on Top";
+            this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // metroButton5
             // 
@@ -256,26 +279,19 @@
             this.Title.Text = "Pocket Tactics";
             this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(232, 7);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Search:";
-            this.label9.Visible = false;
-            // 
             // ChampsSearchBox
             // 
+            this.ChampsSearchBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ChampsSearchBox.Location = new System.Drawing.Point(282, 3);
+            this.ChampsSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChampsSearchBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ChampsSearchBox.Location = new System.Drawing.Point(281, 197);
+            this.ChampsSearchBox.Multiline = true;
             this.ChampsSearchBox.Name = "ChampsSearchBox";
-            this.ChampsSearchBox.Size = new System.Drawing.Size(83, 20);
+            this.ChampsSearchBox.Size = new System.Drawing.Size(132, 29);
             this.ChampsSearchBox.TabIndex = 10;
-            this.ChampsSearchBox.Visible = false;
+            this.ChampsSearchBox.Text = "Search...";
+            this.ChampsSearchBox.Click += new System.EventHandler(this.ChampsSearchBox_Click);
             this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -286,7 +302,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button2.Location = new System.Drawing.Point(3, 6);
+            this.button2.Location = new System.Drawing.Point(12, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 38);
             this.button2.TabIndex = 8;
@@ -302,7 +318,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button3.Location = new System.Drawing.Point(46, 6);
+            this.button3.Location = new System.Drawing.Point(55, 8);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(37, 38);
             this.button3.TabIndex = 9;
@@ -318,7 +334,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button4.Location = new System.Drawing.Point(3, 50);
+            this.button4.Location = new System.Drawing.Point(12, 52);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 38);
             this.button4.TabIndex = 10;
@@ -334,7 +350,7 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button5.Location = new System.Drawing.Point(46, 50);
+            this.button5.Location = new System.Drawing.Point(55, 52);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(37, 38);
             this.button5.TabIndex = 12;
@@ -350,7 +366,7 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.Location = new System.Drawing.Point(3, 94);
+            this.button6.Location = new System.Drawing.Point(12, 96);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(37, 38);
             this.button6.TabIndex = 13;
@@ -366,7 +382,7 @@
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button7.Location = new System.Drawing.Point(46, 94);
+            this.button7.Location = new System.Drawing.Point(55, 96);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(37, 38);
             this.button7.TabIndex = 14;
@@ -382,7 +398,7 @@
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button8.Location = new System.Drawing.Point(3, 138);
+            this.button8.Location = new System.Drawing.Point(12, 140);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(37, 38);
             this.button8.TabIndex = 15;
@@ -398,7 +414,7 @@
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button9.Location = new System.Drawing.Point(46, 138);
+            this.button9.Location = new System.Drawing.Point(55, 140);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(37, 38);
             this.button9.TabIndex = 11;
@@ -412,7 +428,7 @@
             this.ItemName.AutoSize = true;
             this.ItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ItemName.Location = new System.Drawing.Point(18, 160);
+            this.ItemName.Location = new System.Drawing.Point(9, 160);
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(110, 17);
             this.ItemName.TabIndex = 17;
@@ -423,10 +439,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(61)))), ((int)(((byte)(18)))));
             this.panel2.Controls.Add(this.ResultItemImage);
-            this.panel2.Location = new System.Drawing.Point(313, 47);
+            this.panel2.Location = new System.Drawing.Point(323, 42);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
-            this.panel2.Size = new System.Drawing.Size(82, 77);
+            this.panel2.Size = new System.Drawing.Size(82, 80);
             this.panel2.TabIndex = 16;
             // 
             // ResultItemImage
@@ -437,7 +453,7 @@
             this.ResultItemImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ResultItemImage.Location = new System.Drawing.Point(3, 3);
             this.ResultItemImage.Name = "ResultItemImage";
-            this.ResultItemImage.Size = new System.Drawing.Size(76, 71);
+            this.ResultItemImage.Size = new System.Drawing.Size(76, 74);
             this.ResultItemImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ResultItemImage.TabIndex = 0;
             this.ResultItemImage.TabStop = false;
@@ -448,7 +464,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(276, 80);
+            this.label2.Location = new System.Drawing.Point(291, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 25);
             this.label2.TabIndex = 4;
@@ -459,7 +475,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(134, 80);
+            this.label1.Location = new System.Drawing.Point(135, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 25);
             this.label1.TabIndex = 3;
@@ -472,7 +488,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Location = new System.Drawing.Point(3, 6);
+            this.button1.Location = new System.Drawing.Point(12, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 38);
             this.button1.TabIndex = 8;
@@ -488,7 +504,7 @@
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button10.Location = new System.Drawing.Point(46, 6);
+            this.button10.Location = new System.Drawing.Point(55, 6);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(37, 38);
             this.button10.TabIndex = 9;
@@ -504,7 +520,7 @@
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button11.Location = new System.Drawing.Point(3, 50);
+            this.button11.Location = new System.Drawing.Point(12, 50);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(37, 38);
             this.button11.TabIndex = 10;
@@ -520,7 +536,7 @@
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button12.Location = new System.Drawing.Point(46, 50);
+            this.button12.Location = new System.Drawing.Point(55, 50);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(37, 38);
             this.button12.TabIndex = 12;
@@ -536,7 +552,7 @@
             this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button13.Location = new System.Drawing.Point(3, 94);
+            this.button13.Location = new System.Drawing.Point(12, 94);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(37, 38);
             this.button13.TabIndex = 13;
@@ -552,7 +568,7 @@
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button14.Location = new System.Drawing.Point(46, 94);
+            this.button14.Location = new System.Drawing.Point(55, 94);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(37, 38);
             this.button14.TabIndex = 14;
@@ -568,7 +584,7 @@
             this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button15.Location = new System.Drawing.Point(3, 138);
+            this.button15.Location = new System.Drawing.Point(12, 138);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(37, 38);
             this.button15.TabIndex = 15;
@@ -584,7 +600,7 @@
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button16.Location = new System.Drawing.Point(46, 138);
+            this.button16.Location = new System.Drawing.Point(55, 138);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(37, 38);
             this.button16.TabIndex = 11;
@@ -596,9 +612,9 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.ProfileTAB);
-            this.metroTabControl1.Controls.Add(this.ChampionsTab);
             this.metroTabControl1.Controls.Add(this.TierListTab);
             this.metroTabControl1.Controls.Add(this.CraftingTab);
+            this.metroTabControl1.Controls.Add(this.ChampionsTab);
             this.metroTabControl1.Controls.Add(this.ProbTab);
             this.metroTabControl1.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.metroTabControl1.ItemSize = new System.Drawing.Size(59, 30);
@@ -620,7 +636,7 @@
             this.ProfileTAB.Controls.Add(this.LoseLab);
             this.ProfileTAB.Controls.Add(this.RankTierLabel);
             this.ProfileTAB.Controls.Add(this.pictureBox2);
-            this.ProfileTAB.Controls.Add(this.SummName);
+            this.ProfileTAB.Controls.Add(this.Summoner);
             this.ProfileTAB.Controls.Add(this.RankedArmor);
             this.ProfileTAB.HorizontalScrollbarBarColor = true;
             this.ProfileTAB.HorizontalScrollbarHighlightOnWheel = false;
@@ -645,9 +661,9 @@
             this.WINRATEPANEL.HorizontalScrollbarBarColor = true;
             this.WINRATEPANEL.HorizontalScrollbarHighlightOnWheel = false;
             this.WINRATEPANEL.HorizontalScrollbarSize = 10;
-            this.WINRATEPANEL.Location = new System.Drawing.Point(252, 26);
+            this.WINRATEPANEL.Location = new System.Drawing.Point(17, 79);
             this.WINRATEPANEL.Name = "WINRATEPANEL";
-            this.WINRATEPANEL.Size = new System.Drawing.Size(155, 160);
+            this.WINRATEPANEL.Size = new System.Drawing.Size(109, 110);
             this.WINRATEPANEL.TabIndex = 19;
             this.WINRATEPANEL.UseCustomBackColor = true;
             this.WINRATEPANEL.VerticalScrollbarBarColor = true;
@@ -658,11 +674,11 @@
             // 
             this.WinRate.BackColor = System.Drawing.Color.Transparent;
             this.WinRate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WinRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.WinRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.WinRate.ForeColor = System.Drawing.Color.White;
             this.WinRate.Location = new System.Drawing.Point(0, 0);
             this.WinRate.Name = "WinRate";
-            this.WinRate.Size = new System.Drawing.Size(155, 160);
+            this.WinRate.Size = new System.Drawing.Size(109, 110);
             this.WinRate.TabIndex = 6;
             this.WinRate.Text = "100%";
             this.WinRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -672,7 +688,7 @@
             this.WinLab.AutoSize = true;
             this.WinLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WinLab.ForeColor = System.Drawing.Color.LawnGreen;
-            this.WinLab.Location = new System.Drawing.Point(291, 184);
+            this.WinLab.Location = new System.Drawing.Point(29, 192);
             this.WinLab.Name = "WinLab";
             this.WinLab.Size = new System.Drawing.Size(37, 20);
             this.WinLab.TabIndex = 18;
@@ -683,7 +699,7 @@
             this.LoseLab.AutoSize = true;
             this.LoseLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoseLab.ForeColor = System.Drawing.Color.Crimson;
-            this.LoseLab.Location = new System.Drawing.Point(339, 184);
+            this.LoseLab.Location = new System.Drawing.Point(77, 192);
             this.LoseLab.Name = "LoseLab";
             this.LoseLab.Size = new System.Drawing.Size(31, 20);
             this.LoseLab.TabIndex = 17;
@@ -694,7 +710,7 @@
             this.RankTierLabel.AutoSize = true;
             this.RankTierLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.RankTierLabel.ForeColor = System.Drawing.Color.White;
-            this.RankTierLabel.Location = new System.Drawing.Point(38, 184);
+            this.RankTierLabel.Location = new System.Drawing.Point(278, 192);
             this.RankTierLabel.Name = "RankTierLabel";
             this.RankTierLabel.Size = new System.Drawing.Size(74, 19);
             this.RankTierLabel.TabIndex = 5;
@@ -705,36 +721,282 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(13, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 18);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(44, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // SummName
+            // Summoner
             // 
-            this.SummName.AutoSize = true;
-            this.SummName.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.SummName.ForeColor = System.Drawing.Color.White;
-            this.SummName.Location = new System.Drawing.Point(57, 26);
-            this.SummName.Name = "SummName";
-            this.SummName.Size = new System.Drawing.Size(122, 19);
-            this.SummName.TabIndex = 3;
-            this.SummName.Text = "SummonerName";
-            this.SummName.UseCustomBackColor = true;
-            this.SummName.UseCustomForeColor = true;
+            this.Summoner.AutoSize = true;
+            this.Summoner.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Summoner.ForeColor = System.Drawing.Color.White;
+            this.Summoner.Location = new System.Drawing.Point(69, 28);
+            this.Summoner.Name = "Summoner";
+            this.Summoner.Size = new System.Drawing.Size(82, 19);
+            this.Summoner.TabIndex = 3;
+            this.Summoner.Text = "Summoner";
+            this.Summoner.UseCustomBackColor = true;
+            this.Summoner.UseCustomForeColor = true;
             // 
             // RankedArmor
             // 
             this.RankedArmor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RankedArmor.Location = new System.Drawing.Point(13, 60);
+            this.RankedArmor.Location = new System.Drawing.Point(246, 41);
             this.RankedArmor.Name = "RankedArmor";
-            this.RankedArmor.Size = new System.Drawing.Size(123, 117);
+            this.RankedArmor.Size = new System.Drawing.Size(141, 136);
             this.RankedArmor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.RankedArmor.TabIndex = 2;
             this.RankedArmor.TabStop = false;
+            // 
+            // CraftingTab
+            // 
+            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CraftingTab.Controls.Add(this.htmlItemdescription);
+            this.CraftingTab.Controls.Add(this.metroPanel2);
+            this.CraftingTab.Controls.Add(this.metroPanel1);
+            this.CraftingTab.Controls.Add(this.ItemName);
+            this.CraftingTab.Controls.Add(this.panel2);
+            this.CraftingTab.Controls.Add(this.label2);
+            this.CraftingTab.Controls.Add(this.label1);
+            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CraftingTab.HorizontalScrollbarBarColor = true;
+            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.HorizontalScrollbarSize = 10;
+            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
+            this.CraftingTab.Name = "CraftingTab";
+            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
+            this.CraftingTab.TabIndex = 0;
+            this.CraftingTab.Text = "Crafting";
+            this.CraftingTab.UseCustomBackColor = true;
+            this.CraftingTab.VerticalScrollbarBarColor = true;
+            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.VerticalScrollbarSize = 10;
+            // 
+            // htmlItemdescription
+            // 
+            this.htmlItemdescription.AutoScroll = true;
+            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
+            this.htmlItemdescription.AutoSize = false;
+            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
+            this.htmlItemdescription.Name = "htmlItemdescription";
+            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
+            this.htmlItemdescription.TabIndex = 19;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.AutoScroll = true;
+            this.metroPanel2.Controls.Add(this.button1);
+            this.metroPanel2.Controls.Add(this.button11);
+            this.metroPanel2.Controls.Add(this.button10);
+            this.metroPanel2.Controls.Add(this.button16);
+            this.metroPanel2.Controls.Add(this.button12);
+            this.metroPanel2.Controls.Add(this.button15);
+            this.metroPanel2.Controls.Add(this.button13);
+            this.metroPanel2.Controls.Add(this.button14);
+            this.metroPanel2.HorizontalScrollbar = true;
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(165, 11);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel2.TabIndex = 16;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.VerticalScrollbar = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.AutoScroll = true;
+            this.metroPanel1.Controls.Add(this.button2);
+            this.metroPanel1.Controls.Add(this.button4);
+            this.metroPanel1.Controls.Add(this.button3);
+            this.metroPanel1.Controls.Add(this.button9);
+            this.metroPanel1.Controls.Add(this.button5);
+            this.metroPanel1.Controls.Add(this.button8);
+            this.metroPanel1.Controls.Add(this.button6);
+            this.metroPanel1.Controls.Add(this.button7);
+            this.metroPanel1.HorizontalScrollbar = true;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(9, 11);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.VerticalScrollbar = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // ChampionsTab
+            // 
+            this.ChampionsTab.AccessibleName = "";
+            this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampionsTab.Controls.Add(this.metroComboBox2);
+            this.ChampionsTab.Controls.Add(this.metroButton2);
+            this.ChampionsTab.Controls.Add(this.label8);
+            this.ChampionsTab.Controls.Add(this.metroPanel5);
+            this.ChampionsTab.Controls.Add(this.label5);
+            this.ChampionsTab.Controls.Add(this.ChampsSearchBox);
+            this.ChampionsTab.Controls.Add(this.label7);
+            this.ChampionsTab.Controls.Add(this.label4);
+            this.ChampionsTab.HorizontalScrollbarBarColor = true;
+            this.ChampionsTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.ChampionsTab.HorizontalScrollbarSize = 10;
+            this.ChampionsTab.Location = new System.Drawing.Point(4, 34);
+            this.ChampionsTab.Name = "ChampionsTab";
+            this.ChampionsTab.Size = new System.Drawing.Size(416, 229);
+            this.ChampionsTab.TabIndex = 4;
+            this.ChampionsTab.Tag = "";
+            this.ChampionsTab.Text = "Champs";
+            this.ChampionsTab.UseCustomBackColor = true;
+            this.ChampionsTab.VerticalScrollbarBarColor = true;
+            this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
+            this.ChampionsTab.VerticalScrollbarSize = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(66, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Cost";
+            // 
+            // metroPanel5
+            // 
+            this.metroPanel5.AutoScroll = true;
+            this.metroPanel5.ContextMenuStrip = this.ChampsListContext;
+            this.metroPanel5.Controls.Add(this.ChampsList);
+            this.metroPanel5.HorizontalScrollbar = true;
+            this.metroPanel5.HorizontalScrollbarBarColor = true;
+            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.HorizontalScrollbarSize = 10;
+            this.metroPanel5.Location = new System.Drawing.Point(3, 21);
+            this.metroPanel5.Name = "metroPanel5";
+            this.metroPanel5.Size = new System.Drawing.Size(410, 171);
+            this.metroPanel5.TabIndex = 5;
+            this.metroPanel5.UseCustomBackColor = true;
+            this.metroPanel5.VerticalScrollbar = true;
+            this.metroPanel5.VerticalScrollbarBarColor = true;
+            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.VerticalScrollbarSize = 10;
+            // 
+            // ChampsListContext
+            // 
+            this.ChampsListContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem1});
+            this.ChampsListContext.Name = "metroContextMenu1";
+            this.ChampsListContext.Size = new System.Drawing.Size(147, 48);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem2.Text = "Sort by Name";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ascendingToolStripMenuItem,
+            this.descendingToolStripMenuItem,
+            this.cost3ToolStripMenuItem,
+            this.cost4ToolStripMenuItem,
+            this.cost5ToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem1.Text = "Sort by Cost";
+            // 
+            // ascendingToolStripMenuItem
+            // 
+            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
+            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ascendingToolStripMenuItem.Text = "Cost 1";
+            this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
+            // 
+            // descendingToolStripMenuItem
+            // 
+            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
+            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.descendingToolStripMenuItem.Text = "Cost 2";
+            this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
+            // 
+            // cost3ToolStripMenuItem
+            // 
+            this.cost3ToolStripMenuItem.Name = "cost3ToolStripMenuItem";
+            this.cost3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cost3ToolStripMenuItem.Text = "Cost 3";
+            this.cost3ToolStripMenuItem.Click += new System.EventHandler(this.cost3ToolStripMenuItem_Click);
+            // 
+            // cost4ToolStripMenuItem
+            // 
+            this.cost4ToolStripMenuItem.Name = "cost4ToolStripMenuItem";
+            this.cost4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cost4ToolStripMenuItem.Text = "Cost 4";
+            this.cost4ToolStripMenuItem.Click += new System.EventHandler(this.cost4ToolStripMenuItem_Click);
+            // 
+            // cost5ToolStripMenuItem
+            // 
+            this.cost5ToolStripMenuItem.Name = "cost5ToolStripMenuItem";
+            this.cost5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cost5ToolStripMenuItem.Text = "Cost 5";
+            this.cost5ToolStripMenuItem.Click += new System.EventHandler(this.cost5ToolStripMenuItem_Click);
+            // 
+            // ChampsList
+            // 
+            this.ChampsList.AutoSize = true;
+            this.ChampsList.Location = new System.Drawing.Point(3, 3);
+            this.ChampsList.MaximumSize = new System.Drawing.Size(329, 0);
+            this.ChampsList.Name = "ChampsList";
+            this.ChampsList.Size = new System.Drawing.Size(321, 0);
+            this.ChampsList.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(172, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Reccomended Items";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(102, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Origin/Class";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(9, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Champion";
             // 
             // TierListTab
             // 
@@ -832,101 +1094,10 @@
             this.TierListBox.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.TierListBox.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // CraftingTab
-            // 
-            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CraftingTab.Controls.Add(this.htmlItemdescription);
-            this.CraftingTab.Controls.Add(this.metroPanel2);
-            this.CraftingTab.Controls.Add(this.metroPanel1);
-            this.CraftingTab.Controls.Add(this.ItemName);
-            this.CraftingTab.Controls.Add(this.panel2);
-            this.CraftingTab.Controls.Add(this.label2);
-            this.CraftingTab.Controls.Add(this.label1);
-            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingTab.HorizontalScrollbarBarColor = true;
-            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.HorizontalScrollbarSize = 10;
-            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
-            this.CraftingTab.Name = "CraftingTab";
-            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
-            this.CraftingTab.TabIndex = 0;
-            this.CraftingTab.Text = "Crafting";
-            this.CraftingTab.UseCustomBackColor = true;
-            this.CraftingTab.VerticalScrollbarBarColor = true;
-            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.VerticalScrollbarSize = 10;
-            // 
-            // htmlItemdescription
-            // 
-            this.htmlItemdescription.AutoScroll = true;
-            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
-            this.htmlItemdescription.AutoSize = false;
-            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.htmlItemdescription.Location = new System.Drawing.Point(18, 180);
-            this.htmlItemdescription.Name = "htmlItemdescription";
-            this.htmlItemdescription.Size = new System.Drawing.Size(388, 87);
-            this.htmlItemdescription.TabIndex = 19;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.AutoScroll = true;
-            this.metroPanel2.Controls.Add(this.button1);
-            this.metroPanel2.Controls.Add(this.button11);
-            this.metroPanel2.Controls.Add(this.button10);
-            this.metroPanel2.Controls.Add(this.button16);
-            this.metroPanel2.Controls.Add(this.button12);
-            this.metroPanel2.Controls.Add(this.button15);
-            this.metroPanel2.Controls.Add(this.button13);
-            this.metroPanel2.Controls.Add(this.button14);
-            this.metroPanel2.HorizontalScrollbar = true;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(164, 22);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(106, 132);
-            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel2.TabIndex = 16;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.VerticalScrollbar = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.AutoScroll = true;
-            this.metroPanel1.Controls.Add(this.button2);
-            this.metroPanel1.Controls.Add(this.button4);
-            this.metroPanel1.Controls.Add(this.button3);
-            this.metroPanel1.Controls.Add(this.button9);
-            this.metroPanel1.Controls.Add(this.button5);
-            this.metroPanel1.Controls.Add(this.button8);
-            this.metroPanel1.Controls.Add(this.button6);
-            this.metroPanel1.Controls.Add(this.button7);
-            this.metroPanel1.HorizontalScrollbar = true;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(18, 22);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(106, 132);
-            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.VerticalScrollbar = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
             // ProbTab
             // 
             this.ProbTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.ProbTab.Controls.Add(this.label6);
-            this.ProbTab.Controls.Add(this.metroLabel1);
             this.ProbTab.Controls.Add(this.metroButton1);
             this.ProbTab.Controls.Add(this.T1T);
             this.ProbTab.Controls.Add(this.T2T);
@@ -963,31 +1134,19 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(32, 61);
+            this.label6.Location = new System.Drawing.Point(44, 39);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.Size = new System.Drawing.Size(37, 17);
             this.label6.TabIndex = 45;
             this.label6.Text = "Tier";
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.metroLabel1.Location = new System.Drawing.Point(264, 126);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(123, 19);
-            this.metroLabel1.TabIndex = 44;
-            this.metroLabel1.Text = "Latest Known Values";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(264, 84);
+            this.metroButton1.Location = new System.Drawing.Point(47, 188);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(123, 33);
+            this.metroButton1.Size = new System.Drawing.Size(323, 33);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroButton1.TabIndex = 42;
             this.metroButton1.Text = "Increase Level";
@@ -1001,44 +1160,44 @@
             // T1T
             // 
             this.T1T.AutoSize = true;
-            this.T1T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T1T.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1T.ForeColor = System.Drawing.Color.DimGray;
-            this.T1T.Location = new System.Drawing.Point(32, 79);
+            this.T1T.Location = new System.Drawing.Point(45, 66);
             this.T1T.Name = "T1T";
-            this.T1T.Size = new System.Drawing.Size(14, 15);
+            this.T1T.Size = new System.Drawing.Size(16, 17);
             this.T1T.TabIndex = 22;
             this.T1T.Text = "1";
             // 
             // T2T
             // 
             this.T2T.AutoSize = true;
-            this.T2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T2T.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2T.ForeColor = System.Drawing.Color.ForestGreen;
-            this.T2T.Location = new System.Drawing.Point(32, 101);
+            this.T2T.Location = new System.Drawing.Point(45, 88);
             this.T2T.Name = "T2T";
-            this.T2T.Size = new System.Drawing.Size(14, 15);
+            this.T2T.Size = new System.Drawing.Size(16, 17);
             this.T2T.TabIndex = 23;
             this.T2T.Text = "2";
             // 
             // T3T
             // 
             this.T3T.AutoSize = true;
-            this.T3T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T3T.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3T.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.T3T.Location = new System.Drawing.Point(32, 124);
+            this.T3T.Location = new System.Drawing.Point(45, 111);
             this.T3T.Name = "T3T";
-            this.T3T.Size = new System.Drawing.Size(14, 15);
+            this.T3T.Size = new System.Drawing.Size(16, 17);
             this.T3T.TabIndex = 24;
             this.T3T.Text = "3";
             // 
             // T4T
             // 
             this.T4T.AutoSize = true;
-            this.T4T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T4T.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4T.ForeColor = System.Drawing.Color.DarkViolet;
-            this.T4T.Location = new System.Drawing.Point(32, 147);
+            this.T4T.Location = new System.Drawing.Point(45, 134);
             this.T4T.Name = "T4T";
-            this.T4T.Size = new System.Drawing.Size(14, 15);
+            this.T4T.Size = new System.Drawing.Size(16, 17);
             this.T4T.TabIndex = 25;
             this.T4T.Text = "4";
             this.T4T.Click += new System.EventHandler(this.T4T_Click);
@@ -1046,309 +1205,192 @@
             // T5T
             // 
             this.T5T.AutoSize = true;
-            this.T5T.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T5T.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5T.ForeColor = System.Drawing.Color.Gold;
-            this.T5T.Location = new System.Drawing.Point(32, 171);
+            this.T5T.Location = new System.Drawing.Point(45, 158);
             this.T5T.Name = "T5T";
-            this.T5T.Size = new System.Drawing.Size(14, 15);
+            this.T5T.Size = new System.Drawing.Size(16, 17);
             this.T5T.TabIndex = 26;
             this.T5T.Text = "5";
             // 
             // T1P
             // 
             this.T1P.AutoSize = true;
-            this.T1P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T1P.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1P.ForeColor = System.Drawing.Color.DimGray;
-            this.T1P.Location = new System.Drawing.Point(167, 81);
+            this.T1P.Location = new System.Drawing.Point(309, 66);
             this.T1P.Name = "T1P";
-            this.T1P.Size = new System.Drawing.Size(37, 13);
+            this.T1P.Size = new System.Drawing.Size(48, 17);
             this.T1P.TabIndex = 33;
             this.T1P.Text = "100%";
             // 
             // ChampsInPool
             // 
             this.ChampsInPool.AutoSize = true;
-            this.ChampsInPool.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChampsInPool.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChampsInPool.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.ChampsInPool.Location = new System.Drawing.Point(92, 61);
+            this.ChampsInPool.Location = new System.Drawing.Point(159, 39);
             this.ChampsInPool.Name = "ChampsInPool";
-            this.ChampsInPool.Size = new System.Drawing.Size(51, 13);
+            this.ChampsInPool.Size = new System.Drawing.Size(65, 17);
             this.ChampsInPool.TabIndex = 39;
             this.ChampsInPool.Text = "Champs";
             // 
             // Lvl
             // 
             this.Lvl.AutoSize = true;
-            this.Lvl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lvl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lvl.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Lvl.Location = new System.Drawing.Point(166, 61);
+            this.Lvl.Location = new System.Drawing.Point(309, 39);
             this.Lvl.Name = "Lvl";
-            this.Lvl.Size = new System.Drawing.Size(49, 13);
+            this.Lvl.Size = new System.Drawing.Size(61, 17);
             this.Lvl.TabIndex = 38;
             this.Lvl.Text = "Level 1";
             // 
             // T5P
             // 
             this.T5P.AutoSize = true;
-            this.T5P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T5P.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5P.ForeColor = System.Drawing.Color.Gold;
-            this.T5P.Location = new System.Drawing.Point(167, 173);
+            this.T5P.Location = new System.Drawing.Point(309, 158);
             this.T5P.Name = "T5P";
-            this.T5P.Size = new System.Drawing.Size(11, 13);
+            this.T5P.Size = new System.Drawing.Size(14, 17);
             this.T5P.TabIndex = 37;
             this.T5P.Text = "-";
             // 
             // T4P
             // 
             this.T4P.AutoSize = true;
-            this.T4P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T4P.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4P.ForeColor = System.Drawing.Color.DarkViolet;
-            this.T4P.Location = new System.Drawing.Point(167, 149);
+            this.T4P.Location = new System.Drawing.Point(309, 134);
             this.T4P.Name = "T4P";
-            this.T4P.Size = new System.Drawing.Size(11, 13);
+            this.T4P.Size = new System.Drawing.Size(14, 17);
             this.T4P.TabIndex = 36;
             this.T4P.Text = "-";
             // 
             // T3P
             // 
             this.T3P.AutoSize = true;
-            this.T3P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T3P.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3P.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.T3P.Location = new System.Drawing.Point(167, 126);
+            this.T3P.Location = new System.Drawing.Point(309, 111);
             this.T3P.Name = "T3P";
-            this.T3P.Size = new System.Drawing.Size(11, 13);
+            this.T3P.Size = new System.Drawing.Size(14, 17);
             this.T3P.TabIndex = 35;
             this.T3P.Text = "-";
             // 
             // T2P
             // 
             this.T2P.AutoSize = true;
-            this.T2P.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T2P.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2P.ForeColor = System.Drawing.Color.ForestGreen;
-            this.T2P.Location = new System.Drawing.Point(167, 103);
+            this.T2P.Location = new System.Drawing.Point(309, 88);
             this.T2P.Name = "T2P";
-            this.T2P.Size = new System.Drawing.Size(11, 13);
+            this.T2P.Size = new System.Drawing.Size(14, 17);
             this.T2P.TabIndex = 34;
             this.T2P.Text = "-";
             // 
             // T5S
             // 
             this.T5S.AutoSize = true;
-            this.T5S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T5S.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T5S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T5S.Location = new System.Drawing.Point(92, 171);
+            this.T5S.Location = new System.Drawing.Point(160, 158);
             this.T5S.Name = "T5S";
-            this.T5S.Size = new System.Drawing.Size(19, 13);
+            this.T5S.Size = new System.Drawing.Size(24, 17);
             this.T5S.TabIndex = 31;
-            this.T5S.Text = "10";
+            this.T5S.Text = "11";
             // 
             // T4S
             // 
             this.T4S.AutoSize = true;
-            this.T4S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T4S.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T4S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T4S.Location = new System.Drawing.Point(92, 147);
+            this.T4S.Location = new System.Drawing.Point(160, 134);
             this.T4S.Name = "T4S";
-            this.T4S.Size = new System.Drawing.Size(19, 13);
+            this.T4S.Size = new System.Drawing.Size(24, 17);
             this.T4S.TabIndex = 30;
-            this.T4S.Text = "13";
+            this.T4S.Text = "14";
             // 
             // T3S
             // 
             this.T3S.AutoSize = true;
-            this.T3S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T3S.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T3S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T3S.Location = new System.Drawing.Point(92, 126);
+            this.T3S.Location = new System.Drawing.Point(160, 113);
             this.T3S.Name = "T3S";
-            this.T3S.Size = new System.Drawing.Size(19, 13);
+            this.T3S.Size = new System.Drawing.Size(24, 17);
             this.T3S.TabIndex = 29;
-            this.T3S.Text = "21";
+            this.T3S.Text = "22";
             // 
             // T2S
             // 
             this.T2S.AutoSize = true;
-            this.T2S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T2S.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T2S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T2S.Location = new System.Drawing.Point(92, 103);
+            this.T2S.Location = new System.Drawing.Point(160, 90);
             this.T2S.Name = "T2S";
-            this.T2S.Size = new System.Drawing.Size(19, 13);
+            this.T2S.Size = new System.Drawing.Size(24, 17);
             this.T2S.TabIndex = 28;
-            this.T2S.Text = "26";
+            this.T2S.Text = "28";
             // 
             // T1S
             // 
             this.T1S.AutoSize = true;
-            this.T1S.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T1S.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T1S.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.T1S.Location = new System.Drawing.Point(92, 81);
+            this.T1S.Location = new System.Drawing.Point(160, 68);
             this.T1S.Name = "T1S";
-            this.T1S.Size = new System.Drawing.Size(19, 13);
+            this.T1S.Size = new System.Drawing.Size(24, 17);
             this.T1S.TabIndex = 27;
-            this.T1S.Text = "39";
+            this.T1S.Text = "40";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(32, 35);
+            this.label3.Location = new System.Drawing.Point(121, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 17);
+            this.label3.Size = new System.Drawing.Size(167, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Champion Drop Rates";
             // 
-            // ChampionsTab
+            // metroButton2
             // 
-            this.ChampionsTab.AccessibleName = "";
-            this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ChampionsTab.Controls.Add(this.label8);
-            this.ChampionsTab.Controls.Add(this.metroPanel5);
-            this.ChampionsTab.Controls.Add(this.label5);
-            this.ChampionsTab.Controls.Add(this.label7);
-            this.ChampionsTab.Controls.Add(this.label4);
-            this.ChampionsTab.HorizontalScrollbarBarColor = true;
-            this.ChampionsTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.ChampionsTab.HorizontalScrollbarSize = 10;
-            this.ChampionsTab.Location = new System.Drawing.Point(4, 34);
-            this.ChampionsTab.Name = "ChampionsTab";
-            this.ChampionsTab.Size = new System.Drawing.Size(416, 229);
-            this.ChampionsTab.TabIndex = 4;
-            this.ChampionsTab.Tag = "";
-            this.ChampionsTab.Text = "Champs";
-            this.ChampionsTab.UseCustomBackColor = true;
-            this.ChampionsTab.VerticalScrollbarBarColor = true;
-            this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
-            this.ChampionsTab.VerticalScrollbarSize = 10;
+            this.metroButton2.Location = new System.Drawing.Point(128, 197);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(109, 29);
+            this.metroButton2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroButton2.TabIndex = 43;
+            this.metroButton2.Text = "Filter by Name";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseCustomBackColor = true;
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click_1);
             // 
-            // label8
+            // metroComboBox2
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(67, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Cost";
-            // 
-            // metroPanel5
-            // 
-            this.metroPanel5.AutoScroll = true;
-            this.metroPanel5.ContextMenuStrip = this.ChampsListContext;
-            this.metroPanel5.Controls.Add(this.ChampsList);
-            this.metroPanel5.HorizontalScrollbar = true;
-            this.metroPanel5.HorizontalScrollbarBarColor = true;
-            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.HorizontalScrollbarSize = 10;
-            this.metroPanel5.Location = new System.Drawing.Point(2, 21);
-            this.metroPanel5.Name = "metroPanel5";
-            this.metroPanel5.Size = new System.Drawing.Size(410, 200);
-            this.metroPanel5.TabIndex = 5;
-            this.metroPanel5.UseCustomBackColor = true;
-            this.metroPanel5.VerticalScrollbar = true;
-            this.metroPanel5.VerticalScrollbarBarColor = true;
-            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel5.VerticalScrollbarSize = 10;
-            // 
-            // ChampsListContext
-            // 
-            this.ChampsListContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem1});
-            this.ChampsListContext.Name = "metroContextMenu1";
-            this.ChampsListContext.Size = new System.Drawing.Size(147, 48);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(146, 22);
-            this.toolStripMenuItem2.Text = "Sort by Name";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ascendingToolStripMenuItem,
-            this.descendingToolStripMenuItem,
-            this.cost3ToolStripMenuItem,
-            this.cost4ToolStripMenuItem,
-            this.cost5ToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
-            this.toolStripMenuItem1.Text = "Sort by Cost";
-            // 
-            // ascendingToolStripMenuItem
-            // 
-            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.ascendingToolStripMenuItem.Text = "Cost 1";
-            this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
-            // 
-            // descendingToolStripMenuItem
-            // 
-            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.descendingToolStripMenuItem.Text = "Cost 2";
-            this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
-            // 
-            // cost3ToolStripMenuItem
-            // 
-            this.cost3ToolStripMenuItem.Name = "cost3ToolStripMenuItem";
-            this.cost3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.cost3ToolStripMenuItem.Text = "Cost 3";
-            this.cost3ToolStripMenuItem.Click += new System.EventHandler(this.cost3ToolStripMenuItem_Click);
-            // 
-            // cost4ToolStripMenuItem
-            // 
-            this.cost4ToolStripMenuItem.Name = "cost4ToolStripMenuItem";
-            this.cost4ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.cost4ToolStripMenuItem.Text = "Cost 4";
-            this.cost4ToolStripMenuItem.Click += new System.EventHandler(this.cost4ToolStripMenuItem_Click);
-            // 
-            // cost5ToolStripMenuItem
-            // 
-            this.cost5ToolStripMenuItem.Name = "cost5ToolStripMenuItem";
-            this.cost5ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.cost5ToolStripMenuItem.Text = "Cost 5";
-            this.cost5ToolStripMenuItem.Click += new System.EventHandler(this.cost5ToolStripMenuItem_Click);
-            // 
-            // ChampsList
-            // 
-            this.ChampsList.AutoSize = true;
-            this.ChampsList.Location = new System.Drawing.Point(3, 3);
-            this.ChampsList.MaximumSize = new System.Drawing.Size(329, 0);
-            this.ChampsList.Name = "ChampsList";
-            this.ChampsList.Size = new System.Drawing.Size(321, 0);
-            this.ChampsList.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(172, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Reccomended Items";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(101, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Origin/Class";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(10, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Champion";
+            this.metroComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.metroComboBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "Cost 1",
+            "Cost 2",
+            "Cost 3",
+            "Cost 4",
+            "Cost 5"});
+            this.metroComboBox2.Location = new System.Drawing.Point(3, 197);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.PromptText = "Filter by Cost";
+            this.metroComboBox2.Size = new System.Drawing.Size(119, 29);
+            this.metroComboBox2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroComboBox2.TabIndex = 44;
+            this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox2.UseCustomBackColor = true;
+            this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.SelectedIndexChanged += new System.EventHandler(this.metroComboBox2_SelectedIndexChanged);
             // 
             // TFTCrafter
             // 
@@ -1377,20 +1419,20 @@
             this.WINRATEPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankedArmor)).EndInit();
-            this.TierListTab.ResumeLayout(false);
-            this.metroPanel4.ResumeLayout(false);
-            this.metroPanel4.PerformLayout();
             this.CraftingTab.ResumeLayout(false);
             this.CraftingTab.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
-            this.ProbTab.ResumeLayout(false);
-            this.ProbTab.PerformLayout();
             this.ChampionsTab.ResumeLayout(false);
             this.ChampionsTab.PerformLayout();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
             this.ChampsListContext.ResumeLayout(false);
+            this.TierListTab.ResumeLayout(false);
+            this.metroPanel4.ResumeLayout(false);
+            this.metroPanel4.PerformLayout();
+            this.ProbTab.ResumeLayout(false);
+            this.ProbTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1453,7 +1495,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private System.Windows.Forms.Label Debug;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
@@ -1470,13 +1511,12 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ascendingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem descendingToolStripMenuItem;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem cost3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cost4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cost5ToolStripMenuItem;
         private MetroFramework.Controls.MetroTabPage ProfileTAB;
         private System.Windows.Forms.PictureBox RankedArmor;
-        private MetroFramework.Controls.MetroLabel SummName;
+        private MetroFramework.Controls.MetroLabel Summoner;
         private System.Windows.Forms.PictureBox pictureBox2;
         private MetroFramework.Controls.MetroLabel RankTierLabel;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
@@ -1485,6 +1525,9 @@
         private System.Windows.Forms.Label WinRate;
         private System.Windows.Forms.Label WinLab;
         private System.Windows.Forms.Label LoseLab;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }
 
