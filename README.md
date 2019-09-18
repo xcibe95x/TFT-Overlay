@@ -1,11 +1,10 @@
 # Pocket Tactics a TFT Overlay by Cibe aka (xcibe95x)
 
-![Image](https://i.redd.it/vyhdcp8m2k831.png)
+![Image](https://i.redd.it/trbz311srql31.png)
 
 ## ! HOW TO USE !
 - Set your Game to be Borderless or Windowed!
 - Right click on the title bar for the context menu
-- Right click on champions list for sorting options
 
 ## Goal Version
 - **3.0 FINAL (Fully Automated) + Credits for Sources**
@@ -14,10 +13,14 @@
 ## Version Changelogs
 
 - **2.7 PLACE HOLDER**
+	 - New items added to Crafting
+	 - Crafting layout adjustments
+	 
+	 
      - New Feature
      - Profile Tab Labels adjustments
-	 - Tooltips look updated
-	 - Crafting layout adjustments
+	 - Tooltips look updated (?)
+
 	 
 - **2.6 STABLE RELEASE**
    - Changelog
