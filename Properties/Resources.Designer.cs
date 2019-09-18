@@ -19,7 +19,7 @@ namespace TFT_Overlay.Properties {
     // tramite uno strumento quale ResGen o Visual Studio.
     // Per aggiungere o rimuovere un membro, modificare il file con estensione ResX ed eseguire nuovamente ResGen
     // con l'opzione /str oppure ricompilare il progetto VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -143,6 +143,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ArcaneGauntlet {
+            get {
+                object obj = ResourceManager.GetObject("ArcaneGauntlet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ashe {
             get {
                 object obj = ResourceManager.GetObject("Ashe", resourceCulture);
@@ -176,6 +186,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap Azir {
             get {
                 object obj = ResourceManager.GetObject("Azir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Backhand {
+            get {
+                object obj = ResourceManager.GetObject("Backhand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +443,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Demon2 {
+        internal static System.Drawing.Bitmap Demon {
             get {
-                object obj = ResourceManager.GetObject("Demon2", resourceCulture);
+                object obj = ResourceManager.GetObject("Demon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -713,6 +733,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HandofJustice {
+            get {
+                object obj = ResourceManager.GetObject("HandofJustice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hecarim {
             get {
                 object obj = ResourceManager.GetObject("Hecarim", resourceCulture);
@@ -756,6 +786,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap hush {
             get {
                 object obj = ResourceManager.GetObject("hush", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IceborneGauntlet {
+            get {
+                object obj = ResourceManager.GetObject("IceborneGauntlet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1063,6 +1103,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LastWhisper {
+            get {
+                object obj = ResourceManager.GetObject("LastWhisper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Leblanc {
             get {
                 object obj = ResourceManager.GetObject("Leblanc", resourceCulture);
@@ -1106,6 +1156,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap locketoftheironsolari {
             get {
                 object obj = ResourceManager.GetObject("locketoftheironsolari", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LordsEdge {
+            get {
+                object obj = ResourceManager.GetObject("LordsEdge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1226,6 +1286,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap MissFortune {
             get {
                 object obj = ResourceManager.GetObject("MissFortune", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mittens {
+            get {
+                object obj = ResourceManager.GetObject("Mittens", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1519,6 +1589,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Quicksilver {
+            get {
+                object obj = ResourceManager.GetObject("Quicksilver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Quinn {
             get {
                 object obj = ResourceManager.GetObject("Quinn", resourceCulture);
@@ -1622,6 +1702,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap Rengar {
             get {
                 object obj = ResourceManager.GetObject("Rengar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RepeatingCrossbow {
+            get {
+                object obj = ResourceManager.GetObject("RepeatingCrossbow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1829,6 +1919,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SparringGloves {
+            get {
+                object obj = ResourceManager.GetObject("SparringGloves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Spatula {
             get {
                 object obj = ResourceManager.GetObject("Spatula", resourceCulture);
@@ -1962,6 +2062,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap Teemo {
             get {
                 object obj = ResourceManager.GetObject("Teemo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ThiefsGloves {
+            get {
+                object obj = ResourceManager.GetObject("ThiefsGloves", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

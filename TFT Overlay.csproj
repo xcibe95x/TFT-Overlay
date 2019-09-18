@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TFT_Overlay</RootNamespace>
     <AssemblyName>Pocket Tactics</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,6 +27,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -405,6 +406,17 @@
     <None Include="assets\origins\hextech.png" />
     <None Include="assets\origins\imperial.png" />
     <None Include="assets\origins\ninja.png" />
+    <None Include="assets\items\HandofJustice.jpg" />
+    <None Include="assets\items\ArcaneGauntlet.jpg" />
+    <None Include="assets\items\Mittens.jpg" />
+    <None Include="assets\items\Backhand.jpg" />
+    <None Include="assets\items\IceborneGauntlet.jpg" />
+    <None Include="assets\items\LordsEdge.jpg" />
+    <None Include="assets\items\Quicksilver.jpg" />
+    <None Include="assets\items\ThiefsGloves.jpg" />
+    <None Include="assets\items\SparringGloves.jpg" />
+    <None Include="assets\items\RepeatingCrossbow.png" />
+    <None Include="assets\items\LastWhisper.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />

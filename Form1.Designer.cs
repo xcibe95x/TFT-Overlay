@@ -81,15 +81,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
+            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.button17 = new System.Windows.Forms.Button();
             this.TierListTab = new MetroFramework.Controls.MetroTabPage();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TierListBox = new MetroFramework.Controls.MetroComboBox();
-            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
-            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.ProbTab = new MetroFramework.Controls.MetroTabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -124,11 +126,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.RankedArmor)).BeginInit();
             this.ChampionsTab.SuspendLayout();
             this.metroPanel5.SuspendLayout();
-            this.TierListTab.SuspendLayout();
-            this.metroPanel4.SuspendLayout();
             this.CraftingTab.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
+            this.TierListTab.SuspendLayout();
+            this.metroPanel4.SuspendLayout();
             this.ProbTab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,6 +165,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
             this.toolStripTextBox1.Text = "Summoner Name";
@@ -295,7 +298,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button2.Location = new System.Drawing.Point(12, 8);
+            this.button2.Location = new System.Drawing.Point(55, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 38);
             this.button2.TabIndex = 8;
@@ -311,7 +314,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button3.Location = new System.Drawing.Point(55, 8);
+            this.button3.Location = new System.Drawing.Point(12, 52);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(37, 38);
             this.button3.TabIndex = 9;
@@ -327,7 +330,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button4.Location = new System.Drawing.Point(12, 52);
+            this.button4.Location = new System.Drawing.Point(12, 96);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(37, 38);
             this.button4.TabIndex = 10;
@@ -359,7 +362,7 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.Location = new System.Drawing.Point(12, 96);
+            this.button6.Location = new System.Drawing.Point(12, 140);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(37, 38);
             this.button6.TabIndex = 13;
@@ -391,7 +394,7 @@
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button8.Location = new System.Drawing.Point(12, 140);
+            this.button8.Location = new System.Drawing.Point(55, 140);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(37, 38);
             this.button8.TabIndex = 15;
@@ -403,11 +406,11 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Black;
-            this.button9.BackgroundImage = global::TFT_Overlay.Properties.Resources.Spatula;
+            this.button9.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button9.Location = new System.Drawing.Point(55, 140);
+            this.button9.Location = new System.Drawing.Point(12, 8);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(37, 38);
             this.button9.TabIndex = 11;
@@ -481,7 +484,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Location = new System.Drawing.Point(12, 6);
+            this.button1.Location = new System.Drawing.Point(55, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 38);
             this.button1.TabIndex = 8;
@@ -497,7 +500,7 @@
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button10.Location = new System.Drawing.Point(55, 6);
+            this.button10.Location = new System.Drawing.Point(12, 50);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(37, 38);
             this.button10.TabIndex = 9;
@@ -513,7 +516,7 @@
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button11.Location = new System.Drawing.Point(12, 50);
+            this.button11.Location = new System.Drawing.Point(12, 94);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(37, 38);
             this.button11.TabIndex = 10;
@@ -545,7 +548,7 @@
             this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button13.Location = new System.Drawing.Point(12, 94);
+            this.button13.Location = new System.Drawing.Point(12, 138);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(37, 38);
             this.button13.TabIndex = 13;
@@ -577,7 +580,7 @@
             this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button15.Location = new System.Drawing.Point(12, 138);
+            this.button15.Location = new System.Drawing.Point(55, 138);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(37, 38);
             this.button15.TabIndex = 15;
@@ -593,7 +596,7 @@
             this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button16.Location = new System.Drawing.Point(55, 138);
+            this.button16.Location = new System.Drawing.Point(12, 182);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(37, 38);
             this.button16.TabIndex = 11;
@@ -874,6 +877,126 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Champion";
             // 
+            // CraftingTab
+            // 
+            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CraftingTab.Controls.Add(this.htmlItemdescription);
+            this.CraftingTab.Controls.Add(this.metroPanel2);
+            this.CraftingTab.Controls.Add(this.metroPanel1);
+            this.CraftingTab.Controls.Add(this.ItemName);
+            this.CraftingTab.Controls.Add(this.panel2);
+            this.CraftingTab.Controls.Add(this.label2);
+            this.CraftingTab.Controls.Add(this.label1);
+            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CraftingTab.HorizontalScrollbarBarColor = true;
+            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.HorizontalScrollbarSize = 10;
+            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
+            this.CraftingTab.Name = "CraftingTab";
+            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
+            this.CraftingTab.TabIndex = 0;
+            this.CraftingTab.Text = "Crafting";
+            this.CraftingTab.UseCustomBackColor = true;
+            this.CraftingTab.VerticalScrollbarBarColor = true;
+            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.VerticalScrollbarSize = 10;
+            // 
+            // htmlItemdescription
+            // 
+            this.htmlItemdescription.AutoScroll = true;
+            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
+            this.htmlItemdescription.AutoSize = false;
+            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
+            this.htmlItemdescription.Name = "htmlItemdescription";
+            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
+            this.htmlItemdescription.TabIndex = 19;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.AutoScroll = true;
+            this.metroPanel2.Controls.Add(this.button18);
+            this.metroPanel2.Controls.Add(this.button1);
+            this.metroPanel2.Controls.Add(this.button11);
+            this.metroPanel2.Controls.Add(this.button10);
+            this.metroPanel2.Controls.Add(this.button16);
+            this.metroPanel2.Controls.Add(this.button12);
+            this.metroPanel2.Controls.Add(this.button15);
+            this.metroPanel2.Controls.Add(this.button13);
+            this.metroPanel2.Controls.Add(this.button14);
+            this.metroPanel2.HorizontalScrollbar = true;
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(160, 11);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel2.TabIndex = 16;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.VerticalScrollbar = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.Black;
+            this.button18.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.button18.Location = new System.Drawing.Point(12, 6);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(37, 38);
+            this.button18.TabIndex = 16;
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.Button18_Click);
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.AutoScroll = true;
+            this.metroPanel1.Controls.Add(this.button17);
+            this.metroPanel1.Controls.Add(this.button2);
+            this.metroPanel1.Controls.Add(this.button4);
+            this.metroPanel1.Controls.Add(this.button3);
+            this.metroPanel1.Controls.Add(this.button9);
+            this.metroPanel1.Controls.Add(this.button5);
+            this.metroPanel1.Controls.Add(this.button8);
+            this.metroPanel1.Controls.Add(this.button6);
+            this.metroPanel1.Controls.Add(this.button7);
+            this.metroPanel1.HorizontalScrollbar = true;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(2, 11);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.VerticalScrollbar = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.Black;
+            this.button17.BackgroundImage = global::TFT_Overlay.Properties.Resources.Spatula;
+            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.button17.Location = new System.Drawing.Point(12, 184);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(37, 38);
+            this.button17.TabIndex = 16;
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.Button17_Click);
+            // 
             // TierListTab
             // 
             this.TierListTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
@@ -969,96 +1092,6 @@
             this.TierListBox.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             this.TierListBox.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.TierListBox.MouseHover += new System.EventHandler(this.PointerLogic);
-            // 
-            // CraftingTab
-            // 
-            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CraftingTab.Controls.Add(this.htmlItemdescription);
-            this.CraftingTab.Controls.Add(this.metroPanel2);
-            this.CraftingTab.Controls.Add(this.metroPanel1);
-            this.CraftingTab.Controls.Add(this.ItemName);
-            this.CraftingTab.Controls.Add(this.panel2);
-            this.CraftingTab.Controls.Add(this.label2);
-            this.CraftingTab.Controls.Add(this.label1);
-            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingTab.HorizontalScrollbarBarColor = true;
-            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.HorizontalScrollbarSize = 10;
-            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
-            this.CraftingTab.Name = "CraftingTab";
-            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
-            this.CraftingTab.TabIndex = 0;
-            this.CraftingTab.Text = "Crafting";
-            this.CraftingTab.UseCustomBackColor = true;
-            this.CraftingTab.VerticalScrollbarBarColor = true;
-            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.VerticalScrollbarSize = 10;
-            // 
-            // htmlItemdescription
-            // 
-            this.htmlItemdescription.AutoScroll = true;
-            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
-            this.htmlItemdescription.AutoSize = false;
-            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
-            this.htmlItemdescription.Name = "htmlItemdescription";
-            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
-            this.htmlItemdescription.TabIndex = 19;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.AutoScroll = true;
-            this.metroPanel2.Controls.Add(this.button1);
-            this.metroPanel2.Controls.Add(this.button11);
-            this.metroPanel2.Controls.Add(this.button10);
-            this.metroPanel2.Controls.Add(this.button16);
-            this.metroPanel2.Controls.Add(this.button12);
-            this.metroPanel2.Controls.Add(this.button15);
-            this.metroPanel2.Controls.Add(this.button13);
-            this.metroPanel2.Controls.Add(this.button14);
-            this.metroPanel2.HorizontalScrollbar = true;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(160, 11);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(120, 137);
-            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel2.TabIndex = 16;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.VerticalScrollbar = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.AutoScroll = true;
-            this.metroPanel1.Controls.Add(this.button2);
-            this.metroPanel1.Controls.Add(this.button4);
-            this.metroPanel1.Controls.Add(this.button3);
-            this.metroPanel1.Controls.Add(this.button9);
-            this.metroPanel1.Controls.Add(this.button5);
-            this.metroPanel1.Controls.Add(this.button8);
-            this.metroPanel1.Controls.Add(this.button6);
-            this.metroPanel1.Controls.Add(this.button7);
-            this.metroPanel1.HorizontalScrollbar = true;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(2, 11);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(120, 137);
-            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.VerticalScrollbar = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // ProbTab
             // 
@@ -1358,13 +1391,13 @@
             this.ChampionsTab.PerformLayout();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
-            this.TierListTab.ResumeLayout(false);
-            this.metroPanel4.ResumeLayout(false);
-            this.metroPanel4.PerformLayout();
             this.CraftingTab.ResumeLayout(false);
             this.CraftingTab.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
+            this.TierListTab.ResumeLayout(false);
+            this.metroPanel4.ResumeLayout(false);
+            this.metroPanel4.PerformLayout();
             this.ProbTab.ResumeLayout(false);
             this.ProbTab.PerformLayout();
             this.ResumeLayout(false);
@@ -1456,6 +1489,8 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Drawing.Html.HtmlToolTip htmlToolTip1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button17;
     }
 }
 

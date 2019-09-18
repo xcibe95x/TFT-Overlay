@@ -345,11 +345,11 @@ namespace TFT_Overlay
             //BF + BF <--> BF + BF
             if (Item1 == "BF" && Item2 == "BF" || Item2 == "BF" && Item1 == "BF")
             {
-                //IE
-                rItem = (string)jObject.SelectToken("infinityedge.name");
-                rDesc = (string)jObject.SelectToken("infinityedge.bonus");
+                //Lord's Edge
+                rItem = (string)jObject.SelectToken("lordsedge.name");
+                rDesc = (string)jObject.SelectToken("lordsedge.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.infinityedge;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.LordsEdge;
 
             }
 
@@ -368,10 +368,10 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Bow" || Item2 == "BF" && Item1 == "Bow")
             {
                 //SWORD OF DIVINE
-                rItem = (string)jObject.SelectToken("swordofthedivine.name");
-                rDesc = (string)jObject.SelectToken("swordofthedivine.bonus");
+                rItem = (string)jObject.SelectToken("lastwhisper.name");
+                rDesc = (string)jObject.SelectToken("lastwhisper.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.swordofthedivine;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.LastWhisper;
 
             }
 
@@ -708,6 +708,97 @@ namespace TFT_Overlay
 
             }
 
+            
+            if (Item1 == "Glove" && Item2 == "Glove" || Item2 == "Glove" && Item1 == "Glove")
+            {
+                //Thiefs Gloves
+                rItem = (string)jObject.SelectToken("thiefsgloves.name");
+                rDesc = (string)jObject.SelectToken("thiefsgloves.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ThiefsGloves;
+
+            }
+
+
+            if (Item1 == "Glove" && Item2 == "Tear" || Item2 == "Glove" && Item1 == "Tear")
+            {
+                //Hand of Justice
+                rItem = (string)jObject.SelectToken("handofjustice.name");
+                rDesc = (string)jObject.SelectToken("handofjustice.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.HandofJustice;
+
+            }
+
+            if (Item1 == "Glove" && Item2 == "BF" || Item2 == "Glove" && Item1 == "BF")
+            {
+                //Infinity Edge
+                rItem = (string)jObject.SelectToken("infinityedge.name");
+                rDesc = (string)jObject.SelectToken("infinityedge.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.infinityedge;
+
+            }
+
+            if (Item1 == "Glove" && Item2 == "Rod" || Item2 == "Glove" && Item1 == "Rod")
+            {
+                //ArcaneGauntlet
+                rItem = (string)jObject.SelectToken("arcanegauntlet.name");
+                rDesc = (string)jObject.SelectToken("arcanegauntlet.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ArcaneGauntlet;
+
+            }
+
+            if (Item1 == "Glove" && Item2 == "Cape" || Item2 == "Glove" && Item1 == "Cape")
+            {
+                //Quick Silver
+                rItem = (string)jObject.SelectToken("quicksilver.name");
+                rDesc = (string)jObject.SelectToken("quicksilver.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.Quicksilver;
+
+            }
+
+            if (Item1 == "Glove" && Item2 == "Vest" || Item2 == "Glove" && Item1 == "Vest")
+            {
+                //Iceborne Gauntlet
+                rItem = (string)jObject.SelectToken("icebornegauntlet.name");
+                rDesc = (string)jObject.SelectToken("icebornegauntlet.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.IceborneGauntlet;
+
+            }
+
+            if (Item1 == "Glove" && Item2 == "Belt" || Item2 == "Glove" && Item1 == "Belt")
+            {
+                //Backhand
+                rItem = (string)jObject.SelectToken("backhand.name");
+                rDesc = (string)jObject.SelectToken("backhand.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.Backhand;
+
+            }
+
+            if (Item1 == "Glove" && Item2 == "Bow" || Item2 == "Glove" && Item1 == "Bow")
+            {
+                //Repeating Crossbow
+                rItem = (string)jObject.SelectToken("repeatingcrossbow.name");
+                rDesc = (string)jObject.SelectToken("repeatingcrossbow.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.RepeatingCrossbow;
+
+            }
+
+            if (Item1 == "Glove" && Item2 == "Spatula" || Item2 == "Glove" && Item1 == "Spatula")
+            {
+                //Mittens
+                rItem = (string)jObject.SelectToken("mittens.name");
+                rDesc = (string)jObject.SelectToken("mittens.bonus");
+                rTier = "";
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.Mittens;
+
+            }
 
 
         }
@@ -725,6 +816,7 @@ namespace TFT_Overlay
             button7.ForeColor = Color.DarkSlateBlue;
             button8.ForeColor = Color.DarkSlateBlue;
             button9.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -739,6 +831,7 @@ namespace TFT_Overlay
             button7.ForeColor = Color.DarkSlateBlue;
             button8.ForeColor = Color.DarkSlateBlue;
             button9.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -753,6 +846,7 @@ namespace TFT_Overlay
             button7.ForeColor = Color.DarkSlateBlue;
             button8.ForeColor = Color.DarkSlateBlue;
             button9.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -767,6 +861,7 @@ namespace TFT_Overlay
             button7.ForeColor = Color.DarkSlateBlue;
             button8.ForeColor = Color.DarkSlateBlue;
             button9.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -781,6 +876,7 @@ namespace TFT_Overlay
             button7.ForeColor = Color.DarkSlateBlue;
             button8.ForeColor = Color.DarkSlateBlue;
             button9.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -795,6 +891,7 @@ namespace TFT_Overlay
             button7.ForeColor = Color.FromArgb(205, 61, 18);
             button8.ForeColor = Color.DarkSlateBlue;
             button9.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -809,10 +906,26 @@ namespace TFT_Overlay
             button7.ForeColor = Color.DarkSlateBlue;
             button8.ForeColor = Color.FromArgb(205, 61, 18);
             button9.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button9_Click(object sender, EventArgs e)
+        {
+            Item1 = "Glove";
+            button2.ForeColor = Color.DarkSlateBlue;
+            button3.ForeColor = Color.DarkSlateBlue;
+            button4.ForeColor = Color.DarkSlateBlue;
+            button5.ForeColor = Color.DarkSlateBlue;
+            button6.ForeColor = Color.DarkSlateBlue;
+            button7.ForeColor = Color.DarkSlateBlue;
+            button8.ForeColor = Color.DarkSlateBlue;
+            button17.ForeColor = Color.DarkSlateBlue;
+            button9.ForeColor = Color.FromArgb(205, 61, 18);
+            DoCheck();
+        }
+
+        private void Button17_Click(object sender, EventArgs e)
         {
             Item1 = "Spatula";
             button2.ForeColor = Color.DarkSlateBlue;
@@ -822,15 +935,32 @@ namespace TFT_Overlay
             button6.ForeColor = Color.DarkSlateBlue;
             button7.ForeColor = Color.DarkSlateBlue;
             button8.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.FromArgb(205, 61, 18);
+            button17.ForeColor = Color.FromArgb(205, 61, 18);
+            button9.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
-
         // ITEMS SET 2
+
+        private void Button18_Click(object sender, EventArgs e)
+        {
+            Item2 = "Glove";
+            button18.ForeColor = Color.FromArgb(205, 61, 18);
+            button1.ForeColor = Color.DarkSlateBlue;
+            button10.ForeColor = Color.DarkSlateBlue;
+            button11.ForeColor = Color.DarkSlateBlue;
+            button12.ForeColor = Color.DarkSlateBlue;
+            button13.ForeColor = Color.DarkSlateBlue;
+            button14.ForeColor = Color.DarkSlateBlue;
+            button15.ForeColor = Color.DarkSlateBlue;
+            button16.ForeColor = Color.DarkSlateBlue;
+            DoCheck();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Item2 = "BF";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.FromArgb(205, 61, 18);
             button10.ForeColor = Color.DarkSlateBlue;
             button11.ForeColor = Color.DarkSlateBlue;
@@ -845,6 +975,7 @@ namespace TFT_Overlay
         private void button10_Click(object sender, EventArgs e)
         {
             Item2 = "Vest";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.DarkSlateBlue;
             button10.ForeColor = Color.FromArgb(205, 61, 18);
             button11.ForeColor = Color.DarkSlateBlue;
@@ -859,6 +990,7 @@ namespace TFT_Overlay
         private void button11_Click(object sender, EventArgs e)
         {
             Item2 = "Belt";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.DarkSlateBlue;
             button10.ForeColor = Color.DarkSlateBlue;
             button11.ForeColor = Color.FromArgb(205, 61, 18);
@@ -873,6 +1005,7 @@ namespace TFT_Overlay
         private void button12_Click(object sender, EventArgs e)
         {
             Item2 = "Rod";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.DarkSlateBlue;
             button10.ForeColor = Color.DarkSlateBlue;
             button11.ForeColor = Color.DarkSlateBlue;
@@ -887,6 +1020,7 @@ namespace TFT_Overlay
         private void button13_Click(object sender, EventArgs e)
         {
             Item2 = "Cape";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.DarkSlateBlue;
             button10.ForeColor = Color.DarkSlateBlue;
             button11.ForeColor = Color.DarkSlateBlue;
@@ -901,6 +1035,7 @@ namespace TFT_Overlay
         private void button14_Click(object sender, EventArgs e)
         {
             Item2 = "Bow";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.DarkSlateBlue;
             button10.ForeColor = Color.DarkSlateBlue;
             button11.ForeColor = Color.DarkSlateBlue;
@@ -915,6 +1050,7 @@ namespace TFT_Overlay
         private void button15_Click(object sender, EventArgs e)
         {
             Item2 = "Tear";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.DarkSlateBlue;
             button10.ForeColor = Color.DarkSlateBlue;
             button11.ForeColor = Color.DarkSlateBlue;
@@ -928,7 +1064,9 @@ namespace TFT_Overlay
 
         private void button16_Click(object sender, EventArgs e)
         {
+
             Item2 = "Spatula";
+            button18.ForeColor = Color.DarkSlateBlue;
             button1.ForeColor = Color.DarkSlateBlue;
             button10.ForeColor = Color.DarkSlateBlue;
             button11.ForeColor = Color.DarkSlateBlue;
