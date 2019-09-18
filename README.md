@@ -6,10 +6,6 @@
 - Set your Game to be Borderless or Windowed!
 - Right click on the title bar for the context menu
 
-## Goal Version
-- **3.0 FINAL (Fully Automated) + Credits for Sources**
-- Code Cleanup / Improvements
-
 ## Version Changelogs
 
 - **2.7 PLACE HOLDER**
