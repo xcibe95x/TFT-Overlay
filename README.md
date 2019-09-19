@@ -11,11 +11,14 @@
 - **2.7 PLACE HOLDER**
 	 - New items added to Crafting
 	 - Crafting layout adjustments
+	 - Tooltips Updated to fit the whole text, even if they are not too good visually
+	 - Drop Rates Layout updated
+	 - Tier 5 Champions Count updated to 12 as Kai'Sa Joins the roster
 	 
-	 
-     - New Feature
-     - Profile Tab Labels adjustments
-	 - Tooltips look updated (?)
+	 TO DO
+     - New Origins List
+     - Profile Tab Layout Fix
+
 
 	 
 - **2.6 STABLE RELEASE**
@@ -29,7 +32,7 @@
 	 - Now Auto Reset after Passing Level 9 on Drop Rates
 	 - Profile Support for All Servers Including PBE
 	 - Improved Loading Speed
-	 . droprates.json and exclusion.json compiled but not yet included
+	 - droprates.json and exclusion.json compiled but not yet included
 	 - Changed profile layout (Will fix labels in 2.7)
 	 - Tooltips now show the whole text (will adjust it's colors in 2.7)
 	 - Layout Sizes will not be changed further for now, will see if i can make it smaller in 3.0

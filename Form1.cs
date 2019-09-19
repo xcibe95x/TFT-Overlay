@@ -138,15 +138,15 @@ namespace TFT_Overlay
             rm.ReleaseAllResources();
 
             // TABS ORDER PERMANENT FIX
-            metroTabControl1.TabPages.Clear();
-            metroTabControl1.TabPages.Insert(0, ProfileTAB);
-            metroTabControl1.TabPages.Insert(1, CraftingTab);
-            metroTabControl1.TabPages.Insert(2, ChampionsTab);
-            metroTabControl1.TabPages.Insert(3, TierListTab);
-            metroTabControl1.TabPages.Insert(4, ProbTab);
+            TabControl.TabPages.Clear();
+            TabControl.TabPages.Insert(0, ProfileTAB);
+            TabControl.TabPages.Insert(1, CraftingTab);
+            TabControl.TabPages.Insert(2, ChampionsTab);
+            TabControl.TabPages.Insert(3, TierListTab);
+            TabControl.TabPages.Insert(4, ProbTab);
             
 
-            metroTabControl1.SelectedIndex = 0;
+            TabControl.SelectedIndex = 0;
 
             // Delete and Generate Custom Mouse Pointer to Temp Path
             File.Delete(Path.GetTempPath() + "Normal.cur");
