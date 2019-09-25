@@ -380,8 +380,8 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Bow" || Item2 == "BF" && Item1 == "Bow")
             {
                 //SWORD OF DIVINE
-                rItem = (string)jObject.SelectToken("lastwhisper.name");
-                rDesc = (string)jObject.SelectToken("lastwhisper.bonus");
+                rItem = (string)jObject.SelectToken("Last Whisper");
+                rDesc = (string)jObject.SelectToken("Basic attacks deal 5% of target's maximum health bonus true damage.");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.LastWhisper;
 

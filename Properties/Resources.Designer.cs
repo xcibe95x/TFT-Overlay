@@ -1789,16 +1789,6 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sejuani_n {
-            get {
-                object obj = ResourceManager.GetObject("Sejuani_n", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap seraphsembrace {
             get {
                 object obj = ResourceManager.GetObject("seraphsembrace", resourceCulture);

@@ -436,9 +436,6 @@
   <data name="KoFi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\Ko-fi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sejuani_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\new_champs\Sejuani_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="TwistedFate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\champs\TwistedFate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -850,10 +847,10 @@
   <data name="ThiefsGloves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\ThiefsGloves.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LastWhisper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\items\LastWhisper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="RepeatingCrossbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\RepeatingCrossbow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LastWhisper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\items\LastWhisper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
