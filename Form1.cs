@@ -110,11 +110,39 @@ namespace TFT_Overlay
 
         {
 
+
+            var localVersion = new Version("2.6");
+
             // WINDOW STARTING POSITION
             StartPosition = FormStartPosition.Manual;
             Location = new Point(20, 60);
             TopMost = Properties.Settings.Default.TopMost;
             alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.TopMost;
+
+
+            // TABS ORDER PERMANENT FIX
+            TabControl.TabPages.Clear();
+            TabControl.TabPages.Insert(0, ProfileTAB);
+            TabControl.TabPages.Insert(1, CraftingTab);
+            TabControl.TabPages.Insert(2, ChampionsTab);
+            TabControl.TabPages.Insert(3, TierListTab);
+            TabControl.TabPages.Insert(4, ProbTab);
+
+
+            TabControl.SelectedIndex = 0;
+            // Delete and Generate Custom Mouse Pointer to Temp Path
+            File.Delete(Path.GetTempPath() + "Normal.cur");
+            File.Delete(Path.GetTempPath() + "Pointer.cur");
+            File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
+            File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
+
+
+            // Program Title
+            Title.Text = "Pocket Tactics | by @xcibe95x";
+            Properties.Settings.Default.Version = localVersion.ToString();
+
+            // Set League Cursor
+            Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
 
 
             toolStripTextBox1.Text = Properties.Settings.Default.SummonerName;
@@ -136,33 +164,6 @@ namespace TFT_Overlay
                 ResourcesList.Add((string)o.Key);
             }
             rm.ReleaseAllResources();
-
-            // TABS ORDER PERMANENT FIX
-            TabControl.TabPages.Clear();
-            TabControl.TabPages.Insert(0, ProfileTAB);
-            TabControl.TabPages.Insert(1, CraftingTab);
-            TabControl.TabPages.Insert(2, ChampionsTab);
-            TabControl.TabPages.Insert(3, TierListTab);
-            TabControl.TabPages.Insert(4, ProbTab);
-
-
-            TabControl.SelectedIndex = 0;
-
-            // Delete and Generate Custom Mouse Pointer to Temp Path
-            File.Delete(Path.GetTempPath() + "Normal.cur");
-            File.Delete(Path.GetTempPath() + "Pointer.cur");
-            File.WriteAllBytes(Path.GetTempPath() + "Normal.cur", Properties.Resources.Normal);
-            File.WriteAllBytes(Path.GetTempPath() + "Pointer.cur", Properties.Resources.Pointer);
-
-            var localVersion = new Version("2.6");
-
-            // Program Title
-            Title.Text = "Pocket Tactics | by @xcibe95x";
-            Properties.Settings.Default.Version = localVersion.ToString();
-
-
-            // Set League Cursor
-            Cursor = NativeMethods.LoadCustomCursor(Path.GetTempPath() + "Normal.cur");
 
 
             // Check for new Release
