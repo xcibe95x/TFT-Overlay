@@ -144,7 +144,7 @@ namespace TFT_Overlay
             TabControl.TabPages.Insert(2, ChampionsTab);
             TabControl.TabPages.Insert(3, TierListTab);
             TabControl.TabPages.Insert(4, ProbTab);
-            
+
 
             TabControl.SelectedIndex = 0;
 
@@ -280,8 +280,12 @@ namespace TFT_Overlay
             // LOAD CHAMPIONS LIST
             championsListLoop();
 
-            Glove.PerformClick();
-            Glove2.PerformClick();
+
+            Item1 = "Glove";
+            Item2 = "Glove";
+            Glove.ForeColor = Color.FromArgb(205, 61, 18);
+            Glove2.ForeColor = Color.FromArgb(205, 61, 18);
+            DoCheck();
 
         }  
         
@@ -2304,6 +2308,11 @@ namespace TFT_Overlay
         private void ChampsSearchBox_Click(object sender, EventArgs e)
         {
             ((TextBox)sender).Clear();
+        }
+
+        private void CraftingTab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
