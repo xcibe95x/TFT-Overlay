@@ -17,8 +17,13 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - New Origins / Class List
 	 - Show what Data is always updated and what is offline
      - Profile Tab Layout Fix
+	 - Last Whisper Auto Update
 	 
-- **2.7 STABLE RELEASE**
+- **2.7.1**
+     - Updated Last Whisper Art
+	 - Provvisory added manual Item name and description for Last Whisper until the JSON get fixed
+	 
+- **2.7**
 	 - New items added to Crafting
 	 - Crafting layout adjustments
 	 - Tooltips Updated to fit the whole text, even if they are not too good visually
