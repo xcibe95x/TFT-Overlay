@@ -18,7 +18,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Show what Data is always updated and what is offline
      - Profile Tab Layout Fix
 	 
-- **2.7 PLACE HOLDER**
+- **2.7 STABLE RELEASE**
 	 - New items added to Crafting
 	 - Crafting layout adjustments
 	 - Tooltips Updated to fit the whole text, even if they are not too good visually
@@ -28,7 +28,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Offline Player Damage Formula
 	 - Crafting Layout Adjustments
 	 
-- **2.6 STABLE RELEASE**
+- **2.6**
    - Changelog
      ( No new features in this update, will be done in 2.7 )
      - Eventual new items for crafting will be manually mantained ( Those are not always up to date )
