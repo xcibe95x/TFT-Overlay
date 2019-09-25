@@ -439,7 +439,7 @@
             this.ItemName.AutoSize = true;
             this.ItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ItemName.Location = new System.Drawing.Point(9, 160);
+            this.ItemName.Location = new System.Drawing.Point(9, 149);
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(110, 17);
             this.ItemName.TabIndex = 17;
@@ -1161,10 +1161,10 @@
             // 
             this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CraftingTab.Controls.Add(this.ItemName);
             this.CraftingTab.Controls.Add(this.htmlItemdescription);
             this.CraftingTab.Controls.Add(this.metroPanel2);
             this.CraftingTab.Controls.Add(this.metroPanel1);
-            this.CraftingTab.Controls.Add(this.ItemName);
             this.CraftingTab.Controls.Add(this.panel2);
             this.CraftingTab.Controls.Add(this.label2);
             this.CraftingTab.Controls.Add(this.label1);
@@ -1190,9 +1190,9 @@
             this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
+            this.htmlItemdescription.Location = new System.Drawing.Point(7, 162);
             this.htmlItemdescription.Name = "htmlItemdescription";
-            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
+            this.htmlItemdescription.Size = new System.Drawing.Size(399, 97);
             this.htmlItemdescription.TabIndex = 19;
             // 
             // metroPanel2

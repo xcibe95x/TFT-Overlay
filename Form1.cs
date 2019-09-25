@@ -17,45 +17,12 @@ using System.Windows.Forms;
 
 // Useful Links
 // https://riotapi.dev/en/latest/
+// https://lolchess.gg/guide/damage
 
 namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
-
-        
-        public string ApiKey = "RGAPI-"; // RIOT API KEY
-        public string SummonerName = Properties.Settings.Default.SummonerName;
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
-        public string Item1;
-        public string Item2;
-        public string rItem;
-        public string rTier;
-        public string rDesc;
-        public string lolVer;
-        public Point OMLoc;
-        public int Levels = 1;
-        WebClient client = new WebClient();
-        public string summonerJSON;
-        public string rankedJSON;
-        public string itemsJSON;
-        public string tiersJSON;
-        public string champsJSON;
-        public string versionJSON;
-        public bool toggleHide;
-        public int Wins;
-        public int Loss;
-        List<string> ResourcesList = new List<string>();
-
-        ToolTip tiup = new MetroFramework.Drawing.Html.HtmlToolTip();
-
-        ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
-
-        FlowLayoutPanel SearchPanel;
-
-        int TierIndex = 1;
-        string TierType = "all";
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -77,6 +44,41 @@ namespace TFT_Overlay
             [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
             private static extern IntPtr LoadCursorFromFile(string path);
         }
+
+        public string ApiKey = "RGAPI-"; // RIOT API KEY
+        public string SummonerName = Properties.Settings.Default.SummonerName;
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        public string Item1;
+        public string Item2;
+        public string rItem;
+        public string rTier;
+        public string rDesc;
+        public string lolVer;
+        public Point OMLoc;
+        public int Levels = 1;
+        public string summonerJSON;
+        public string rankedJSON;
+        public string itemsJSON;
+        public string tiersJSON;
+        public string champsJSON;
+        public string versionJSON;
+        public bool toggleHide;
+        public int Wins;
+        public int Loss;
+
+        WebClient client = new WebClient();
+
+        List<string> ResourcesList = new List<string>();
+
+        ToolTip tiup = new MetroFramework.Drawing.Html.HtmlToolTip();
+
+        ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
+
+        FlowLayoutPanel SearchPanel;
+
+        int TierIndex = 1;
+        string TierType = "all";
 
         public TFTCrafter()
         {

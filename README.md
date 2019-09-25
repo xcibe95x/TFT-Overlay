@@ -13,7 +13,10 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 ## Version Changelogs
 
 - **2.8 PLACE HOLDER**
+     TO DO
 	 - New Origins / Class List
+	 - Show what Data is always updated and what is offline
+     - Profile Tab Layout Fix
 	 
 - **2.7 PLACE HOLDER**
 	 - New items added to Crafting
@@ -22,12 +25,8 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Drop Rates Layout updated
 	 - Tier 5 Champions Count updated to 12 as Kai'Sa Joins the roster
 	 - Now start with an already crafted item
-	 
-	 TO DO
-	 - Player Damage
-     - Profile Tab Layout Fix
-
-
+	 - Offline Player Damage Formula
+	 - Crafting Layout Adjustments
 	 
 - **2.6 STABLE RELEASE**
    - Changelog
