@@ -110,7 +110,6 @@ namespace TFT_Overlay
 
         {
 
-
             var localVersion = new Version("2.7");
 
             // WINDOW STARTING POSITION
@@ -127,7 +126,7 @@ namespace TFT_Overlay
             TabControl.TabPages.Insert(2, ChampionsTab);
             TabControl.TabPages.Insert(3, TierListTab);
             TabControl.TabPages.Insert(4, ProbTab);
-
+            TabControl.TabPages.Insert(5, PDamageTab);
 
             TabControl.SelectedIndex = 0;
             // Delete and Generate Custom Mouse Pointer to Temp Path
