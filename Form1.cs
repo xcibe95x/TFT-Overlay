@@ -742,9 +742,9 @@ namespace TFT_Overlay
 
             if (Item1 == "Glove" && Item2 == "Rod" || Item2 == "Glove" && Item1 == "Rod")
             {
-                //ArcaneGauntlet
-                rItem = (string)jObject.SelectToken("arcanegauntlet.name");
-                rDesc = (string)jObject.SelectToken("arcanegauntlet.bonus");
+                //Jeweled Gauntlet
+                rItem = (string)jObject.SelectToken("jeweledgauntlet.name");
+                rDesc = (string)jObject.SelectToken("jeweledgauntlet.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ArcaneGauntlet;
 
@@ -763,8 +763,8 @@ namespace TFT_Overlay
             if (Item1 == "Glove" && Item2 == "Vest" || Item2 == "Glove" && Item1 == "Vest")
             {
                 //Iceborne Gauntlet
-                rItem = (string)jObject.SelectToken("icebornegauntlet.name");
-                rDesc = (string)jObject.SelectToken("icebornegauntlet.bonus");
+                rItem = (string)jObject.SelectToken("iceborngauntlet.name");
+                rDesc = (string)jObject.SelectToken("iceborngauntlet.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.IceborneGauntlet;
 
@@ -773,8 +773,8 @@ namespace TFT_Overlay
             if (Item1 == "Glove" && Item2 == "Belt" || Item2 == "Glove" && Item1 == "Belt")
             {
                 //Backhand
-                rItem = (string)jObject.SelectToken("backhand.name");
-                rDesc = (string)jObject.SelectToken("backhand.bonus");
+                rItem = (string)jObject.SelectToken("trapclaw.name");
+                rDesc = (string)jObject.SelectToken("trapclaw.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.Backhand;
 
