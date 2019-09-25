@@ -2316,5 +2316,15 @@ namespace TFT_Overlay
         {
 
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
