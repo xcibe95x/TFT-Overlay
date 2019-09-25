@@ -112,7 +112,7 @@ namespace TFT_Overlay
 
         {
 
-            var localVersion = new Version("2.7");
+            var localVersion = new Version("2.7.1");
 
             // WINDOW STARTING POSITION
             StartPosition = FormStartPosition.Manual;
