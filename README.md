@@ -1,5 +1,9 @@
 # Pocket Tactics a TFT Overlay by Cibe aka (xcibe95x)
 
+IMPORTANT: Updates may slowdown a bit, i started studying again recently, this saturday i will rush new features for v2.8
+other vesion will slow down, but at the end we will reach the 3.0 that i preset to be the final version wich will have a different versioning
+cause of small updates like new items just in case, beacuse at 3.0 the app will be almost perfect and always up to date all alone.
+
 ![Image](https://i.redd.it/trbz311srql31.png)
 
 ## ! HOW TO USE !
@@ -8,15 +12,19 @@
 
 ## Version Changelogs
 
+- **2.8 PLACE HOLDER**
+	 - New Origins / Class List
+	 
 - **2.7 PLACE HOLDER**
 	 - New items added to Crafting
 	 - Crafting layout adjustments
 	 - Tooltips Updated to fit the whole text, even if they are not too good visually
 	 - Drop Rates Layout updated
 	 - Tier 5 Champions Count updated to 12 as Kai'Sa Joins the roster
+	 - Now start with an already crafted item
 	 
 	 TO DO
-     - New Origins List
+	 - Player Damage
      - Profile Tab Layout Fix
 
 

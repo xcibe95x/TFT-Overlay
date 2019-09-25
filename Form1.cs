@@ -280,8 +280,14 @@ namespace TFT_Overlay
             // LOAD CHAMPIONS LIST
             championsListLoop();
 
+            Glove.PerformClick();
+            Glove2.PerformClick();
 
-        }   // FORM 1 END
+        }  
+        
+        
+        
+        // FORM 1 END
 
         private void Panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -808,135 +814,135 @@ namespace TFT_Overlay
         private void button2_Click(object sender, EventArgs e)
         {
             Item1 = "BF";
-            button2.ForeColor = Color.FromArgb(205, 61, 18);
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.FromArgb(205, 61, 18);
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Glove.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Item1 = "Vest";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.FromArgb(205, 61, 18);
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.FromArgb(205, 61, 18);
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Glove.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
             Item1 = "Belt";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.FromArgb(205, 61, 18);
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.FromArgb(205, 61, 18);
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Glove.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Item1 = "Rod";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.FromArgb(205, 61, 18);
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.FromArgb(205, 61, 18);
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Glove.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Item1 = "Cape";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.FromArgb(205, 61, 18);
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.FromArgb(205, 61, 18);
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Glove.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Item1 = "Bow";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.FromArgb(205, 61, 18);
-            button8.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.FromArgb(205, 61, 18);
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Glove.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             Item1 = "Tear";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.FromArgb(205, 61, 18);
-            button9.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.FromArgb(205, 61, 18);
+            Glove.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             Item1 = "Glove";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.DarkSlateBlue;
-            button9.ForeColor = Color.FromArgb(205, 61, 18);
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.DarkSlateBlue;
+            Glove.ForeColor = Color.FromArgb(205, 61, 18);
             DoCheck();
         }
 
         private void Button17_Click(object sender, EventArgs e)
         {
             Item1 = "Spatula";
-            button2.ForeColor = Color.DarkSlateBlue;
-            button3.ForeColor = Color.DarkSlateBlue;
-            button4.ForeColor = Color.DarkSlateBlue;
-            button5.ForeColor = Color.DarkSlateBlue;
-            button6.ForeColor = Color.DarkSlateBlue;
-            button7.ForeColor = Color.DarkSlateBlue;
-            button8.ForeColor = Color.DarkSlateBlue;
-            button17.ForeColor = Color.FromArgb(205, 61, 18);
-            button9.ForeColor = Color.DarkSlateBlue;
+            BF.ForeColor = Color.DarkSlateBlue;
+            Vest.ForeColor = Color.DarkSlateBlue;
+            Belt.ForeColor = Color.DarkSlateBlue;
+            Rod.ForeColor = Color.DarkSlateBlue;
+            Cape.ForeColor = Color.DarkSlateBlue;
+            Bow.ForeColor = Color.DarkSlateBlue;
+            Tear.ForeColor = Color.DarkSlateBlue;
+            Spatula.ForeColor = Color.FromArgb(205, 61, 18);
+            Glove.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -945,120 +951,120 @@ namespace TFT_Overlay
         private void Button18_Click(object sender, EventArgs e)
         {
             Item2 = "Glove";
-            button18.ForeColor = Color.FromArgb(205, 61, 18);
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.FromArgb(205, 61, 18);
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Item2 = "BF";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.FromArgb(205, 61, 18);
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.FromArgb(205, 61, 18);
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             Item2 = "Vest";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.FromArgb(205, 61, 18);
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.FromArgb(205, 61, 18);
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             Item2 = "Belt";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.FromArgb(205, 61, 18);
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.FromArgb(205, 61, 18);
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             Item2 = "Rod";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.FromArgb(205, 61, 18);
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.FromArgb(205, 61, 18);
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             Item2 = "Cape";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.FromArgb(205, 61, 18);
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.FromArgb(205, 61, 18);
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             Item2 = "Bow";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.FromArgb(205, 61, 18);
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.FromArgb(205, 61, 18);
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             Item2 = "Tear";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.FromArgb(205, 61, 18);
-            button16.ForeColor = Color.DarkSlateBlue;
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.FromArgb(205, 61, 18);
+            Spatula2.ForeColor = Color.DarkSlateBlue;
             DoCheck();
         }
 
@@ -1066,15 +1072,15 @@ namespace TFT_Overlay
         {
 
             Item2 = "Spatula";
-            button18.ForeColor = Color.DarkSlateBlue;
-            button1.ForeColor = Color.DarkSlateBlue;
-            button10.ForeColor = Color.DarkSlateBlue;
-            button11.ForeColor = Color.DarkSlateBlue;
-            button12.ForeColor = Color.DarkSlateBlue;
-            button13.ForeColor = Color.DarkSlateBlue;
-            button14.ForeColor = Color.DarkSlateBlue;
-            button15.ForeColor = Color.DarkSlateBlue;
-            button16.ForeColor = Color.FromArgb(205, 61, 18);
+            Glove2.ForeColor = Color.DarkSlateBlue;
+            BF2.ForeColor = Color.DarkSlateBlue;
+            Vest2.ForeColor = Color.DarkSlateBlue;
+            Belt2.ForeColor = Color.DarkSlateBlue;
+            Rod2.ForeColor = Color.DarkSlateBlue;
+            Cape2.ForeColor = Color.DarkSlateBlue;
+            Bow2.ForeColor = Color.DarkSlateBlue;
+            Tear2.ForeColor = Color.DarkSlateBlue;
+            Spatula2.ForeColor = Color.FromArgb(205, 61, 18);
             DoCheck();
         }
 

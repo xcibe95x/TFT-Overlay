@@ -41,27 +41,27 @@
             this.Debug = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.ChampsSearchBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.BF = new System.Windows.Forms.Button();
+            this.Vest = new System.Windows.Forms.Button();
+            this.Belt = new System.Windows.Forms.Button();
+            this.Rod = new System.Windows.Forms.Button();
+            this.Cape = new System.Windows.Forms.Button();
+            this.Bow = new System.Windows.Forms.Button();
+            this.Tear = new System.Windows.Forms.Button();
+            this.Glove = new System.Windows.Forms.Button();
             this.ItemName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ResultItemImage = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.BF2 = new System.Windows.Forms.Button();
+            this.Vest2 = new System.Windows.Forms.Button();
+            this.Belt2 = new System.Windows.Forms.Button();
+            this.Rod2 = new System.Windows.Forms.Button();
+            this.Cape2 = new System.Windows.Forms.Button();
+            this.Bow2 = new System.Windows.Forms.Button();
+            this.Tear2 = new System.Windows.Forms.Button();
+            this.Spatula2 = new System.Windows.Forms.Button();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.ProfileTAB = new MetroFramework.Controls.MetroTabPage();
             this.WINRATEPANEL = new MetroFramework.Controls.MetroPanel();
@@ -72,12 +72,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Summoner = new MetroFramework.Controls.MetroLabel();
             this.RankedArmor = new System.Windows.Forms.PictureBox();
-            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
-            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.button17 = new System.Windows.Forms.Button();
             this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
@@ -87,6 +81,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
+            this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.Glove2 = new System.Windows.Forms.Button();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.Spatula = new System.Windows.Forms.Button();
             this.TierListTab = new MetroFramework.Controls.MetroTabPage();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
@@ -113,11 +113,17 @@
             this.T2S = new System.Windows.Forms.Label();
             this.T1S = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.OriginsTab = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ClassTab = new MetroFramework.Controls.MetroTabPage();
+            this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.PDamageTab = new MetroFramework.Controls.MetroTabPage();
+            this.metroPanel7 = new MetroFramework.Controls.MetroPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.TitleBar.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -127,16 +133,20 @@
             this.WINRATEPANEL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankedArmor)).BeginInit();
+            this.ChampionsTab.SuspendLayout();
+            this.metroPanel5.SuspendLayout();
             this.CraftingTab.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            this.ChampionsTab.SuspendLayout();
-            this.metroPanel5.SuspendLayout();
             this.TierListTab.SuspendLayout();
             this.metroPanel4.SuspendLayout();
             this.ProbTab.SuspendLayout();
             this.OriginsTab.SuspendLayout();
             this.metroPanel3.SuspendLayout();
+            this.ClassTab.SuspendLayout();
+            this.metroPanel6.SuspendLayout();
+            this.PDamageTab.SuspendLayout();
+            this.metroPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleBar
@@ -296,133 +306,133 @@
             this.ChampsSearchBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.ChampsSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // button2
+            // BF
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.BackgroundImage = global::TFT_Overlay.Properties.Resources.BF;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button2.Location = new System.Drawing.Point(55, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 38);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button2.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.BF.BackColor = System.Drawing.Color.Black;
+            this.BF.BackgroundImage = global::TFT_Overlay.Properties.Resources.BF;
+            this.BF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BF.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.BF.Location = new System.Drawing.Point(55, 8);
+            this.BF.Name = "BF";
+            this.BF.Size = new System.Drawing.Size(37, 38);
+            this.BF.TabIndex = 8;
+            this.BF.UseVisualStyleBackColor = false;
+            this.BF.Click += new System.EventHandler(this.button2_Click);
+            this.BF.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.BF.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button3
+            // Vest
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.BackgroundImage = global::TFT_Overlay.Properties.Resources.Vest;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button3.Location = new System.Drawing.Point(12, 52);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(37, 38);
-            this.button3.TabIndex = 9;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            this.button3.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button3.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Vest.BackColor = System.Drawing.Color.Black;
+            this.Vest.BackgroundImage = global::TFT_Overlay.Properties.Resources.Vest;
+            this.Vest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Vest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vest.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Vest.Location = new System.Drawing.Point(12, 52);
+            this.Vest.Name = "Vest";
+            this.Vest.Size = new System.Drawing.Size(37, 38);
+            this.Vest.TabIndex = 9;
+            this.Vest.UseVisualStyleBackColor = false;
+            this.Vest.Click += new System.EventHandler(this.button3_Click);
+            this.Vest.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Vest.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button4
+            // Belt
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.BackgroundImage = global::TFT_Overlay.Properties.Resources.Belt;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button4.Location = new System.Drawing.Point(12, 96);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(37, 38);
-            this.button4.TabIndex = 10;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
-            this.button4.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button4.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Belt.BackColor = System.Drawing.Color.Black;
+            this.Belt.BackgroundImage = global::TFT_Overlay.Properties.Resources.Belt;
+            this.Belt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Belt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Belt.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Belt.Location = new System.Drawing.Point(12, 96);
+            this.Belt.Name = "Belt";
+            this.Belt.Size = new System.Drawing.Size(37, 38);
+            this.Belt.TabIndex = 10;
+            this.Belt.UseVisualStyleBackColor = false;
+            this.Belt.Click += new System.EventHandler(this.Button4_Click);
+            this.Belt.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Belt.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button5
+            // Rod
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.BackgroundImage = global::TFT_Overlay.Properties.Resources.Rod;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button5.Location = new System.Drawing.Point(55, 52);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(37, 38);
-            this.button5.TabIndex = 12;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            this.button5.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button5.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Rod.BackColor = System.Drawing.Color.Black;
+            this.Rod.BackgroundImage = global::TFT_Overlay.Properties.Resources.Rod;
+            this.Rod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Rod.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Rod.Location = new System.Drawing.Point(55, 52);
+            this.Rod.Name = "Rod";
+            this.Rod.Size = new System.Drawing.Size(37, 38);
+            this.Rod.TabIndex = 12;
+            this.Rod.UseVisualStyleBackColor = false;
+            this.Rod.Click += new System.EventHandler(this.button5_Click);
+            this.Rod.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Rod.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button6
+            // Cape
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.BackgroundImage = global::TFT_Overlay.Properties.Resources.Cape;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.Location = new System.Drawing.Point(12, 140);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(37, 38);
-            this.button6.TabIndex = 13;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            this.button6.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button6.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Cape.BackColor = System.Drawing.Color.Black;
+            this.Cape.BackgroundImage = global::TFT_Overlay.Properties.Resources.Cape;
+            this.Cape.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Cape.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cape.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Cape.Location = new System.Drawing.Point(12, 140);
+            this.Cape.Name = "Cape";
+            this.Cape.Size = new System.Drawing.Size(37, 38);
+            this.Cape.TabIndex = 13;
+            this.Cape.UseVisualStyleBackColor = false;
+            this.Cape.Click += new System.EventHandler(this.button6_Click);
+            this.Cape.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Cape.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button7
+            // Bow
             // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.BackgroundImage = global::TFT_Overlay.Properties.Resources.Bow;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button7.Location = new System.Drawing.Point(55, 96);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(37, 38);
-            this.button7.TabIndex = 14;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            this.button7.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button7.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Bow.BackColor = System.Drawing.Color.Black;
+            this.Bow.BackgroundImage = global::TFT_Overlay.Properties.Resources.Bow;
+            this.Bow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Bow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bow.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Bow.Location = new System.Drawing.Point(55, 96);
+            this.Bow.Name = "Bow";
+            this.Bow.Size = new System.Drawing.Size(37, 38);
+            this.Bow.TabIndex = 14;
+            this.Bow.UseVisualStyleBackColor = false;
+            this.Bow.Click += new System.EventHandler(this.button7_Click);
+            this.Bow.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Bow.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button8
+            // Tear
             // 
-            this.button8.BackColor = System.Drawing.Color.Black;
-            this.button8.BackgroundImage = global::TFT_Overlay.Properties.Resources.Tear;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button8.Location = new System.Drawing.Point(55, 140);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(37, 38);
-            this.button8.TabIndex = 15;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            this.button8.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button8.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Tear.BackColor = System.Drawing.Color.Black;
+            this.Tear.BackgroundImage = global::TFT_Overlay.Properties.Resources.Tear;
+            this.Tear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Tear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Tear.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Tear.Location = new System.Drawing.Point(55, 140);
+            this.Tear.Name = "Tear";
+            this.Tear.Size = new System.Drawing.Size(37, 38);
+            this.Tear.TabIndex = 15;
+            this.Tear.UseVisualStyleBackColor = false;
+            this.Tear.Click += new System.EventHandler(this.button8_Click);
+            this.Tear.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Tear.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button9
+            // Glove
             // 
-            this.button9.BackColor = System.Drawing.Color.Black;
-            this.button9.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button9.Location = new System.Drawing.Point(12, 8);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(37, 38);
-            this.button9.TabIndex = 11;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            this.button9.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button9.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Glove.BackColor = System.Drawing.Color.Black;
+            this.Glove.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
+            this.Glove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Glove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Glove.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Glove.Location = new System.Drawing.Point(12, 8);
+            this.Glove.Name = "Glove";
+            this.Glove.Size = new System.Drawing.Size(37, 38);
+            this.Glove.TabIndex = 11;
+            this.Glove.UseVisualStyleBackColor = false;
+            this.Glove.Click += new System.EventHandler(this.button9_Click);
+            this.Glove.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Glove.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
             // ItemName
             // 
@@ -482,147 +492,149 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "+";
             // 
-            // button1
+            // BF2
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.BackgroundImage = global::TFT_Overlay.Properties.Resources.BF;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Location = new System.Drawing.Point(55, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 38);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button1.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.BF2.BackColor = System.Drawing.Color.Black;
+            this.BF2.BackgroundImage = global::TFT_Overlay.Properties.Resources.BF;
+            this.BF2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BF2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BF2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.BF2.Location = new System.Drawing.Point(55, 6);
+            this.BF2.Name = "BF2";
+            this.BF2.Size = new System.Drawing.Size(37, 38);
+            this.BF2.TabIndex = 8;
+            this.BF2.UseVisualStyleBackColor = false;
+            this.BF2.Click += new System.EventHandler(this.button1_Click);
+            this.BF2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.BF2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button10
+            // Vest2
             // 
-            this.button10.BackColor = System.Drawing.Color.Black;
-            this.button10.BackgroundImage = global::TFT_Overlay.Properties.Resources.Vest;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button10.Location = new System.Drawing.Point(12, 50);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(37, 38);
-            this.button10.TabIndex = 9;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            this.button10.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button10.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Vest2.BackColor = System.Drawing.Color.Black;
+            this.Vest2.BackgroundImage = global::TFT_Overlay.Properties.Resources.Vest;
+            this.Vest2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Vest2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vest2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Vest2.Location = new System.Drawing.Point(12, 50);
+            this.Vest2.Name = "Vest2";
+            this.Vest2.Size = new System.Drawing.Size(37, 38);
+            this.Vest2.TabIndex = 9;
+            this.Vest2.UseVisualStyleBackColor = false;
+            this.Vest2.Click += new System.EventHandler(this.button10_Click);
+            this.Vest2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Vest2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button11
+            // Belt2
             // 
-            this.button11.BackColor = System.Drawing.Color.Black;
-            this.button11.BackgroundImage = global::TFT_Overlay.Properties.Resources.Belt;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button11.Location = new System.Drawing.Point(12, 94);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(37, 38);
-            this.button11.TabIndex = 10;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            this.button11.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button11.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Belt2.BackColor = System.Drawing.Color.Black;
+            this.Belt2.BackgroundImage = global::TFT_Overlay.Properties.Resources.Belt;
+            this.Belt2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Belt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Belt2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Belt2.Location = new System.Drawing.Point(12, 94);
+            this.Belt2.Name = "Belt2";
+            this.Belt2.Size = new System.Drawing.Size(37, 38);
+            this.Belt2.TabIndex = 10;
+            this.Belt2.UseVisualStyleBackColor = false;
+            this.Belt2.Click += new System.EventHandler(this.button11_Click);
+            this.Belt2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Belt2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button12
+            // Rod2
             // 
-            this.button12.BackColor = System.Drawing.Color.Black;
-            this.button12.BackgroundImage = global::TFT_Overlay.Properties.Resources.Rod;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button12.Location = new System.Drawing.Point(55, 50);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(37, 38);
-            this.button12.TabIndex = 12;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            this.button12.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button12.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Rod2.BackColor = System.Drawing.Color.Black;
+            this.Rod2.BackgroundImage = global::TFT_Overlay.Properties.Resources.Rod;
+            this.Rod2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Rod2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Rod2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Rod2.Location = new System.Drawing.Point(55, 50);
+            this.Rod2.Name = "Rod2";
+            this.Rod2.Size = new System.Drawing.Size(37, 38);
+            this.Rod2.TabIndex = 12;
+            this.Rod2.UseVisualStyleBackColor = false;
+            this.Rod2.Click += new System.EventHandler(this.button12_Click);
+            this.Rod2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Rod2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button13
+            // Cape2
             // 
-            this.button13.BackColor = System.Drawing.Color.Black;
-            this.button13.BackgroundImage = global::TFT_Overlay.Properties.Resources.Cape;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button13.Location = new System.Drawing.Point(12, 138);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(37, 38);
-            this.button13.TabIndex = 13;
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            this.button13.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button13.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Cape2.BackColor = System.Drawing.Color.Black;
+            this.Cape2.BackgroundImage = global::TFT_Overlay.Properties.Resources.Cape;
+            this.Cape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Cape2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cape2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Cape2.Location = new System.Drawing.Point(12, 138);
+            this.Cape2.Name = "Cape2";
+            this.Cape2.Size = new System.Drawing.Size(37, 38);
+            this.Cape2.TabIndex = 13;
+            this.Cape2.UseVisualStyleBackColor = false;
+            this.Cape2.Click += new System.EventHandler(this.button13_Click);
+            this.Cape2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Cape2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button14
+            // Bow2
             // 
-            this.button14.BackColor = System.Drawing.Color.Black;
-            this.button14.BackgroundImage = global::TFT_Overlay.Properties.Resources.Bow;
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button14.Location = new System.Drawing.Point(55, 94);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(37, 38);
-            this.button14.TabIndex = 14;
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            this.button14.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button14.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Bow2.BackColor = System.Drawing.Color.Black;
+            this.Bow2.BackgroundImage = global::TFT_Overlay.Properties.Resources.Bow;
+            this.Bow2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Bow2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bow2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Bow2.Location = new System.Drawing.Point(55, 94);
+            this.Bow2.Name = "Bow2";
+            this.Bow2.Size = new System.Drawing.Size(37, 38);
+            this.Bow2.TabIndex = 14;
+            this.Bow2.UseVisualStyleBackColor = false;
+            this.Bow2.Click += new System.EventHandler(this.button14_Click);
+            this.Bow2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Bow2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button15
+            // Tear2
             // 
-            this.button15.BackColor = System.Drawing.Color.Black;
-            this.button15.BackgroundImage = global::TFT_Overlay.Properties.Resources.Tear;
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button15.Location = new System.Drawing.Point(55, 138);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(37, 38);
-            this.button15.TabIndex = 15;
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            this.button15.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button15.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Tear2.BackColor = System.Drawing.Color.Black;
+            this.Tear2.BackgroundImage = global::TFT_Overlay.Properties.Resources.Tear;
+            this.Tear2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Tear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Tear2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Tear2.Location = new System.Drawing.Point(55, 138);
+            this.Tear2.Name = "Tear2";
+            this.Tear2.Size = new System.Drawing.Size(37, 38);
+            this.Tear2.TabIndex = 15;
+            this.Tear2.UseVisualStyleBackColor = false;
+            this.Tear2.Click += new System.EventHandler(this.button15_Click);
+            this.Tear2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Tear2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // button16
+            // Spatula2
             // 
-            this.button16.BackColor = System.Drawing.Color.Black;
-            this.button16.BackgroundImage = global::TFT_Overlay.Properties.Resources.Spatula;
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button16.Location = new System.Drawing.Point(12, 182);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(37, 38);
-            this.button16.TabIndex = 11;
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            this.button16.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
-            this.button16.MouseHover += new System.EventHandler(this.PointerLogic);
+            this.Spatula2.BackColor = System.Drawing.Color.Black;
+            this.Spatula2.BackgroundImage = global::TFT_Overlay.Properties.Resources.Spatula;
+            this.Spatula2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Spatula2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Spatula2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Spatula2.Location = new System.Drawing.Point(12, 182);
+            this.Spatula2.Name = "Spatula2";
+            this.Spatula2.Size = new System.Drawing.Size(37, 38);
+            this.Spatula2.TabIndex = 11;
+            this.Spatula2.UseVisualStyleBackColor = false;
+            this.Spatula2.Click += new System.EventHandler(this.button16_Click);
+            this.Spatula2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
+            this.Spatula2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
             // TabControl
             // 
             this.TabControl.Controls.Add(this.ProfileTAB);
+            this.TabControl.Controls.Add(this.ProbTab);
             this.TabControl.Controls.Add(this.ChampionsTab);
             this.TabControl.Controls.Add(this.CraftingTab);
             this.TabControl.Controls.Add(this.TierListTab);
-            this.TabControl.Controls.Add(this.ProbTab);
             this.TabControl.Controls.Add(this.OriginsTab);
+            this.TabControl.Controls.Add(this.ClassTab);
+            this.TabControl.Controls.Add(this.PDamageTab);
             this.TabControl.FontSize = MetroFramework.MetroTabControlSize.Small;
             this.TabControl.ItemSize = new System.Drawing.Size(59, 30);
             this.TabControl.Location = new System.Drawing.Point(-2, 22);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 4;
+            this.TabControl.SelectedIndex = 3;
             this.TabControl.Size = new System.Drawing.Size(424, 267);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Orange;
             this.TabControl.TabIndex = 15;
@@ -754,126 +766,6 @@
             this.RankedArmor.TabIndex = 2;
             this.RankedArmor.TabStop = false;
             // 
-            // CraftingTab
-            // 
-            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CraftingTab.Controls.Add(this.htmlItemdescription);
-            this.CraftingTab.Controls.Add(this.metroPanel2);
-            this.CraftingTab.Controls.Add(this.metroPanel1);
-            this.CraftingTab.Controls.Add(this.ItemName);
-            this.CraftingTab.Controls.Add(this.panel2);
-            this.CraftingTab.Controls.Add(this.label2);
-            this.CraftingTab.Controls.Add(this.label1);
-            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingTab.HorizontalScrollbarBarColor = true;
-            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.HorizontalScrollbarSize = 10;
-            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
-            this.CraftingTab.Name = "CraftingTab";
-            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
-            this.CraftingTab.TabIndex = 0;
-            this.CraftingTab.Text = "Crafting";
-            this.CraftingTab.UseCustomBackColor = true;
-            this.CraftingTab.VerticalScrollbarBarColor = true;
-            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
-            this.CraftingTab.VerticalScrollbarSize = 10;
-            // 
-            // htmlItemdescription
-            // 
-            this.htmlItemdescription.AutoScroll = true;
-            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
-            this.htmlItemdescription.AutoSize = false;
-            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
-            this.htmlItemdescription.Name = "htmlItemdescription";
-            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
-            this.htmlItemdescription.TabIndex = 19;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.AutoScroll = true;
-            this.metroPanel2.Controls.Add(this.button18);
-            this.metroPanel2.Controls.Add(this.button1);
-            this.metroPanel2.Controls.Add(this.button11);
-            this.metroPanel2.Controls.Add(this.button10);
-            this.metroPanel2.Controls.Add(this.button16);
-            this.metroPanel2.Controls.Add(this.button12);
-            this.metroPanel2.Controls.Add(this.button15);
-            this.metroPanel2.Controls.Add(this.button13);
-            this.metroPanel2.Controls.Add(this.button14);
-            this.metroPanel2.HorizontalScrollbar = true;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(160, 11);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(120, 137);
-            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel2.TabIndex = 16;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.VerticalScrollbar = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Black;
-            this.button18.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button18.Location = new System.Drawing.Point(12, 6);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(37, 38);
-            this.button18.TabIndex = 16;
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.Button18_Click);
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.AutoScroll = true;
-            this.metroPanel1.Controls.Add(this.button17);
-            this.metroPanel1.Controls.Add(this.button2);
-            this.metroPanel1.Controls.Add(this.button4);
-            this.metroPanel1.Controls.Add(this.button3);
-            this.metroPanel1.Controls.Add(this.button9);
-            this.metroPanel1.Controls.Add(this.button5);
-            this.metroPanel1.Controls.Add(this.button8);
-            this.metroPanel1.Controls.Add(this.button6);
-            this.metroPanel1.Controls.Add(this.button7);
-            this.metroPanel1.HorizontalScrollbar = true;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(2, 11);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(120, 137);
-            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.VerticalScrollbar = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.Black;
-            this.button17.BackgroundImage = global::TFT_Overlay.Properties.Resources.Spatula;
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.button17.Location = new System.Drawing.Point(12, 184);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(37, 38);
-            this.button17.TabIndex = 16;
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.Button17_Click);
-            // 
             // ChampionsTab
             // 
             this.ChampionsTab.AccessibleName = "";
@@ -1002,6 +894,126 @@
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Champion";
+            // 
+            // CraftingTab
+            // 
+            this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.CraftingTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CraftingTab.Controls.Add(this.htmlItemdescription);
+            this.CraftingTab.Controls.Add(this.metroPanel2);
+            this.CraftingTab.Controls.Add(this.metroPanel1);
+            this.CraftingTab.Controls.Add(this.ItemName);
+            this.CraftingTab.Controls.Add(this.panel2);
+            this.CraftingTab.Controls.Add(this.label2);
+            this.CraftingTab.Controls.Add(this.label1);
+            this.CraftingTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CraftingTab.HorizontalScrollbarBarColor = true;
+            this.CraftingTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.HorizontalScrollbarSize = 10;
+            this.CraftingTab.Location = new System.Drawing.Point(4, 34);
+            this.CraftingTab.Name = "CraftingTab";
+            this.CraftingTab.Size = new System.Drawing.Size(416, 229);
+            this.CraftingTab.TabIndex = 0;
+            this.CraftingTab.Text = "Crafting";
+            this.CraftingTab.UseCustomBackColor = true;
+            this.CraftingTab.VerticalScrollbarBarColor = true;
+            this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
+            this.CraftingTab.VerticalScrollbarSize = 10;
+            // 
+            // htmlItemdescription
+            // 
+            this.htmlItemdescription.AutoScroll = true;
+            this.htmlItemdescription.AutoScrollMinSize = new System.Drawing.Size(10, 0);
+            this.htmlItemdescription.AutoSize = false;
+            this.htmlItemdescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.htmlItemdescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlItemdescription.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.htmlItemdescription.Location = new System.Drawing.Point(7, 180);
+            this.htmlItemdescription.Name = "htmlItemdescription";
+            this.htmlItemdescription.Size = new System.Drawing.Size(399, 87);
+            this.htmlItemdescription.TabIndex = 19;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.AutoScroll = true;
+            this.metroPanel2.Controls.Add(this.Glove2);
+            this.metroPanel2.Controls.Add(this.BF2);
+            this.metroPanel2.Controls.Add(this.Belt2);
+            this.metroPanel2.Controls.Add(this.Vest2);
+            this.metroPanel2.Controls.Add(this.Spatula2);
+            this.metroPanel2.Controls.Add(this.Rod2);
+            this.metroPanel2.Controls.Add(this.Tear2);
+            this.metroPanel2.Controls.Add(this.Cape2);
+            this.metroPanel2.Controls.Add(this.Bow2);
+            this.metroPanel2.HorizontalScrollbar = true;
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(160, 11);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel2.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel2.TabIndex = 16;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.VerticalScrollbar = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // Glove2
+            // 
+            this.Glove2.BackColor = System.Drawing.Color.Black;
+            this.Glove2.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
+            this.Glove2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Glove2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Glove2.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Glove2.Location = new System.Drawing.Point(12, 6);
+            this.Glove2.Name = "Glove2";
+            this.Glove2.Size = new System.Drawing.Size(37, 38);
+            this.Glove2.TabIndex = 16;
+            this.Glove2.UseVisualStyleBackColor = false;
+            this.Glove2.Click += new System.EventHandler(this.Button18_Click);
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.AutoScroll = true;
+            this.metroPanel1.Controls.Add(this.Spatula);
+            this.metroPanel1.Controls.Add(this.BF);
+            this.metroPanel1.Controls.Add(this.Belt);
+            this.metroPanel1.Controls.Add(this.Vest);
+            this.metroPanel1.Controls.Add(this.Glove);
+            this.metroPanel1.Controls.Add(this.Rod);
+            this.metroPanel1.Controls.Add(this.Tear);
+            this.metroPanel1.Controls.Add(this.Cape);
+            this.metroPanel1.Controls.Add(this.Bow);
+            this.metroPanel1.HorizontalScrollbar = true;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(2, 11);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(120, 137);
+            this.metroPanel1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.VerticalScrollbar = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // Spatula
+            // 
+            this.Spatula.BackColor = System.Drawing.Color.Black;
+            this.Spatula.BackgroundImage = global::TFT_Overlay.Properties.Resources.Spatula;
+            this.Spatula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Spatula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Spatula.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.Spatula.Location = new System.Drawing.Point(12, 184);
+            this.Spatula.Name = "Spatula";
+            this.Spatula.Size = new System.Drawing.Size(37, 38);
+            this.Spatula.TabIndex = 16;
+            this.Spatula.UseVisualStyleBackColor = false;
+            this.Spatula.Click += new System.EventHandler(this.Button17_Click);
             // 
             // TierListTab
             // 
@@ -1361,11 +1373,6 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Champion Drop Rates";
             // 
-            // htmlToolTip1
-            // 
-            this.htmlToolTip1.OwnerDraw = true;
-            this.htmlToolTip1.ShowAlways = true;
-            // 
             // OriginsTab
             // 
             this.OriginsTab.AccessibleName = "";
@@ -1412,6 +1419,103 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(321, 0);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
+            // htmlToolTip1
+            // 
+            this.htmlToolTip1.OwnerDraw = true;
+            this.htmlToolTip1.ShowAlways = true;
+            // 
+            // ClassTab
+            // 
+            this.ClassTab.AccessibleName = "";
+            this.ClassTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ClassTab.Controls.Add(this.metroPanel6);
+            this.ClassTab.HorizontalScrollbarBarColor = true;
+            this.ClassTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.ClassTab.HorizontalScrollbarSize = 10;
+            this.ClassTab.Location = new System.Drawing.Point(4, 34);
+            this.ClassTab.Name = "ClassTab";
+            this.ClassTab.Size = new System.Drawing.Size(416, 229);
+            this.ClassTab.TabIndex = 7;
+            this.ClassTab.Tag = "";
+            this.ClassTab.Text = "Classes";
+            this.ClassTab.UseCustomBackColor = true;
+            this.ClassTab.VerticalScrollbarBarColor = true;
+            this.ClassTab.VerticalScrollbarHighlightOnWheel = false;
+            this.ClassTab.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel6
+            // 
+            this.metroPanel6.AutoScroll = true;
+            this.metroPanel6.Controls.Add(this.flowLayoutPanel3);
+            this.metroPanel6.HorizontalScrollbar = true;
+            this.metroPanel6.HorizontalScrollbarBarColor = true;
+            this.metroPanel6.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel6.HorizontalScrollbarSize = 10;
+            this.metroPanel6.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel6.Name = "metroPanel6";
+            this.metroPanel6.Size = new System.Drawing.Size(410, 218);
+            this.metroPanel6.TabIndex = 5;
+            this.metroPanel6.UseCustomBackColor = true;
+            this.metroPanel6.VerticalScrollbar = true;
+            this.metroPanel6.VerticalScrollbarBarColor = true;
+            this.metroPanel6.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel6.VerticalScrollbarSize = 10;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoSize = true;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(329, 0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(321, 0);
+            this.flowLayoutPanel3.TabIndex = 4;
+            // 
+            // PDamageTab
+            // 
+            this.PDamageTab.AccessibleName = "";
+            this.PDamageTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.PDamageTab.Controls.Add(this.metroPanel7);
+            this.PDamageTab.HorizontalScrollbarBarColor = true;
+            this.PDamageTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.PDamageTab.HorizontalScrollbarSize = 10;
+            this.PDamageTab.Location = new System.Drawing.Point(4, 34);
+            this.PDamageTab.Name = "PDamageTab";
+            this.PDamageTab.Size = new System.Drawing.Size(416, 229);
+            this.PDamageTab.TabIndex = 8;
+            this.PDamageTab.Tag = "";
+            this.PDamageTab.Text = "Player Damage";
+            this.PDamageTab.UseCustomBackColor = true;
+            this.PDamageTab.VerticalScrollbarBarColor = true;
+            this.PDamageTab.VerticalScrollbarHighlightOnWheel = false;
+            this.PDamageTab.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel7
+            // 
+            this.metroPanel7.AutoScroll = true;
+            this.metroPanel7.Controls.Add(this.flowLayoutPanel4);
+            this.metroPanel7.HorizontalScrollbar = true;
+            this.metroPanel7.HorizontalScrollbarBarColor = true;
+            this.metroPanel7.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel7.HorizontalScrollbarSize = 10;
+            this.metroPanel7.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel7.Name = "metroPanel7";
+            this.metroPanel7.Size = new System.Drawing.Size(410, 218);
+            this.metroPanel7.TabIndex = 5;
+            this.metroPanel7.UseCustomBackColor = true;
+            this.metroPanel7.VerticalScrollbar = true;
+            this.metroPanel7.VerticalScrollbarBarColor = true;
+            this.metroPanel7.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel7.VerticalScrollbarSize = 10;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.AutoSize = true;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel4.MaximumSize = new System.Drawing.Size(329, 0);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(321, 0);
+            this.flowLayoutPanel4.TabIndex = 4;
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1439,14 +1543,14 @@
             this.WINRATEPANEL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RankedArmor)).EndInit();
-            this.CraftingTab.ResumeLayout(false);
-            this.CraftingTab.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
-            this.metroPanel1.ResumeLayout(false);
             this.ChampionsTab.ResumeLayout(false);
             this.ChampionsTab.PerformLayout();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
+            this.CraftingTab.ResumeLayout(false);
+            this.CraftingTab.PerformLayout();
+            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel1.ResumeLayout(false);
             this.TierListTab.ResumeLayout(false);
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
@@ -1455,6 +1559,12 @@
             this.OriginsTab.ResumeLayout(false);
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
+            this.ClassTab.ResumeLayout(false);
+            this.metroPanel6.ResumeLayout(false);
+            this.metroPanel6.PerformLayout();
+            this.PDamageTab.ResumeLayout(false);
+            this.metroPanel7.ResumeLayout(false);
+            this.metroPanel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1462,24 +1572,24 @@
         #endregion
 
         private System.Windows.Forms.Panel TitleBar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button BF;
+        private System.Windows.Forms.Button Vest;
+        private System.Windows.Forms.Button Belt;
+        private System.Windows.Forms.Button Rod;
+        private System.Windows.Forms.Button Cape;
+        private System.Windows.Forms.Button Bow;
+        private System.Windows.Forms.Button Tear;
+        private System.Windows.Forms.Button Glove;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button BF2;
+        private System.Windows.Forms.Button Vest2;
+        private System.Windows.Forms.Button Belt2;
+        private System.Windows.Forms.Button Rod2;
+        private System.Windows.Forms.Button Cape2;
+        private System.Windows.Forms.Button Bow2;
+        private System.Windows.Forms.Button Tear2;
+        private System.Windows.Forms.Button Spatula2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox ResultItemImage;
         private System.Windows.Forms.Label Title;
@@ -1544,11 +1654,17 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Drawing.Html.HtmlToolTip htmlToolTip1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button Glove2;
+        private System.Windows.Forms.Button Spatula;
         private MetroFramework.Controls.MetroTabPage OriginsTab;
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private MetroFramework.Controls.MetroTabPage ClassTab;
+        private MetroFramework.Controls.MetroPanel metroPanel6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private MetroFramework.Controls.MetroTabPage PDamageTab;
+        private MetroFramework.Controls.MetroPanel metroPanel7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
     }
 }
 
