@@ -18,6 +18,11 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Show what Data is always updated and what is offline
      - Profile Tab Layout Fix
 	 - Last Whisper Auto Update
+	
+- **2.7.2**
+     - Updated Drop Rates to the latest Values
+	 - I'm sorry i missunderstood the meaning of the Pool in first place, now the values are restored to the actual patch
+	   numbers, and the text has been changed from Champs => Pool, Sorry for the inconvenience it has now been fixed.
 	 
 - **2.7.1**
      - Updated Last Whisper Art
