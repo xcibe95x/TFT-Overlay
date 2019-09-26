@@ -112,7 +112,7 @@ namespace TFT_Overlay
 
         {
 
-            var localVersion = new Version("2.7.1");
+            var localVersion = new Version("2.7.2");
 
             // WINDOW STARTING POSITION
             StartPosition = FormStartPosition.Manual;
@@ -175,7 +175,7 @@ namespace TFT_Overlay
 
             if (netVersion > localVersion)
             {
-                if (MessageBox.Show("Version: " + netVersion + " is now available on GitHub, Want to get it now?", "GitHub.com", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                if (MessageBox.Show("Version: " + netVersion + " is now available on GitHub, it's reccomended to updated, proceed?", "GitHub.com", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start("https://github.com/xcibe95x/TFT-Overlay/releases");
                 }
@@ -1454,8 +1454,8 @@ namespace TFT_Overlay
                     break;
                 case 3:
                     Lvl.Text = "Level 3";
-                    T1P.Text = "65%";
-                    T2P.Text = "30%";
+                    T1P.Text = "70%";
+                    T2P.Text = "25%";
                     T3P.Text = "5%";
                     T4P.Text = "-";
                     T5P.Text = "-";
@@ -1470,7 +1470,7 @@ namespace TFT_Overlay
                     break;
                 case 5:
                     Lvl.Text = "Level 5";
-                    T1P.Text = "37%";
+                    T1P.Text = "35%";
                     T2P.Text = "35%";
                     T3P.Text = "25%";
                     T4P.Text = "3%";
@@ -1478,11 +1478,11 @@ namespace TFT_Overlay
                     break;
                 case 6:
                     Lvl.Text = "Level 6";
-                    T1P.Text = "24.5%";
+                    T1P.Text = "25%";
                     T2P.Text = "35%";
                     T3P.Text = "30%";
                     T4P.Text = "10%";
-                    T5P.Text = "0.5%";
+                    T5P.Text = "-";
                     break;
                 case 7:
                     Lvl.Text = "Level 7";
@@ -1504,9 +1504,9 @@ namespace TFT_Overlay
                     Lvl.Text = "Level 9";
                     T1P.Text = "10%";
                     T2P.Text = "15%";
-                    T3P.Text = "35%";
+                    T3P.Text = "33%";
                     T4P.Text = "30%";
-                    T5P.Text = "10%";
+                    T5P.Text = "12%";
                     break;
             }
         }
