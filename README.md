@@ -36,7 +36,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
      - New Origins List 
 	 - Fix reccomended items icons for new items
      - Profile Tab Layout Adjustments
-	
+	 - Buttons now don't stay gray and instantly lose focus
 - **2.7.2**
      - Updated Drop Rates to the latest Values
 	 - I'm sorry i missunderstood the meaning of the Pool in first place, now the values are restored to the actual patch

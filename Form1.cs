@@ -1415,7 +1415,7 @@ namespace TFT_Overlay
         // PROBABILITIES
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
-
+            Title.Focus();
 
 
             if (Levels < 9)
@@ -1554,6 +1554,7 @@ namespace TFT_Overlay
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Title.Focus();
             flowLayoutPanel1.Controls.Clear();
             TierIndex = TierListBox.SelectedIndex + 1;
             GetTierList(TierIndex, TierType);
@@ -1562,6 +1563,7 @@ namespace TFT_Overlay
 
         private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            Title.Focus();
             flowLayoutPanel1.Controls.Clear();
             TierType = metroComboBox1.SelectedItem.ToString().ToLower();
             GetTierList(TierIndex, TierType);
@@ -1569,6 +1571,7 @@ namespace TFT_Overlay
 
         private void metroButton4_Click(object sender, EventArgs e)
         {
+            Title.Focus();
             Application.Exit();
         }
 
@@ -2274,7 +2277,6 @@ namespace TFT_Overlay
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -2295,6 +2297,7 @@ namespace TFT_Overlay
         // HIDE TOOL
         private void metroButton5_Click(object sender, EventArgs e)
         {
+            Title.Focus();
             if (Height == 289) { Height = 28; metroButton5.Text = "v"; toggleHide = true; } else { Height = 289; metroButton5.Text = ">"; toggleHide = false; }        
         }
 
@@ -2339,6 +2342,7 @@ namespace TFT_Overlay
 
         private void metroButton2_Click_1(object sender, EventArgs e)
         {
+            Title.Focus();
             ChampsList.Controls.Clear();
             ChampsSearchBox.Clear();
             championsListLoop();
@@ -2347,6 +2351,8 @@ namespace TFT_Overlay
 
         private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Title.Focus();
+
             if (metroComboBox2.SelectedIndex == 0) {
 
                 ChampsList.Controls.Clear();
