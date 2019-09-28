@@ -13,8 +13,10 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 ## Version Changelogs
 
 - **2.8 PLACE HOLDER**
+	 - Deathblade has been fixed and now show informations properly
+	 - Reverted change from the last hotfix, Last Whisper ( Giant Slayer) is now always up to date
      TO DO
-	 - New Origins / Class List
+	 - New Origins List
 	 - Show what Data is always updated and what is offline
      - Profile Tab Layout Fix
 	 - Last Whisper Auto Update

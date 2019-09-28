@@ -112,7 +112,7 @@ namespace TFT_Overlay
 
         {
 
-            var localVersion = new Version("2.7.2");
+            var localVersion = new Version("2.8");
 
             // WINDOW STARTING POSITION
             StartPosition = FormStartPosition.Manual;
@@ -358,8 +358,8 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "BF" || Item2 == "BF" && Item1 == "BF")
             {
                 //Lord's Edge
-                rItem = (string)jObject.SelectToken("lordsedge.name");
-                rDesc = (string)jObject.SelectToken("lordsedge.bonus");
+                rItem = (string)jObject.SelectToken("deathblade.name");
+                rDesc = (string)jObject.SelectToken("deathblade.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.LordsEdge;
 
@@ -380,8 +380,8 @@ namespace TFT_Overlay
             if (Item1 == "BF" && Item2 == "Bow" || Item2 == "BF" && Item1 == "Bow")
             {
                 //SWORD OF DIVINE
-                rItem = "Last Whisper"; //(string)jObject.SelectToken("lastwhisper.name");
-                rDesc = "Basic attacks deal 5% of target's maximum health bonus true damage."; //(string)jObject.SelectToken("lastwhisper.bonus");
+                rItem = (string)jObject.SelectToken("giantslayer.name");
+                rDesc = (string)jObject.SelectToken("giantslayer.bonus");
                 rTier = "";
                 ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.LastWhisper;
 
