@@ -12,6 +12,12 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 
 ## Version Changelogs
 
+- **3.0 PLACE HOLDER**
+	 - 
+	 
+- **2.9 PLACE HOLDER**
+	 - 
+	 
 - **2.8 PLACE HOLDER**
 	 - Deathblade has been fixed and now show informations properly
 	 - Reverted change from the last hotfix, Last Whisper ( Giant Slayer) is now always up to date
