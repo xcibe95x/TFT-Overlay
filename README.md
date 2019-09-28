@@ -19,7 +19,6 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - New Origins List
 	 - Show what Data is always updated and what is offline
      - Profile Tab Layout Fix
-	 - Last Whisper Auto Update
 	
 - **2.7.2**
      - Updated Drop Rates to the latest Values
