@@ -611,6 +611,8 @@
     <Content Include="Teamfight_Tactics_2019_hover_icon.ico" />
     <None Include="Resources\Click.cur" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

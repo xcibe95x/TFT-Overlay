@@ -13,17 +13,20 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 ## Version Changelogs
 
 - **3.0 PLACE HOLDER**
-	 - 
+	 - Champs Tab with more feature
+	 - Add Support to implement the json data on github
+	 - Code Optimization
+	 - Changeable Opacity
 	 
 - **2.9 PLACE HOLDER**
-	 - 
+	 - New Class Tab
+	 - Show what Data is always updated and what is offline
 	 
 - **2.8 PLACE HOLDER**
 	 - Deathblade has been fixed and now show informations properly
 	 - Reverted change from the last hotfix, Last Whisper ( Giant Slayer) is now always up to date
      TO DO
-	 - New Origins List
-	 - Show what Data is always updated and what is offline
+	 - New Origins List 
      - Profile Tab Layout Fix
 	
 - **2.7.2**

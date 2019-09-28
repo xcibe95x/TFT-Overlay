@@ -63,6 +63,9 @@ namespace TFT_Overlay
         public string tiersJSON;
         public string champsJSON;
         public string versionJSON;
+        public string originsJSON;
+        public string classesJSON;
+        public string compsJSON;
         public bool toggleHide;
         public int Wins;
         public int Loss;
@@ -129,6 +132,7 @@ namespace TFT_Overlay
             TabControl.TabPages.Insert(3, TierListTab);
             TabControl.TabPages.Insert(4, ProbTab);
             TabControl.TabPages.Insert(5, PDamageTab);
+            TabControl.TabPages.Insert(6, OriginsTab);
 
             TabControl.SelectedIndex = 0;
             // Delete and Generate Custom Mouse Pointer to Temp Path
@@ -155,7 +159,9 @@ namespace TFT_Overlay
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
             champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
-
+            originsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/origins.json");
+            classesJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/classes.json");
+            compsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/comps.json");
 
             ResourceSet resSet = Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
             ResourceSet set = rm.GetResourceSet(CultureInfo.CurrentCulture, true, true);
@@ -281,6 +287,7 @@ namespace TFT_Overlay
 
             // LOAD CHAMPIONS LIST
             championsListLoop();
+            originsListLoop();
 
 
             Item1 = "Glove";
@@ -1648,10 +1655,6 @@ namespace TFT_Overlay
 
                 ChampsSearchBox.AutoCompleteCustomSource.Add(key);
 
-                ResourceManager rm = new ResourceManager(
-                "TFT_Overlay.Properties.Resources",
-                Assembly.GetExecutingAssembly());
-
 
                 // DEBUG LINE
                 //Console.WriteLine((string)jObject.SelectToken(key + ".name"));
@@ -1716,9 +1719,9 @@ namespace TFT_Overlay
                     UseCustomBackColor = true,
                     UseCustomForeColor = true,
                     ForeColor = tiercost,
-
-                    Size = new Size(12, 18),
                     FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                    Size = new Size(12, 18),
+               
                 };
                 tiup.SetToolTip(ChampCost, "Cost");
                 basepanel.Controls.Add(ChampCost);
@@ -2093,7 +2096,94 @@ namespace TFT_Overlay
             }
         }
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
+
+        // ORIGINS LIST
+
+        private void originsListLoop()
+        {
+
+            JObject jObject = JObject.Parse(originsJSON);
+
+            // ORIGINS LIST (FOREACH)
+            var OriginsList = jObject.SelectTokens("$").ToList();
+
+
+            foreach (JProperty item in OriginsList.Children())
+            {
+
+                // VARIABLES
+                var originKey = item.Name.ToString();
+                string originName = (string)jObject.SelectToken(originKey + ".name");
+                string originDesc = (string)jObject.SelectToken(originKey + ".description");
+
+
+                // CODE
+                var DrawPanel = new FlowLayoutPanel
+                {
+                    Size = new Size(312, 48),
+                    BackColor = Color.SlateBlue,
+                    Location = new Point(0, 0),
+                    Cursor = Cursors.Hand,
+            };
+
+                OriginsFlowPanel.Controls.Add(DrawPanel);
+
+                //SPACER
+                var DrawSpacer = new Panel
+                {
+                    Name = "ChampBox",
+                    Size = new Size(0, 45),
+                    Padding = new Padding(2, 2, 2, 2),
+
+                };
+
+                DrawPanel.Controls.Add(DrawSpacer);
+
+
+                // ORIGIN ICON
+                var DrawOrigin = new PictureBox
+                {
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Size = new Size(22, 22),
+                    Location = new Point(0, 0),
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject(originName)),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+                };
+
+                DrawPanel.Controls.Add(DrawOrigin);
+
+                //            if (ResourcesList.Contains(originName))
+                //            {
+                //              DrawPanel.Controls.Add(DrawOrigin);
+                //           }
+                //             else
+                //             {
+                //                DrawOrigin.SizeMode = PictureBoxSizeMode.StretchImage;
+                //               DrawOrigin.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + originName + ".png");
+                //                 DrawPanel.Controls.Add(DrawOrigin);
+                //           }
+
+                var DrawLabel = new MetroLabel
+                {
+                    Text = originName,
+                    ForeColor = Color.White,
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Location = new Point(0, 0),
+                };
+                DrawPanel.Controls.Add(DrawLabel);
+
+            }
+        }
+
+
+
+            private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
             toolStripTextBox1.Clear();
         }
@@ -2188,6 +2278,7 @@ namespace TFT_Overlay
             ChampsList.Controls.Clear();
             ChampsSearchBox.Clear();
             championsListLoop();
+
         }
 
         private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
