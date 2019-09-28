@@ -2098,7 +2098,7 @@ namespace TFT_Overlay
 
 
         // ORIGINS LIST
-
+       
         private void originsListLoop()
         {
 
@@ -2113,6 +2113,7 @@ namespace TFT_Overlay
 
                 // VARIABLES
                 var originKey = item.Name.ToString();
+                string originK = (string)jObject.SelectToken(originKey + ".key");
                 string originName = (string)jObject.SelectToken(originKey + ".name");
                 string originDesc = (string)jObject.SelectToken(originKey + ".description");
 
@@ -2120,12 +2121,17 @@ namespace TFT_Overlay
                 // CODE
                 var DrawPanel = new FlowLayoutPanel
                 {
+                    Name = originK,
                     Size = new Size(312, 48),
                     BackColor = Color.SlateBlue,
                     Location = new Point(0, 0),
                     Cursor = Cursors.Hand,
+                   
+
             };
 
+                
+                DrawPanel.Click += new EventHandler(DrawPanel_Click);
                 OriginsFlowPanel.Controls.Add(DrawPanel);
 
                 //SPACER
@@ -2150,6 +2156,7 @@ namespace TFT_Overlay
                     BackColor = Color.Transparent,
                     BackgroundImage = (Image)(rm.GetObject(originName)),
                     BackgroundImageLayout = ImageLayout.Stretch,
+                    Enabled = false,
                 };
 
                 DrawPanel.Controls.Add(DrawOrigin);
@@ -2175,15 +2182,70 @@ namespace TFT_Overlay
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
                     Location = new Point(0, 0),
+                    Enabled = false,
                 };
                 DrawPanel.Controls.Add(DrawLabel);
-
             }
+            
         }
 
+        private void DrawPanel_Click(object sender, EventArgs e)
+        {
+
+            richTextBox1.Clear();
+            OriginsDescriptionFlow.Controls.Clear();
+            OriginsDescriptionFlow.Controls.Add(richTextBox1);
+
+            JObject jObject = JObject.Parse(originsJSON);
+            string Description = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".description");
+
+            JArray championsTiers = (JArray)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses");
+
+            int originsCount = 0;
+
+            foreach (JToken arrayname in championsTiers)
+            {
+
+                string ChampsNeeded = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses["+ originsCount + "].needed");
+                string ChampsEffect = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].effect");
+
+                richTextBox1.Text = Description;
 
 
-            private void toolStripTextBox1_Click(object sender, EventArgs e)
+                var DrawLabel = new MetroLabel
+                {
+                    Text = ChampsNeeded,
+                    ForeColor = Color.White,
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Location = new Point(0, 0),
+                    Enabled = false,
+                };
+                OriginsDescriptionFlow.Controls.Add(DrawLabel);
+
+                var DrawLabel2 = new MetroLabel
+                {
+                    Text = ChampsEffect,
+                    ForeColor = Color.White,
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    Anchor = AnchorStyles.Left,
+                    Dock = DockStyle.None,
+                    Location = new Point(0, 0),
+                    Enabled = false,
+                };
+
+                OriginsDescriptionFlow.Controls.Add(DrawLabel2);
+
+                originsCount++;
+            }
+           
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
             toolStripTextBox1.Clear();
         }
