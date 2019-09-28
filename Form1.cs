@@ -368,7 +368,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("deathblade.name");
                 rDesc = (string)jObject.SelectToken("deathblade.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.LordsEdge;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.deathblade;
 
             }
 
@@ -390,7 +390,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("giantslayer.name");
                 rDesc = (string)jObject.SelectToken("giantslayer.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.LastWhisper;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.giantslayer;
 
             }
 
@@ -745,7 +745,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("handofjustice.name");
                 rDesc = (string)jObject.SelectToken("handofjustice.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.HandofJustice;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.handofjustice;
 
             }
 
@@ -765,7 +765,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("jeweledgauntlet.name");
                 rDesc = (string)jObject.SelectToken("jeweledgauntlet.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ArcaneGauntlet;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.jeweledgauntlet;
 
             }
 
@@ -775,7 +775,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("quicksilver.name");
                 rDesc = (string)jObject.SelectToken("quicksilver.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.Quicksilver;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.quicksilver;
 
             }
 
@@ -785,7 +785,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("iceborngauntlet.name");
                 rDesc = (string)jObject.SelectToken("iceborngauntlet.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.IceborneGauntlet;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.iceborngauntlet;
 
             }
 
@@ -795,7 +795,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("trapclaw.name");
                 rDesc = (string)jObject.SelectToken("trapclaw.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.Backhand;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.trapclaw;
 
             }
 
@@ -805,7 +805,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("repeatingcrossbow.name");
                 rDesc = (string)jObject.SelectToken("repeatingcrossbow.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.RepeatingCrossbow;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.repeatingcrossbow;
 
             }
 
@@ -815,7 +815,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("mittens.name");
                 rDesc = (string)jObject.SelectToken("mittens.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.Mittens;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.mittens;
 
             }
 
@@ -2123,9 +2123,10 @@ namespace TFT_Overlay
                 {
                     Name = originK,
                     Size = new Size(312, 48),
-                    BackColor = Color.SlateBlue,
+                    BackColor = Color.FromArgb(33, 42, 59),                
                     Location = new Point(0, 0),
                     Cursor = Cursors.Hand,
+                    Margin = new Padding(1,1,1,1),
                    
 
             };
@@ -2212,6 +2213,7 @@ namespace TFT_Overlay
                 string ChampsEffect = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].effect");
 
                 richTextBox1.Text = Description;
+                
 
                 var DrawLabel = new MetroLabel
                 {

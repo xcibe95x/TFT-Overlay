@@ -817,37 +817,37 @@
   <data name="Yordle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\origins\yordle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ArcaneGauntlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="jeweledgauntlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\ArcaneGauntlet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Backhand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="trapclaw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\Backhand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HandofJustice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="handofjustice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\HandofJustice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IceborneGauntlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="iceborngauntlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\IceborneGauntlet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LordsEdge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="deathblade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\LordsEdge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mittens" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="mittens" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\Mittens.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Quicksilver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="quicksilver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\Quicksilver.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SparringGloves" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="sparringgloves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\SparringGloves.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ThiefsGloves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\ThiefsGloves.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RepeatingCrossbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="repeatingcrossbow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\RepeatingCrossbow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LastWhisper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="giantslayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\items\LastWhisper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

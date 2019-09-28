@@ -467,7 +467,7 @@
             // Glove
             // 
             this.Glove.BackColor = System.Drawing.Color.Black;
-            this.Glove.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
+            this.Glove.BackgroundImage = global::TFT_Overlay.Properties.Resources.sparringgloves;
             this.Glove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Glove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Glove.ForeColor = System.Drawing.Color.DarkSlateBlue;
@@ -936,7 +936,7 @@
             // Glove2
             // 
             this.Glove2.BackColor = System.Drawing.Color.Black;
-            this.Glove2.BackgroundImage = global::TFT_Overlay.Properties.Resources.SparringGloves;
+            this.Glove2.BackgroundImage = global::TFT_Overlay.Properties.Resources.sparringgloves;
             this.Glove2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Glove2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Glove2.ForeColor = System.Drawing.Color.DarkSlateBlue;
