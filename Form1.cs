@@ -2211,7 +2211,6 @@ namespace TFT_Overlay
 
                 richTextBox1.Text = Description;
 
-
                 var DrawLabel = new MetroLabel
                 {
                     Text = ChampsNeeded,
@@ -2222,7 +2221,6 @@ namespace TFT_Overlay
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
                     Location = new Point(0, 0),
-                    Enabled = false,
                 };
                 OriginsDescriptionFlow.Controls.Add(DrawLabel);
 
@@ -2235,7 +2233,6 @@ namespace TFT_Overlay
                     Anchor = AnchorStyles.Left,
                     Dock = DockStyle.None,
                     Location = new Point(0, 0),
-                    Enabled = false,
                 };
 
                 OriginsDescriptionFlow.Controls.Add(DrawLabel2);
