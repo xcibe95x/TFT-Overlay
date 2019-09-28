@@ -2194,10 +2194,12 @@ namespace TFT_Overlay
 
             richTextBox1.Clear();
             OriginsDescriptionFlow.Controls.Clear();
-            OriginsDescriptionFlow.Controls.Add(richTextBox1);
+
 
             JObject jObject = JObject.Parse(originsJSON);
             string Description = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".description");
+
+            if (Description != null) { OriginsDescriptionFlow.Controls.Add(richTextBox1); }
 
             JArray championsTiers = (JArray)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses");
 
@@ -2214,27 +2216,28 @@ namespace TFT_Overlay
                 var DrawLabel = new MetroLabel
                 {
                     Text = ChampsNeeded,
+                    AutoSize = true,
                     ForeColor = Color.White,
                     UseCustomBackColor = true,
                     UseCustomForeColor = true,
                     FontWeight = MetroFramework.MetroLabelWeight.Bold,
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Location = new Point(0, 0),
-                };
-                OriginsDescriptionFlow.Controls.Add(DrawLabel);
-
-                var DrawLabel2 = new MetroLabel
-                {
-                    Text = ChampsEffect,
-                    ForeColor = Color.White,
-                    UseCustomBackColor = true,
-                    UseCustomForeColor = true,
                     Anchor = AnchorStyles.Left,
                     Dock = DockStyle.None,
-                    Location = new Point(0, 0),
+   
+                };
+               
+
+                var DrawLabel2 = new Label
+                {
+
+                    AutoSize = true,
+                    Text = ChampsEffect,
+                    ForeColor = Color.White,
+                    Anchor = AnchorStyles.Left,
+                    Dock = DockStyle.None,
                 };
 
+                OriginsDescriptionFlow.Controls.Add(DrawLabel);
                 OriginsDescriptionFlow.Controls.Add(DrawLabel2);
 
                 originsCount++;

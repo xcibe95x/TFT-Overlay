@@ -835,9 +835,10 @@
             // OriginsDescriptionFlow
             // 
             this.OriginsDescriptionFlow.Controls.Add(this.richTextBox1);
-            this.OriginsDescriptionFlow.Location = new System.Drawing.Point(139, 28);
+            this.OriginsDescriptionFlow.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.OriginsDescriptionFlow.Location = new System.Drawing.Point(139, 3);
             this.OriginsDescriptionFlow.Name = "OriginsDescriptionFlow";
-            this.OriginsDescriptionFlow.Size = new System.Drawing.Size(274, 193);
+            this.OriginsDescriptionFlow.Size = new System.Drawing.Size(274, 223);
             this.OriginsDescriptionFlow.TabIndex = 7;
             // 
             // metroPanel8
@@ -2157,7 +2158,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(270, 66);
+            this.richTextBox1.Size = new System.Drawing.Size(270, 54);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
