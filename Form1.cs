@@ -122,7 +122,7 @@ namespace TFT_Overlay
             Location = new Point(20, 60);
             TopMost = Properties.Settings.Default.TopMost;
             alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.TopMost;
-
+            Summoner.Text = "";
 
             // TABS ORDER PERMANENT FIX
             TabControl.TabPages.Clear();
@@ -295,7 +295,7 @@ namespace TFT_Overlay
             Glove.ForeColor = Color.FromArgb(205, 61, 18);
             Glove2.ForeColor = Color.FromArgb(205, 61, 18);
             DoCheck();
-
+          
         }  
         
         
@@ -734,7 +734,7 @@ namespace TFT_Overlay
                 rItem = (string)jObject.SelectToken("thiefsgloves.name");
                 rDesc = (string)jObject.SelectToken("thiefsgloves.bonus");
                 rTier = "";
-                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.ThiefsGloves;
+                ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.thiefsgloves;
 
             }
 

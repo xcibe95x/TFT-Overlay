@@ -2039,9 +2039,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ThiefsGloves {
+        internal static System.Drawing.Bitmap thiefsgloves {
             get {
-                object obj = ResourceManager.GetObject("ThiefsGloves", resourceCulture);
+                object obj = ResourceManager.GetObject("thiefsgloves", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

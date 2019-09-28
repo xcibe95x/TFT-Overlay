@@ -35,8 +35,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Reverted change from the last hotfix, Last Whisper ( Giant Slayer) is now always up to date
      - New Origins List 
 	 - Fix reccomended items icons for new items
-	 TO DO
-     - Profile Tab Layout Fix
+     - Profile Tab Layout Adjustments
 	
 - **2.7.2**
      - Updated Drop Rates to the latest Values
