@@ -24,19 +24,20 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - New system to add summoner profile
 	 - tooltip on reccomended items
 	 
-- **2.9 PLACE HOLDER**
+- **2.9 IN PROGRESS**
      TO DO
 	 - New Class Tab
 	 - Show what Data is always updated and what is offline
 	 - Drop Rates Layout Adjustments
 	 
-- **2.8 IN PROGRESS**
+- **2.8**
 	 - Deathblade has been fixed and now show informations properly
 	 - Reverted change from the last hotfix, Last Whisper ( Giant Slayer) is now always up to date
      - New Origins List 
 	 - Fix reccomended items icons for new items
      - Profile Tab Layout Adjustments
 	 - Buttons now don't stay gray and instantly lose focus
+	 
 - **2.7.2**
      - Updated Drop Rates to the latest Values
 	 - I'm sorry i missunderstood the meaning of the Pool in first place, now the values are restored to the actual patch
