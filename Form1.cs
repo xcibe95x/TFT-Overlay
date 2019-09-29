@@ -47,18 +47,9 @@ namespace TFT_Overlay
         public string lolVer;
         public Point OMLoc;
         public int Levels = 1;
-        public string summonerJSON;
-        public string rankedJSON;
-        public string itemsJSON;
-        public string tiersJSON;
-        public string champsJSON;
-        public string versionJSON;
-        public string originsJSON;
-        public string classesJSON;
-        public string compsJSON;
+        public string summonerJSON, rankedJSON, itemsJSON, tiersJSON, champsJSON, versionJSON, originsJSON, classesJSON, compsJSON;
         public bool toggleHide;
-        public int Wins;
-        public int Loss;
+        public int Wins, Loss;
 
         WebClient client = new WebClient();
 
