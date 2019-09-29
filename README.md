@@ -51,7 +51,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Adjusted Downloaded Origins/Classes Icons Sizes
 	 - Font Size decreased for Origins and Classes
 	 
-- **2.8**
+- **2.8.0**
 	 - Deathblade has been fixed and now show informations properly
 	 - Reverted change from the last hotfix, Last Whisper ( Giant Slayer) is now always up to date
      - New Origins List 
@@ -68,7 +68,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
      - Updated Last Whisper Art
 	 - Provvisory added manual Item name and description for Last Whisper until the JSON get fixed
 	 
-- **2.7**
+- **2.7.0**
 	 - New items added to Crafting
 	 - Crafting layout adjustments
 	 - Tooltips Updated to fit the whole text, even if they are not too good visually
@@ -78,7 +78,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Offline Player Damage Formula
 	 - Crafting Layout Adjustments
 	 
-- **2.6**
+- **2.6.0**
    - Changelog
      ( No new features in this update, will be done in 2.7 )
      - Eventual new items for crafting will be manually mantained ( Those are not always up to date )
@@ -111,21 +111,21 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
    - Changelog
      - Replace API Key with a Production One
 
-- **2.5** 
+- **2.5.0** 
    - Changelog
      - Removed some stuff from About Infos
      - Winrate Tab completely Removed
      - Using Riot API's and Ddragon Data! (You will need your own API Key if you buildthe source.)
      - Profile Tab! (Right Click on the Orange title bar to Set your Summoner Name and hit Enter) (Only Support EUW At the Moment)
      - You can now hide/show part of the tool, hovering the bar will show it and leaving will hide it
-     + Tier List assets are now always up-to-date
-     + Default Class/Origins Hex (Black for Now)
-     * Fixed Win and Lose, now properly shows TFT Stats and ignores Solo Q
-     * Champions Class and Origins for new champs are now automatically updated across the tool
-     * Champions Icons are now always up to date! No more manual updates
-     * Fixed some crash
-     * Fixed an issue with Tabs, they no longer randomly change position
-     * Searchbox no longer appear when starting the tool
+     - Tier List assets are now always up-to-date
+     - Default Class/Origins Hex (Black for Now)
+     - Fixed Win and Lose, now properly shows TFT Stats and ignores Solo Q
+     - Champions Class and Origins for new champs are now automatically updated across the tool
+     - Champions Icons are now always up to date! No more manual updates
+     - Fixed some crash
+     - Fixed an issue with Tabs, they no longer randomly change position
+     - Searchbox no longer appear when starting the tool
      - New Name (TFT Overlay --> Pocket Tactics)
      - Profile is now the main Tab when starting 
      - Winrate is back!, Winrate is now incorporated to your profile and scale with your actual wins and losses from your Teamfight Tactics Games!
@@ -134,10 +134,10 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
      - There are a bunch of common bugs left will be fixed on the road for new versions
      - Still unable to teach rammus new words
 	
-- **2.4 (Unreleased)**
+- **2.4.0 (Unreleased)**
   - Changes listed in 2.5 Changelog
 
-- **2.3**
+- **2.3.0**
   - Changelog
     - Added Latest Champs Assets
     - !IMPORTANT!, Meta Tier Costs and Tier may not be up to date at the moment, i will fix this in 2.4 or 2.5 sorry for this                          
@@ -156,7 +156,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
     - Searchbox for championslist
     - You can now sorter by cost by right clicking on the champlist
 
-- **2.2**
+- **2.2.0**
   - Changelog  
     - New champions Portraits
     - Fixed some champions not showing in tier list
@@ -174,7 +174,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
   - Changelog  
     - Fixed some wrong items names & description from 2.0 (My bad!)
 
-- **2.1**
+- **2.1.0**
   - Changelog  
     - Meta Tier List
     - Small changes based on feedback
