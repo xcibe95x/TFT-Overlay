@@ -20,7 +20,6 @@ namespace TFT_Overlay
 
         /////////////////////////////////////////////////////
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")] public static extern bool ReleaseCapture();
 
         static class NativeMethods
         {
@@ -34,19 +33,17 @@ namespace TFT_Overlay
                 fi.SetValue(curs, true);
                 return curs;
             }
-            [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-            private static extern IntPtr LoadCursorFromFile(string path);
+            [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]  private static extern IntPtr LoadCursorFromFile(string path);
         }
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")] public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")] public static extern bool ReleaseCapture();
 
 
         public string SummonerName = Properties.Settings.Default.SummonerName;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-        public string Item1;
-        public string Item2;
-        public string rItem;
-        public string rTier;
-        public string rDesc;
+        public string Item1, Item2, rItem, rTier, rDesc;
         public string lolVer;
         public Point OMLoc;
         public int Levels = 1;
