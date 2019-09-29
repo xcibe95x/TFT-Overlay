@@ -1,14 +1,11 @@
-# Pocket Tactics a TFT Overlay by Cibe aka (xcibe95x)
-
-IMPORTANT: Updates may slowdown a bit, i started studying again recently, this saturday i will rush new features for v2.8
-other vesion will slow down, but at the end we will reach the 3.0 that i preset to be the final version wich will have a different versioning
-cause of small updates like new items just in case, beacuse at 3.0 the app will be almost perfect and always up to date all alone.
+# Pocket Tactics a TFT Overlay for all your Teamfight Tactics needs.
 
 ![Image](https://i.redd.it/trbz311srql31.png)
 
 ## ! HOW TO USE !
 - Set your Game to be Borderless or Windowed!
 - Right click on the title bar for the context menu
+- Enjoy
 
 ## Final does not mean it will not be updated anymore, but it will be updated from time to time when it's strictly necessary
 ## Since the application is almost fully autoupdated.
