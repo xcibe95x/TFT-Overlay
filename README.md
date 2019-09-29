@@ -23,7 +23,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Graphic Updates
 	 - New system to add summoner profile
 	 - tooltip on reccomended items just in case
-	 - Update DefaultHex Asset to fit size of the others
+	 - Add more default hexes with different colors that get choosen random
 	 
 - **2.9 IN PROGRESS**
 	 - Now send you straight to the latest version GitHub Page
@@ -33,8 +33,9 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Tables Colors Adjusted
 	 - New Class Tab
 	 - Origins and Classes List Automatically gain Icon for new classes
+	 - Player Damage Tab Renamed to save space, will be restored in 3.0
 	 - Show what Data is always updated and what is offline
-
+	 - Update DefaultHex Asset to fit size of the others, changed color
 	 
 - **2.8**
 	 - Deathblade has been fixed and now show informations properly

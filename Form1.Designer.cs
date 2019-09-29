@@ -694,7 +694,7 @@
             this.TabControl.ItemSize = new System.Drawing.Size(59, 30);
             this.TabControl.Location = new System.Drawing.Point(-2, 22);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 7;
+            this.TabControl.SelectedIndex = 2;
             this.TabControl.Size = new System.Drawing.Size(424, 267);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Orange;
             this.TabControl.TabIndex = 15;
@@ -1021,6 +1021,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
@@ -1167,7 +1168,7 @@
             this.PDamageTab.Size = new System.Drawing.Size(416, 229);
             this.PDamageTab.TabIndex = 8;
             this.PDamageTab.Tag = "";
-            this.PDamageTab.Text = "Player Damage";
+            this.PDamageTab.Text = "Damage";
             this.PDamageTab.UseCustomBackColor = true;
             this.PDamageTab.VerticalScrollbarBarColor = true;
             this.PDamageTab.VerticalScrollbarHighlightOnWheel = false;
@@ -2260,7 +2261,7 @@
             this.ClassesDescriptionFlow.Controls.Add(this.label54);
             this.ClassesDescriptionFlow.Controls.Add(this.richTextBox2);
             this.ClassesDescriptionFlow.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.ClassesDescriptionFlow.Location = new System.Drawing.Point(141, 3);
+            this.ClassesDescriptionFlow.Location = new System.Drawing.Point(139, 3);
             this.ClassesDescriptionFlow.Name = "ClassesDescriptionFlow";
             this.ClassesDescriptionFlow.Size = new System.Drawing.Size(274, 223);
             this.ClassesDescriptionFlow.TabIndex = 9;
@@ -2271,7 +2272,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.White;
-            this.label54.Location = new System.Drawing.Point(30, 100);
+            this.label54.Location = new System.Drawing.Point(31, 100);
             this.label54.Margin = new System.Windows.Forms.Padding(3, 100, 3, 0);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(216, 20);
@@ -2280,13 +2281,14 @@
             // 
             // richTextBox2
             // 
+            this.richTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.ForeColor = System.Drawing.Color.White;
             this.richTextBox2.Location = new System.Drawing.Point(3, 123);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(270, 54);
+            this.richTextBox2.Size = new System.Drawing.Size(272, 54);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
@@ -2298,7 +2300,7 @@
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(2, 3);
+            this.metroPanel3.Location = new System.Drawing.Point(1, 3);
             this.metroPanel3.Name = "metroPanel3";
             this.metroPanel3.Size = new System.Drawing.Size(133, 223);
             this.metroPanel3.TabIndex = 8;

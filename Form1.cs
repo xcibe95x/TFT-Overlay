@@ -1282,8 +1282,8 @@ namespace TFT_Overlay
                     var newOrigins = new PictureBox
                     {
                         Name = "newOrigins",
-                        Size = new Size(18, 18),
-                        Padding = new Padding(3, 3, 3, 3),
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.Fill,
                         //Location = new Point(10, 50),
@@ -1353,9 +1353,8 @@ namespace TFT_Overlay
 
                     var newClass = new PictureBox
                     {
-                        Name = "newOrigins",
-                        Size = new Size(18, 18),
-                        Padding = new Padding(3, 3, 3, 3),
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.Fill,
                         //Location = new Point(10, 50),
@@ -1791,9 +1790,8 @@ namespace TFT_Overlay
 
                     var newOrigins = new PictureBox
                     {
-                        Name = "newOrigins",
-                        Size = new Size(18, 18),
-                        Padding = new Padding(3, 3, 3, 3),
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.Fill,
                         //Location = new Point(10, 50),
@@ -1860,9 +1858,8 @@ namespace TFT_Overlay
 
                     var newClasses = new PictureBox
                     {
-                        Name = "newOrigins",
-                        Size = new Size(18, 18),
-                        Padding = new Padding(3, 3, 3, 3),
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.Fill,
                         //Location = new Point(10, 50),
@@ -2162,18 +2159,37 @@ namespace TFT_Overlay
                     Enabled = false,
                 };
 
-                DrawPanel.Controls.Add(DrawOrigin);
+                var defaultHex = new PictureBox
+                {
+                    Name = "basepanel",
+                    Size = new Size(25, 25),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+                };
 
-                //            if (ResourcesList.Contains(originName))
-                //            {
-                //              DrawPanel.Controls.Add(DrawOrigin);
-                //           }
-                //             else
-                //             {
-                //                DrawOrigin.SizeMode = PictureBoxSizeMode.StretchImage;
-                //               DrawOrigin.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + originName + ".png");
-                //                 DrawPanel.Controls.Add(DrawOrigin);
-                //           }
+                var newOrigin = new PictureBox
+                {
+                    Size = new Size(13, 13),
+                    Padding = new Padding(5, 5, 5, 5),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.Fill,
+                    BackColor = Color.Transparent,
+                };
+
+                if (ResourcesList.Contains(originName))
+                {
+                    DrawPanel.Controls.Add(DrawOrigin);
+                }
+                else
+                {
+                    newOrigin.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + originName + ".png");
+                    newOrigin.SizeMode = PictureBoxSizeMode.StretchImage;
+                    DrawPanel.Controls.Add(defaultHex);
+                    defaultHex.Controls.Add(newOrigin);
+                }
 
                 var DrawLabel = new MetroLabel
                 {
@@ -2257,7 +2273,6 @@ namespace TFT_Overlay
 
                 var defaultHex = new PictureBox
                 {
-                    Name = "basepanel",
                     Size = new Size(25, 25),
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
@@ -2269,9 +2284,8 @@ namespace TFT_Overlay
 
                 var newClasses = new PictureBox
                 {
-                    Name = "newOrigins",
-                    Size = new Size(18, 18),
-                    Padding = new Padding(3, 3, 3, 3),
+                    Size = new Size(13, 13),
+                    Padding = new Padding(5, 5, 5, 5),
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.Fill,
                     //Location = new Point(10, 50),
