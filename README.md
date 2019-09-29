@@ -39,6 +39,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Show what Data is always updated and what is offline
 	 - Update DefaultHex Asset to fit size of the others, changed color
 	 - Adjusted Downloaded Origins/Classes Icons Sizes
+	 - Font Size decreased for Origins and Classes
 	 
 - **2.8**
 	 - Deathblade has been fixed and now show informations properly
