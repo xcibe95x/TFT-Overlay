@@ -152,7 +152,9 @@ namespace TFT_Overlay
 
             toolStripTextBox1.Text = Properties.Settings.Default.SummonerName;
             toolStripComboBox1.Text = Properties.Settings.Default.Server;
-            ItemName.Text = "";
+            rItem = "Neeko's Help";
+            rDesc = @"<div style=""color: #87ceeb; font-size: 10px; width:320px""><li style=""max-width:60em; word-wrap:break-word; overflow-wrap: break-word"">Place on a champion to create a 1-star copy of that champion and add it to your bench.</li></div>";
+            ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.neekoshelp;
 
 
             versionJSON = client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
@@ -183,7 +185,7 @@ namespace TFT_Overlay
             {
                 if (MessageBox.Show("Version: " + netVersion + " is now available on GitHub, it's reccomended to updated, proceed?", "GitHub.com", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
                 {
-                    System.Diagnostics.Process.Start("https://github.com/xcibe95x/TFT-Overlay/releases");
+                    System.Diagnostics.Process.Start("https://github.com/xcibe95x/TFT-Overlay/releases/" + Ver);
                 }
             }
 
@@ -288,13 +290,6 @@ namespace TFT_Overlay
             // LOAD CHAMPIONS LIST
             championsListLoop();
             originsListLoop();
-
-
-            Item1 = "Glove";
-            Item2 = "Glove";
-            Glove.ForeColor = Color.FromArgb(205, 61, 18);
-            Glove2.ForeColor = Color.FromArgb(205, 61, 18);
-            DoCheck();
           
         }  
         

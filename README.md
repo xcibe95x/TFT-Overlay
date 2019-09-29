@@ -12,8 +12,8 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 
 ## Version Changelogs
 
-- **3.0 (FINAL) PLACE HOLDER** SOME O THE FEATURES MAY BE MOVED TO 2.9
-     TO DO
+- **3.0 (FINAL) PLACE HOLDER**
+       POSSIBLE CHANGES
 	 - Champs Tab with more feature
 	 - Add Support to implement the json data on github
 	 - Code Optimization
@@ -25,10 +25,13 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - tooltip on reccomended items
 	 
 - **2.9 IN PROGRESS**
+	 - Now send you straight to the latest version GitHub Page
+	 - No longer run with preselected gloves, instead now show neeko's help as a placeholder
      TO DO
 	 - New Class Tab
 	 - Show what Data is always updated and what is offline
 	 - Drop Rates Layout Adjustments
+
 	 
 - **2.8**
 	 - Deathblade has been fixed and now show informations properly

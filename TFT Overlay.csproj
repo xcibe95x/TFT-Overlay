@@ -417,6 +417,7 @@
     <None Include="assets\items\SparringGloves.jpg" />
     <None Include="assets\items\RepeatingCrossbow.png" />
     <None Include="assets\items\LastWhisper.png" />
+    <None Include="assets\items\neekoshelp.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />
