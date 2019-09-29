@@ -20,11 +20,7 @@ namespace TFT_Overlay
 
         /////////////////////////////////////////////////////
 
-
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
+        [System.Runtime.InteropServices.DllImport("user32.dll")] public static extern bool ReleaseCapture();
 
         static class NativeMethods
         {
