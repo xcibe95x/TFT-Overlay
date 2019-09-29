@@ -377,7 +377,7 @@
             this.BF.Size = new System.Drawing.Size(37, 38);
             this.BF.TabIndex = 8;
             this.BF.UseVisualStyleBackColor = false;
-            this.BF.Click += new System.EventHandler(this.button2_Click);
+            this.BF.Click += new System.EventHandler(this.Button2_Click);
             this.BF.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.BF.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -393,7 +393,7 @@
             this.Vest.Size = new System.Drawing.Size(37, 38);
             this.Vest.TabIndex = 9;
             this.Vest.UseVisualStyleBackColor = false;
-            this.Vest.Click += new System.EventHandler(this.button3_Click);
+            this.Vest.Click += new System.EventHandler(this.Button3_Click);
             this.Vest.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Vest.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -425,7 +425,7 @@
             this.Rod.Size = new System.Drawing.Size(37, 38);
             this.Rod.TabIndex = 12;
             this.Rod.UseVisualStyleBackColor = false;
-            this.Rod.Click += new System.EventHandler(this.button5_Click);
+            this.Rod.Click += new System.EventHandler(this.Button5_Click);
             this.Rod.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Rod.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -441,7 +441,7 @@
             this.Cape.Size = new System.Drawing.Size(37, 38);
             this.Cape.TabIndex = 13;
             this.Cape.UseVisualStyleBackColor = false;
-            this.Cape.Click += new System.EventHandler(this.button6_Click);
+            this.Cape.Click += new System.EventHandler(this.Button6_Click);
             this.Cape.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Cape.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -457,7 +457,7 @@
             this.Bow.Size = new System.Drawing.Size(37, 38);
             this.Bow.TabIndex = 14;
             this.Bow.UseVisualStyleBackColor = false;
-            this.Bow.Click += new System.EventHandler(this.button7_Click);
+            this.Bow.Click += new System.EventHandler(this.Button7_Click);
             this.Bow.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Bow.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -473,7 +473,7 @@
             this.Tear.Size = new System.Drawing.Size(37, 38);
             this.Tear.TabIndex = 15;
             this.Tear.UseVisualStyleBackColor = false;
-            this.Tear.Click += new System.EventHandler(this.button8_Click);
+            this.Tear.Click += new System.EventHandler(this.Button8_Click);
             this.Tear.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Tear.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -489,7 +489,7 @@
             this.Glove.Size = new System.Drawing.Size(37, 38);
             this.Glove.TabIndex = 11;
             this.Glove.UseVisualStyleBackColor = false;
-            this.Glove.Click += new System.EventHandler(this.button9_Click);
+            this.Glove.Click += new System.EventHandler(this.Button9_Click);
             this.Glove.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Glove.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -563,7 +563,7 @@
             this.BF2.Size = new System.Drawing.Size(37, 38);
             this.BF2.TabIndex = 8;
             this.BF2.UseVisualStyleBackColor = false;
-            this.BF2.Click += new System.EventHandler(this.button1_Click);
+            this.BF2.Click += new System.EventHandler(this.Button1_Click);
             this.BF2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.BF2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -579,7 +579,7 @@
             this.Vest2.Size = new System.Drawing.Size(37, 38);
             this.Vest2.TabIndex = 9;
             this.Vest2.UseVisualStyleBackColor = false;
-            this.Vest2.Click += new System.EventHandler(this.button10_Click);
+            this.Vest2.Click += new System.EventHandler(this.Button10_Click);
             this.Vest2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Vest2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -595,7 +595,7 @@
             this.Belt2.Size = new System.Drawing.Size(37, 38);
             this.Belt2.TabIndex = 10;
             this.Belt2.UseVisualStyleBackColor = false;
-            this.Belt2.Click += new System.EventHandler(this.button11_Click);
+            this.Belt2.Click += new System.EventHandler(this.Button11_Click);
             this.Belt2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Belt2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -611,7 +611,7 @@
             this.Rod2.Size = new System.Drawing.Size(37, 38);
             this.Rod2.TabIndex = 12;
             this.Rod2.UseVisualStyleBackColor = false;
-            this.Rod2.Click += new System.EventHandler(this.button12_Click);
+            this.Rod2.Click += new System.EventHandler(this.Button12_Click);
             this.Rod2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Rod2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -627,7 +627,7 @@
             this.Cape2.Size = new System.Drawing.Size(37, 38);
             this.Cape2.TabIndex = 13;
             this.Cape2.UseVisualStyleBackColor = false;
-            this.Cape2.Click += new System.EventHandler(this.button13_Click);
+            this.Cape2.Click += new System.EventHandler(this.Button13_Click);
             this.Cape2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Cape2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -643,7 +643,7 @@
             this.Bow2.Size = new System.Drawing.Size(37, 38);
             this.Bow2.TabIndex = 14;
             this.Bow2.UseVisualStyleBackColor = false;
-            this.Bow2.Click += new System.EventHandler(this.button14_Click);
+            this.Bow2.Click += new System.EventHandler(this.Button14_Click);
             this.Bow2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Bow2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -659,7 +659,7 @@
             this.Tear2.Size = new System.Drawing.Size(37, 38);
             this.Tear2.TabIndex = 15;
             this.Tear2.UseVisualStyleBackColor = false;
-            this.Tear2.Click += new System.EventHandler(this.button15_Click);
+            this.Tear2.Click += new System.EventHandler(this.Button15_Click);
             this.Tear2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Tear2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
@@ -675,7 +675,7 @@
             this.Spatula2.Size = new System.Drawing.Size(37, 38);
             this.Spatula2.TabIndex = 11;
             this.Spatula2.UseVisualStyleBackColor = false;
-            this.Spatula2.Click += new System.EventHandler(this.button16_Click);
+            this.Spatula2.Click += new System.EventHandler(this.Button16_Click);
             this.Spatula2.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.Spatula2.MouseHover += new System.EventHandler(this.PointerLogic);
             // 

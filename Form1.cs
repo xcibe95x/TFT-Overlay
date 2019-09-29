@@ -52,7 +52,7 @@ namespace TFT_Overlay
         public const int HT_CAPTION = 0x2;
         public bool toggleHide;
         public Point OMLoc;
-        readonly WebClient client = new WebClient();
+
         readonly List<string> ResourcesList = new List<string>();
         readonly ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
 
@@ -136,7 +136,7 @@ namespace TFT_Overlay
             rDesc = @"<div style=""color: #87ceeb; font-size: 10px; width:320px""><li style=""max-width:60em; word-wrap:break-word; overflow-wrap: break-word"">Place on a champion to create a 1-star copy of that champion and add it to your bench.</li></div>";
             ResultItemImage.BackgroundImage = TFT_Overlay.Properties.Resources.neekoshelp;
 
-
+            WebClient client = new WebClient();
             versionJSON = client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
             itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
             tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
@@ -800,7 +800,7 @@ namespace TFT_Overlay
 
 
         // ITEMS SET 1
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Item1 = "BF";
             BF.ForeColor = Color.FromArgb(205, 61, 18);
@@ -815,7 +815,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             Item1 = "Vest";
             BF.ForeColor = Color.DarkSlateBlue;
@@ -845,7 +845,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             Item1 = "Rod";
             BF.ForeColor = Color.DarkSlateBlue;
@@ -860,7 +860,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             Item1 = "Cape";
             BF.ForeColor = Color.DarkSlateBlue;
@@ -875,7 +875,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e)
         {
             Item1 = "Bow";
             BF.ForeColor = Color.DarkSlateBlue;
@@ -890,7 +890,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void Button8_Click(object sender, EventArgs e)
         {
             Item1 = "Tear";
             BF.ForeColor = Color.DarkSlateBlue;
@@ -905,7 +905,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void Button9_Click(object sender, EventArgs e)
         {
             Item1 = "Glove";
             BF.ForeColor = Color.DarkSlateBlue;
@@ -952,7 +952,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Item2 = "BF";
             Glove2.ForeColor = Color.DarkSlateBlue;
@@ -967,7 +967,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void Button10_Click(object sender, EventArgs e)
         {
             Item2 = "Vest";
             Glove2.ForeColor = Color.DarkSlateBlue;
@@ -982,7 +982,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void Button11_Click(object sender, EventArgs e)
         {
             Item2 = "Belt";
             Glove2.ForeColor = Color.DarkSlateBlue;
@@ -997,7 +997,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void Button12_Click(object sender, EventArgs e)
         {
             Item2 = "Rod";
             Glove2.ForeColor = Color.DarkSlateBlue;
@@ -1012,7 +1012,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void Button13_Click(object sender, EventArgs e)
         {
             Item2 = "Cape";
             Glove2.ForeColor = Color.DarkSlateBlue;
@@ -1027,7 +1027,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void Button14_Click(object sender, EventArgs e)
         {
             Item2 = "Bow";
             Glove2.ForeColor = Color.DarkSlateBlue;
@@ -1042,7 +1042,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void Button15_Click(object sender, EventArgs e)
         {
             Item2 = "Tear";
             Glove2.ForeColor = Color.DarkSlateBlue;
@@ -1057,7 +1057,7 @@ namespace TFT_Overlay
             DoCheck();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void Button16_Click(object sender, EventArgs e)
         {
 
             Item2 = "Spatula";
