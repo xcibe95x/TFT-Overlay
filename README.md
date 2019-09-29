@@ -15,7 +15,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 
 ## Version Changelogs
 
-- **3.0 (FINAL) PLACE HOLDER**
+- **3.0 (FINAL) PLACE HOLDER (B.F. UPDATE)**
        REAL CHANGELOG
      - Updated Design
      - FINALly! Proper ToolTips!
