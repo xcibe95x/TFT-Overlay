@@ -40,23 +40,21 @@ namespace TFT_Overlay
         [System.Runtime.InteropServices.DllImport("user32.dll")] public static extern bool ReleaseCapture();
 
 
-        public string SummonerName = Properties.Settings.Default.SummonerName;
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
+        /// VARIABLES
+
+        public string summonerJSON, rankedJSON, itemsJSON, tiersJSON, champsJSON, versionJSON, originsJSON, classesJSON, compsJSON;
         public string Item1, Item2, rItem, rTier, rDesc;
         public string lolVer;
-        public Point OMLoc;
-        public int Levels = 1;
-        public string summonerJSON, rankedJSON, itemsJSON, tiersJSON, champsJSON, versionJSON, originsJSON, classesJSON, compsJSON;
-        public bool toggleHide;
+        public string SummonerName = Properties.Settings.Default.SummonerName;
         public int Wins, Loss;
-
-        WebClient client = new WebClient();
-
-        List<string> ResourcesList = new List<string>();
-       
-
-        ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
+        public int Levels = 1;
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        public bool toggleHide;
+        public Point OMLoc;
+        readonly WebClient client = new WebClient();
+        readonly List<string> ResourcesList = new List<string>();
+        readonly ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
 
         FlowLayoutPanel SearchPanel;
 
