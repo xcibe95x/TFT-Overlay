@@ -10,6 +10,9 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 - Set your Game to be Borderless or Windowed!
 - Right click on the title bar for the context menu
 
+## Final does not mean it will not be updated anymore, but it will be updated from time to time when it's strictly necessary
+## Since the application is almost fully autoupdated.
+
 ## Version Changelogs
 
 - **3.0 (FINAL) PLACE HOLDER**
