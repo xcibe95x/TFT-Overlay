@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -195,82 +196,82 @@ namespace TFT_Overlay
 
             try
             {
-            // GET JSON DATA
-            summonerJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey);
-      
+                // GET JSON DATA
+                summonerJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerName + "?api_key=" + ApiKey);
 
-            JObject summonerObject = JObject.Parse(summonerJSON);
-            string SummonerId = (string)summonerObject.SelectToken("id");
-            Summoner.Text = SummonerName;
-            
-            pictureBox2.Load("http://ddragon.leagueoflegends.com/cdn/9.14.1/img/profileicon/" + (string)summonerObject.SelectToken("profileIconId") + ".png");
 
-            rankedJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
-                
-        
-            
-            JArray rankedArray = JArray.Parse(rankedJSON);
-            int QueueIndex = 0;
-            string TFTQueue = (string)rankedArray.SelectToken("[" + QueueIndex + "].queueType");
-            string TFTTier = (string)rankedArray.SelectToken("[" + QueueIndex + "].tier");
-            string TFTRank = (string)rankedArray.SelectToken("[" + QueueIndex + "].rank");
-            string TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
-            string TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
-            string TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
-            Wins = (int)rankedArray.SelectToken("[" + QueueIndex + "].wins");
-            Loss = (int)rankedArray.SelectToken("[" + QueueIndex + "].losses");
-            JArray rankedLoop = (JArray)rankedArray.SelectToken("$");
+                JObject summonerObject = JObject.Parse(summonerJSON);
+                string SummonerId = (string)summonerObject.SelectToken("id");
+                Summoner.Text = SummonerName;
 
-            // Force TFT Ranking
-            foreach (JToken arrayname in rankedLoop)
-            {
-                if (TFTQueue != "RANKED_TFT")
+                pictureBox2.Load("http://ddragon.leagueoflegends.com/cdn/9.14.1/img/profileicon/" + (string)summonerObject.SelectToken("profileIconId") + ".png");
+
+                rankedJSON = client.DownloadString("https://" + Properties.Settings.Default.Server + ".api.riotgames.com/lol/league/v4/entries/by-summoner/" + SummonerId + "?api_key=" + ApiKey);
+
+
+
+                JArray rankedArray = JArray.Parse(rankedJSON);
+                int QueueIndex = 0;
+                string TFTQueue = (string)rankedArray.SelectToken("[" + QueueIndex + "].queueType");
+                string TFTTier = (string)rankedArray.SelectToken("[" + QueueIndex + "].tier");
+                string TFTRank = (string)rankedArray.SelectToken("[" + QueueIndex + "].rank");
+                string TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
+                string TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+                string TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+                Wins = (int)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+                Loss = (int)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+                JArray rankedLoop = (JArray)rankedArray.SelectToken("$");
+
+                // Force TFT Ranking
+                foreach (JToken arrayname in rankedLoop)
                 {
-                    QueueIndex++;
-                    TFTQueue = (string)rankedArray.SelectToken("[" + QueueIndex + "].queueType");
-                    TFTTier = (string)rankedArray.SelectToken("[" + QueueIndex + "].tier");
-                    TFTRank = (string)rankedArray.SelectToken("[" + QueueIndex + "].rank");
-                    TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
-                    TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
-                    TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
+                    if (TFTQueue != "RANKED_TFT")
+                    {
+                        QueueIndex++;
+                        TFTQueue = (string)rankedArray.SelectToken("[" + QueueIndex + "].queueType");
+                        TFTTier = (string)rankedArray.SelectToken("[" + QueueIndex + "].tier");
+                        TFTRank = (string)rankedArray.SelectToken("[" + QueueIndex + "].rank");
+                        TFTLp = (string)rankedArray.SelectToken("[" + QueueIndex + "].leaguePoints");
+                        TFTWins = (string)rankedArray.SelectToken("[" + QueueIndex + "].wins");
+                        TFTLosses = (string)rankedArray.SelectToken("[" + QueueIndex + "].losses");
                         Wins = (int)rankedArray.SelectToken("[" + QueueIndex + "].wins");
                         Loss = (int)rankedArray.SelectToken("[" + QueueIndex + "].losses");
                     }
-            }
+                }
 
-            string RankNumber = "";
-            if (TFTRank == "IV")
-            {
-                RankNumber = "4";
-            }
-            if (TFTRank == "III")
-            {
-                RankNumber = "3";
-            }
-            if (TFTRank == "II")
-            {
-                RankNumber = "2";
-            }
-            if (TFTRank == "I")
-            {
-                RankNumber = "1";
-            }
-            RankedArmor.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/"+ TFTTier.ToLower() + "_" + RankNumber + ".png");
-            RankTierLabel.Text = TFTTier + " " + TFTRank;
+                string RankNumber = "";
+                if (TFTRank == "IV")
+                {
+                    RankNumber = "4";
+                }
+                if (TFTRank == "III")
+                {
+                    RankNumber = "3";
+                }
+                if (TFTRank == "II")
+                {
+                    RankNumber = "2";
+                }
+                if (TFTRank == "I")
+                {
+                    RankNumber = "1";
+                }
+                RankedArmor.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/" + TFTTier.ToLower() + "_" + RankNumber + ".png");
+                RankTierLabel.Text = TFTTier + " " + TFTRank;
 
 
-            if (TFTQueue != "RANKED_TFT")
-            {
+                if (TFTQueue != "RANKED_TFT")
+                {
 
-                QueueIndex = 0;
-                RankedArmor.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
+                    QueueIndex = 0;
+                    RankedArmor.Load("https://s3-us-west-2.amazonaws.com/blitz-client-static-all/ranks/default.png");
 
-            }
+                }
 
             }
             catch { }
 
-           
+
 
             JArray jArray22 = JArray.Parse(versionJSON);
             lolVer = (string)jArray22.SelectToken("[0]");
@@ -290,11 +291,11 @@ namespace TFT_Overlay
             // LOAD CHAMPIONS LIST
             championsListLoop();
             originsListLoop();
-          
-        }  
-        
-        
-        
+
+        }
+
+
+
         // FORM 1 END
 
         private void Panel1_MouseDown(object sender, MouseEventArgs e)
@@ -722,7 +723,7 @@ namespace TFT_Overlay
 
             }
 
-            
+
             if (Item1 == "Glove" && Item2 == "Glove" || Item2 == "Glove" && Item1 == "Glove")
             {
                 //Thiefs Gloves
@@ -1146,50 +1147,50 @@ namespace TFT_Overlay
 
 
 
-            
 
-                foreach (JToken arrayname in championsTiers)
+
+            foreach (JToken arrayname in championsTiers)
+            {
+
+                int originsIndex = 0;
+                int classesIndex = 0;
+
+
+
+
+
+                string champName = (string)jObject.SelectToken(TierType + "." + TierIndex + "[" + champIndex.ToString() + "]");
+                int cost = (int)jObjectw.SelectToken(champName + ".cost");
+
+
+
+
+
+                var picture = new PictureBox
                 {
+                    Name = "pictureBox",
+                    Size = new Size(84, 84),
+                    //Padding = new Padding(5, 5, 5, 5),
+                    Dock = DockStyle.None,
+                    Anchor = AnchorStyles.None,
+                    Location = new Point(0, 0),
+                    BackgroundImage = (Image)(rm.GetObject(champName)),
+                    BackgroundImageLayout = ImageLayout.Stretch,
 
-                    int originsIndex = 0;
-                    int classesIndex = 0;
+                };
 
+                var basepanel = new FlowLayoutPanel
+                {
+                    Dock = DockStyle.None,
+                    Anchor = AnchorStyles.None,
+                    BackColor = Color.Transparent,
+                    Location = new Point(3, 52),
+                    FlowDirection = FlowDirection.RightToLeft,
+                    //AutoSize = true,
+                    //AutoSizeMode = AutoSizeMode.GrowOnly,
+                    Size = new Size(picture.Width - 6, picture.Height - 55),
 
-
-                
-
-                    string champName = (string)jObject.SelectToken(TierType + "." + TierIndex + "[" + champIndex.ToString() + "]");
-                    int cost = (int)jObjectw.SelectToken(champName + ".cost");
-
-
-
-
-
-                    var picture = new PictureBox
-                    {
-                        Name = "pictureBox",
-                        Size = new Size(84, 84),
-                        //Padding = new Padding(5, 5, 5, 5),
-                        Dock = DockStyle.None,
-                        Anchor = AnchorStyles.None,
-                        Location = new Point(0, 0),
-                        BackgroundImage = (Image)(rm.GetObject(champName)),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-
-                    };
-
-                    var basepanel = new FlowLayoutPanel
-                    {
-                        Dock = DockStyle.None,
-                        Anchor = AnchorStyles.None,
-                        BackColor = Color.Transparent,
-                        Location = new Point(3, 52),
-                        FlowDirection = FlowDirection.RightToLeft,
-                        //AutoSize = true,
-                        //AutoSizeMode = AutoSizeMode.GrowOnly,
-                        Size = new Size(picture.Width - 6, picture.Height - 55),
-
-                    };
+                };
 
 
                 if (ResourcesList.Contains(champName))
@@ -1202,85 +1203,85 @@ namespace TFT_Overlay
                     picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
                     picture.Controls.Add(basepanel);
                 }
-                
-                    
 
-                    
-                    flowLayoutPanel1.Controls.Add(picture);
 
-                    var tierbox = new PictureBox
+
+
+                flowLayoutPanel1.Controls.Add(picture);
+
+                var tierbox = new PictureBox
+                {
+                    Name = "pictureBox",
+                    Size = new Size(84, 84),
+                    Location = new Point(0, 0),
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject("Tier" + cost.ToString())),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+
+                };
+
+                picture.Controls.Add(tierbox);
+
+                var label = new Label
+                {
+                    Text = cost.ToString(),
+                    ForeColor = Color.White,
+                    //Size = new Size(84, 84),
+                    Location = new Point(0, 0),
+                    BackColor = Color.Transparent,
+                    Font = new Font(Font, FontStyle.Bold),
+
+                };
+
+                var coin = new PictureBox
+                {
+                    Name = "pictureBox",
+                    Size = new Size(8, 8),
+                    Location = new Point(12, 3),
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject("Coin")),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+
+                };
+
+
+                tierbox.Controls.Add(label);
+                label.Controls.Add(coin);
+
+
+
+
+
+
+                // ORIGIN
+
+                JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
+
+                foreach (JToken arrayname2 in originsLoop)
+                {
+
+                    string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
+
+                    var defaultHex = new PictureBox
                     {
-                        Name = "pictureBox",
-                        Size = new Size(84, 84),
-                        Location = new Point(0, 0),
+                        Name = "basepanel",
+                        Size = new Size(22, 22),
+                        Margin = new Padding(2, 5, 2, 0),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
                         BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("Tier" + cost.ToString())),
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
                         BackgroundImageLayout = ImageLayout.Stretch,
 
-                    };
-
-                    picture.Controls.Add(tierbox);
-
-                    var label = new Label
-                    {
-                        Text = cost.ToString(),
-                        ForeColor = Color.White,
-                        //Size = new Size(84, 84),
-                        Location = new Point(0, 0),
-                        BackColor = Color.Transparent,
-                        Font = new Font(Font, FontStyle.Bold),
 
                     };
-
-                    var coin = new PictureBox
-                    {
-                        Name = "pictureBox",
-                        Size = new Size(8, 8),
-                        Location = new Point(12, 3),
-                        BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("Coin")),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-
-                    };
-
-
-                    tierbox.Controls.Add(label);
-                    label.Controls.Add(coin);
-
-                
-
-
-
-
-                    // ORIGIN
-
-                    JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
-
-                    foreach (JToken arrayname2 in originsLoop)
-                    {
-
-                        string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
-
-                        var defaultHex = new PictureBox
-                        {
-                            Name = "basepanel",
-                            Size = new Size(22, 22),
-                            Margin = new Padding(2, 5, 2, 0),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.None,
-                            //Location = new Point(10, 50),
-                            BackColor = Color.Transparent,
-                            BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                            BackgroundImageLayout = ImageLayout.Stretch,
-
-
-                        };
 
                     var newOrigins = new PictureBox
                     {
                         Name = "newOrigins",
                         Size = new Size(18, 18),
-                        Padding = new Padding(3, 3 ,3,3),
+                        Padding = new Padding(3, 3, 3, 3),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.Fill,
                         //Location = new Point(10, 50),
@@ -1290,15 +1291,15 @@ namespace TFT_Overlay
 
                     var originsBox = new PictureBox
                     {
-                            Name = "basepanel",
-                            Margin = new Padding(2, 5, 2, 0),
-                            Size = new Size(22, 22),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.None,
-                            BackColor = Color.Transparent,
-                            BackgroundImage = (Image)(rm.GetObject(origins)),
-                            BackgroundImageLayout = ImageLayout.Stretch,
-                        };
+                        Name = "basepanel",
+                        Margin = new Padding(2, 5, 2, 0),
+                        Size = new Size(22, 22),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject(origins)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
 
 
                     if (ResourcesList.Contains(origins))
@@ -1320,9 +1321,9 @@ namespace TFT_Overlay
 
 
                     originsIndex++;
-                    }
+                }
 
-                    // CLASSES
+                // CLASSES
 
                 JArray classesLoop = (JArray)jObjectw.SelectToken(champName + ".class");
 
@@ -1398,7 +1399,7 @@ namespace TFT_Overlay
                 label.BringToFront();
 
                 champIndex++;
-                }
+            }
 
 
 
@@ -1417,7 +1418,8 @@ namespace TFT_Overlay
             {
                 Levels++;
             }
-            else {
+            else
+            {
                 Levels = 1;
                 Lvl.Text = "Level " + 1;
                 T1P.Text = "100%";
@@ -1425,7 +1427,7 @@ namespace TFT_Overlay
                 T3P.Text = "0%";
                 T4P.Text = "0%";
                 T5P.Text = "0%";
-            
+
             }
 
             switch (Levels)
@@ -1475,7 +1477,7 @@ namespace TFT_Overlay
                     T1P.Text = "35%";
                     T2P.Text = "35%";
                     T3P.Text = "25%";
-                    T4P.Text = "3%";
+                    T4P.Text = "5%";
                     T5P.Text = "-";
                     break;
                 case 6:
@@ -1514,7 +1516,7 @@ namespace TFT_Overlay
         }
 
 
-        
+
         private void metroButton2_Click(object sender, EventArgs e)
         {
 
@@ -1663,7 +1665,7 @@ namespace TFT_Overlay
                     Name = key,
                     Text = cost.ToString(),
                     Size = new Size(312, 48),
-                    
+
                 };
                 ChampsList.Controls.Add(basepanel);
                 SearchPanel = basepanel;
@@ -1704,8 +1706,8 @@ namespace TFT_Overlay
                     ChampBox.Controls.Add(ChampPicture);
                 }
 
-                               
-              
+
+
                 // CHAMP COST
                 var ChampCost = new MetroLabel
                 {
@@ -1719,7 +1721,7 @@ namespace TFT_Overlay
                     ForeColor = tiercost,
                     FontWeight = MetroFramework.MetroLabelWeight.Bold,
                     Size = new Size(12, 18),
-               
+
                 };
                 tiup.SetToolTip(ChampCost, "Cost");
                 basepanel.Controls.Add(ChampCost);
@@ -1815,8 +1817,8 @@ namespace TFT_Overlay
 
                     }
 
-                    
-                    
+
+
                     originsIndex++;
                 }
 
@@ -1879,7 +1881,7 @@ namespace TFT_Overlay
                         tiup.SetToolTip(defaultHex, classes);
                         tiup.SetToolTip(newClasses, classes);
                     }
-                    
+
                     classesIndex++;
                 }
 
@@ -1979,7 +1981,7 @@ namespace TFT_Overlay
 
         private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-        // Deprecated
+            // Deprecated
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -2096,7 +2098,7 @@ namespace TFT_Overlay
 
 
         // ORIGINS LIST
-       
+
         private void originsListLoop()
         {
 
@@ -2121,15 +2123,15 @@ namespace TFT_Overlay
                 {
                     Name = originK,
                     Size = new Size(312, 48),
-                    BackColor = Color.FromArgb(33, 42, 59),                
+                    BackColor = Color.FromArgb(33, 42, 59),
                     Location = new Point(0, 0),
                     Cursor = Cursors.Hand,
-                    Margin = new Padding(1,1,1,1),
-                   
+                    Margin = new Padding(1, 1, 1, 1),
 
-            };
 
-                
+                };
+
+
                 DrawPanel.Click += new EventHandler(DrawPanel_Click);
                 OriginsFlowPanel.Controls.Add(DrawPanel);
 
@@ -2185,7 +2187,7 @@ namespace TFT_Overlay
                 };
                 DrawPanel.Controls.Add(DrawLabel);
             }
-            
+
         }
 
         private void DrawPanel_Click(object sender, EventArgs e)
@@ -2207,11 +2209,11 @@ namespace TFT_Overlay
             foreach (JToken arrayname in championsTiers)
             {
 
-                string ChampsNeeded = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses["+ originsCount + "].needed");
+                string ChampsNeeded = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].needed");
                 string ChampsEffect = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].effect");
 
                 richTextBox1.Text = Description;
-                
+
 
                 var DrawLabel = new MetroLabel
                 {
@@ -2223,9 +2225,9 @@ namespace TFT_Overlay
                     FontWeight = MetroFramework.MetroLabelWeight.Bold,
                     Anchor = AnchorStyles.Left,
                     Dock = DockStyle.None,
-   
+
                 };
-               
+
 
                 var DrawLabel2 = new Label
                 {
@@ -2242,7 +2244,7 @@ namespace TFT_Overlay
 
                 originsCount++;
             }
-           
+
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
@@ -2259,7 +2261,7 @@ namespace TFT_Overlay
         private void toolStripTextBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            
+
         }
 
         private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -2293,7 +2295,7 @@ namespace TFT_Overlay
         private void metroButton5_Click(object sender, EventArgs e)
         {
             Title.Focus();
-            if (Height == 289) { Height = 28; metroButton5.Text = "v"; toggleHide = true; } else { Height = 289; metroButton5.Text = ">"; toggleHide = false; }        
+            if (Height == 289) { Height = 28; metroButton5.Text = "v"; toggleHide = true; } else { Height = 289; metroButton5.Text = ">"; toggleHide = false; }
         }
 
         private void panel1_MouseHover(object sender, EventArgs e)
@@ -2313,7 +2315,7 @@ namespace TFT_Overlay
 
         private void metroContextMenu1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
- 
+
         }
 
         private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -2332,7 +2334,7 @@ namespace TFT_Overlay
             if (toolStripComboBox1.SelectedItem.Equals("PBE")) { Properties.Settings.Default.Server = "pbe1"; }
             if (toolStripComboBox1.SelectedItem.Equals("BR")) { Properties.Settings.Default.Server = "br1"; }
             Properties.Settings.Default.Save();
-            
+
         }
 
         private void metroButton2_Click_1(object sender, EventArgs e)
@@ -2348,7 +2350,8 @@ namespace TFT_Overlay
         {
             Title.Focus();
 
-            if (metroComboBox2.SelectedIndex == 0) {
+            if (metroComboBox2.SelectedIndex == 0)
+            {
 
                 ChampsList.Controls.Clear();
                 ChampsSearchBox.Clear();
@@ -2481,6 +2484,30 @@ namespace TFT_Overlay
         private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void TableLayoutPanel2_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            var panel = sender as TableLayoutPanel;
+            e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+            var rectangle = e.CellBounds;
+            using (var pen = new Pen(Color.FromArgb(33, 48, 60), 1))
+            {
+                pen.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+                pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+
+                if (e.Row == (panel.RowCount - 1))
+                {
+                    rectangle.Height -= 1;
+                }
+
+                if (e.Column == (panel.ColumnCount - 1))
+                {
+                    rectangle.Width -= 1;
+                }
+
+                e.Graphics.DrawRectangle(pen, rectangle);
+            }
         }
     }
 }
