@@ -134,6 +134,7 @@ namespace TFT_Overlay
             TabControl.TabPages.Insert(4, ProbTab);
             TabControl.TabPages.Insert(5, PDamageTab);
             TabControl.TabPages.Insert(6, OriginsTab);
+            TabControl.TabPages.Insert(7, ClassTab);
 
             TabControl.SelectedIndex = 0;
             // Delete and Generate Custom Mouse Pointer to Temp Path
@@ -291,6 +292,7 @@ namespace TFT_Overlay
             // LOAD CHAMPIONS LIST
             championsListLoop();
             originsListLoop();
+            ClassesListLoop();
 
         }
 
@@ -2190,6 +2192,121 @@ namespace TFT_Overlay
 
         }
 
+        // CLASSES LIST
+
+        private void ClassesListLoop()
+        {
+
+            JObject jObject = JObject.Parse(classesJSON);
+
+            // ORIGINS LIST (FOREACH)
+            var ClassesList = jObject.SelectTokens("$").ToList();
+
+
+            foreach (JProperty item in ClassesList.Children())
+            {
+
+                // VARIABLES
+                var classKey = item.Name.ToString();
+                string classK = (string)jObject.SelectToken(classKey + ".key");
+                string className = (string)jObject.SelectToken(classKey + ".name");
+                string classDesc = (string)jObject.SelectToken(classKey + ".description");
+
+
+                // CODE
+                var DrawPanel = new FlowLayoutPanel
+                {
+                    Name = classK,
+                    Size = new Size(312, 48),
+                    BackColor = Color.FromArgb(33, 42, 59),
+                    Location = new Point(0, 0),
+                    Cursor = Cursors.Hand,
+                    Margin = new Padding(1, 1, 1, 1),
+
+
+                };
+
+
+                DrawPanel.Click += new EventHandler(DrawPanel2_Click);
+                ClassesFlowPanel.Controls.Add(DrawPanel);
+
+                //SPACER
+                var DrawSpacer = new Panel
+                {
+                    Name = "ChampBox",
+                    Size = new Size(0, 45),
+                    Padding = new Padding(2, 2, 2, 2),
+
+                };
+
+                DrawPanel.Controls.Add(DrawSpacer);
+
+
+                // ORIGIN ICON
+                var DrawClass = new PictureBox
+                {
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Size = new Size(22, 22),
+                    Location = new Point(0, 0),
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject(className)),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+                    Enabled = false,
+                };
+
+                var defaultHex = new PictureBox
+                {
+                    Name = "basepanel",
+                    Size = new Size(25, 25),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    //Location = new Point(10, 50),
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+                };
+
+                var newClasses = new PictureBox
+                {
+                    Name = "newOrigins",
+                    Size = new Size(18, 18),
+                    Padding = new Padding(3, 3, 3, 3),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.Fill,
+                    //Location = new Point(10, 50),
+                    BackColor = Color.Transparent,
+                };
+
+                if (ResourcesList.Contains(className))
+                {
+                    DrawPanel.Controls.Add(DrawClass);
+                }
+                else
+                {
+                    newClasses.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + className + ".png");
+                    newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
+                    DrawPanel.Controls.Add(defaultHex);
+                    defaultHex.Controls.Add(newClasses);
+                }
+
+                var DrawLabel = new MetroLabel
+                {
+                    Text = className,
+                    ForeColor = Color.White,
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    Location = new Point(0, 0),
+                    Enabled = false,
+                };
+                DrawPanel.Controls.Add(DrawLabel);
+            }
+
+        }
+
         private void DrawPanel_Click(object sender, EventArgs e)
         {
 
@@ -2243,6 +2360,63 @@ namespace TFT_Overlay
                 OriginsDescriptionFlow.Controls.Add(DrawLabel2);
 
                 originsCount++;
+            }
+
+        }
+
+        private void DrawPanel2_Click(object sender, EventArgs e)
+        {
+
+            richTextBox2.Clear();
+            ClassesDescriptionFlow.Controls.Clear();
+
+
+            JObject jObject = JObject.Parse(classesJSON);
+            string Description = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".description");
+
+            if (Description != null) { ClassesDescriptionFlow.Controls.Add(richTextBox2); }
+
+            JArray championsTiers = (JArray)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses");
+
+            int classesCount = 0;
+
+            foreach (JToken arrayname in championsTiers)
+            {
+
+                string ChampsNeeded = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + classesCount + "].needed");
+                string ChampsEffect = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + classesCount + "].effect");
+
+                richTextBox2.Text = Description;
+
+
+                var DrawLabel = new MetroLabel
+                {
+                    Text = ChampsNeeded,
+                    AutoSize = true,
+                    ForeColor = Color.White,
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                    Anchor = AnchorStyles.Left,
+                    Dock = DockStyle.None,
+
+                };
+
+
+                var DrawLabel2 = new Label
+                {
+
+                    AutoSize = true,
+                    Text = ChampsEffect,
+                    ForeColor = Color.White,
+                    Anchor = AnchorStyles.Left,
+                    Dock = DockStyle.None,
+                };
+
+                ClassesDescriptionFlow.Controls.Add(DrawLabel);
+                ClassesDescriptionFlow.Controls.Add(DrawLabel2);
+
+               classesCount++;
             }
 
         }

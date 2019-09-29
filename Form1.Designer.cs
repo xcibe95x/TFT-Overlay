@@ -148,8 +148,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ClassTab = new MetroFramework.Controls.MetroTabPage();
-            this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.htmlToolTip1 = new MetroFramework.Drawing.Html.HtmlToolTip();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label47 = new System.Windows.Forms.Label();
@@ -172,6 +170,11 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
+            this.ClassesDescriptionFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.label54 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.ClassesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TitleBar.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -201,8 +204,9 @@
             this.ChampionsTab.SuspendLayout();
             this.metroPanel5.SuspendLayout();
             this.ClassTab.SuspendLayout();
-            this.metroPanel6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.ClassesDescriptionFlow.SuspendLayout();
+            this.metroPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleBar
@@ -690,7 +694,7 @@
             this.TabControl.ItemSize = new System.Drawing.Size(59, 30);
             this.TabControl.Location = new System.Drawing.Point(-2, 22);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 5;
+            this.TabControl.SelectedIndex = 7;
             this.TabControl.Size = new System.Drawing.Size(424, 267);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Orange;
             this.TabControl.TabIndex = 15;
@@ -1962,7 +1966,8 @@
             // 
             this.ClassTab.AccessibleName = "";
             this.ClassTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
-            this.ClassTab.Controls.Add(this.metroPanel6);
+            this.ClassTab.Controls.Add(this.ClassesDescriptionFlow);
+            this.ClassTab.Controls.Add(this.metroPanel3);
             this.ClassTab.HorizontalScrollbarBarColor = true;
             this.ClassTab.HorizontalScrollbarHighlightOnWheel = false;
             this.ClassTab.HorizontalScrollbarSize = 10;
@@ -1976,33 +1981,6 @@
             this.ClassTab.VerticalScrollbarBarColor = true;
             this.ClassTab.VerticalScrollbarHighlightOnWheel = false;
             this.ClassTab.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel6
-            // 
-            this.metroPanel6.AutoScroll = true;
-            this.metroPanel6.Controls.Add(this.flowLayoutPanel3);
-            this.metroPanel6.HorizontalScrollbar = true;
-            this.metroPanel6.HorizontalScrollbarBarColor = true;
-            this.metroPanel6.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel6.HorizontalScrollbarSize = 10;
-            this.metroPanel6.Location = new System.Drawing.Point(3, 3);
-            this.metroPanel6.Name = "metroPanel6";
-            this.metroPanel6.Size = new System.Drawing.Size(410, 218);
-            this.metroPanel6.TabIndex = 5;
-            this.metroPanel6.UseCustomBackColor = true;
-            this.metroPanel6.VerticalScrollbar = true;
-            this.metroPanel6.VerticalScrollbarBarColor = true;
-            this.metroPanel6.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel6.VerticalScrollbarSize = 10;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoSize = true;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(329, 0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(321, 0);
-            this.flowLayoutPanel3.TabIndex = 4;
             // 
             // htmlToolTip1
             // 
@@ -2277,6 +2255,68 @@
             this.label53.TabIndex = 55;
             this.label53.Text = "Tier 5";
             // 
+            // ClassesDescriptionFlow
+            // 
+            this.ClassesDescriptionFlow.Controls.Add(this.label54);
+            this.ClassesDescriptionFlow.Controls.Add(this.richTextBox2);
+            this.ClassesDescriptionFlow.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.ClassesDescriptionFlow.Location = new System.Drawing.Point(141, 3);
+            this.ClassesDescriptionFlow.Name = "ClassesDescriptionFlow";
+            this.ClassesDescriptionFlow.Size = new System.Drawing.Size(274, 223);
+            this.ClassesDescriptionFlow.TabIndex = 9;
+            // 
+            // label54
+            // 
+            this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.Location = new System.Drawing.Point(30, 100);
+            this.label54.Margin = new System.Windows.Forms.Padding(3, 100, 3, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(216, 20);
+            this.label54.TabIndex = 1;
+            this.label54.Text = "Choose a class to get started";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.ForeColor = System.Drawing.Color.White;
+            this.richTextBox2.Location = new System.Drawing.Point(3, 123);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(270, 54);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.AutoScroll = true;
+            this.metroPanel3.Controls.Add(this.ClassesFlowPanel);
+            this.metroPanel3.HorizontalScrollbar = true;
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(2, 3);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(133, 223);
+            this.metroPanel3.TabIndex = 8;
+            this.metroPanel3.UseCustomBackColor = true;
+            this.metroPanel3.VerticalScrollbar = true;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // ClassesFlowPanel
+            // 
+            this.ClassesFlowPanel.AutoSize = true;
+            this.ClassesFlowPanel.Location = new System.Drawing.Point(0, 3);
+            this.ClassesFlowPanel.MaximumSize = new System.Drawing.Size(120, 0);
+            this.ClassesFlowPanel.Name = "ClassesFlowPanel";
+            this.ClassesFlowPanel.Size = new System.Drawing.Size(120, 0);
+            this.ClassesFlowPanel.TabIndex = 4;
+            // 
             // TFTCrafter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2338,10 +2378,12 @@
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
             this.ClassTab.ResumeLayout(false);
-            this.metroPanel6.ResumeLayout(false);
-            this.metroPanel6.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.ClassesDescriptionFlow.ResumeLayout(false);
+            this.ClassesDescriptionFlow.PerformLayout();
+            this.metroPanel3.ResumeLayout(false);
+            this.metroPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2429,8 +2471,6 @@
         private System.Windows.Forms.Button Spatula;
         private MetroFramework.Controls.MetroTabPage OriginsTab;
         private MetroFramework.Controls.MetroTabPage ClassTab;
-        private MetroFramework.Controls.MetroPanel metroPanel6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private MetroFramework.Controls.MetroTabPage PDamageTab;
         private MetroFramework.Controls.MetroPanel metroPanel7;
         private System.Windows.Forms.FlowLayoutPanel OriginsFlowPanel;
@@ -2490,6 +2530,11 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.FlowLayoutPanel ClassesDescriptionFlow;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private System.Windows.Forms.FlowLayoutPanel ClassesFlowPanel;
     }
 }
 

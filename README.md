@@ -13,7 +13,7 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 ## Version Changelogs
 
 - **3.0 (FINAL) PLACE HOLDER**
-       POSSIBLE CHANGES
+       POSSIBLE CHANGELOG
 	 - Champs Tab with more feature
 	 - Add Support to implement the json data on github
 	 - Code Optimization
@@ -22,17 +22,18 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Updated Cloud Icons
 	 - Graphic Updates
 	 - New system to add summoner profile
-	 - tooltip on reccomended items
+	 - tooltip on reccomended items just in case
+	 - Update DefaultHex Asset to fit size of the others
 	 
 - **2.9 IN PROGRESS**
 	 - Now send you straight to the latest version GitHub Page
 	 - No longer run with preselected gloves, instead now show neeko's help as a placeholder
 	 - Drop Rates Layout Adjustments
 	 - Fixed an incorrect value on Level 5 Drop Rates
-     TO DO
+	 - Tables Colors Adjusted
 	 - New Class Tab
+	 - Origins and Classes List Automatically gain Icon for new classes
 	 - Show what Data is always updated and what is offline
-
 
 	 
 - **2.8**
