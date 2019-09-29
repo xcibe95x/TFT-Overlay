@@ -29,8 +29,11 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Add more default hexes with different colors that get choosen random
 	 - Remove ALL unused Assets
 	 - Rounds
+     - Blitz.gg
+	 - Mobalitycs
+	 - Possible Team Comps
 	 
-- **2.9 IN PROGRESS**
+- **2.9**
 	 - Now send you straight to the latest version GitHub Page
 	 - No longer run with preselected gloves, instead now show neeko's help as a placeholder
 	 - Drop Rates Layout Adjustments
