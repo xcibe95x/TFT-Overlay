@@ -24,6 +24,8 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - New system to add summoner profile
 	 - tooltip on reccomended items just in case
 	 - Add more default hexes with different colors that get choosen random
+	 - Remove ALL unused Assets
+	 - Rounds
 	 
 - **2.9 IN PROGRESS**
 	 - Now send you straight to the latest version GitHub Page

@@ -363,6 +363,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cloud_data {
+            get {
+                object obj = ResourceManager.GetObject("cloud_data", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Coin {
             get {
                 object obj = ResourceManager.GetObject("Coin", resourceCulture);
@@ -646,6 +656,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap giantslayer {
             get {
                 object obj = ResourceManager.GetObject("giantslayer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap github_hosted {
+            get {
+                object obj = ResourceManager.GetObject("github_hosted", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1422,6 +1442,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap Ninja {
             get {
                 object obj = ResourceManager.GetObject("Ninja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_cloud {
+            get {
+                object obj = ResourceManager.GetObject("no_cloud", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

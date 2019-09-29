@@ -418,6 +418,9 @@
     <None Include="assets\items\RepeatingCrossbow.png" />
     <None Include="assets\items\LastWhisper.png" />
     <None Include="assets\items\neekoshelp.png" />
+    <None Include="assets\storage\no_cloud.png" />
+    <None Include="assets\storage\cloud_data.png" />
+    <None Include="assets\storage\github_hosted.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />
