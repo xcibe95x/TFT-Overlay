@@ -38,7 +38,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.Debug = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.ChampsSearchBox = new System.Windows.Forms.TextBox();
             this.BF = new System.Windows.Forms.Button();
@@ -228,7 +227,6 @@
             this.TitleBar.ContextMenuStrip = this.PocketMenu;
             this.TitleBar.Controls.Add(this.metroButton5);
             this.TitleBar.Controls.Add(this.metroButton4);
-            this.TitleBar.Controls.Add(this.Debug);
             this.TitleBar.Controls.Add(this.Title);
             this.TitleBar.Location = new System.Drawing.Point(-2, 0);
             this.TitleBar.Name = "TitleBar";
@@ -339,17 +337,6 @@
             this.metroButton4.MouseLeave += new System.EventHandler(this.PointerLogicLeave);
             this.metroButton4.MouseHover += new System.EventHandler(this.PointerLogic);
             // 
-            // Debug
-            // 
-            this.Debug.AutoSize = true;
-            this.Debug.ForeColor = System.Drawing.Color.MistyRose;
-            this.Debug.Location = new System.Drawing.Point(6, 7);
-            this.Debug.Name = "Debug";
-            this.Debug.Size = new System.Drawing.Size(68, 13);
-            this.Debug.TabIndex = 1;
-            this.Debug.Text = "Debug Label";
-            this.Debug.Visible = false;
-            // 
             // Title
             // 
             this.Title.AutoSize = true;
@@ -365,7 +352,7 @@
             // ChampsSearchBox
             // 
             this.ChampsSearchBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampsSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.ChampsSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChampsSearchBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ChampsSearchBox.Location = new System.Drawing.Point(281, 197);
@@ -707,7 +694,7 @@
             this.TabControl.ItemSize = new System.Drawing.Size(59, 30);
             this.TabControl.Location = new System.Drawing.Point(-2, 22);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 7;
+            this.TabControl.SelectedIndex = 1;
             this.TabControl.Size = new System.Drawing.Size(424, 267);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Silver;
             this.TabControl.TabIndex = 15;
@@ -872,7 +859,7 @@
             // ChampionsTab
             // 
             this.ChampionsTab.AccessibleName = "";
-            this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.ChampionsTab.Controls.Add(this.pictureBox6);
             this.ChampionsTab.Controls.Add(this.metroComboBox2);
             this.ChampionsTab.Controls.Add(this.metroButton2);
@@ -909,7 +896,7 @@
             // 
             // metroComboBox2
             // 
-            this.metroComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.metroComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.metroComboBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.metroComboBox2.FormattingEnabled = true;
             this.metroComboBox2.ItemHeight = 23;
@@ -1143,7 +1130,7 @@
             // 
             // ProbTab
             // 
-            this.ProbTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ProbTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.ProbTab.Controls.Add(this.pictureBox3);
             this.ProbTab.Controls.Add(this.tableLayoutPanel7);
             this.ProbTab.Controls.Add(this.tableLayoutPanel6);
@@ -1480,7 +1467,7 @@
             // OriginsTab
             // 
             this.OriginsTab.AccessibleName = "";
-            this.OriginsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.OriginsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.OriginsTab.Controls.Add(this.pictureBox4);
             this.OriginsTab.Controls.Add(this.OriginsDescriptionFlow);
             this.OriginsTab.Controls.Add(this.metroPanel8);
@@ -1535,7 +1522,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
             this.richTextBox1.Location = new System.Drawing.Point(3, 123);
@@ -1574,7 +1561,7 @@
             // 
             // TierListTab
             // 
-            this.TierListTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.TierListTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.TierListTab.Controls.Add(this.pictureBox5);
             this.TierListTab.Controls.Add(this.metroComboBox1);
             this.TierListTab.Controls.Add(this.metroPanel4);
@@ -1605,7 +1592,7 @@
             // 
             // metroComboBox1
             // 
-            this.metroComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.metroComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.metroComboBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
@@ -1657,7 +1644,7 @@
             // 
             // TierListBox
             // 
-            this.TierListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.TierListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.TierListBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.TierListBox.FormattingEnabled = true;
             this.TierListBox.ItemHeight = 23;
@@ -1702,6 +1689,7 @@
             // metroPanel7
             // 
             this.metroPanel7.AutoScroll = true;
+            this.metroPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.metroPanel7.Controls.Add(this.pictureBox8);
             this.metroPanel7.Controls.Add(this.tableLayoutPanel2);
             this.metroPanel7.Controls.Add(this.label33);
@@ -2318,7 +2306,7 @@
             // ClassTab
             // 
             this.ClassTab.AccessibleName = "";
-            this.ClassTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.ClassTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.ClassTab.Controls.Add(this.pictureBox7);
             this.ClassTab.Controls.Add(this.ClassesDescriptionFlow);
             this.ClassTab.Controls.Add(this.metroPanel3);
@@ -2373,7 +2361,7 @@
             // richTextBox2
             // 
             this.richTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.ForeColor = System.Drawing.Color.White;
             this.richTextBox2.Location = new System.Drawing.Point(3, 123);
@@ -2546,7 +2534,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroComboBox TierListBox;
         private MetroFramework.Controls.MetroPanel metroPanel4;
-        private System.Windows.Forms.Label Debug;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;

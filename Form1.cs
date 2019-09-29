@@ -1,21 +1,6 @@
-﻿using MetroFramework.Controls;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Resources;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Windows.Forms;
+﻿using MetroFramework.Controls; using Newtonsoft.Json.Linq; using System; using System.Collections; using System.Collections.Generic; using System.ComponentModel; using System.Drawing; using System.Drawing.Drawing2D;
+using System.Globalization; using System.IO; using System.Linq; using System.Net; using System.Reflection; using System.Resources; using System.Runtime.InteropServices; using System.Text.RegularExpressions;
+using System.Threading; using System.Windows.Forms;
 
 // Useful Links
 // https://riotapi.dev/en/latest/
@@ -25,10 +10,15 @@ namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
+        
+        //
+        // APP SETTINGS
+        //
 
+        readonly Version localVersion = new Version("3.0");
+        public string ApiKey = "RGAPI-";
 
-        public string ApiKey = "RGAPI-"; // RIOT API KEY
-
+        /////////////////////////////////////////////////////
 
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -115,13 +105,14 @@ namespace TFT_Overlay
 
         }
 
+        
 
         // FORM LOAD
         private void Form1_Load(object sender, EventArgs e)
 
         {
 
-            var localVersion = new Version("2.9");
+            //var localVersion = new Version("3.0");
 
             // WINDOW STARTING POSITION
             StartPosition = FormStartPosition.Manual;
