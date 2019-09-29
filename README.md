@@ -27,10 +27,11 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 - **2.9 IN PROGRESS**
 	 - Now send you straight to the latest version GitHub Page
 	 - No longer run with preselected gloves, instead now show neeko's help as a placeholder
+	 - Drop Rates Layout Adjustments
      TO DO
 	 - New Class Tab
 	 - Show what Data is always updated and what is offline
-	 - Drop Rates Layout Adjustments
+
 
 	 
 - **2.8**
