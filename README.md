@@ -16,6 +16,10 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 ## Version Changelogs
 
 - **3.0 (FINAL) PLACE HOLDER**
+       REAL CHANGELOG
+     - Updated Design
+     - FINALly! Proper ToolTips!
+
        POSSIBLE CHANGELOG
 	 - Champs Tab with more feature
 	 - Add Support to implement the json data on github
@@ -23,7 +27,6 @@ cause of small updates like new items just in case, beacuse at 3.0 the app will 
 	 - Changeable Opacity
 	 - Improve actual features
 	 - Updated Cloud Icons
-	 - Graphic Updates
 	 - New system to add summoner profile
 	 - tooltip on reccomended items just in case
 	 - Add more default hexes with different colors that get choosen random

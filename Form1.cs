@@ -13,6 +13,7 @@ using System.Net;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -24,6 +25,11 @@ namespace TFT_Overlay
 {
     public partial class TFTCrafter : Form
     {
+
+
+        public string ApiKey = "RGAPI-"; // RIOT API KEY
+
+
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -46,7 +52,7 @@ namespace TFT_Overlay
             private static extern IntPtr LoadCursorFromFile(string path);
         }
 
-        public string ApiKey = "RGAPI-"; // RIOT API KEY
+
         public string SummonerName = Properties.Settings.Default.SummonerName;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -74,8 +80,7 @@ namespace TFT_Overlay
         WebClient client = new WebClient();
 
         List<string> ResourcesList = new List<string>();
-
-        ToolTip tiup = new MetroFramework.Drawing.Html.HtmlToolTip();
+       
 
         ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
 
@@ -1307,7 +1312,7 @@ namespace TFT_Overlay
                     if (ResourcesList.Contains(origins))
                     {
                         basepanel.Controls.Add(originsBox);
-                        tiup.SetToolTip(originsBox, origins);
+                        PocketTips.SetToolTip(originsBox, origins);
                     }
                     else
                     {
@@ -1316,8 +1321,8 @@ namespace TFT_Overlay
                         newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
                         basepanel.Controls.Add(defaultHex);
                         defaultHex.Controls.Add(newOrigins);
-                        tiup.SetToolTip(defaultHex, origins);
-                        tiup.SetToolTip(newOrigins, origins);
+                        PocketTips.SetToolTip(defaultHex, origins);
+                        PocketTips.SetToolTip(newOrigins, origins);
 
                     }
 
@@ -1377,7 +1382,7 @@ namespace TFT_Overlay
                     if (ResourcesList.Contains(classes))
                     {
                         basepanel.Controls.Add(classBox);
-                        tiup.SetToolTip(classBox, classes);
+                        PocketTips.SetToolTip(classBox, classes);
                     }
                     else
                     {
@@ -1385,8 +1390,8 @@ namespace TFT_Overlay
                         newClass.SizeMode = PictureBoxSizeMode.StretchImage;
                         basepanel.Controls.Add(defaultHex);
                         defaultHex.Controls.Add(newClass);
-                        tiup.SetToolTip(defaultHex, classes);
-                        tiup.SetToolTip(newClass, classes);
+                        PocketTips.SetToolTip(defaultHex, classes);
+                        PocketTips.SetToolTip(newClass, classes);
                     }
 
 
@@ -1724,7 +1729,7 @@ namespace TFT_Overlay
                     Size = new Size(12, 18),
 
                 };
-                tiup.SetToolTip(ChampCost, "Cost");
+                PocketTips.SetToolTip(ChampCost, "Cost");
                 basepanel.Controls.Add(ChampCost);
 
 
@@ -1738,7 +1743,7 @@ namespace TFT_Overlay
                     BackgroundImageLayout = ImageLayout.Stretch,
 
                 };
-                tiup.SetToolTip(CostIcon, "Cost");
+                PocketTips.SetToolTip(CostIcon, "Cost");
                 basepanel.Controls.Add(CostIcon);
 
 
@@ -1804,7 +1809,7 @@ namespace TFT_Overlay
                     if (ResourcesList.Contains(origins))
                     {
                         basepanel.Controls.Add(picturebox);
-                        tiup.SetToolTip(picturebox, origins);
+                        PocketTips.SetToolTip(picturebox, origins);
                     }
                     else
                     {
@@ -1812,8 +1817,8 @@ namespace TFT_Overlay
                         newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
                         basepanel.Controls.Add(defaultHex);
                         defaultHex.Controls.Add(newOrigins);
-                        tiup.SetToolTip(defaultHex, origins);
-                        tiup.SetToolTip(newOrigins, origins);
+                        PocketTips.SetToolTip(defaultHex, origins);
+                        PocketTips.SetToolTip(newOrigins, origins);
 
                     }
 
@@ -1869,7 +1874,7 @@ namespace TFT_Overlay
                     if (ResourcesList.Contains(classes))
                     {
                         basepanel.Controls.Add(picturebox);
-                        tiup.SetToolTip(picturebox, classes);
+                        PocketTips.SetToolTip(picturebox, classes);
                     }
                     else
                     {
@@ -1877,8 +1882,8 @@ namespace TFT_Overlay
                         newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
                         basepanel.Controls.Add(defaultHex);
                         defaultHex.Controls.Add(newClasses);
-                        tiup.SetToolTip(defaultHex, classes);
-                        tiup.SetToolTip(newClasses, classes);
+                        PocketTips.SetToolTip(defaultHex, classes);
+                        PocketTips.SetToolTip(newClasses, classes);
                     }
 
                     classesIndex++;
@@ -1940,9 +1945,16 @@ namespace TFT_Overlay
 
                 }
 
+                //WRAP TIPS
+                Regex rgx = new Regex("(.{50}\\s)"); string WrappedMessage = rgx.Replace(ability, "$1\n");
+
                 // TOOLTIPS
-                tiup.SetToolTip(ChampBox, @"<body style=""width:380px;font-size: 10px;"">" + ability + "</body>");
-                tiup.SetToolTip(ChampPicture, @"<body style=""width:380px;font-size: 10px;"">" + ability + "</body>");
+                PocketTips.SetToolTip(ChampBox, WrappedMessage);
+                PocketTips.SetToolTip(ChampPicture, WrappedMessage);
+
+
+
+               
 
             }
 
@@ -2700,6 +2712,31 @@ namespace TFT_Overlay
 
                 e.Graphics.DrawRectangle(pen, rectangle);
             }
+        }
+
+        private void ToolTip1_Draw(object sender, DrawToolTipEventArgs e)
+        {
+            Graphics g = e.Graphics;
+
+            LinearGradientBrush b = new LinearGradientBrush(e.Bounds,
+                 Color.FromArgb(21, 20, 24), Color.FromArgb(21, 20, 24), 45f);
+
+            g.FillRectangle(b, e.Bounds);
+            //Color.FromArgb(10, 27, 38)
+            g.DrawRectangle(new Pen(Brushes.DarkCyan, 1), new Rectangle(e.Bounds.X, e.Bounds.Y,
+                e.Bounds.Width - 1, e.Bounds.Height - 1));
+
+            g.DrawString(e.ToolTipText, new Font(e.Font, FontStyle.Regular), Brushes.White,
+                new PointF(e.Bounds.X + 5, e.Bounds.Y + 1)); // top layer
+
+            b.Dispose();
+            
+        }
+
+        private void ToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+       
+          
         }
     }
 }
