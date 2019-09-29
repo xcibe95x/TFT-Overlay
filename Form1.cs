@@ -56,7 +56,7 @@ namespace TFT_Overlay
         readonly List<string> ResourcesList = new List<string>();
         readonly ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
 
-        FlowLayoutPanel SearchPanel;
+        
 
         int TierIndex = 1;
         string TierType = "all";
@@ -1647,7 +1647,7 @@ namespace TFT_Overlay
 
                 };
                 ChampsList.Controls.Add(basepanel);
-                SearchPanel = basepanel;
+
 
                 // CHAMP BORDER
                 var ChampBox = new Panel
