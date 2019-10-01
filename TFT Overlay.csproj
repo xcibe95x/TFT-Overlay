@@ -421,6 +421,7 @@
     <None Include="assets\storage\no_cloud.png" />
     <None Include="assets\storage\cloud_data.png" />
     <None Include="assets\storage\github_hosted.png" />
+    <None Include="assets\profile\SummonerIconPlaceHolder.png" />
     <Content Include="TFT.ico" />
     <None Include="bin\Release\MetroFramework.Design.dll" />
     <None Include="bin\Release\MetroFramework.dll" />

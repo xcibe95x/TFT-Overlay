@@ -64,6 +64,9 @@ namespace TFT_Overlay
         public TFTCrafter()
         {
             InitializeComponent();
+            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
+            path.AddEllipse(0, 0, pictureBox2.Width, pictureBox2.Height);
+            pictureBox2.Region = new Region(path);
         }
 
 
@@ -138,12 +141,12 @@ namespace TFT_Overlay
 
             WebClient client = new WebClient();
             versionJSON = client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
-            itemsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/items.json");
-            tiersJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/tierlist.json");
-            champsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/champions.json");
-            originsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/origins.json");
-            classesJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/classes.json");
-            compsJSON = client.DownloadString("https://solomid-resources.s3.amazonaws.com/blitz/tft/data/comps.json");
+            itemsJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Items.php");
+            tiersJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Tierlist.php");
+            champsJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Champions.php");
+            originsJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Origins.php");
+            classesJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Classes.php");
+            compsJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Comps.php");
 
             Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
             ResourceSet set = rm.GetResourceSet(CultureInfo.CurrentCulture, true, true);

@@ -1949,6 +1949,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SummonerIconPlaceHolder {
+            get {
+                object obj = ResourceManager.GetObject("SummonerIconPlaceHolder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Swain {
             get {
                 object obj = ResourceManager.GetObject("Swain", resourceCulture);

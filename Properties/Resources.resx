@@ -856,4 +856,7 @@
   <data name="no_cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\storage\no_cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SummonerIconPlaceHolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\profile\SummonerIconPlaceHolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
