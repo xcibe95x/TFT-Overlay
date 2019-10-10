@@ -112,10 +112,6 @@ namespace TFT_Overlay
             TabControl.TabPages.Insert(1, CraftingTab);
             TabControl.TabPages.Insert(2, ChampionsTab);
             TabControl.TabPages.Insert(3, TierListTab);
-            TabControl.TabPages.Insert(4, ProbTab);
-            TabControl.TabPages.Insert(5, PDamageTab);
-            TabControl.TabPages.Insert(6, OriginsTab);
-            TabControl.TabPages.Insert(7, ClassTab);
 
             TabControl.SelectedIndex = 0;
             // Delete and Generate Custom Mouse Pointer to Temp Path
@@ -2496,6 +2492,44 @@ namespace TFT_Overlay
         private void Panel1_MouseHover(object sender, EventArgs e)
         {
             if (toggleHide == true) { Height = 289; }
+        }
+
+        private void MetroButton3_Click(object sender, EventArgs e)
+        {
+
+            if (Switch.Text == "Data")
+            {
+                Switch.Text = "Data 2";
+
+                TabControl.TabPages.Clear();
+                TabControl.TabPages.Insert(0, ProfileTAB);
+                TabControl.TabPages.Insert(1, ProbTab);
+                TabControl.TabPages.Insert(2, PDamageTab);
+                TabControl.TabPages.Insert(3, OriginsTab);
+                TabControl.TabPages.Insert(4, ClassTab);
+            }
+            else if (Switch.Text == "Data 2")
+            {
+                Switch.Text = "Data";
+                TabControl.TabPages.Clear();
+                TabControl.TabPages.Insert(0, ProfileTAB);
+                TabControl.TabPages.Insert(1, CraftingTab);
+                TabControl.TabPages.Insert(2, ChampionsTab);
+                TabControl.TabPages.Insert(3, TierListTab);
+  
+            }
+        }
+
+        private void TabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            if (TabControl.SelectedTab == ProfileTAB) { Indicator.Visible = false; Switch.Location = new Point(350, 32); }
+            else {
+            Indicator.Visible = true; Switch.Location = new Point(330, 32);
+
+                if (TabControl.SelectedTab == CraftingTab)
+                Indicator.BackgroundImage = Properties.Resources.no_cloud;
+                PocketTips.SetToolTip(Indicator, "Do i make you scared?");
+            }
         }
 
         private void Panel1_MouseLeave(object sender, EventArgs e)

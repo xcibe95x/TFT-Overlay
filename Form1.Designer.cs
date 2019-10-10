@@ -74,7 +74,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Summoner = new MetroFramework.Controls.MetroLabel();
             this.ChampionsTab = new MetroFramework.Controls.MetroTabPage();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -84,7 +83,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CraftingTab = new MetroFramework.Controls.MetroTabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.htmlItemdescription = new MetroFramework.Drawing.Html.HtmlLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.Glove2 = new System.Windows.Forms.Button();
@@ -115,21 +113,18 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.label3 = new System.Windows.Forms.Label();
             this.OriginsTab = new MetroFramework.Controls.MetroTabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.OriginsDescriptionFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.label49 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroPanel8 = new MetroFramework.Controls.MetroPanel();
             this.OriginsFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.TierListTab = new MetroFramework.Controls.MetroTabPage();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TierListBox = new MetroFramework.Controls.MetroComboBox();
             this.PDamageTab = new MetroFramework.Controls.MetroTabPage();
             this.metroPanel7 = new MetroFramework.Controls.MetroPanel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label44 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -173,13 +168,14 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.ClassTab = new MetroFramework.Controls.MetroTabPage();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.ClassesDescriptionFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.label54 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.ClassesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.Indicator = new System.Windows.Forms.PictureBox();
             this.PocketTips = new System.Windows.Forms.ToolTip(this.components);
+            this.Switch = new MetroFramework.Controls.MetroButton();
             this.TitleBar.SuspendLayout();
             this.PocketMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -192,10 +188,8 @@
             this.WINRATEPANEL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.ChampionsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.metroPanel5.SuspendLayout();
             this.CraftingTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.ProbTab.SuspendLayout();
@@ -204,21 +198,18 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.OriginsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.OriginsDescriptionFlow.SuspendLayout();
             this.metroPanel8.SuspendLayout();
             this.TierListTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.metroPanel4.SuspendLayout();
             this.PDamageTab.SuspendLayout();
             this.metroPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.ClassTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.ClassesDescriptionFlow.SuspendLayout();
             this.metroPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Indicator)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleBar
@@ -228,9 +219,9 @@
             this.TitleBar.Controls.Add(this.metroButton5);
             this.TitleBar.Controls.Add(this.metroButton4);
             this.TitleBar.Controls.Add(this.Title);
-            this.TitleBar.Location = new System.Drawing.Point(-2, 0);
+            this.TitleBar.Location = new System.Drawing.Point(-2, 3);
             this.TitleBar.Name = "TitleBar";
-            this.TitleBar.Size = new System.Drawing.Size(424, 27);
+            this.TitleBar.Size = new System.Drawing.Size(424, 26);
             this.TitleBar.TabIndex = 2;
             this.TitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
@@ -303,7 +294,7 @@
             // 
             this.metroButton5.BackColor = System.Drawing.Color.Transparent;
             this.metroButton5.ForeColor = System.Drawing.Color.Silver;
-            this.metroButton5.Location = new System.Drawing.Point(371, 5);
+            this.metroButton5.Location = new System.Drawing.Point(372, 5);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(20, 18);
             this.metroButton5.Style = MetroFramework.MetroColorStyle.Orange;
@@ -321,7 +312,7 @@
             // 
             this.metroButton4.BackColor = System.Drawing.Color.Transparent;
             this.metroButton4.ForeColor = System.Drawing.Color.Silver;
-            this.metroButton4.Location = new System.Drawing.Point(396, 5);
+            this.metroButton4.Location = new System.Drawing.Point(397, 5);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(20, 18);
             this.metroButton4.Style = MetroFramework.MetroColorStyle.Orange;
@@ -701,6 +692,7 @@
             this.TabControl.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TabControl.UseSelectable = true;
             this.TabControl.SelectedIndexChanged += new System.EventHandler(this.MetroTabControl1_SelectedIndexChanged);
+            this.TabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
             // 
             // ProfileTAB
             // 
@@ -853,7 +845,7 @@
             this.Summoner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(235)))), ((int)(((byte)(239)))));
             this.Summoner.Location = new System.Drawing.Point(74, 27);
             this.Summoner.Name = "Summoner";
-            this.Summoner.Size = new System.Drawing.Size(100, 25);
+            this.Summoner.Size = new System.Drawing.Size(76, 19);
             this.Summoner.TabIndex = 3;
             this.Summoner.Text = "Summoner";
             this.Summoner.UseCustomBackColor = true;
@@ -863,7 +855,6 @@
             // 
             this.ChampionsTab.AccessibleName = "";
             this.ChampionsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
-            this.ChampionsTab.Controls.Add(this.pictureBox6);
             this.ChampionsTab.Controls.Add(this.metroComboBox2);
             this.ChampionsTab.Controls.Add(this.metroButton2);
             this.ChampionsTab.Controls.Add(this.label8);
@@ -885,17 +876,6 @@
             this.ChampionsTab.VerticalScrollbarBarColor = true;
             this.ChampionsTab.VerticalScrollbarHighlightOnWheel = false;
             this.ChampionsTab.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::TFT_Overlay.Properties.Resources.cloud_data;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(392, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(21, 20);
-            this.pictureBox6.TabIndex = 50;
-            this.pictureBox6.TabStop = false;
-            this.PocketTips.SetToolTip(this.pictureBox6, "Always Up to Date!");
             // 
             // metroComboBox2
             // 
@@ -1003,7 +983,6 @@
             // CraftingTab
             // 
             this.CraftingTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
-            this.CraftingTab.Controls.Add(this.pictureBox1);
             this.CraftingTab.Controls.Add(this.ItemName);
             this.CraftingTab.Controls.Add(this.htmlItemdescription);
             this.CraftingTab.Controls.Add(this.metroPanel2);
@@ -1024,17 +1003,6 @@
             this.CraftingTab.VerticalScrollbarBarColor = true;
             this.CraftingTab.VerticalScrollbarHighlightOnWheel = false;
             this.CraftingTab.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::TFT_Overlay.Properties.Resources.no_cloud;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(391, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            this.PocketTips.SetToolTip(this.pictureBox1, "Offline Data: This data is updated by software updates.");
             // 
             // htmlItemdescription
             // 
@@ -1471,7 +1439,6 @@
             // 
             this.OriginsTab.AccessibleName = "";
             this.OriginsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
-            this.OriginsTab.Controls.Add(this.pictureBox4);
             this.OriginsTab.Controls.Add(this.OriginsDescriptionFlow);
             this.OriginsTab.Controls.Add(this.metroPanel8);
             this.OriginsTab.HorizontalScrollbarBarColor = true;
@@ -1487,17 +1454,6 @@
             this.OriginsTab.VerticalScrollbarBarColor = true;
             this.OriginsTab.VerticalScrollbarHighlightOnWheel = false;
             this.OriginsTab.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::TFT_Overlay.Properties.Resources.cloud_data;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(392, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(21, 20);
-            this.pictureBox4.TabIndex = 50;
-            this.pictureBox4.TabStop = false;
-            this.PocketTips.SetToolTip(this.pictureBox4, "Always Up to Date!");
             // 
             // OriginsDescriptionFlow
             // 
@@ -1565,7 +1521,6 @@
             // TierListTab
             // 
             this.TierListTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
-            this.TierListTab.Controls.Add(this.pictureBox5);
             this.TierListTab.Controls.Add(this.metroComboBox1);
             this.TierListTab.Controls.Add(this.metroPanel4);
             this.TierListTab.Controls.Add(this.TierListBox);
@@ -1581,17 +1536,6 @@
             this.TierListTab.VerticalScrollbarBarColor = true;
             this.TierListTab.VerticalScrollbarHighlightOnWheel = false;
             this.TierListTab.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::TFT_Overlay.Properties.Resources.cloud_data;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(392, 6);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(21, 20);
-            this.pictureBox5.TabIndex = 50;
-            this.pictureBox5.TabStop = false;
-            this.PocketTips.SetToolTip(this.pictureBox5, "Always Up to Date!");
             // 
             // metroComboBox1
             // 
@@ -1693,7 +1637,6 @@
             // 
             this.metroPanel7.AutoScroll = true;
             this.metroPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
-            this.metroPanel7.Controls.Add(this.pictureBox8);
             this.metroPanel7.Controls.Add(this.tableLayoutPanel2);
             this.metroPanel7.Controls.Add(this.label33);
             this.metroPanel7.Controls.Add(this.label32);
@@ -1713,17 +1656,6 @@
             this.metroPanel7.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel7.VerticalScrollbarSize = 10;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::TFT_Overlay.Properties.Resources.no_cloud;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(388, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(21, 20);
-            this.pictureBox8.TabIndex = 73;
-            this.pictureBox8.TabStop = false;
-            this.PocketTips.SetToolTip(this.pictureBox8, "Offline Data: This data is updated by software updates.");
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 7;
@@ -1733,7 +1665,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel2.Controls.Add(this.label44, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label42, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label41, 0, 1);
@@ -1763,7 +1695,7 @@
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(109, 36);
+            this.label44.Location = new System.Drawing.Point(106, 36);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(13, 13);
             this.label44.TabIndex = 68;
@@ -1789,7 +1721,7 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(61, 36);
+            this.label41.Location = new System.Drawing.Point(59, 36);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(13, 13);
             this.label41.TabIndex = 65;
@@ -1802,9 +1734,9 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label35.Location = new System.Drawing.Point(3, 1);
+            this.label35.Location = new System.Drawing.Point(6, 1);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(40, 26);
+            this.label35.Size = new System.Drawing.Size(33, 26);
             this.label35.TabIndex = 51;
             this.label35.Text = "Stage 1";
             // 
@@ -1814,7 +1746,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label34.Location = new System.Drawing.Point(51, 1);
+            this.label34.Location = new System.Drawing.Point(49, 1);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(33, 26);
             this.label34.TabIndex = 59;
@@ -1826,7 +1758,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label36.Location = new System.Drawing.Point(93, 1);
+            this.label36.Location = new System.Drawing.Point(90, 1);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(44, 26);
             this.label36.TabIndex = 60;
@@ -1838,7 +1770,7 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label37.Location = new System.Drawing.Point(144, 1);
+            this.label37.Location = new System.Drawing.Point(141, 1);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(44, 26);
             this.label37.TabIndex = 61;
@@ -1850,7 +1782,7 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label39.Location = new System.Drawing.Point(197, 1);
+            this.label39.Location = new System.Drawing.Point(194, 1);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(44, 26);
             this.label39.TabIndex = 62;
@@ -1862,7 +1794,7 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label40.Location = new System.Drawing.Point(311, 7);
+            this.label40.Location = new System.Drawing.Point(309, 7);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(58, 13);
             this.label40.TabIndex = 63;
@@ -1874,7 +1806,7 @@
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label38.Location = new System.Drawing.Point(253, 1);
+            this.label38.Location = new System.Drawing.Point(250, 1);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(44, 26);
             this.label38.TabIndex = 64;
@@ -1886,7 +1818,7 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(159, 36);
+            this.label43.Location = new System.Drawing.Point(156, 36);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(13, 13);
             this.label43.TabIndex = 67;
@@ -1899,7 +1831,7 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(212, 36);
+            this.label45.Location = new System.Drawing.Point(209, 36);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(13, 13);
             this.label45.TabIndex = 69;
@@ -1912,7 +1844,7 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(268, 36);
+            this.label46.Location = new System.Drawing.Point(265, 36);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(13, 13);
             this.label46.TabIndex = 70;
@@ -1925,7 +1857,7 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.White;
-            this.label47.Location = new System.Drawing.Point(333, 36);
+            this.label47.Location = new System.Drawing.Point(332, 36);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(13, 13);
             this.label47.TabIndex = 71;
@@ -1966,7 +1898,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel1.Controls.Add(this.label16, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label17, 0, 2);
@@ -2008,7 +1940,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label16.Location = new System.Drawing.Point(10, 97);
+            this.label16.Location = new System.Drawing.Point(9, 97);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 53;
@@ -2020,7 +1952,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label9.Location = new System.Drawing.Point(10, 41);
+            this.label9.Location = new System.Drawing.Point(9, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 13);
             this.label9.TabIndex = 51;
@@ -2032,7 +1964,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label17.Location = new System.Drawing.Point(10, 69);
+            this.label17.Location = new System.Drawing.Point(9, 69);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 13);
             this.label17.TabIndex = 54;
@@ -2044,7 +1976,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(67, 10);
+            this.label10.Location = new System.Drawing.Point(65, 10);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 46;
@@ -2056,7 +1988,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(81, 41);
+            this.label15.Location = new System.Drawing.Point(78, 41);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(13, 13);
             this.label15.TabIndex = 52;
@@ -2069,7 +2001,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label11.Location = new System.Drawing.Point(122, 10);
+            this.label11.Location = new System.Drawing.Point(119, 10);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(40, 13);
             this.label11.TabIndex = 47;
@@ -2081,7 +2013,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(180, 10);
+            this.label12.Location = new System.Drawing.Point(177, 10);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 48;
@@ -2093,7 +2025,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label13.Location = new System.Drawing.Point(239, 10);
+            this.label13.Location = new System.Drawing.Point(236, 10);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 13);
             this.label13.TabIndex = 49;
@@ -2105,7 +2037,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Gold;
-            this.label14.Location = new System.Drawing.Point(313, 10);
+            this.label14.Location = new System.Drawing.Point(312, 10);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(40, 13);
             this.label14.TabIndex = 50;
@@ -2117,7 +2049,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(136, 41);
+            this.label18.Location = new System.Drawing.Point(133, 41);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(13, 13);
             this.label18.TabIndex = 55;
@@ -2130,7 +2062,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(194, 41);
+            this.label19.Location = new System.Drawing.Point(191, 41);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(13, 13);
             this.label19.TabIndex = 56;
@@ -2143,7 +2075,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(253, 41);
+            this.label20.Location = new System.Drawing.Point(250, 41);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(13, 13);
             this.label20.TabIndex = 57;
@@ -2156,7 +2088,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(327, 41);
+            this.label21.Location = new System.Drawing.Point(325, 41);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(13, 13);
             this.label21.TabIndex = 58;
@@ -2169,7 +2101,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(81, 69);
+            this.label22.Location = new System.Drawing.Point(78, 69);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(13, 13);
             this.label22.TabIndex = 59;
@@ -2182,7 +2114,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(194, 69);
+            this.label24.Location = new System.Drawing.Point(191, 69);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(13, 13);
             this.label24.TabIndex = 61;
@@ -2195,7 +2127,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(253, 69);
+            this.label25.Location = new System.Drawing.Point(250, 69);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(13, 13);
             this.label25.TabIndex = 62;
@@ -2208,7 +2140,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(327, 69);
+            this.label26.Location = new System.Drawing.Point(325, 69);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(13, 13);
             this.label26.TabIndex = 63;
@@ -2221,7 +2153,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(81, 97);
+            this.label27.Location = new System.Drawing.Point(78, 97);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(13, 13);
             this.label27.TabIndex = 64;
@@ -2234,7 +2166,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(194, 97);
+            this.label29.Location = new System.Drawing.Point(191, 97);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(13, 13);
             this.label29.TabIndex = 66;
@@ -2247,7 +2179,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(253, 97);
+            this.label30.Location = new System.Drawing.Point(250, 97);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(13, 13);
             this.label30.TabIndex = 67;
@@ -2260,7 +2192,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(327, 97);
+            this.label31.Location = new System.Drawing.Point(325, 97);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(13, 13);
             this.label31.TabIndex = 68;
@@ -2273,7 +2205,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(136, 97);
+            this.label23.Location = new System.Drawing.Point(133, 97);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(13, 13);
             this.label23.TabIndex = 60;
@@ -2286,7 +2218,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(136, 69);
+            this.label28.Location = new System.Drawing.Point(133, 69);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(13, 13);
             this.label28.TabIndex = 65;
@@ -2310,7 +2242,6 @@
             // 
             this.ClassTab.AccessibleName = "";
             this.ClassTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(24)))));
-            this.ClassTab.Controls.Add(this.pictureBox7);
             this.ClassTab.Controls.Add(this.ClassesDescriptionFlow);
             this.ClassTab.Controls.Add(this.metroPanel3);
             this.ClassTab.HorizontalScrollbarBarColor = true;
@@ -2326,17 +2257,6 @@
             this.ClassTab.VerticalScrollbarBarColor = true;
             this.ClassTab.VerticalScrollbarHighlightOnWheel = false;
             this.ClassTab.VerticalScrollbarSize = 10;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::TFT_Overlay.Properties.Resources.cloud_data;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(392, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(21, 20);
-            this.pictureBox7.TabIndex = 50;
-            this.pictureBox7.TabStop = false;
-            this.PocketTips.SetToolTip(this.pictureBox7, "Always Up to Date!");
             // 
             // ClassesDescriptionFlow
             // 
@@ -2401,11 +2321,36 @@
             this.ClassesFlowPanel.Size = new System.Drawing.Size(120, 0);
             this.ClassesFlowPanel.TabIndex = 4;
             // 
+            // Indicator
+            // 
+            this.Indicator.BackColor = System.Drawing.Color.Transparent;
+            this.Indicator.BackgroundImage = global::TFT_Overlay.Properties.Resources.cloud_data;
+            this.Indicator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Indicator.Location = new System.Drawing.Point(396, 32);
+            this.Indicator.Name = "Indicator";
+            this.Indicator.Size = new System.Drawing.Size(20, 18);
+            this.Indicator.TabIndex = 50;
+            this.Indicator.TabStop = false;
+            this.PocketTips.SetToolTip(this.Indicator, "Always Up to Date!");
+            // 
             // PocketTips
             // 
             this.PocketTips.BackColor = System.Drawing.Color.White;
             this.PocketTips.OwnerDraw = true;
             this.PocketTips.Draw += new System.Windows.Forms.DrawToolTipEventHandler(this.ToolTip1_Draw);
+            // 
+            // Switch
+            // 
+            this.Switch.Location = new System.Drawing.Point(330, 32);
+            this.Switch.Name = "Switch";
+            this.Switch.Size = new System.Drawing.Size(65, 18);
+            this.Switch.Style = MetroFramework.MetroColorStyle.Orange;
+            this.Switch.TabIndex = 43;
+            this.Switch.Text = "Data";
+            this.Switch.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Switch.UseCustomBackColor = true;
+            this.Switch.UseSelectable = true;
+            this.Switch.Click += new System.EventHandler(this.MetroButton3_Click);
             // 
             // TFTCrafter
             // 
@@ -2413,6 +2358,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(27)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(421, 289);
+            this.Controls.Add(this.Switch);
+            this.Controls.Add(this.Indicator);
             this.Controls.Add(this.TitleBar);
             this.Controls.Add(this.TabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2441,12 +2388,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ChampionsTab.ResumeLayout(false);
             this.ChampionsTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
             this.CraftingTab.ResumeLayout(false);
             this.CraftingTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.ProbTab.ResumeLayout(false);
@@ -2459,29 +2404,26 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.OriginsTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.OriginsDescriptionFlow.ResumeLayout(false);
             this.OriginsDescriptionFlow.PerformLayout();
             this.metroPanel8.ResumeLayout(false);
             this.metroPanel8.PerformLayout();
             this.TierListTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
             this.PDamageTab.ResumeLayout(false);
             this.metroPanel7.ResumeLayout(false);
             this.metroPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ClassTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ClassesDescriptionFlow.ResumeLayout(false);
             this.ClassesDescriptionFlow.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Indicator)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2571,7 +2513,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel7;
         private System.Windows.Forms.FlowLayoutPanel OriginsFlowPanel;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label10;
@@ -2606,6 +2547,19 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.FlowLayoutPanel ClassesDescriptionFlow;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private System.Windows.Forms.FlowLayoutPanel ClassesFlowPanel;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox Indicator;
+        private MetroFramework.Controls.MetroButton Switch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label42;
@@ -2621,23 +2575,7 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.FlowLayoutPanel ClassesDescriptionFlow;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
-        private System.Windows.Forms.FlowLayoutPanel ClassesFlowPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label33;
     }
 }
 
