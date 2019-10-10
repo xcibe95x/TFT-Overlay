@@ -263,6 +263,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap border {
+            get {
+                object obj = ResourceManager.GetObject("border", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bow {
             get {
                 object obj = ResourceManager.GetObject("Bow", resourceCulture);
@@ -1213,6 +1223,16 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap manually {
+            get {
+                object obj = ResourceManager.GetObject("manually", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Maokai {
             get {
                 object obj = ResourceManager.GetObject("Maokai", resourceCulture);
@@ -1932,6 +1952,16 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap spearofshojin {
             get {
                 object obj = ResourceManager.GetObject("spearofshojin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap special {
+            get {
+                object obj = ResourceManager.GetObject("special", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

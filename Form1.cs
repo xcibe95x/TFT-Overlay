@@ -104,7 +104,6 @@ namespace TFT_Overlay
             Location = new Point(20, 60);
             TopMost = Properties.Settings.Default.TopMost;
             alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.TopMost;
-            Summoner.Text = "";
 
             // TABS ORDER PERMANENT FIX
             TabControl.TabPages.Clear();
@@ -2527,8 +2526,47 @@ namespace TFT_Overlay
             Indicator.Visible = true; Switch.Location = new Point(330, 32);
 
                 if (TabControl.SelectedTab == CraftingTab)
-                Indicator.BackgroundImage = Properties.Resources.no_cloud;
-                PocketTips.SetToolTip(Indicator, "Do i make you scared?");
+                {
+                    Indicator.BackgroundImage = Properties.Resources.manually;
+                    PocketTips.SetToolTip(Indicator, "Data is always up to date, but latest items combinations are updated software-side.");
+                }
+
+                if (TabControl.SelectedTab == ChampionsTab)
+                {
+                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                    PocketTips.SetToolTip(Indicator, "Always Up to Date!");
+                }
+
+                if (TabControl.SelectedTab == TierListTab)
+                {
+                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                    PocketTips.SetToolTip(Indicator, "Always Up to Date!");
+                }
+
+                if (TabControl.SelectedTab == ProbTab)
+                {
+                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                    PocketTips.SetToolTip(Indicator, "");
+                }
+
+                if (TabControl.SelectedTab == PDamageTab)
+                {
+                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                    PocketTips.SetToolTip(Indicator, "");
+                }
+
+                if (TabControl.SelectedTab == OriginsTab)
+                {
+                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                    PocketTips.SetToolTip(Indicator, "Always Up to Date!");
+                }
+
+                if (TabControl.SelectedTab == ClassTab)
+                {
+                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                    PocketTips.SetToolTip(Indicator, "Always Up to Date!");
+                }
+
             }
         }
 
