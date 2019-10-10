@@ -685,7 +685,7 @@
             this.TabControl.ItemSize = new System.Drawing.Size(59, 30);
             this.TabControl.Location = new System.Drawing.Point(-2, 22);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
+            this.TabControl.SelectedIndex = 1;
             this.TabControl.Size = new System.Drawing.Size(424, 267);
             this.TabControl.Style = MetroFramework.MetroColorStyle.Silver;
             this.TabControl.TabIndex = 15;
@@ -2333,6 +2333,7 @@
             this.Indicator.TabIndex = 50;
             this.Indicator.TabStop = false;
             this.PocketTips.SetToolTip(this.Indicator, "Always Up to Date!");
+            this.Indicator.Visible = false;
             // 
             // PocketTips
             // 

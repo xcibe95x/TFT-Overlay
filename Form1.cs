@@ -2498,6 +2498,8 @@ namespace TFT_Overlay
 
             if (Switch.Text == "Data")
             {
+
+                Indicator.Visible = false;
                 Switch.Text = "Data 2";
 
                 TabControl.TabPages.Clear();
@@ -2509,6 +2511,7 @@ namespace TFT_Overlay
             }
             else if (Switch.Text == "Data 2")
             {
+                Indicator.Visible = false;
                 Switch.Text = "Data";
                 TabControl.TabPages.Clear();
                 TabControl.TabPages.Insert(0, ProfileTAB);
@@ -2521,53 +2524,62 @@ namespace TFT_Overlay
 
         private void TabControl_Selected(object sender, TabControlEventArgs e)
         {
-            if (TabControl.SelectedTab == ProfileTAB) { Indicator.Visible = false; Switch.Location = new Point(350, 32); }
-            else {
-            Indicator.Visible = true; Switch.Location = new Point(330, 32);
+            if (TabControl.SelectedTab == ProfileTAB)
+            {
+                Indicator.Visible = false; Switch.Location = new Point(350, 32);
+            }
+            
 
                 if (TabControl.SelectedTab == CraftingTab)
                 {
-                    Indicator.BackgroundImage = Properties.Resources.manually;
+                Indicator.Visible = true; Switch.Location = new Point(330, 32);
+                Indicator.BackgroundImage = Properties.Resources.manually;
                     PocketTips.SetToolTip(Indicator, "Data is always up to date, but latest items combinations are updated software-side.");
                 }
 
                 if (TabControl.SelectedTab == ChampionsTab)
                 {
-                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                Indicator.Visible = true; Switch.Location = new Point(330, 32);
+                Indicator.BackgroundImage = Properties.Resources.cloud_data;
                     PocketTips.SetToolTip(Indicator, "Always Up to Date!");
                 }
 
                 if (TabControl.SelectedTab == TierListTab)
                 {
-                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                Indicator.Visible = true; Switch.Location = new Point(330, 32);
+                Indicator.BackgroundImage = Properties.Resources.cloud_data;
                     PocketTips.SetToolTip(Indicator, "Always Up to Date!");
                 }
 
                 if (TabControl.SelectedTab == ProbTab)
                 {
-                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                Indicator.Visible = true; Switch.Location = new Point(330, 32);
+                Indicator.BackgroundImage = Properties.Resources.cloud_data;
                     PocketTips.SetToolTip(Indicator, "");
                 }
 
                 if (TabControl.SelectedTab == PDamageTab)
                 {
-                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                Indicator.Visible = true; Switch.Location = new Point(330, 32);
+                Indicator.BackgroundImage = Properties.Resources.cloud_data;
                     PocketTips.SetToolTip(Indicator, "");
                 }
 
                 if (TabControl.SelectedTab == OriginsTab)
                 {
-                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                Indicator.Visible = true; Switch.Location = new Point(330, 32);
+                Indicator.BackgroundImage = Properties.Resources.cloud_data;
                     PocketTips.SetToolTip(Indicator, "Always Up to Date!");
                 }
 
                 if (TabControl.SelectedTab == ClassTab)
                 {
-                    Indicator.BackgroundImage = Properties.Resources.cloud_data;
+                Indicator.Visible = true; Switch.Location = new Point(330, 32);
+                Indicator.BackgroundImage = Properties.Resources.cloud_data;
                     PocketTips.SetToolTip(Indicator, "Always Up to Date!");
                 }
 
-            }
+           
         }
 
         private void Panel1_MouseLeave(object sender, EventArgs e)
