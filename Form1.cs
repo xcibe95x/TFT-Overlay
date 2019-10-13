@@ -1753,7 +1753,6 @@ namespace TFT_Overlay
 
                     using (PictureBox picturebox = new PictureBox
                     {
-                        Name = "basepanel",
                         Size = new Size(25, 25),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.None,
@@ -1764,7 +1763,6 @@ namespace TFT_Overlay
                     {
                         using (PictureBox defaultHex = new PictureBox
                         {
-                            Name = "basepanel",
                             Size = new Size(25, 25),
                             Anchor = AnchorStyles.None,
                             Dock = DockStyle.None,
@@ -1929,7 +1927,8 @@ namespace TFT_Overlay
                     basepanel.Controls.Add(itemBorder);
                     itemBorder.Controls.Add(picturebox);
                     itemsIndex++;
-
+                   
+                    PocketTips.SetToolTip(picturebox, itemization);
                 }
 
                 //WRAP TIPS

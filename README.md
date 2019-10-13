@@ -21,22 +21,21 @@
 	 - Removed ALL unused Assets
 	 - New Settings Page
 	 - Adjustable Opacity
+	 - Updated Data Sync Icons
+	 - Added tooltip on recommended items, in case new items don't have icon
+	 - Fixed a bug with Origins and Classes Icons not showing
 	 
        POSSIBLE CHANGELOG
-	 - Champs Tab with more feature
+	 - You can set the summoner name from Settings Tab now
 	 - Add Support to implement the json data on github
-	 - Code Optimization
-
+	 - Champs Tab with more feature
 	 - Improve actual features
-	 - Updated Cloud Icons
-	 - New system to add summoner profile
-	 - tooltip on reccomended items just in case
 	 - Add more default hexes with different colors that get choosen random
-
 	 - Rounds
      - Blitz.gg
 	 - Mobalitycs
 	 - Possible Team Comps
+	 - Code Optimization
 	 
 - **2.9**
 	 - Now send you straight to the latest version GitHub Page
