@@ -2,6 +2,8 @@
 
 ![Image](https://i.redd.it/trbz311srql31.png)
 
+## PLEASE HELP KEEPING THE JSON FILE UP-TO-DATE!
+
 ## ! HOW TO USE !
 - Set your Game to be Borderless or Windowed!
 - Right click on the title bar for the context menu
@@ -17,12 +19,14 @@
      - Updated Design
      - FINALly! Proper ToolTips!
 	 - Removed ALL unused Assets
+	 - New Settings Page
+	 - Adjustable Opacity
 	 
        POSSIBLE CHANGELOG
 	 - Champs Tab with more feature
 	 - Add Support to implement the json data on github
 	 - Code Optimization
-	 - Changeable Opacity
+
 	 - Improve actual features
 	 - Updated Cloud Icons
 	 - New system to add summoner profile

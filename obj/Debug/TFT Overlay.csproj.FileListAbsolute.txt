@@ -1,0 +1,17 @@
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\Pocket Tactics.exe.config
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\Pocket Tactics.exe
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\Pocket Tactics.pdb
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\MetroFramework.Design.dll
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\MetroFramework.dll
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\TFT Overlay.csprojAssemblyReference.cache
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\TFT_Overlay.TFTCrafter.resources
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\TFT_Overlay.Form2.resources
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\TFT_Overlay.Properties.Resources.resources
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\TFT Overlay.csproj.GenerateResource.cache
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\TFT Overlay.csproj.CoreCompileInputs.cache
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\TFT Overlay.csproj.CopyComplete
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\Pocket Tactics.exe
+C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Debug\Pocket Tactics.pdb

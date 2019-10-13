@@ -105,6 +105,13 @@ namespace TFT_Overlay
             TopMost = Properties.Settings.Default.TopMost;
             alwaysOnTopToolStripMenuItem.Checked = Properties.Settings.Default.TopMost;
 
+            
+         
+          Opacity = Properties.Settings.Default.Opacity / 100.0;
+           
+           metroTrackBar1.Value = Properties.Settings.Default.Opacity;
+
+
             // TABS ORDER PERMANENT FIX
             TabControl.TabPages.Clear();
             TabControl.TabPages.Insert(0, ProfileTAB);
@@ -2580,6 +2587,39 @@ namespace TFT_Overlay
                 }
 
            
+        }
+
+        private void MetroButton3_Click_1(object sender, EventArgs e)
+        {
+                  
+            TabControl.TabPages.Insert(TabControl.TabCount, settingsTab);
+            TabControl.SelectedTab = settingsTab;
+            Indicator.Visible = false;
+        }
+
+        private void MetroTrackBar1_ValueChanged(object sender, EventArgs e)
+        {
+
+            metroLabel1.Text = "Opacity: " + metroTrackBar1.Value + "%";
+          this.Opacity = (double)metroTrackBar1.Value / 100.0;
+          Properties.Settings.Default.Opacity = metroTrackBar1.Value;
+          Properties.Settings.Default.Save();
+
+        }
+
+        private void TFTCrafter_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SettingsTab_Leave(object sender, EventArgs e)
+        {
+            TabControl.TabPages.Remove(settingsTab);
         }
 
         private void Panel1_MouseLeave(object sender, EventArgs e)
