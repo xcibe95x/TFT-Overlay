@@ -37,7 +37,7 @@ namespace TFT_Overlay.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("VoyBoy")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Tsunderina")]
         public string SummonerName {
             get {
                 return ((string)(this["SummonerName"]));
@@ -49,7 +49,7 @@ namespace TFT_Overlay.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("na")]
+        [global::System.Configuration.DefaultSettingValueAttribute("euw1")]
         public string Server {
             get {
                 return ((string)(this["Server"]));

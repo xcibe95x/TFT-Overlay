@@ -6,10 +6,10 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="SummonerName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">VoyBoy</Value>
+      <Value Profile="(Default)">Tsunderina</Value>
     </Setting>
     <Setting Name="Server" Type="System.String" Scope="User">
-      <Value Profile="(Default)">na</Value>
+      <Value Profile="(Default)">euw1</Value>
     </Setting>
     <Setting Name="Opacity" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">95</Value>

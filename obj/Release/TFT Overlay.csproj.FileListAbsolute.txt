@@ -27,8 +27,6 @@ C:\Users\cibe\Documents\GitHub\TFT-Overlay--Crafting---Utility-s-\obj\Release\TF
 C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Release\Pocket Tactics.exe.config
 C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Release\Pocket Tactics.exe
 C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Release\Pocket Tactics.pdb
-C:\Users\cibe\Documents\GitHub\TFT-Overlay\bin\Release\Newtonsoft.Json.xml
-C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Release\TFT Overlay.csprojAssemblyReference.cache
 C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Release\TFT_Overlay.TFTCrafter.resources
 C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Release\TFT_Overlay.Form2.resources
 C:\Users\cibe\Documents\GitHub\TFT-Overlay\obj\Release\TFT_Overlay.Properties.Resources.resources

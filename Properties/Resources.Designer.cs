@@ -1251,36 +1251,6 @@ namespace TFT_Overlay.Properties {
         }
         
         /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Byte[].
-        /// </summary>
-        internal static byte[] MetroFramework {
-            get {
-                object obj = ResourceManager.GetObject("MetroFramework", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Byte[].
-        /// </summary>
-        internal static byte[] MetroFramework_Design {
-            get {
-                object obj = ResourceManager.GetObject("MetroFramework_Design", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Byte[].
-        /// </summary>
-        internal static byte[] MetroFramework_Fonts {
-            get {
-                object obj = ResourceManager.GetObject("MetroFramework_Fonts", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap MissFortune {
@@ -1387,42 +1357,6 @@ namespace TFT_Overlay.Properties {
             get {
                 object obj = ResourceManager.GetObject("neekoshelp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Byte[].
-        /// </summary>
-        internal static byte[] Newtonsoft_Json {
-            get {
-                object obj = ResourceManager.GetObject("Newtonsoft_Json", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una stringa localizzata simile a &lt;?xml version=&quot;1.0&quot;?&gt;
-        ///&lt;doc&gt;
-        ///    &lt;assembly&gt;
-        ///        &lt;name&gt;Newtonsoft.Json&lt;/name&gt;
-        ///    &lt;/assembly&gt;
-        ///    &lt;members&gt;
-        ///        &lt;member name=&quot;T:Newtonsoft.Json.Bson.BsonObjectId&quot;&gt;
-        ///            &lt;summary&gt;
-        ///            Represents a BSON Oid (object id).
-        ///            &lt;/summary&gt;
-        ///        &lt;/member&gt;
-        ///        &lt;member name=&quot;P:Newtonsoft.Json.Bson.BsonObjectId.Value&quot;&gt;
-        ///            &lt;summary&gt;
-        ///            Gets or sets the value of the Oid.
-        ///            &lt;/summary&gt;
-        ///            &lt;value&gt;The value of the Oid.&lt;/value&gt;
-        ///        &lt;/member&gt;
-        ///        [stringa troncata]&quot;;.
-        /// </summary>
-        internal static string Newtonsoft_Json1 {
-            get {
-                return ResourceManager.GetString("Newtonsoft_Json1", resourceCulture);
             }
         }
         
@@ -1929,9 +1863,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sparringgloves {
+        internal static System.Drawing.Bitmap SparringGloves {
             get {
-                object obj = ResourceManager.GetObject("sparringgloves", resourceCulture);
+                object obj = ResourceManager.GetObject("SparringGloves", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2202,16 +2136,6 @@ namespace TFT_Overlay.Properties {
         internal static System.Drawing.Bitmap Tristana {
             get {
                 object obj = ResourceManager.GetObject("Tristana", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tristana1 {
-            get {
-                object obj = ResourceManager.GetObject("Tristana1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -107,7 +107,7 @@ namespace TFT_Overlay
 
             
          
-          Opacity = Properties.Settings.Default.Opacity / 100.0;
+          this.Opacity = Properties.Settings.Default.Opacity / 100.0;
            
            metroTrackBar1.Value = Properties.Settings.Default.Opacity;
 
@@ -1245,6 +1245,7 @@ namespace TFT_Overlay
                 {
 
                     string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
+                    Console.WriteLine(origins);
 
                     using (PictureBox defaultHex = new PictureBox
                     {
@@ -1753,6 +1754,7 @@ namespace TFT_Overlay
 
                     using (PictureBox picturebox = new PictureBox
                     {
+                        Name = "basepanel",
                         Size = new Size(25, 25),
                         Anchor = AnchorStyles.None,
                         Dock = DockStyle.None,
@@ -1763,6 +1765,7 @@ namespace TFT_Overlay
                     {
                         using (PictureBox defaultHex = new PictureBox
                         {
+                            Name = "basepanel",
                             Size = new Size(25, 25),
                             Anchor = AnchorStyles.None,
                             Dock = DockStyle.None,
@@ -1927,7 +1930,6 @@ namespace TFT_Overlay
                     basepanel.Controls.Add(itemBorder);
                     itemBorder.Controls.Add(picturebox);
                     itemsIndex++;
-                   
                     PocketTips.SetToolTip(picturebox, itemization);
                 }
 
@@ -1937,10 +1939,11 @@ namespace TFT_Overlay
                 // TOOLTIPS
                 PocketTips.SetToolTip(ChampBox, WrappedMessage);
                 PocketTips.SetToolTip(ChampPicture, WrappedMessage);
+            
 
 
 
-               
+
 
             }
 
