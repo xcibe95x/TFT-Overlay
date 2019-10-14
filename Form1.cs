@@ -1118,7 +1118,7 @@ namespace TFT_Overlay
 
             // FILL TIER LIST
 
-
+        
 
             JObject jObject = JObject.Parse(tiersJSON);
 
@@ -1233,21 +1233,18 @@ namespace TFT_Overlay
                 label.Controls.Add(coin);
 
 
-
-
-
-
                 // ORIGIN
 
                 JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
-
+        
                 foreach (JToken arrayname2 in originsLoop)
                 {
 
                     string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
                     Console.WriteLine(origins);
 
-                    using (PictureBox defaultHex = new PictureBox
+#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
+                    var defaultHex = new PictureBox
                     {
                         Name = "basepanel",
                         Size = new Size(22, 22),
@@ -1260,32 +1257,37 @@ namespace TFT_Overlay
                         BackgroundImageLayout = ImageLayout.Stretch,
 
 
-                    })
-                    {
-                        using (PictureBox newOrigins = new PictureBox
-                        {
-                            Name = "newOrigins",
-                            Size = new Size(13, 13),
-                            Padding = new Padding(5, 5, 5, 5),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.Fill,
-                            //Location = new Point(10, 50),
-                            BackColor = Color.Transparent,
+                    };
+#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
 
-                        })
-                        {
-                            using (PictureBox originsBox = new PictureBox
-                            {
-                                Name = "basepanel",
-                                Margin = new Padding(2, 5, 2, 0),
-                                Size = new Size(22, 22),
-                                Anchor = AnchorStyles.None,
-                                Dock = DockStyle.None,
-                                BackColor = Color.Transparent,
-                                BackgroundImage = (Image)(rm.GetObject(origins)),
-                                BackgroundImageLayout = ImageLayout.Stretch,
-                            })
-                            {
+#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
+                    var newOrigins = new PictureBox
+                    {
+                        Name = "newOrigins",
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
+
+#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
+                    var originsBox = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Margin = new Padding(2, 5, 2, 0),
+                        Size = new Size(22, 22),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject(origins)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
+                            
                                 if (ResourcesList.Contains(origins))
                                 {
                                     basepanel.Controls.Add(originsBox);
@@ -1299,11 +1301,8 @@ namespace TFT_Overlay
                                     basepanel.Controls.Add(defaultHex);
                                     defaultHex.Controls.Add(newOrigins);
                                     PocketTips.SetToolTip(defaultHex, origins);
-                                    PocketTips.SetToolTip(newOrigins, origins);
-
-                                }
-                            }
-                        }
+                                    PocketTips.SetToolTip(newOrigins, origins);                            
+                                  
                     }
 
 
@@ -1319,8 +1318,8 @@ namespace TFT_Overlay
 
 
                     string classes = (string)jObjectw.SelectToken(champName + ".class.[" + classesIndex.ToString() + "]");
-
-                    using (PictureBox defaultHex = new PictureBox
+#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
+                    var defaultHex = new PictureBox
                     {
                         Name = "basepanel",
                         Size = new Size(22, 22),
@@ -1333,31 +1332,31 @@ namespace TFT_Overlay
                         BackgroundImageLayout = ImageLayout.Stretch,
 
 
-                    })
-                    {
-                        using (PictureBox newClass = new PictureBox
-                        {
-                            Size = new Size(13, 13),
-                            Padding = new Padding(5, 5, 5, 5),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.Fill,
-                            //Location = new Point(10, 50),
-                            BackColor = Color.Transparent,
+                    };
 
-                        })
-                        {
-                            using (PictureBox classBox = new PictureBox
-                            {
-                                Name = "basepanel",
-                                Size = new Size(22, 22),
-                                Margin = new Padding(2, 5, 2, 0),
-                                Anchor = AnchorStyles.None,
-                                Dock = DockStyle.None,
-                                BackColor = Color.Transparent,
-                                BackgroundImage = (Image)(rm.GetObject(classes)),
-                                BackgroundImageLayout = ImageLayout.Stretch,
-                            })
-                            {
+                    var newClass = new PictureBox
+                    {
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+
+                    var classBox = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(22, 22),
+                        Margin = new Padding(2, 5, 2, 0),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject(classes)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+                           
                                 if (ResourcesList.Contains(classes))
                                 {
                                     basepanel.Controls.Add(classBox);
@@ -1370,10 +1369,7 @@ namespace TFT_Overlay
                                     basepanel.Controls.Add(defaultHex);
                                     defaultHex.Controls.Add(newClass);
                                     PocketTips.SetToolTip(defaultHex, classes);
-                                    PocketTips.SetToolTip(newClass, classes);
-                                }
-                            }
-                        }
+                                    PocketTips.SetToolTip(newClass, classes);       
                     }
 
 
@@ -1752,7 +1748,7 @@ namespace TFT_Overlay
 
                     string origins = (string)jObject.SelectToken(key + ".origin.[" + originsIndex.ToString() + "]");
 
-                    using (PictureBox picturebox = new PictureBox
+                    var picturebox = new PictureBox
                     {
                         Name = "basepanel",
                         Size = new Size(25, 25),
@@ -1761,33 +1757,33 @@ namespace TFT_Overlay
                         Location = new Point(0, 0),
                         BackgroundImage = (Image)(rm.GetObject(origins)),
                         BackgroundImageLayout = ImageLayout.Stretch,
-                    })
+                    };
+
+                    var defaultHex = new PictureBox
                     {
-                        using (PictureBox defaultHex = new PictureBox
-                        {
-                            Name = "basepanel",
-                            Size = new Size(25, 25),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.None,
-                            //Location = new Point(10, 50),
-                            BackColor = Color.Transparent,
-                            BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                            BackgroundImageLayout = ImageLayout.Stretch,
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
 
 
-                        })
-                        {
-                            using (PictureBox newOrigins = new PictureBox
-                            {
-                                Size = new Size(13, 13),
-                                Padding = new Padding(5, 5, 5, 5),
-                                Anchor = AnchorStyles.None,
-                                Dock = DockStyle.Fill,
-                                //Location = new Point(10, 50),
-                                BackColor = Color.Transparent,
+                    };
 
-                            })
-                            {
+                    var newOrigins = new PictureBox
+                    {
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+
+                    };
+                            
                                 if (ResourcesList.Contains(origins))
                                 {
                                     basepanel.Controls.Add(picturebox);
@@ -1801,10 +1797,7 @@ namespace TFT_Overlay
                                     defaultHex.Controls.Add(newOrigins);
                                     PocketTips.SetToolTip(defaultHex, origins);
                                     PocketTips.SetToolTip(newOrigins, origins);
-
-                                }
-                            }
-                        }
+           
                     }
 
 
@@ -1823,7 +1816,7 @@ namespace TFT_Overlay
 
                     string classes = (string)jObject.SelectToken(key + ".class.[" + classesIndex.ToString() + "]");
 
-                    using (PictureBox picturebox = new PictureBox
+                    var picturebox = new PictureBox
                     {
                         Name = "basepanel",
                         Size = new Size(25, 25),
@@ -1832,30 +1825,30 @@ namespace TFT_Overlay
                         Location = new Point(0, 0),
                         BackgroundImage = (Image)(rm.GetObject(classes)),
                         BackgroundImageLayout = ImageLayout.Stretch,
-                    })
+                    };
+
+                    var defaultHex = new PictureBox
                     {
-                        using (PictureBox defaultHex = new PictureBox
-                        {
-                            Name = "basepanel",
-                            Size = new Size(25, 25),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.None,
-                            //Location = new Point(10, 50),
-                            BackColor = Color.Transparent,
-                            BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                            BackgroundImageLayout = ImageLayout.Stretch,
-                        })
-                        {
-                            using (PictureBox newClasses = new PictureBox
-                            {
-                                Size = new Size(13, 13),
-                                Padding = new Padding(5, 5, 5, 5),
-                                Anchor = AnchorStyles.None,
-                                Dock = DockStyle.Fill,
-                                //Location = new Point(10, 50),
-                                BackColor = Color.Transparent,
-                            })
-                            {
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+                    var newClasses = new PictureBox
+                    {
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                    };
+                            
                                 if (ResourcesList.Contains(classes))
                                 {
                                     basepanel.Controls.Add(picturebox);
@@ -1869,9 +1862,7 @@ namespace TFT_Overlay
                                     defaultHex.Controls.Add(newClasses);
                                     PocketTips.SetToolTip(defaultHex, classes);
                                     PocketTips.SetToolTip(newClasses, classes);
-                                }
-                            }
-                        }
+
                     }
 
                     classesIndex++;
@@ -2148,7 +2139,7 @@ namespace TFT_Overlay
 
 
                 // ORIGIN ICON
-                using (PictureBox DrawOrigin = new PictureBox
+                var DrawOrigin = new PictureBox
                 {
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
@@ -2158,28 +2149,28 @@ namespace TFT_Overlay
                     BackgroundImage = (Image)(rm.GetObject(originName)),
                     BackgroundImageLayout = ImageLayout.Stretch,
                     Enabled = false,
-                })
+                };
+
+                var defaultHex = new PictureBox
                 {
-                    using (PictureBox defaultHex = new PictureBox
-                    {
-                        Name = "basepanel",
-                        Size = new Size(25, 25),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    })
-                    {
-                        using (PictureBox newOrigin = new PictureBox
-                        {
-                            Size = new Size(13, 13),
-                            Padding = new Padding(5, 5, 5, 5),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.Fill,
-                            BackColor = Color.Transparent,
-                        })
-                        {
+                    Name = "basepanel",
+                    Size = new Size(25, 25),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+                };
+
+                var newOrigin = new PictureBox
+                {
+                    Size = new Size(13, 13),
+                    Padding = new Padding(5, 5, 5, 5),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.Fill,
+                    BackColor = Color.Transparent,
+                };
+                        
                             if (ResourcesList.Contains(originName))
                             {
                                 DrawPanel.Controls.Add(DrawOrigin);
@@ -2190,9 +2181,7 @@ namespace TFT_Overlay
                                 newOrigin.SizeMode = PictureBoxSizeMode.StretchImage;
                                 DrawPanel.Controls.Add(defaultHex);
                                 defaultHex.Controls.Add(newOrigin);
-                            }
-                        }
-                    }
+
                 }
 
                 var DrawLabel = new MetroLabel
@@ -2265,7 +2254,7 @@ namespace TFT_Overlay
 
 
                 // ORIGIN ICON
-                using (PictureBox DrawClass = new PictureBox
+                var DrawClass = new PictureBox
                 {
                     Anchor = AnchorStyles.None,
                     Dock = DockStyle.None,
@@ -2275,29 +2264,29 @@ namespace TFT_Overlay
                     BackgroundImage = (Image)(rm.GetObject(className)),
                     BackgroundImageLayout = ImageLayout.Stretch,
                     Enabled = false,
-                })
+                };
+
+                var defaultHex = new PictureBox
                 {
-                    using (PictureBox defaultHex = new PictureBox
-                    {
-                        Size = new Size(25, 25),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    })
-                    {
-                        using (PictureBox newClasses = new PictureBox
-                        {
-                            Size = new Size(13, 13),
-                            Padding = new Padding(5, 5, 5, 5),
-                            Anchor = AnchorStyles.None,
-                            Dock = DockStyle.Fill,
-                            //Location = new Point(10, 50),
-                            BackColor = Color.Transparent,
-                        })
-                        {
+                    Size = new Size(25, 25),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.None,
+                    //Location = new Point(10, 50),
+                    BackColor = Color.Transparent,
+                    BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                    BackgroundImageLayout = ImageLayout.Stretch,
+                };
+
+                var newClasses = new PictureBox
+                {
+                    Size = new Size(13, 13),
+                    Padding = new Padding(5, 5, 5, 5),
+                    Anchor = AnchorStyles.None,
+                    Dock = DockStyle.Fill,
+                    //Location = new Point(10, 50),
+                    BackColor = Color.Transparent,
+                };
+                        
                             if (ResourcesList.Contains(className))
                             {
                                 DrawPanel.Controls.Add(DrawClass);
@@ -2308,9 +2297,7 @@ namespace TFT_Overlay
                                 newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
                                 DrawPanel.Controls.Add(defaultHex);
                                 defaultHex.Controls.Add(newClasses);
-                            }
-                        }
-                    }
+   
                 }
 
                 var DrawLabel = new MetroLabel

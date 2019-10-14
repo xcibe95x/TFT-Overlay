@@ -23,7 +23,6 @@
 	 - Adjustable Opacity
 	 - Updated Data Sync Icons
 	 - Added tooltip on recommended items, in case new items don't have icon
-	 - Fixed a bug with Origins and Classes Icons not showing
 	 
        POSSIBLE CHANGELOG
 	 - You can set the summoner name from Settings Tab now
