@@ -1242,7 +1242,7 @@ namespace TFT_Overlay
                 {
 
                     string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
-                    Console.WriteLine(origins);
+                 
 
 #pragma warning disable IDE0068 // Usare il criterio dispose consigliato
                     var defaultHex = new PictureBox
@@ -1645,10 +1645,6 @@ namespace TFT_Overlay
 
 
                 ChampsSearchBox.AutoCompleteCustomSource.Add(key);
-
-
-                // DEBUG LINE
-                //Console.WriteLine((string)jObject.SelectToken(key + ".name"));
 
                 // CODE
                 var basepanel = new FlowLayoutPanel
