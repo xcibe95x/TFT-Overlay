@@ -142,7 +142,7 @@
   <data name="Ashe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\champs\Ashe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Asjsassin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Assassin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\classes\Assassin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AurelionSol" type="System.Resources.ResXFileRef, System.Windows.Forms">

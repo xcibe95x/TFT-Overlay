@@ -1396,6 +1396,10 @@ namespace TFT_Overlay
         // PROBABILITIES
         private void MetroButton1_Click_1(object sender, EventArgs e)
         {
+
+
+            JObject jObject = JObject.Parse(datacloudJSON);
+
             Title.Focus();
 
 
@@ -1407,11 +1411,11 @@ namespace TFT_Overlay
             {
                 Levels = 1;
                 Lvl.Text = "Level " + 1;
-                T1P.Text = "100%";
-                T2P.Text = "0%";
-                T3P.Text = "0%";
-                T4P.Text = "0%";
-                T5P.Text = "0%";
+                T1P.Text = (string)jObject.SelectToken("Levels.LV1.T1"); ;
+                T2P.Text = (string)jObject.SelectToken("Levels.LV1.T2"); ;
+                T3P.Text = (string)jObject.SelectToken("Levels.LV1.T3"); ;
+                T4P.Text = (string)jObject.SelectToken("Levels.LV1.T4"); ;
+                T5P.Text = (string)jObject.SelectToken("Levels.LV1.T5"); ;
 
             }
 
@@ -1419,83 +1423,83 @@ namespace TFT_Overlay
             {
                 default:
                     Lvl.Text = "Level 1";
-                    T1P.Text = "100%";
-                    T2P.Text = "-";
-                    T3P.Text = "-";
-                    T4P.Text = "-";
-                    T5P.Text = "-";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV1.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV1.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV1.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV1.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV1.T5"); ;
                     break;
                 case 1:
                     Lvl.Text = "Level 1";
-                    T1P.Text = "100%";
-                    T2P.Text = "-";
-                    T3P.Text = "-";
-                    T4P.Text = "-";
-                    T5P.Text = "-";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV1.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV1.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV1.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV1.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV1.T5"); ;
                     break;
                 case 2:
                     Lvl.Text = "Level 2";
-                    T1P.Text = "100%";
-                    T2P.Text = "-";
-                    T3P.Text = "-";
-                    T4P.Text = "-";
-                    T5P.Text = "-";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV2.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV2.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV2.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV2.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV2.T5"); ;
                     break;
                 case 3:
                     Lvl.Text = "Level 3";
-                    T1P.Text = "70%";
-                    T2P.Text = "25%";
-                    T3P.Text = "5%";
-                    T4P.Text = "-";
-                    T5P.Text = "-";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV3.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV3.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV3.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV3.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV3.T5"); ;
                     break;
                 case 4:
                     Lvl.Text = "Level 4";
-                    T1P.Text = "50%";
-                    T2P.Text = "35%";
-                    T3P.Text = "15%";
-                    T4P.Text = "-";
-                    T5P.Text = "-";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV4.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV4.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV4.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV4.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV4.T5"); ;
                     break;
                 case 5:
                     Lvl.Text = "Level 5";
-                    T1P.Text = "35%";
-                    T2P.Text = "35%";
-                    T3P.Text = "25%";
-                    T4P.Text = "5%";
-                    T5P.Text = "-";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV5.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV5.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV5.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV5.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV5.T5"); ;
                     break;
                 case 6:
                     Lvl.Text = "Level 6";
-                    T1P.Text = "25%";
-                    T2P.Text = "35%";
-                    T3P.Text = "30%";
-                    T4P.Text = "10%";
-                    T5P.Text = "-";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV6.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV6.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV6.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV6.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV6.T5"); ;
                     break;
                 case 7:
                     Lvl.Text = "Level 7";
-                    T1P.Text = "20%";
-                    T2P.Text = "30%";
-                    T3P.Text = "33%";
-                    T4P.Text = "15%";
-                    T5P.Text = "2%";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV7.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV7.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV7.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV7.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV7.T5"); ;
                     break;
                 case 8:
                     Lvl.Text = "Level 8";
-                    T1P.Text = "15%";
-                    T2P.Text = "25%";
-                    T3P.Text = "35%";
-                    T4P.Text = "20%";
-                    T5P.Text = "5%";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV8.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV8.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV8.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV8.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV8.T5"); ;
                     break;
                 case 9:
                     Lvl.Text = "Level 9";
-                    T1P.Text = "10%";
-                    T2P.Text = "15%";
-                    T3P.Text = "33%";
-                    T4P.Text = "30%";
-                    T5P.Text = "12%";
+                    T1P.Text = (string)jObject.SelectToken("Levels.LV9.T1"); ;
+                    T2P.Text = (string)jObject.SelectToken("Levels.LV9.T2"); ;
+                    T3P.Text = (string)jObject.SelectToken("Levels.LV9.T3"); ;
+                    T4P.Text = (string)jObject.SelectToken("Levels.LV9.T4"); ;
+                    T5P.Text = (string)jObject.SelectToken("Levels.LV9.T5"); ;
                     break;
             }
         }

@@ -153,9 +153,9 @@ namespace TFT_Overlay.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Asjsassin {
+        internal static System.Drawing.Bitmap Assassin {
             get {
-                object obj = ResourceManager.GetObject("Asjsassin", resourceCulture);
+                object obj = ResourceManager.GetObject("Assassin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

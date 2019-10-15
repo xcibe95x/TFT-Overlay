@@ -23,10 +23,11 @@
 	 - Adjustable Opacity
 	 - Updated Data Sync Icons
 	 - Added tooltip on recommended items, in case new items don't have icon
+	 - Implemented the json data file from github
+	 - Drop Rates now gets data from github datacloud.json
 	 
        POSSIBLE CHANGELOG
 	 - You can set the summoner name from Settings Tab now
-	 - Add Support to implement the json data on github
 	 - Champs Tab with more feature
 	 - Improve actual features
 	 - Add more default hexes with different colors that get choosen random
