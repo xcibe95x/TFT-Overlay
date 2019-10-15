@@ -2134,11 +2134,11 @@
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label51.Location = new System.Drawing.Point(137, 7);
+            this.label51.Location = new System.Drawing.Point(135, 7);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(40, 13);
+            this.label51.Size = new System.Drawing.Size(43, 13);
             this.label51.TabIndex = 53;
-            this.label51.Text = "Tier 3";
+            this.label51.Text = "Cost 3";
             // 
             // label6
             // 
@@ -2146,11 +2146,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(15, 7);
+            this.label6.Location = new System.Drawing.Point(14, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 51;
-            this.label6.Text = "Tier 1";
+            this.label6.Text = "Cost 1";
             // 
             // label50
             // 
@@ -2158,11 +2158,11 @@
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label50.Location = new System.Drawing.Point(80, 7);
+            this.label50.Location = new System.Drawing.Point(78, 7);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(40, 13);
+            this.label50.Size = new System.Drawing.Size(43, 13);
             this.label50.TabIndex = 52;
-            this.label50.Text = "Tier 2";
+            this.label50.Text = "Cost 2";
             // 
             // label53
             // 
@@ -2170,11 +2170,11 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Gold;
-            this.label53.Location = new System.Drawing.Point(248, 7);
+            this.label53.Location = new System.Drawing.Point(247, 7);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(40, 13);
+            this.label53.Size = new System.Drawing.Size(43, 13);
             this.label53.TabIndex = 55;
-            this.label53.Text = "Tier 5";
+            this.label53.Text = "Cost 5";
             // 
             // label52
             // 
@@ -2182,11 +2182,11 @@
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.DarkViolet;
-            this.label52.Location = new System.Drawing.Point(192, 7);
+            this.label52.Location = new System.Drawing.Point(191, 7);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(40, 13);
+            this.label52.Size = new System.Drawing.Size(43, 13);
             this.label52.TabIndex = 54;
-            this.label52.Text = "Tier 4";
+            this.label52.Text = "Cost 4";
             // 
             // metroButton1
             // 

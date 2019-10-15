@@ -1,6 +1,6 @@
 # Pocket Tactics a TFT Overlay for all your Teamfight Tactics needs.
 
-![Image](https://i.redd.it/trbz311srql31.png)
+![Image](https://i.ibb.co/ZYMvk02/TFTTT.png)
 
 ## PLEASE HELP KEEPING THE JSON FILE UP-TO-DATE!
 
@@ -25,6 +25,7 @@
 	 - Added tooltip on recommended items, in case new items don't have icon
 	 - Implemented the json data file from github
 	 - Drop Rates now gets data from github datacloud.json
+	 - Tier => Cost, Renamed in Drop Rates tab	 
 	 
        POSSIBLE CHANGELOG
 	 - You can set the summoner name from Settings Tab now

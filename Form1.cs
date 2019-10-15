@@ -15,7 +15,7 @@ namespace TFT_Overlay
         // APP SETTINGS
         //
 
-        readonly Version localVersion = new Version("3.0");
+        readonly Version localVersion = new Version("3.0"); // FINAL
         public string ApiKey = "RGAPI-";
 
         /////////////////////////////////////////////////////
