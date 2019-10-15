@@ -16,7 +16,7 @@
 
 ## Version Changelogs
 
-- **3.0 (FINAL) PLACE HOLDER (B.F. UPDATE)**
+- **3.0 (FINAL) PLACE HOLDER**
        REAL CHANGELOG
      - Updated Design
      - FINALly! Proper ToolTips!
@@ -40,6 +40,7 @@
 	 - Mobalitycs
 	 - Possible Team Comps
 	 - Code Optimization
+	 - Improve boot times
 	 
 - **2.9**
 	 - Now send you straight to the latest version GitHub Page
