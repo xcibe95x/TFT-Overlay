@@ -30,6 +30,7 @@
 	 - Tier => Cost, Renamed in Drop Rates tab	 
 	 
        POSSIBLE CHANGELOG
+	 - Champion Images can be Excluded from the datacloud.json file to force reworked champion icon
 	 - You can set the summoner name from Settings Tab now
 	 - Champs Tab with more feature
 	 - Improve actual features
