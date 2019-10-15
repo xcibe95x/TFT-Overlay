@@ -42,7 +42,7 @@ namespace TFT_Overlay
 
         /// VARIABLES
 
-        public string summonerJSON, rankedJSON, itemsJSON, tiersJSON, champsJSON, versionJSON, originsJSON, classesJSON, compsJSON;
+        public string summonerJSON, rankedJSON, itemsJSON, tiersJSON, champsJSON, versionJSON, originsJSON, classesJSON, compsJSON, datacloudJSON; 
         public string Item1, Item2, rItem, rTier, rDesc;
         public string lolVer;
         public string SummonerName = Properties.Settings.Default.SummonerName;
@@ -149,6 +149,7 @@ namespace TFT_Overlay
             originsJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Origins.php");
             classesJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Classes.php");
             compsJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Comps.php");
+            datacloudJSON = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/datacloud.json");
 
             Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
             ResourceSet set = rm.GetResourceSet(CultureInfo.CurrentCulture, true, true);
