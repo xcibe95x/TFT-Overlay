@@ -1,4 +1,6 @@
-﻿using MetroFramework.Controls; using Newtonsoft.Json.Linq; using System; using System.Collections; using System.Collections.Generic; using System.ComponentModel; using System.Drawing; using System.Drawing.Drawing2D;
+﻿using MetroFramework.Controls;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq; using System; using System.Collections; using System.Collections.Generic; using System.ComponentModel; using System.Drawing; using System.Drawing.Drawing2D;
 using System.Globalization; using System.IO; using System.Linq; using System.Net; using System.Reflection; using System.Resources; using System.Runtime.InteropServices; using System.Text.RegularExpressions;
 using System.Threading; using System.Windows.Forms;
 
@@ -42,7 +44,7 @@ namespace TFT_Overlay
 
         /// VARIABLES
 
-        public string summonerJSON, rankedJSON, itemsJSON, tiersJSON, champsJSON, versionJSON, originsJSON, classesJSON, compsJSON, datacloudJSON; 
+        public string summonerJSON, rankedJSON, itemsJSON, tiersJSON, champsJSON, versionJSON, originsJSON, classesJSON, compsJSON, datacloudJSON, exclusions;
         public string Item1, Item2, rItem, rTier, rDesc;
         public string lolVer;
         public string SummonerName = Properties.Settings.Default.SummonerName;
@@ -51,8 +53,10 @@ namespace TFT_Overlay
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         public bool toggleHide;
+
         public Point OMLoc;
 
+        readonly List<string> list = new List<string>();
         readonly List<string> ResourcesList = new List<string>();
         readonly ResourceManager rm = new ResourceManager("TFT_Overlay.Properties.Resources", Assembly.GetExecutingAssembly());
 
@@ -150,6 +154,27 @@ namespace TFT_Overlay
             classesJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Classes.php");
             compsJSON = client.DownloadString("https://dev.playconstraints.com/apps/PocketTactics/Comps.php");
             datacloudJSON = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/datacloud.json");
+            exclusions = client.DownloadString("https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/exclusion.md");
+
+
+
+            var url = "https://raw.githubusercontent.com/xcibe95x/TFT-Overlay/master/exclusion.md";
+            using (var stream = client.OpenRead(url))
+            using (var reader = new StreamReader(stream))
+
+
+
+
+            using (var sr = new StreamReader(stream))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    list.Add(line);
+                }
+            }
+
+
 
             Properties.Resources.ResourceManager.GetResourceSet(Thread.CurrentThread.CurrentCulture, false, true);
             ResourceSet set = rm.GetResourceSet(CultureInfo.CurrentCulture, true, true);
@@ -1177,8 +1202,17 @@ namespace TFT_Overlay
 
                 };
 
+                     
 
-                if (ResourcesList.Contains(champName))
+
+                if (list.Contains(champName))
+                {
+                    picture.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
+                    picture.Controls.Add(basepanel);
+
+                } else if (ResourcesList.Contains(champName))
+
                 {
                     picture.Controls.Add(basepanel);
                 }
@@ -1682,7 +1716,14 @@ namespace TFT_Overlay
 
 
 
-                if (ResourcesList.Contains(key))
+                if (list.Contains(key))
+                {
+                    ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+                    ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
+                    ChampBox.Controls.Add(ChampPicture);
+
+                }
+                else if (ResourcesList.Contains(key))
                 {
                     ChampBox.Controls.Add(ChampPicture);
                 }

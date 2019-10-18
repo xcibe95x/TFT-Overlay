@@ -24,13 +24,14 @@
 	 - New Settings Page
 	 - Adjustable Opacity
 	 - Updated Data Sync Icons
-	 - Added tooltip on recommended items, in case new items don't have icon
+	 - Added tooltip on recommended items, in case new items don't have an icon
 	 - Implemented the json data file from github
 	 - Drop Rates now gets data from github datacloud.json
-	 - Tier => Cost, Renamed in Drop Rates tab	 
-	 
-       POSSIBLE CHANGELOG
-	 - Champion Images can be Excluded from the datacloud.json file to force reworked champion icon
+	 - Tier => Cost, Renamed in Drop Rates tab	
+	 - Champion Images can be Excluded from the exclusion.md file to force reworked champion icon
+       
+	   
+	   POSSIBLE CHANGELOG
 	 - You can set the summoner name from Settings Tab now
 	 - Champs Tab with more feature
 	 - Improve actual features
