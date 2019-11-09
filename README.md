@@ -1,5 +1,8 @@
 # Pocket Tactics a TFT Overlay for all your Teamfight Tactics needs.
 
+Update 09/11/2019, I'm trying to make everything already done to work with the new update, will keep you updated on the progress
+this will be the last version if i finish it, not sure if i'm going to update either, but will be easy for you to keep it up to date from the json file on github if you want to push changes
+
 ## PLEASE HELP KEEPING THE DATACLOUD.JSON FILE UP-TO-DATE!
 
 ![Image](https://i.ibb.co/ZYMvk02/TFTTT.png)
