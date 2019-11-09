@@ -1162,197 +1162,197 @@ namespace TFT_Overlay
             foreach (JToken arrayname in championsTiers)
             {
 
-                int originsIndex = 0;
-                int classesIndex = 0;
+                
+                    int originsIndex = 0;
+                    int classesIndex = 0;
+
+                    string champName = (string)jObject.SelectToken(TierType + "." + TierIndex + "[" + champIndex.ToString() + "]");
+
+
+                    int cost = (int)jObjectw.SelectToken(champName + ".set2.cost");
 
 
 
 
 
-                string champName = (string)jObject.SelectToken(TierType + "." + TierIndex + "[" + champIndex.ToString() + "]");
-                int cost = (int)jObjectw.SelectToken(champName + ".cost");
-
-
-
-
-
-                var picture = new PictureBox
-                {
-                    Name = "pictureBox",
-                    Size = new Size(84, 84),
-                    //Padding = new Padding(5, 5, 5, 5),
-                    Dock = DockStyle.None,
-                    Anchor = AnchorStyles.None,
-                    Location = new Point(0, 0),
-                    BackgroundImage = (Image)(rm.GetObject(champName)),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-
-                };
-
-                var basepanel = new FlowLayoutPanel
-                {
-                    Dock = DockStyle.None,
-                    Anchor = AnchorStyles.None,
-                    BackColor = Color.Transparent,
-                    Location = new Point(3, 52),
-                    FlowDirection = FlowDirection.RightToLeft,
-                    //AutoSize = true,
-                    //AutoSizeMode = AutoSizeMode.GrowOnly,
-                    Size = new Size(picture.Width - 6, picture.Height - 55),
-
-                };
-
-                     
-
-
-                if (list.Contains(champName))
-                {
-                    picture.SizeMode = PictureBoxSizeMode.StretchImage;
-                    picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
-                    picture.Controls.Add(basepanel);
-
-                } else if (ResourcesList.Contains(champName))
-
-                {
-                    picture.Controls.Add(basepanel);
-                }
-                else
-                {
-                    picture.SizeMode = PictureBoxSizeMode.StretchImage;
-                    picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
-                    picture.Controls.Add(basepanel);
-                }
-
-
-
-
-                flowLayoutPanel1.Controls.Add(picture);
-
-                var tierbox = new PictureBox
-                {
-                    Name = "pictureBox",
-                    Size = new Size(84, 84),
-                    Location = new Point(0, 0),
-                    BackColor = Color.Transparent,
-                    BackgroundImage = (Image)(rm.GetObject("Tier" + cost.ToString())),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-
-                };
-
-                picture.Controls.Add(tierbox);
-
-                var label = new Label
-                {
-                    Text = cost.ToString(),
-                    ForeColor = Color.White,
-                    //Size = new Size(84, 84),
-                    Location = new Point(0, 0),
-                    BackColor = Color.Transparent,
-                    Font = new Font(Font, FontStyle.Bold),
-
-                };
-
-                var coin = new PictureBox
-                {
-                    Name = "pictureBox",
-                    Size = new Size(8, 8),
-                    Location = new Point(12, 3),
-                    BackColor = Color.Transparent,
-                    BackgroundImage = (Image)(rm.GetObject("Coin")),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-
-                };
-
-
-                tierbox.Controls.Add(label);
-                label.Controls.Add(coin);
-
-
-                // ORIGIN
-
-                JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".origin");
-        
-                foreach (JToken arrayname2 in originsLoop)
-                {
-
-                    string origins = (string)jObjectw.SelectToken(champName + ".origin.[" + originsIndex.ToString() + "]");
-                 
-
-#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
-                    var defaultHex = new PictureBox
+                    var picture = new PictureBox
                     {
-                        Name = "basepanel",
-                        Size = new Size(22, 22),
-                        Margin = new Padding(2, 5, 2, 0),
-                        Anchor = AnchorStyles.None,
+                        Name = "pictureBox",
+                        Size = new Size(84, 84),
+                        //Padding = new Padding(5, 5, 5, 5),
                         Dock = DockStyle.None,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        Anchor = AnchorStyles.None,
+                        Location = new Point(0, 0),
+                        BackgroundImage = (Image)(rm.GetObject(champName)),
                         BackgroundImageLayout = ImageLayout.Stretch,
 
-
                     };
-#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
 
-#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
-                    var newOrigins = new PictureBox
+                    var basepanel = new FlowLayoutPanel
                     {
-                        Name = "newOrigins",
-                        Size = new Size(13, 13),
-                        Padding = new Padding(5, 5, 5, 5),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.Fill,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-
-                    };
-#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
-
-#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
-                    var originsBox = new PictureBox
-                    {
-                        Name = "basepanel",
-                        Margin = new Padding(2, 5, 2, 0),
-                        Size = new Size(22, 22),
-                        Anchor = AnchorStyles.None,
                         Dock = DockStyle.None,
+                        Anchor = AnchorStyles.None,
                         BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject(origins)),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    };
-#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
-                            
-                                if (ResourcesList.Contains(origins))
-                                {
-                                    basepanel.Controls.Add(originsBox);
-                                    PocketTips.SetToolTip(originsBox, origins);
-                                }
-                                else
-                                {
+                        Location = new Point(3, 52),
+                        FlowDirection = FlowDirection.RightToLeft,
+                        //AutoSize = true,
+                        //AutoSizeMode = AutoSizeMode.GrowOnly,
+                        Size = new Size(picture.Width - 6, picture.Height - 55),
 
-                                    newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + origins + ".png");
-                                    newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
-                                    basepanel.Controls.Add(defaultHex);
-                                    defaultHex.Controls.Add(newOrigins);
-                                    PocketTips.SetToolTip(defaultHex, origins);
-                                    PocketTips.SetToolTip(newOrigins, origins);                            
-                                  
+                    };
+
+
+
+
+                    if (list.Contains(champName))
+                    {
+                        picture.SizeMode = PictureBoxSizeMode.StretchImage;
+                        picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
+                        picture.Controls.Add(basepanel);
+
+                    } else if (ResourcesList.Contains(champName))
+
+                    {
+                        picture.Controls.Add(basepanel);
+                    }
+                    else
+                    {
+                        picture.SizeMode = PictureBoxSizeMode.StretchImage;
+                        picture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + champName + ".png");
+                        picture.Controls.Add(basepanel);
                     }
 
 
-                    originsIndex++;
+
+
+                    flowLayoutPanel1.Controls.Add(picture);
+
+                    var tierbox = new PictureBox
+                    {
+                        Name = "pictureBox",
+                        Size = new Size(84, 84),
+                        Location = new Point(0, 0),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("Tier" + cost.ToString())),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+                    };
+
+                    picture.Controls.Add(tierbox);
+
+                    var label = new Label
+                    {
+                        Text = cost.ToString(),
+                        ForeColor = Color.White,
+                        //Size = new Size(84, 84),
+                        Location = new Point(0, 0),
+                        BackColor = Color.Transparent,
+                        Font = new Font(Font, FontStyle.Bold),
+
+                    };
+
+                    var coin = new PictureBox
+                    {
+                        Name = "pictureBox",
+                        Size = new Size(8, 8),
+                        Location = new Point(12, 3),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("Coin")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+
+                    };
+
+
+                    tierbox.Controls.Add(label);
+                    label.Controls.Add(coin);
+
+
+                    // ORIGIN
+
+                    JArray originsLoop = (JArray)jObjectw.SelectToken(champName + ".set2.origin");
+
+                    foreach (JToken arrayname2 in originsLoop)
+                    {
+
+                        string origins = (string)jObjectw.SelectToken(champName + ".set2.origin.[" + originsIndex.ToString() + "]");
+
+
+#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
+                        var defaultHex = new PictureBox
+                        {
+                            Name = "basepanel",
+                            Size = new Size(22, 22),
+                            Margin = new Padding(2, 5, 2, 0),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            //Location = new Point(10, 50),
+                            BackColor = Color.Transparent,
+                            BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                            BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                        };
+#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
+
+#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
+                        var newOrigins = new PictureBox
+                        {
+                            Name = "newOrigins",
+                            Size = new Size(13, 13),
+                            Padding = new Padding(5, 5, 5, 5),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.Fill,
+                            //Location = new Point(10, 50),
+                            BackColor = Color.Transparent,
+
+                        };
+#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
+
+#pragma warning disable IDE0068 // Usare il criterio dispose consigliato
+                        var originsBox = new PictureBox
+                        {
+                            Name = "basepanel",
+                            Margin = new Padding(2, 5, 2, 0),
+                            Size = new Size(22, 22),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            BackColor = Color.Transparent,
+                            BackgroundImage = (Image)(rm.GetObject(origins)),
+                            BackgroundImageLayout = ImageLayout.Stretch,
+                        };
+#pragma warning restore IDE0068 // Usare il criterio dispose consigliato
+
+                        if (ResourcesList.Contains(origins))
+                        {
+                            basepanel.Controls.Add(originsBox);
+                            PocketTips.SetToolTip(originsBox, origins);
+                        }
+                        else
+                        {
+
+                            newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + origins + ".png");
+                            newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
+                            basepanel.Controls.Add(defaultHex);
+                            defaultHex.Controls.Add(newOrigins);
+                            PocketTips.SetToolTip(defaultHex, origins);
+                            PocketTips.SetToolTip(newOrigins, origins);
+
+                        }
+
+
+                        originsIndex++;
+                   
                 }
 
                 // CLASSES
 
-                JArray classesLoop = (JArray)jObjectw.SelectToken(champName + ".class");
+                JArray classesLoop = (JArray)jObjectw.SelectToken(champName + ".set2.class");
 
                 foreach (JToken arrayname3 in classesLoop)
                 {
 
 
-                    string classes = (string)jObjectw.SelectToken(champName + ".class.[" + classesIndex.ToString() + "]");
+                    string classes = (string)jObjectw.SelectToken(champName + ".set2.class.[" + classesIndex.ToString() + "]");
 #pragma warning disable IDE0068 // Usare il criterio dispose consigliato
                     var defaultHex = new PictureBox
                     {
@@ -1634,352 +1634,362 @@ namespace TFT_Overlay
         private void ChampionsListLoop()
         {
 
+            try { 
+
             JObject jObject = JObject.Parse(champsJSON);
 
             // CHAMP LIST (FOREACH)
             var ChampionNamesList = jObject.SelectTokens("$").ToList();
 
-            foreach (JProperty item in ChampionNamesList.Children())
-            {
-                int originsIndex = 0;
-                int classesIndex = 0;
-                int itemsIndex = 0;
-
-                // VARIABLES
-                var key = item.Name.ToString();
-                int cost = (int)jObject.SelectToken(key + ".cost");
-                string ability = (string)jObject.SelectToken(key + ".ability.description");
-                Color tiercost = Color.OrangeRed;
-
-
-                if (cost == 1)
+                foreach (JProperty item in ChampionNamesList.Children())
                 {
-                    tiercost = Color.DimGray;
-                }
+                    int originsIndex = 0;
+                    int classesIndex = 0;
+                    int itemsIndex = 0;
 
-                if (cost == 2)
-                {
-                    tiercost = Color.ForestGreen;
-                }
+                    var key = item.Name.ToString();
 
-                if (cost == 3)
-                {
-                    tiercost = Color.DodgerBlue;
-                }
+                    string costCheck = (string)jObject.SelectToken(key + ".set2.cost");
 
-                if (cost == 4)
-                {
-                    tiercost = Color.DarkViolet;
-                }
-
-                if (cost == 5)
-                {
-                    tiercost = Color.Gold;
-                }
-
-
-                ChampsSearchBox.AutoCompleteCustomSource.Add(key);
-
-                // CODE
-                var basepanel = new FlowLayoutPanel
-                {
-                    Name = key,
-                    Text = cost.ToString(),
-                    Size = new Size(312, 48),
-
-                };
-                ChampsList.Controls.Add(basepanel);
-
-
-                // CHAMP BORDER
-                var ChampBox = new Panel
-                {
-                    Name = "ChampBox",
-                    Size = new Size(45, 45),
-                    Padding = new Padding(2, 2, 2, 2),
-                    BackColor = tiercost,
-
-                };
-                basepanel.Controls.Add(ChampBox);
-
-
-                // CHAMP ICON
-                var ChampPicture = new PictureBox
-                {
-                    Name = "ChampPicture",
-                    Size = new Size(41, 41),
-                    Dock = DockStyle.Fill,
-                    BackgroundImage = (Image)(rm.GetObject(key)),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-
-                };
-
-
-
-                if (list.Contains(key))
-                {
-                    ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
-                    ChampBox.Controls.Add(ChampPicture);
-
-                }
-                else if (ResourcesList.Contains(key))
-                {
-                    ChampBox.Controls.Add(ChampPicture);
-                }
-                else
-                {
-                    ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
-                    ChampBox.Controls.Add(ChampPicture);
-                }
-
-
-
-                // CHAMP COST
-                var ChampCost = new MetroLabel
-                {
-
-                    Name = cost.ToString(),
-                    Text = cost.ToString(),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    UseCustomBackColor = true,
-                    UseCustomForeColor = true,
-                    ForeColor = tiercost,
-                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
-                    Size = new Size(12, 18),
-
-                };
-                PocketTips.SetToolTip(ChampCost, "Cost");
-                basepanel.Controls.Add(ChampCost);
-
-
-                // COST ICON
-                var CostIcon = new PictureBox
-                {
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Size = new Size(10, 10),
-                    BackgroundImage = Properties.Resources.Coin,
-                    BackgroundImageLayout = ImageLayout.Stretch,
-
-                };
-                PocketTips.SetToolTip(CostIcon, "Cost");
-                basepanel.Controls.Add(CostIcon);
-
-
-                // SPACER
-
-                var Spacer = new Panel
-                {
-                    Size = new Size(1, 1),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Location = new Point(0, 0),
-                };
-                basepanel.Controls.Add(Spacer);
-
-
-                // ORIGIN
-
-                JArray originsLoop = (JArray)jObject.SelectToken(key + ".origin");
-
-                foreach (JToken arrayname in originsLoop)
-                {
-
-                    string origins = (string)jObject.SelectToken(key + ".origin.[" + originsIndex.ToString() + "]");
-
-                    var picturebox = new PictureBox
+                    if (costCheck != null)
                     {
-                        Name = "basepanel",
-                        Size = new Size(25, 25),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        Location = new Point(0, 0),
-                        BackgroundImage = (Image)(rm.GetObject(origins)),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    };
-
-                    var defaultHex = new PictureBox
-                    {
-                        Name = "basepanel",
-                        Size = new Size(25, 25),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                        BackgroundImageLayout = ImageLayout.Stretch,
 
 
-                    };
+                        int cost = (int)jObject.SelectToken(key + ".set2.cost");
+                        string ability = (string)jObject.SelectToken(key + ".set2.ability.description");
+                        Color tiercost = Color.OrangeRed;
 
-                    var newOrigins = new PictureBox
-                    {
-                        Size = new Size(13, 13),
-                        Padding = new Padding(5, 5, 5, 5),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.Fill,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
 
-                    };
-                            
-                                if (ResourcesList.Contains(origins))
-                                {
-                                    basepanel.Controls.Add(picturebox);
-                                    PocketTips.SetToolTip(picturebox, origins);
-                                }
-                                else
-                                {
-                                    newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + origins + ".png");
-                                    newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
-                                    basepanel.Controls.Add(defaultHex);
-                                    defaultHex.Controls.Add(newOrigins);
-                                    PocketTips.SetToolTip(defaultHex, origins);
-                                    PocketTips.SetToolTip(newOrigins, origins);
-           
+                        if (cost == 1)
+                        {
+                            tiercost = Color.DimGray;
+                        }
+
+                        if (cost == 2)
+                        {
+                            tiercost = Color.ForestGreen;
+                        }
+
+                        if (cost == 3)
+                        {
+                            tiercost = Color.DodgerBlue;
+                        }
+
+                        if (cost == 4)
+                        {
+                            tiercost = Color.DarkViolet;
+                        }
+
+                        if (cost == 5)
+                        {
+                            tiercost = Color.Gold;
+                        }
+
+
+                        ChampsSearchBox.AutoCompleteCustomSource.Add(key);
+
+                        // CODE
+                        var basepanel = new FlowLayoutPanel
+                        {
+                            Name = key,
+                            Text = cost.ToString(),
+                            Size = new Size(312, 48),
+
+                        };
+                        ChampsList.Controls.Add(basepanel);
+
+
+                        // CHAMP BORDER
+                        var ChampBox = new Panel
+                        {
+                            Name = "ChampBox",
+                            Size = new Size(45, 45),
+                            Padding = new Padding(2, 2, 2, 2),
+                            BackColor = tiercost,
+
+                        };
+                        basepanel.Controls.Add(ChampBox);
+
+
+                        // CHAMP ICON
+                        var ChampPicture = new PictureBox
+                        {
+                            Name = "ChampPicture",
+                            Size = new Size(41, 41),
+                            Dock = DockStyle.Fill,
+                            BackgroundImage = (Image)(rm.GetObject(key)),
+                            BackgroundImageLayout = ImageLayout.Stretch,
+
+                        };
+
+
+
+                        if (list.Contains(key))
+                        {
+                            ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+                            ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
+                            ChampBox.Controls.Add(ChampPicture);
+
+                        }
+                        else if (ResourcesList.Contains(key))
+                        {
+                            ChampBox.Controls.Add(ChampPicture);
+                        }
+                        else
+                        {
+                            ChampPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+                            ChampPicture.Load("https://ddragon.leagueoflegends.com/cdn/" + lolVer + "/img/champion/" + key + ".png");
+                            ChampBox.Controls.Add(ChampPicture);
+                        }
+
+
+
+                        // CHAMP COST
+                        var ChampCost = new MetroLabel
+                        {
+
+                            Name = cost.ToString(),
+                            Text = cost.ToString(),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            UseCustomBackColor = true,
+                            UseCustomForeColor = true,
+                            ForeColor = tiercost,
+                            FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                            Size = new Size(12, 18),
+
+                        };
+                        PocketTips.SetToolTip(ChampCost, "Cost");
+                        basepanel.Controls.Add(ChampCost);
+
+
+                        // COST ICON
+                        var CostIcon = new PictureBox
+                        {
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            Size = new Size(10, 10),
+                            BackgroundImage = Properties.Resources.Coin,
+                            BackgroundImageLayout = ImageLayout.Stretch,
+
+                        };
+                        PocketTips.SetToolTip(CostIcon, "Cost");
+                        basepanel.Controls.Add(CostIcon);
+
+
+                        // SPACER
+
+                        var Spacer = new Panel
+                        {
+                            Size = new Size(1, 1),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            Location = new Point(0, 0),
+                        };
+                        basepanel.Controls.Add(Spacer);
+
+
+                        // ORIGIN
+
+                        JArray originsLoop = (JArray)jObject.SelectToken(key + ".set2.origin");
+
+                        foreach (JToken arrayname in originsLoop)
+                        {
+
+                            string origins = (string)jObject.SelectToken(key + ".set2.origin.[" + originsIndex.ToString() + "]");
+
+                            var picturebox = new PictureBox
+                            {
+                                Name = "basepanel",
+                                Size = new Size(25, 25),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.None,
+                                Location = new Point(0, 0),
+                                BackgroundImage = (Image)(rm.GetObject(origins)),
+                                BackgroundImageLayout = ImageLayout.Stretch,
+                            };
+
+                            var defaultHex = new PictureBox
+                            {
+                                Name = "basepanel",
+                                Size = new Size(25, 25),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.None,
+                                //Location = new Point(10, 50),
+                                BackColor = Color.Transparent,
+                                BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                                BackgroundImageLayout = ImageLayout.Stretch,
+
+
+                            };
+
+                            var newOrigins = new PictureBox
+                            {
+                                Size = new Size(13, 13),
+                                Padding = new Padding(5, 5, 5, 5),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.Fill,
+                                //Location = new Point(10, 50),
+                                BackColor = Color.Transparent,
+
+                            };
+
+                            if (ResourcesList.Contains(origins))
+                            {
+                                basepanel.Controls.Add(picturebox);
+                                PocketTips.SetToolTip(picturebox, origins);
+                            }
+                            else
+                            {
+                                newOrigins.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + origins + ".png");
+                                newOrigins.SizeMode = PictureBoxSizeMode.StretchImage;
+                                basepanel.Controls.Add(defaultHex);
+                                defaultHex.Controls.Add(newOrigins);
+                                PocketTips.SetToolTip(defaultHex, origins);
+                                PocketTips.SetToolTip(newOrigins, origins);
+
+                            }
+
+
+                            originsIndex++;
+                        }
+
+
+                        // CLASSES
+
+                        JArray classesLoop = (JArray)jObject.SelectToken(key + ".set2.class");
+
+                        foreach (JToken arrayname in classesLoop)
+                        {
+
+
+                            string classes = (string)jObject.SelectToken(key + ".set2.class.[" + classesIndex.ToString() + "]");
+
+                            var picturebox = new PictureBox
+                            {
+                                Name = "basepanel",
+                                Size = new Size(25, 25),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.None,
+                                Location = new Point(0, 0),
+                                BackgroundImage = (Image)(rm.GetObject(classes)),
+                                BackgroundImageLayout = ImageLayout.Stretch,
+                            };
+
+                            var defaultHex = new PictureBox
+                            {
+                                Name = "basepanel",
+                                Size = new Size(25, 25),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.None,
+                                //Location = new Point(10, 50),
+                                BackColor = Color.Transparent,
+                                BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                                BackgroundImageLayout = ImageLayout.Stretch,
+                            };
+
+                            var newClasses = new PictureBox
+                            {
+                                Size = new Size(13, 13),
+                                Padding = new Padding(5, 5, 5, 5),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.Fill,
+                                //Location = new Point(10, 50),
+                                BackColor = Color.Transparent,
+                            };
+
+                            if (ResourcesList.Contains(classes))
+                            {
+                                basepanel.Controls.Add(picturebox);
+                                PocketTips.SetToolTip(picturebox, classes);
+                            }
+                            else
+                            {
+                                newClasses.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + classes + ".png");
+                                newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
+                                basepanel.Controls.Add(defaultHex);
+                                defaultHex.Controls.Add(newClasses);
+                                PocketTips.SetToolTip(defaultHex, classes);
+                                PocketTips.SetToolTip(newClasses, classes);
+
+                            }
+
+                            classesIndex++;
+
+
+                        }
+
+
+
+                        // SPACER
+
+                        var Spacer2 = new Panel
+                        {
+                            Size = new Size(4, 4),
+                            Anchor = AnchorStyles.None,
+                            Dock = DockStyle.None,
+                            Location = new Point(0, 0),
+                        };
+                        basepanel.Controls.Add(Spacer2);
+
+
+                        // ITEMS
+
+                        JArray itemsLoop = (JArray)jObject.SelectToken(key + ".set2.items");
+
+
+
+                        foreach (JToken arrayname in itemsLoop)
+                        {
+
+
+                            string itemization = (string)jObject.SelectToken(key + ".set2.items.[" + itemsIndex.ToString() + "]");
+
+                            var itemBorder = new Panel
+                            {
+
+                                Size = new Size(32, 32),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.None,
+                                Location = new Point(0, 0),
+                                BackColor = tiercost,
+                                Padding = new Padding(2, 2, 2, 2),
+                            };
+
+
+                            var picturebox = new PictureBox
+                            {
+
+                                Size = new Size(28, 28),
+                                Anchor = AnchorStyles.None,
+                                Dock = DockStyle.Fill,
+
+                                Location = new Point(0, 0),
+                                BackgroundImage = (Image)(rm.GetObject(itemization)),
+                                BackgroundImageLayout = ImageLayout.Stretch,
+                            };
+
+                            basepanel.Controls.Add(itemBorder);
+                            itemBorder.Controls.Add(picturebox);
+                            itemsIndex++;
+                            PocketTips.SetToolTip(picturebox, itemization);
+                        }
+
+                        //WRAP TIPS
+                        Regex rgx = new Regex("(.{50}\\s)"); string WrappedMessage = rgx.Replace(ability, "$1\n");
+
+                        // TOOLTIPS
+                        PocketTips.SetToolTip(ChampBox, WrappedMessage);
+                        PocketTips.SetToolTip(ChampPicture, WrappedMessage);
+
+
+
+
+
+
                     }
-
-
-
-                    originsIndex++;
                 }
-
-
-                // CLASSES
-
-                JArray classesLoop = (JArray)jObject.SelectToken(key + ".class");
-
-                foreach (JToken arrayname in classesLoop)
-                {
-
-
-                    string classes = (string)jObject.SelectToken(key + ".class.[" + classesIndex.ToString() + "]");
-
-                    var picturebox = new PictureBox
-                    {
-                        Name = "basepanel",
-                        Size = new Size(25, 25),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        Location = new Point(0, 0),
-                        BackgroundImage = (Image)(rm.GetObject(classes)),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    };
-
-                    var defaultHex = new PictureBox
-                    {
-                        Name = "basepanel",
-                        Size = new Size(25, 25),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    };
-
-                    var newClasses = new PictureBox
-                    {
-                        Size = new Size(13, 13),
-                        Padding = new Padding(5, 5, 5, 5),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.Fill,
-                        //Location = new Point(10, 50),
-                        BackColor = Color.Transparent,
-                    };
-                            
-                                if (ResourcesList.Contains(classes))
-                                {
-                                    basepanel.Controls.Add(picturebox);
-                                    PocketTips.SetToolTip(picturebox, classes);
-                                }
-                                else
-                                {
-                                    newClasses.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + classes + ".png");
-                                    newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
-                                    basepanel.Controls.Add(defaultHex);
-                                    defaultHex.Controls.Add(newClasses);
-                                    PocketTips.SetToolTip(defaultHex, classes);
-                                    PocketTips.SetToolTip(newClasses, classes);
-
-                    }
-
-                    classesIndex++;
-                }
-
-
-
-                // SPACER
-
-                var Spacer2 = new Panel
-                {
-                    Size = new Size(4, 4),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Location = new Point(0, 0),
-                };
-                basepanel.Controls.Add(Spacer2);
-
-
-                // ITEMS
-
-                JArray itemsLoop = (JArray)jObject.SelectToken(key + ".items");
-
-
-
-                foreach (JToken arrayname in itemsLoop)
-                {
-
-
-                    string itemization = (string)jObject.SelectToken(key + ".items.[" + itemsIndex.ToString() + "]");
-
-                    var itemBorder = new Panel
-                    {
-
-                        Size = new Size(32, 32),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.None,
-                        Location = new Point(0, 0),
-                        BackColor = tiercost,
-                        Padding = new Padding(2, 2, 2, 2),
-                    };
-
-
-                    var picturebox = new PictureBox
-                    {
-
-                        Size = new Size(28, 28),
-                        Anchor = AnchorStyles.None,
-                        Dock = DockStyle.Fill,
-
-                        Location = new Point(0, 0),
-                        BackgroundImage = (Image)(rm.GetObject(itemization)),
-                        BackgroundImageLayout = ImageLayout.Stretch,
-                    };
-
-                    basepanel.Controls.Add(itemBorder);
-                    itemBorder.Controls.Add(picturebox);
-                    itemsIndex++;
-                    PocketTips.SetToolTip(picturebox, itemization);
-                }
-
-                //WRAP TIPS
-                Regex rgx = new Regex("(.{50}\\s)"); string WrappedMessage = rgx.Replace(ability, "$1\n");
-
-                // TOOLTIPS
-                PocketTips.SetToolTip(ChampBox, WrappedMessage);
-                PocketTips.SetToolTip(ChampPicture, WrappedMessage);
-            
-
-
-
-
-
-            }
-
+            } catch { }
         }
 
 
@@ -2138,7 +2148,7 @@ namespace TFT_Overlay
             JObject jObject = JObject.Parse(originsJSON);
 
             // ORIGINS LIST (FOREACH)
-            var OriginsList = jObject.SelectTokens("$").ToList();
+            var OriginsList = jObject.SelectTokens("set2").ToList();
 
 
             foreach (JProperty item in OriginsList.Children())
@@ -2146,103 +2156,108 @@ namespace TFT_Overlay
 
                 // VARIABLES
                 var originKey = item.Name.ToString();
-                string originK = (string)jObject.SelectToken(originKey + ".key");
-                string originName = (string)jObject.SelectToken(originKey + ".name");
-                string originDesc = (string)jObject.SelectToken(originKey + ".description");
+                string originK = (string)jObject.SelectToken(".set2." + originKey + ".key");
 
-
-                // CODE
-                var DrawPanel = new FlowLayoutPanel
+                if (originK != null)
                 {
-                    Name = originK,
-                    Size = new Size(312, 48),
-                    BackColor = Color.FromArgb(33, 42, 59),
-                    Location = new Point(0, 0),
-                    Cursor = Cursors.Hand,
-                    Margin = new Padding(1, 1, 1, 1),
+
+                    string originName = (string)jObject.SelectToken(".set2." + originKey + ".name");
+                    string originDesc = (string)jObject.SelectToken(".set2." + originKey + ".description");
 
 
-                };
+                    // CODE
+                    var DrawPanel = new FlowLayoutPanel
+                    {
+                        Name = originK,
+                        Size = new Size(312, 48),
+                        BackColor = Color.FromArgb(33, 42, 59),
+                        Location = new Point(0, 0),
+                        Cursor = Cursors.Hand,
+                        Margin = new Padding(1, 1, 1, 1),
 
 
-                DrawPanel.Click += new EventHandler(DrawPanel_Click);
-                OriginsFlowPanel.Controls.Add(DrawPanel);
-
-                //SPACER
-                var DrawSpacer = new Panel
-                {
-                    Name = "ChampBox",
-                    Size = new Size(0, 45),
-                    Padding = new Padding(2, 2, 2, 2),
-
-                };
-
-                DrawPanel.Controls.Add(DrawSpacer);
+                    };
 
 
-                // ORIGIN ICON
-                var DrawOrigin = new PictureBox
-                {
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Size = new Size(22, 22),
-                    Location = new Point(0, 0),
-                    BackColor = Color.Transparent,
-                    BackgroundImage = (Image)(rm.GetObject(originName)),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-                    Enabled = false,
-                };
+                    DrawPanel.Click += new EventHandler(DrawPanel_Click);
+                    OriginsFlowPanel.Controls.Add(DrawPanel);
 
-                var defaultHex = new PictureBox
-                {
-                    Name = "basepanel",
-                    Size = new Size(25, 25),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    BackColor = Color.Transparent,
-                    BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-                };
+                    //SPACER
+                    var DrawSpacer = new Panel
+                    {
+                        Name = "ChampBox",
+                        Size = new Size(0, 45),
+                        Padding = new Padding(2, 2, 2, 2),
 
-                var newOrigin = new PictureBox
-                {
-                    Size = new Size(13, 13),
-                    Padding = new Padding(5, 5, 5, 5),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.Fill,
-                    BackColor = Color.Transparent,
-                };
-                        
-                            if (ResourcesList.Contains(originName))
-                            {
-                                DrawPanel.Controls.Add(DrawOrigin);
-                            }
-                            else
-                            {
-                                newOrigin.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + originName + ".png");
-                                newOrigin.SizeMode = PictureBoxSizeMode.StretchImage;
-                                DrawPanel.Controls.Add(defaultHex);
-                                defaultHex.Controls.Add(newOrigin);
+                    };
 
+                    DrawPanel.Controls.Add(DrawSpacer);
+
+
+                    // ORIGIN ICON
+                    var DrawOrigin = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Size = new Size(22, 22),
+                        Location = new Point(0, 0),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject(originName)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                        Enabled = false,
+                    };
+
+                    var defaultHex = new PictureBox
+                    {
+                        Name = "basepanel",
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+                    var newOrigin = new PictureBox
+                    {
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        BackColor = Color.Transparent,
+                    };
+
+                    if (ResourcesList.Contains(originName))
+                    {
+                        DrawPanel.Controls.Add(DrawOrigin);
+                    }
+                    else
+                    {
+                        newOrigin.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + originName + ".png");
+                        newOrigin.SizeMode = PictureBoxSizeMode.StretchImage;
+                        DrawPanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newOrigin);
+
+                    }
+
+                    var DrawLabel = new MetroLabel
+                    {
+                        Text = originName,
+                        ForeColor = Color.White,
+                        UseCustomBackColor = true,
+                        UseCustomForeColor = true,
+                        Margin = new Padding(3, 10, 3, 3),
+                        FontSize = MetroFramework.MetroLabelSize.Small,
+                        FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Location = new Point(0, 0),
+                        Enabled = false,
+                    };
+                    DrawPanel.Controls.Add(DrawLabel);
                 }
-
-                var DrawLabel = new MetroLabel
-                {
-                    Text = originName,
-                    ForeColor = Color.White,
-                    UseCustomBackColor = true,
-                    UseCustomForeColor = true,
-                    Margin = new Padding(3, 10, 3, 3),
-                    FontSize = MetroFramework.MetroLabelSize.Small,
-                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Location = new Point(0, 0),
-                    Enabled = false,
-                };
-                DrawPanel.Controls.Add(DrawLabel);
             }
-
         }
 
         // CLASSES LIST
@@ -2253,112 +2268,115 @@ namespace TFT_Overlay
             JObject jObject = JObject.Parse(classesJSON);
 
             // ORIGINS LIST (FOREACH)
-            var ClassesList = jObject.SelectTokens("$").ToList();
-
+            var ClassesList = jObject.SelectTokens("set2").ToList();
+            
 
             foreach (JProperty item in ClassesList.Children())
             {
 
                 // VARIABLES
                 var classKey = item.Name.ToString();
-                string classK = (string)jObject.SelectToken(classKey + ".key");
-                string className = (string)jObject.SelectToken(classKey + ".name");
-                string classDesc = (string)jObject.SelectToken(classKey + ".description");
-
-
-                // CODE
-                var DrawPanel = new FlowLayoutPanel
+                string classK = (string)jObject.SelectToken(".set2." + classKey + ".key");
+                Console.WriteLine(classKey);
+                if (classK != null)
                 {
-                    Name = classK,
-                    Size = new Size(312, 48),
-                    BackColor = Color.FromArgb(33, 42, 59),
-                    Location = new Point(0, 0),
-                    Cursor = Cursors.Hand,
-                    Margin = new Padding(1, 1, 1, 1),
+                    string className = (string)jObject.SelectToken(".set2." + classKey + ".name");
+                    string classDesc = (string)jObject.SelectToken(".set2." + classKey + ".description");
 
 
-                };
+                    // CODE
+                    var DrawPanel = new FlowLayoutPanel
+                    {
+                        Name = classK,
+                        Size = new Size(312, 48),
+                        BackColor = Color.FromArgb(33, 42, 59),
+                        Location = new Point(0, 0),
+                        Cursor = Cursors.Hand,
+                        Margin = new Padding(1, 1, 1, 1),
 
 
-                DrawPanel.Click += new EventHandler(DrawPanel2_Click);
-                ClassesFlowPanel.Controls.Add(DrawPanel);
-
-                //SPACER
-                var DrawSpacer = new Panel
-                {
-                    Name = "ChampBox",
-                    Size = new Size(0, 45),
-                    Padding = new Padding(2, 2, 2, 2),
-
-                };
-
-                DrawPanel.Controls.Add(DrawSpacer);
+                    };
 
 
-                // ORIGIN ICON
-                var DrawClass = new PictureBox
-                {
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Size = new Size(22, 22),
-                    Location = new Point(0, 0),
-                    BackColor = Color.Transparent,
-                    BackgroundImage = (Image)(rm.GetObject(className)),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-                    Enabled = false,
-                };
+                    DrawPanel.Click += new EventHandler(DrawPanel2_Click);
+                    ClassesFlowPanel.Controls.Add(DrawPanel);
 
-                var defaultHex = new PictureBox
-                {
-                    Size = new Size(25, 25),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    //Location = new Point(10, 50),
-                    BackColor = Color.Transparent,
-                    BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
-                    BackgroundImageLayout = ImageLayout.Stretch,
-                };
+                    //SPACER
+                    var DrawSpacer = new Panel
+                    {
+                        Name = "ChampBox",
+                        Size = new Size(0, 45),
+                        Padding = new Padding(2, 2, 2, 2),
 
-                var newClasses = new PictureBox
-                {
-                    Size = new Size(13, 13),
-                    Padding = new Padding(5, 5, 5, 5),
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.Fill,
-                    //Location = new Point(10, 50),
-                    BackColor = Color.Transparent,
-                };
-                        
-                            if (ResourcesList.Contains(className))
-                            {
-                                DrawPanel.Controls.Add(DrawClass);
-                            }
-                            else
-                            {
-                                newClasses.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + className + ".png");
-                                newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
-                                DrawPanel.Controls.Add(defaultHex);
-                                defaultHex.Controls.Add(newClasses);
-   
+                    };
+
+                    DrawPanel.Controls.Add(DrawSpacer);
+
+
+                    // ORIGIN ICON
+                    var DrawClass = new PictureBox
+                    {
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Size = new Size(22, 22),
+                        Location = new Point(0, 0),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject(className)),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                        Enabled = false,
+                    };
+
+                    var defaultHex = new PictureBox
+                    {
+                        Size = new Size(25, 25),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                        BackgroundImage = (Image)(rm.GetObject("DefaultHex")),
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                    };
+
+                    var newClasses = new PictureBox
+                    {
+                        Size = new Size(13, 13),
+                        Padding = new Padding(5, 5, 5, 5),
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.Fill,
+                        //Location = new Point(10, 50),
+                        BackColor = Color.Transparent,
+                    };
+
+                    if (ResourcesList.Contains(className))
+                    {
+                        DrawPanel.Controls.Add(DrawClass);
+                    }
+                    else
+                    {
+                        newClasses.Load("https://img.rankedboost.com/wp-content/plugins/league/assets/tft/" + className + ".png");
+                        newClasses.SizeMode = PictureBoxSizeMode.StretchImage;
+                        DrawPanel.Controls.Add(defaultHex);
+                        defaultHex.Controls.Add(newClasses);
+
+                    }
+
+                    var DrawLabel = new MetroLabel
+                    {
+                        Text = className,
+                        ForeColor = Color.White,
+                        UseCustomBackColor = true,
+                        UseCustomForeColor = true,
+                        Margin = new Padding(3, 10, 3, 3),
+                        FontSize = MetroFramework.MetroLabelSize.Small,
+                        FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                        Anchor = AnchorStyles.None,
+                        Dock = DockStyle.None,
+                        Location = new Point(0, 0),
+                        Enabled = false,
+                    };
+                    DrawPanel.Controls.Add(DrawLabel);
                 }
-
-                var DrawLabel = new MetroLabel
-                {
-                    Text = className,
-                    ForeColor = Color.White,
-                    UseCustomBackColor = true,
-                    UseCustomForeColor = true,
-                    Margin = new Padding(3, 10, 3, 3),
-                    FontSize = MetroFramework.MetroLabelSize.Small,
-                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
-                    Anchor = AnchorStyles.None,
-                    Dock = DockStyle.None,
-                    Location = new Point(0, 0),
-                    Enabled = false,
-                };
-                DrawPanel.Controls.Add(DrawLabel);
             }
-
         }
 
         private void DrawPanel_Click(object sender, EventArgs e)
@@ -2369,19 +2387,19 @@ namespace TFT_Overlay
 
 
             JObject jObject = JObject.Parse(originsJSON);
-            string Description = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".description");
+            string Description = (string)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".description");
 
             if (Description != null) { OriginsDescriptionFlow.Controls.Add(richTextBox1); }
 
-            JArray championsTiers = (JArray)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses");
+            JArray championsTiers = (JArray)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".bonuses");
 
             int originsCount = 0;
 
             foreach (JToken arrayname in championsTiers)
             {
 
-                string ChampsNeeded = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].needed");
-                string ChampsEffect = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].effect");
+                string ChampsNeeded = (string)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].needed");
+                string ChampsEffect = (string)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".bonuses[" + originsCount + "].effect");
 
                 richTextBox1.Text = Description;
 
@@ -2426,19 +2444,19 @@ namespace TFT_Overlay
 
 
             JObject jObject = JObject.Parse(classesJSON);
-            string Description = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".description");
+            string Description = (string)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".description");
 
             if (Description != null) { ClassesDescriptionFlow.Controls.Add(richTextBox2); }
 
-            JArray championsTiers = (JArray)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses");
+            JArray championsTiers = (JArray)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".bonuses");
 
             int classesCount = 0;
 
             foreach (JToken arrayname in championsTiers)
             {
 
-                string ChampsNeeded = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + classesCount + "].needed");
-                string ChampsEffect = (string)jObject.SelectToken((sender as FlowLayoutPanel).Name + ".bonuses[" + classesCount + "].effect");
+                string ChampsNeeded = (string)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".bonuses[" + classesCount + "].needed");
+                string ChampsEffect = (string)jObject.SelectToken(".set2." + (sender as FlowLayoutPanel).Name + ".bonuses[" + classesCount + "].effect");
 
                 richTextBox2.Text = Description;
 
