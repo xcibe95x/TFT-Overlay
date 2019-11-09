@@ -32,19 +32,21 @@ this will be the last version if i finish it, not sure if i'm going to update ei
 	 - Drop Rates now gets data from github datacloud.json
 	 - Tier => Cost, Renamed in Drop Rates tab	
 	 - Champion Images can be Excluded from the exclusion.md file to force reworked champion icon
-       
-	   
+         - Converted to Rise of the Elements patch
+
 	   POSSIBLE CHANGELOG
 	 - You can set the summoner name from Settings Tab now
-	 - Champs Tab with more feature
+	 - Champs Tab has Ability Description Now
 	 - Improve actual features
 	 - Add more default hexes with different colors that get choosen random
 	 - Rounds
-     - Blitz.gg
+	 - In settings add an option to change champions sets
+	 - Final Items Crafting update (Not going to be up-to-date after that)
+	 	 
+         - Blitz.gg
 	 - Mobalitycs
-	 - Possible Team Comps
-	 - Code Optimization
-	 - Improve boot times
+	 - Possible Team Comps ( May not be implemented )
+	 The changelog will be cutdown since i'm dropping support to this after 3.0
 	 
 - **2.9**
 	 - Now send you straight to the latest version GitHub Page
