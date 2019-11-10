@@ -1,7 +1,6 @@
 ## Version Changelogs
 
 - **3.0 (FINAL) PLACE HOLDER**
-       REAL CHANGELOG
      - Updated Design
      - FINALly! Proper ToolTips!
 	 - Removed ALL unused Assets
@@ -13,7 +12,7 @@
 	 - Drop Rates now gets data from github datacloud.json
 	 - Tier => Cost, Renamed in Drop Rates tab	
 	 - Champion Images can be Excluded from the exclusion.md file to force reworked champion icon
-         - Converted to Rise of the Elements patch
+     - Converted to Rise of the Elements patch
 
 	   POSSIBLE CHANGELOG
 	 - Assets Update
