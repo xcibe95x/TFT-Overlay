@@ -1,6 +1,6 @@
 ## Version Changelogs
 
-- **3.0 (FINAL)**
+- **3.0 (FINAL) PLACE HOLDER**
        REAL CHANGELOG
      - Updated Design
      - FINALly! Proper ToolTips!
