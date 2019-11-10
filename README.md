@@ -15,13 +15,10 @@ Hope you enjoyed it and hope it can be usefull for some of you still.
 - Right click on the title bar for the context menu
 - Enjoy
 
-## Final does not mean it will not be updated anymore, but it will be updated from time to time when it's strictly necessary
-## Since the application is almost fully autoupdated.
 
 ## Version Changelogs
 
-- **3.0 (FINAL) PLACE HOLDER**
-       REAL CHANGELOG
+- **3.0 FINAL**
      - Updated Design
      - FINALly! Proper ToolTips!
 	 - Removed ALL unused Assets
@@ -33,7 +30,7 @@ Hope you enjoyed it and hope it can be usefull for some of you still.
 	 - Drop Rates now gets data from github datacloud.json
 	 - Tier => Cost, Renamed in Drop Rates tab	
 	 - Champion Images can be Excluded from the exclusion.md file to force reworked champion icon
-         - Converted to Rise of the Elements patch
+     - Converted to Rise of the Elements patch
 
 	   POSSIBLE CHANGELOG
 	 - Assets Update
