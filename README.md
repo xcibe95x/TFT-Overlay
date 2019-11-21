@@ -1,8 +1,12 @@
 # Pocket Tactics a TFT Overlay for all your Teamfight Tactics needs.
 
-Update 10/11/2019, I finally made my mind and decided to drop support for this, since TFT already own a bunch of usefull features directly in game now, and the need for such tools is fading, but i wanted to leave you with a 3.0 Final anyway
-Not completely finished, but working for the latest patch! this will be the last update,thank you for supporting the app.
-Hope you enjoyed it and hope it can be usefull for some of you still.
+Update 21/11/2019, I apologize, i'm not finding interest in supporting this, since i'm done with Riot Games, if you will ever find a 3.0 Version in the releases the changelog is what you find below, as soon as i have time i will build this last version and release it.
+If you want in the time being you can compile it your self or get the Release folder and run it from here, you are free
+to keep supporting this yourself or pushing changes here, i will approve them.
+Have a nice day.
+
+Feel free to keep an eye on my current project of making a video game all by my self here: http://playconstraints.com/
+
 
 ## PLEASE HELP KEEPING THE DATACLOUD.JSON FILE UP-TO-DATE!
 
@@ -32,7 +36,7 @@ Hope you enjoyed it and hope it can be usefull for some of you still.
 	 - Champion Images can be Excluded from the exclusion.md file to force reworked champion icon
      - Converted to Rise of the Elements patch
 
-	   POSSIBLE CHANGELOG
+	   CHANGES NEVER IMPLEMENTED AT THE CURRENT STATUS
 	 - Assets Update
 	 - In settings add an option to change champions sets
 	 - Final Items Crafting update (Not going to be up-to-date after that)
