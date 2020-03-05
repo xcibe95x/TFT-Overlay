@@ -1,12 +1,6 @@
 # Pocket Tactics a TFT Overlay for all your Teamfight Tactics needs.
 
-Update 21/11/2019, I apologize, i'm not finding interest in supporting this, since i'm done with Riot Games, if you will ever find a 3.0 Version in the releases the changelog is what you find below, as soon as i have time i will build this last version and release it.
-If you want in the time being you can compile it your self or get the Release folder and run it from here, you are free
-to keep supporting this yourself or pushing changes here, i will approve them.
-Have a nice day.
-
-Feel free to keep an eye on my current project of making a video game all by my self here: http://playconstraints.com/
-
+## THIS PROJECT HAS BEEN DISCONTINUED AND IS NO LONGER BEING SUPPORTED.
 
 ## PLEASE HELP KEEPING THE DATACLOUD.JSON FILE UP-TO-DATE!
 
