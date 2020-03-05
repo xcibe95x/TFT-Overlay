@@ -1,6 +1,6 @@
-# Pocket Tactics a TFT Overlay for all your Teamfight Tactics needs.
+# Pocket Tactics a TFT Overlay for all your Teamfight Tactics needs. (DISCONTINUED)
 
-## THIS PROJECT HAS BEEN DISCONTINUED AND IS NO LONGER BEING SUPPORTED.
+## THIS PROJECT HAS BEEN DISCONTINUED AND IS NO LONGER BEING SUPPORTED
 
 ## PLEASE HELP KEEPING THE DATACLOUD.JSON FILE UP-TO-DATE!
 
